@@ -231,6 +231,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "features.md",
+      "output": {
+        ".html": {
+          "relative_path": "features.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "guide.md",
       "output": {
         ".html": {

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> |  LibSodium.Net </title>
+      <title>Features |  LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" |  LibSodium.Net ">
+      <meta name="title" content="Features |  LibSodium.Net ">
       
       
       <link rel="icon" href="images/Na.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/features.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -71,9 +71,43 @@
         </div>
 
         <article data-uid="">
+<h1 id="features">Features</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>LibSodium.NET is a library that provides .NET bindings for libsodium. It is designed to eventually support all of libsodium’s features while offering a modern and efficient approach to cryptographic operations.</p>
+<p>LibSodium.Net is designed to eventually support all of libsodium’s features while offering a modern and efficient approach to cryptographic operations</p>
+<h2 id="modern-and-efficient">Modern and Efficient</h2>
+<ul>
+<li>Utilizes <code>Span&lt;T&gt;</code> instead of arrays for enhanced performance.</li>
+<li>Supports Ahead-of-Time (AOT) compilation by leveraging <code>LibraryImport</code> rather than <code>DllImport</code>.</li>
+</ul>
+<h2 id="implemented-features">Implemented Features</h2>
+<h3 id="helpers">Helpers</h3>
+<ul>
+<li>Constant-time equality testing</li>
+<li>Hexadecimal encoding and decoding.</li>
+<li>Base64 encoding and decoding</li>
+<li>Operations for arbitrary-length unsigned numbers.</li>
+<li>Testing for all-zero values.</li>
+</ul>
+<h3 id="pading">Pading</h3>
+<p>Pad and unpad data using the ISO/IEC 7816-4 padding algorithm</p>
+<h3 id="secure-memory">Secure Memory</h3>
+<ul>
+<li>Zeroing memory</li>
+<li>Locking memory</li>
+<li>Guarded heap allocations.</li>
+</ul>
+<h3 id="generating-random-data">Generating random data</h3>
+<ul>
+<li>Random <code>UInt32</code> , including uniform with upper bound.</li>
+<li>Random buffer generation, including deterministic option.</li>
+<li>Closing and stirring the random generator</li>
+</ul>
+<h3 id="secret-key-cryptography">Secret-Key Cryptography</h3>
+<ul>
+<li>Authenticatedd encryption (SecretBox)</li>
+</ul>
+<h2 id="additional-features">Additional Features</h2>
+<p>Coming soon</p>
 
 </article>
 
