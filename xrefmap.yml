@@ -1,1051 +1,1051 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: LibSodium.Net
-  name: LibSodium.Net
-  href: api/LibSodium.Net.html
-  commentId: N:LibSodium.Net
-  fullName: LibSodium.Net
-  nameWithType: LibSodium.Net
-- uid: LibSodium.Net.Base64Encoding
+- uid: LibSodium
+  name: LibSodium
+  href: api/LibSodium.html
+  commentId: N:LibSodium
+  fullName: LibSodium
+  nameWithType: LibSodium
+- uid: LibSodium.Base64Encoding
   name: Base64Encoding
-  href: api/LibSodium.Net.Base64Encoding.html
-  commentId: T:LibSodium.Net.Base64Encoding
-  fullName: LibSodium.Net.Base64Encoding
+  href: api/LibSodium.Base64Encoding.html
+  commentId: T:LibSodium.Base64Encoding
+  fullName: LibSodium.Base64Encoding
   nameWithType: Base64Encoding
-- uid: LibSodium.Net.Base64Encoding.Base64ToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},LibSodium.Net.Base64Variant,System.String)
+- uid: LibSodium.Base64Encoding.Base64ToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},LibSodium.Base64Variant,System.String)
   name: Base64ToBin(ReadOnlySpan<char>, Span<byte>, Base64Variant, string?)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_Base64ToBin_System_ReadOnlySpan_System_Char__System_Span_System_Byte__LibSodium_Net_Base64Variant_System_String_
-  commentId: M:LibSodium.Net.Base64Encoding.Base64ToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},LibSodium.Net.Base64Variant,System.String)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_Base64ToBin_System_ReadOnlySpan_System_Char__System_Span_System_Byte__LibSodium_Base64Variant_System_String_
+  commentId: M:LibSodium.Base64Encoding.Base64ToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},LibSodium.Base64Variant,System.String)
   name.vb: Base64ToBin(ReadOnlySpan(Of Char), Span(Of Byte), Base64Variant, String)
-  fullName: LibSodium.Net.Base64Encoding.Base64ToBin(System.ReadOnlySpan<char>, System.Span<byte>, LibSodium.Net.Base64Variant, string?)
-  fullName.vb: LibSodium.Net.Base64Encoding.Base64ToBin(System.ReadOnlySpan(Of Char), System.Span(Of Byte), LibSodium.Net.Base64Variant, String)
+  fullName: LibSodium.Base64Encoding.Base64ToBin(System.ReadOnlySpan<char>, System.Span<byte>, LibSodium.Base64Variant, string?)
+  fullName.vb: LibSodium.Base64Encoding.Base64ToBin(System.ReadOnlySpan(Of Char), System.Span(Of Byte), LibSodium.Base64Variant, String)
   nameWithType: Base64Encoding.Base64ToBin(ReadOnlySpan<char>, Span<byte>, Base64Variant, string?)
   nameWithType.vb: Base64Encoding.Base64ToBin(ReadOnlySpan(Of Char), Span(Of Byte), Base64Variant, String)
-- uid: LibSodium.Net.Base64Encoding.Base64ToBin(System.String,System.Span{System.Byte},LibSodium.Net.Base64Variant,System.String)
+- uid: LibSodium.Base64Encoding.Base64ToBin(System.String,System.Span{System.Byte},LibSodium.Base64Variant,System.String)
   name: Base64ToBin(string, Span<byte>, Base64Variant, string?)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_Base64ToBin_System_String_System_Span_System_Byte__LibSodium_Net_Base64Variant_System_String_
-  commentId: M:LibSodium.Net.Base64Encoding.Base64ToBin(System.String,System.Span{System.Byte},LibSodium.Net.Base64Variant,System.String)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_Base64ToBin_System_String_System_Span_System_Byte__LibSodium_Base64Variant_System_String_
+  commentId: M:LibSodium.Base64Encoding.Base64ToBin(System.String,System.Span{System.Byte},LibSodium.Base64Variant,System.String)
   name.vb: Base64ToBin(String, Span(Of Byte), Base64Variant, String)
-  fullName: LibSodium.Net.Base64Encoding.Base64ToBin(string, System.Span<byte>, LibSodium.Net.Base64Variant, string?)
-  fullName.vb: LibSodium.Net.Base64Encoding.Base64ToBin(String, System.Span(Of Byte), LibSodium.Net.Base64Variant, String)
+  fullName: LibSodium.Base64Encoding.Base64ToBin(string, System.Span<byte>, LibSodium.Base64Variant, string?)
+  fullName.vb: LibSodium.Base64Encoding.Base64ToBin(String, System.Span(Of Byte), LibSodium.Base64Variant, String)
   nameWithType: Base64Encoding.Base64ToBin(string, Span<byte>, Base64Variant, string?)
   nameWithType.vb: Base64Encoding.Base64ToBin(String, Span(Of Byte), Base64Variant, String)
-- uid: LibSodium.Net.Base64Encoding.Base64ToBin*
+- uid: LibSodium.Base64Encoding.Base64ToBin*
   name: Base64ToBin
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_Base64ToBin_
-  commentId: Overload:LibSodium.Net.Base64Encoding.Base64ToBin
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_Base64ToBin_
+  commentId: Overload:LibSodium.Base64Encoding.Base64ToBin
   isSpec: "True"
-  fullName: LibSodium.Net.Base64Encoding.Base64ToBin
+  fullName: LibSodium.Base64Encoding.Base64ToBin
   nameWithType: Base64Encoding.Base64ToBin
-- uid: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},LibSodium.Net.Base64Variant)
+- uid: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},LibSodium.Base64Variant)
   name: BinToBase64(ReadOnlySpan<byte>, Base64Variant)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_BinToBase64_System_ReadOnlySpan_System_Byte__LibSodium_Net_Base64Variant_
-  commentId: M:LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},LibSodium.Net.Base64Variant)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_BinToBase64_System_ReadOnlySpan_System_Byte__LibSodium_Base64Variant_
+  commentId: M:LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},LibSodium.Base64Variant)
   name.vb: BinToBase64(ReadOnlySpan(Of Byte), Base64Variant)
-  fullName: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan<byte>, LibSodium.Net.Base64Variant)
-  fullName.vb: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan(Of Byte), LibSodium.Net.Base64Variant)
+  fullName: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan<byte>, LibSodium.Base64Variant)
+  fullName.vb: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan(Of Byte), LibSodium.Base64Variant)
   nameWithType: Base64Encoding.BinToBase64(ReadOnlySpan<byte>, Base64Variant)
   nameWithType.vb: Base64Encoding.BinToBase64(ReadOnlySpan(Of Byte), Base64Variant)
-- uid: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},System.Span{System.Char},LibSodium.Net.Base64Variant)
+- uid: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},System.Span{System.Char},LibSodium.Base64Variant)
   name: BinToBase64(ReadOnlySpan<byte>, Span<char>, Base64Variant)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_BinToBase64_System_ReadOnlySpan_System_Byte__System_Span_System_Char__LibSodium_Net_Base64Variant_
-  commentId: M:LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},System.Span{System.Char},LibSodium.Net.Base64Variant)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_BinToBase64_System_ReadOnlySpan_System_Byte__System_Span_System_Char__LibSodium_Base64Variant_
+  commentId: M:LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan{System.Byte},System.Span{System.Char},LibSodium.Base64Variant)
   name.vb: BinToBase64(ReadOnlySpan(Of Byte), Span(Of Char), Base64Variant)
-  fullName: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan<byte>, System.Span<char>, LibSodium.Net.Base64Variant)
-  fullName.vb: LibSodium.Net.Base64Encoding.BinToBase64(System.ReadOnlySpan(Of Byte), System.Span(Of Char), LibSodium.Net.Base64Variant)
+  fullName: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan<byte>, System.Span<char>, LibSodium.Base64Variant)
+  fullName.vb: LibSodium.Base64Encoding.BinToBase64(System.ReadOnlySpan(Of Byte), System.Span(Of Char), LibSodium.Base64Variant)
   nameWithType: Base64Encoding.BinToBase64(ReadOnlySpan<byte>, Span<char>, Base64Variant)
   nameWithType.vb: Base64Encoding.BinToBase64(ReadOnlySpan(Of Byte), Span(Of Char), Base64Variant)
-- uid: LibSodium.Net.Base64Encoding.BinToBase64*
+- uid: LibSodium.Base64Encoding.BinToBase64*
   name: BinToBase64
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_BinToBase64_
-  commentId: Overload:LibSodium.Net.Base64Encoding.BinToBase64
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_BinToBase64_
+  commentId: Overload:LibSodium.Base64Encoding.BinToBase64
   isSpec: "True"
-  fullName: LibSodium.Net.Base64Encoding.BinToBase64
+  fullName: LibSodium.Base64Encoding.BinToBase64
   nameWithType: Base64Encoding.BinToBase64
-- uid: LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen(System.Int32)
+- uid: LibSodium.Base64Encoding.GetBase64DecodedMaxLen(System.Int32)
   name: GetBase64DecodedMaxLen(int)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_GetBase64DecodedMaxLen_System_Int32_
-  commentId: M:LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen(System.Int32)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_GetBase64DecodedMaxLen_System_Int32_
+  commentId: M:LibSodium.Base64Encoding.GetBase64DecodedMaxLen(System.Int32)
   name.vb: GetBase64DecodedMaxLen(Integer)
-  fullName: LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen(int)
-  fullName.vb: LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen(Integer)
+  fullName: LibSodium.Base64Encoding.GetBase64DecodedMaxLen(int)
+  fullName.vb: LibSodium.Base64Encoding.GetBase64DecodedMaxLen(Integer)
   nameWithType: Base64Encoding.GetBase64DecodedMaxLen(int)
   nameWithType.vb: Base64Encoding.GetBase64DecodedMaxLen(Integer)
-- uid: LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen*
+- uid: LibSodium.Base64Encoding.GetBase64DecodedMaxLen*
   name: GetBase64DecodedMaxLen
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_GetBase64DecodedMaxLen_
-  commentId: Overload:LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_GetBase64DecodedMaxLen_
+  commentId: Overload:LibSodium.Base64Encoding.GetBase64DecodedMaxLen
   isSpec: "True"
-  fullName: LibSodium.Net.Base64Encoding.GetBase64DecodedMaxLen
+  fullName: LibSodium.Base64Encoding.GetBase64DecodedMaxLen
   nameWithType: Base64Encoding.GetBase64DecodedMaxLen
-- uid: LibSodium.Net.Base64Encoding.GetBase64EncodedLen(System.Int32,LibSodium.Net.Base64Variant,System.Boolean)
+- uid: LibSodium.Base64Encoding.GetBase64EncodedLen(System.Int32,LibSodium.Base64Variant,System.Boolean)
   name: GetBase64EncodedLen(int, Base64Variant, bool)
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_GetBase64EncodedLen_System_Int32_LibSodium_Net_Base64Variant_System_Boolean_
-  commentId: M:LibSodium.Net.Base64Encoding.GetBase64EncodedLen(System.Int32,LibSodium.Net.Base64Variant,System.Boolean)
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_GetBase64EncodedLen_System_Int32_LibSodium_Base64Variant_System_Boolean_
+  commentId: M:LibSodium.Base64Encoding.GetBase64EncodedLen(System.Int32,LibSodium.Base64Variant,System.Boolean)
   name.vb: GetBase64EncodedLen(Integer, Base64Variant, Boolean)
-  fullName: LibSodium.Net.Base64Encoding.GetBase64EncodedLen(int, LibSodium.Net.Base64Variant, bool)
-  fullName.vb: LibSodium.Net.Base64Encoding.GetBase64EncodedLen(Integer, LibSodium.Net.Base64Variant, Boolean)
+  fullName: LibSodium.Base64Encoding.GetBase64EncodedLen(int, LibSodium.Base64Variant, bool)
+  fullName.vb: LibSodium.Base64Encoding.GetBase64EncodedLen(Integer, LibSodium.Base64Variant, Boolean)
   nameWithType: Base64Encoding.GetBase64EncodedLen(int, Base64Variant, bool)
   nameWithType.vb: Base64Encoding.GetBase64EncodedLen(Integer, Base64Variant, Boolean)
-- uid: LibSodium.Net.Base64Encoding.GetBase64EncodedLen*
+- uid: LibSodium.Base64Encoding.GetBase64EncodedLen*
   name: GetBase64EncodedLen
-  href: api/LibSodium.Net.Base64Encoding.html#LibSodium_Net_Base64Encoding_GetBase64EncodedLen_
-  commentId: Overload:LibSodium.Net.Base64Encoding.GetBase64EncodedLen
+  href: api/LibSodium.Base64Encoding.html#LibSodium_Base64Encoding_GetBase64EncodedLen_
+  commentId: Overload:LibSodium.Base64Encoding.GetBase64EncodedLen
   isSpec: "True"
-  fullName: LibSodium.Net.Base64Encoding.GetBase64EncodedLen
+  fullName: LibSodium.Base64Encoding.GetBase64EncodedLen
   nameWithType: Base64Encoding.GetBase64EncodedLen
-- uid: LibSodium.Net.Base64Variant
+- uid: LibSodium.Base64Variant
   name: Base64Variant
-  href: api/LibSodium.Net.Base64Variant.html
-  commentId: T:LibSodium.Net.Base64Variant
-  fullName: LibSodium.Net.Base64Variant
+  href: api/LibSodium.Base64Variant.html
+  commentId: T:LibSodium.Base64Variant
+  fullName: LibSodium.Base64Variant
   nameWithType: Base64Variant
-- uid: LibSodium.Net.Base64Variant.Original
+- uid: LibSodium.Base64Variant.Original
   name: Original
-  href: api/LibSodium.Net.Base64Variant.html#LibSodium_Net_Base64Variant_Original
-  commentId: F:LibSodium.Net.Base64Variant.Original
-  fullName: LibSodium.Net.Base64Variant.Original
+  href: api/LibSodium.Base64Variant.html#LibSodium_Base64Variant_Original
+  commentId: F:LibSodium.Base64Variant.Original
+  fullName: LibSodium.Base64Variant.Original
   nameWithType: Base64Variant.Original
-- uid: LibSodium.Net.Base64Variant.OriginalNoPadding
+- uid: LibSodium.Base64Variant.OriginalNoPadding
   name: OriginalNoPadding
-  href: api/LibSodium.Net.Base64Variant.html#LibSodium_Net_Base64Variant_OriginalNoPadding
-  commentId: F:LibSodium.Net.Base64Variant.OriginalNoPadding
-  fullName: LibSodium.Net.Base64Variant.OriginalNoPadding
+  href: api/LibSodium.Base64Variant.html#LibSodium_Base64Variant_OriginalNoPadding
+  commentId: F:LibSodium.Base64Variant.OriginalNoPadding
+  fullName: LibSodium.Base64Variant.OriginalNoPadding
   nameWithType: Base64Variant.OriginalNoPadding
-- uid: LibSodium.Net.Base64Variant.UrlSafe
+- uid: LibSodium.Base64Variant.UrlSafe
   name: UrlSafe
-  href: api/LibSodium.Net.Base64Variant.html#LibSodium_Net_Base64Variant_UrlSafe
-  commentId: F:LibSodium.Net.Base64Variant.UrlSafe
-  fullName: LibSodium.Net.Base64Variant.UrlSafe
+  href: api/LibSodium.Base64Variant.html#LibSodium_Base64Variant_UrlSafe
+  commentId: F:LibSodium.Base64Variant.UrlSafe
+  fullName: LibSodium.Base64Variant.UrlSafe
   nameWithType: Base64Variant.UrlSafe
-- uid: LibSodium.Net.Base64Variant.UrlSafeNoPadding
+- uid: LibSodium.Base64Variant.UrlSafeNoPadding
   name: UrlSafeNoPadding
-  href: api/LibSodium.Net.Base64Variant.html#LibSodium_Net_Base64Variant_UrlSafeNoPadding
-  commentId: F:LibSodium.Net.Base64Variant.UrlSafeNoPadding
-  fullName: LibSodium.Net.Base64Variant.UrlSafeNoPadding
+  href: api/LibSodium.Base64Variant.html#LibSodium_Base64Variant_UrlSafeNoPadding
+  commentId: F:LibSodium.Base64Variant.UrlSafeNoPadding
+  fullName: LibSodium.Base64Variant.UrlSafeNoPadding
   nameWithType: Base64Variant.UrlSafeNoPadding
-- uid: LibSodium.Net.HexEncoding
+- uid: LibSodium.HexEncoding
   name: HexEncoding
-  href: api/LibSodium.Net.HexEncoding.html
-  commentId: T:LibSodium.Net.HexEncoding
-  fullName: LibSodium.Net.HexEncoding
+  href: api/LibSodium.HexEncoding.html
+  commentId: T:LibSodium.HexEncoding
+  fullName: LibSodium.HexEncoding
   nameWithType: HexEncoding
-- uid: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte})
   name: BinToHex(ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_BinToHex_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_BinToHex_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte})
   name.vb: BinToHex(ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan(Of Byte))
   nameWithType: HexEncoding.BinToHex(ReadOnlySpan<byte>)
   nameWithType.vb: HexEncoding.BinToHex(ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char})
+- uid: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char})
   name: BinToHex(ReadOnlySpan<byte>, Span<char>)
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_BinToHex_System_ReadOnlySpan_System_Byte__System_Span_System_Char__
-  commentId: M:LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char})
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_BinToHex_System_ReadOnlySpan_System_Byte__System_Span_System_Char__
+  commentId: M:LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char})
   name.vb: BinToHex(ReadOnlySpan(Of Byte), Span(Of Char))
-  fullName: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan<byte>, System.Span<char>)
-  fullName.vb: LibSodium.Net.HexEncoding.BinToHex(System.ReadOnlySpan(Of Byte), System.Span(Of Char))
+  fullName: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan<byte>, System.Span<char>)
+  fullName.vb: LibSodium.HexEncoding.BinToHex(System.ReadOnlySpan(Of Byte), System.Span(Of Char))
   nameWithType: HexEncoding.BinToHex(ReadOnlySpan<byte>, Span<char>)
   nameWithType.vb: HexEncoding.BinToHex(ReadOnlySpan(Of Byte), Span(Of Char))
-- uid: LibSodium.Net.HexEncoding.BinToHex*
+- uid: LibSodium.HexEncoding.BinToHex*
   name: BinToHex
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_BinToHex_
-  commentId: Overload:LibSodium.Net.HexEncoding.BinToHex
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_BinToHex_
+  commentId: Overload:LibSodium.HexEncoding.BinToHex
   isSpec: "True"
-  fullName: LibSodium.Net.HexEncoding.BinToHex
+  fullName: LibSodium.HexEncoding.BinToHex
   nameWithType: HexEncoding.BinToHex
-- uid: LibSodium.Net.HexEncoding.HexToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.String)
+- uid: LibSodium.HexEncoding.HexToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.String)
   name: HexToBin(ReadOnlySpan<char>, Span<byte>, string?)
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_HexToBin_System_ReadOnlySpan_System_Char__System_Span_System_Byte__System_String_
-  commentId: M:LibSodium.Net.HexEncoding.HexToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.String)
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_HexToBin_System_ReadOnlySpan_System_Char__System_Span_System_Byte__System_String_
+  commentId: M:LibSodium.HexEncoding.HexToBin(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.String)
   name.vb: HexToBin(ReadOnlySpan(Of Char), Span(Of Byte), String)
-  fullName: LibSodium.Net.HexEncoding.HexToBin(System.ReadOnlySpan<char>, System.Span<byte>, string?)
-  fullName.vb: LibSodium.Net.HexEncoding.HexToBin(System.ReadOnlySpan(Of Char), System.Span(Of Byte), String)
+  fullName: LibSodium.HexEncoding.HexToBin(System.ReadOnlySpan<char>, System.Span<byte>, string?)
+  fullName.vb: LibSodium.HexEncoding.HexToBin(System.ReadOnlySpan(Of Char), System.Span(Of Byte), String)
   nameWithType: HexEncoding.HexToBin(ReadOnlySpan<char>, Span<byte>, string?)
   nameWithType.vb: HexEncoding.HexToBin(ReadOnlySpan(Of Char), Span(Of Byte), String)
-- uid: LibSodium.Net.HexEncoding.HexToBin(System.String,System.Span{System.Byte},System.String)
+- uid: LibSodium.HexEncoding.HexToBin(System.String,System.Span{System.Byte},System.String)
   name: HexToBin(string, Span<byte>, string?)
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_HexToBin_System_String_System_Span_System_Byte__System_String_
-  commentId: M:LibSodium.Net.HexEncoding.HexToBin(System.String,System.Span{System.Byte},System.String)
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_HexToBin_System_String_System_Span_System_Byte__System_String_
+  commentId: M:LibSodium.HexEncoding.HexToBin(System.String,System.Span{System.Byte},System.String)
   name.vb: HexToBin(String, Span(Of Byte), String)
-  fullName: LibSodium.Net.HexEncoding.HexToBin(string, System.Span<byte>, string?)
-  fullName.vb: LibSodium.Net.HexEncoding.HexToBin(String, System.Span(Of Byte), String)
+  fullName: LibSodium.HexEncoding.HexToBin(string, System.Span<byte>, string?)
+  fullName.vb: LibSodium.HexEncoding.HexToBin(String, System.Span(Of Byte), String)
   nameWithType: HexEncoding.HexToBin(string, Span<byte>, string?)
   nameWithType.vb: HexEncoding.HexToBin(String, Span(Of Byte), String)
-- uid: LibSodium.Net.HexEncoding.HexToBin*
+- uid: LibSodium.HexEncoding.HexToBin*
   name: HexToBin
-  href: api/LibSodium.Net.HexEncoding.html#LibSodium_Net_HexEncoding_HexToBin_
-  commentId: Overload:LibSodium.Net.HexEncoding.HexToBin
+  href: api/LibSodium.HexEncoding.html#LibSodium_HexEncoding_HexToBin_
+  commentId: Overload:LibSodium.HexEncoding.HexToBin
   isSpec: "True"
-  fullName: LibSodium.Net.HexEncoding.HexToBin
+  fullName: LibSodium.HexEncoding.HexToBin
   nameWithType: HexEncoding.HexToBin
-- uid: LibSodium.Net.LibraryInitializer
+- uid: LibSodium.LibraryInitializer
   name: LibraryInitializer
-  href: api/LibSodium.Net.LibraryInitializer.html
-  commentId: T:LibSodium.Net.LibraryInitializer
-  fullName: LibSodium.Net.LibraryInitializer
+  href: api/LibSodium.LibraryInitializer.html
+  commentId: T:LibSodium.LibraryInitializer
+  fullName: LibSodium.LibraryInitializer
   nameWithType: LibraryInitializer
-- uid: LibSodium.Net.LibraryInitializer.EnsureInitialized
+- uid: LibSodium.LibraryInitializer.EnsureInitialized
   name: EnsureInitialized()
-  href: api/LibSodium.Net.LibraryInitializer.html#LibSodium_Net_LibraryInitializer_EnsureInitialized
-  commentId: M:LibSodium.Net.LibraryInitializer.EnsureInitialized
-  fullName: LibSodium.Net.LibraryInitializer.EnsureInitialized()
+  href: api/LibSodium.LibraryInitializer.html#LibSodium_LibraryInitializer_EnsureInitialized
+  commentId: M:LibSodium.LibraryInitializer.EnsureInitialized
+  fullName: LibSodium.LibraryInitializer.EnsureInitialized()
   nameWithType: LibraryInitializer.EnsureInitialized()
-- uid: LibSodium.Net.LibraryInitializer.EnsureInitialized*
+- uid: LibSodium.LibraryInitializer.EnsureInitialized*
   name: EnsureInitialized
-  href: api/LibSodium.Net.LibraryInitializer.html#LibSodium_Net_LibraryInitializer_EnsureInitialized_
-  commentId: Overload:LibSodium.Net.LibraryInitializer.EnsureInitialized
+  href: api/LibSodium.LibraryInitializer.html#LibSodium_LibraryInitializer_EnsureInitialized_
+  commentId: Overload:LibSodium.LibraryInitializer.EnsureInitialized
   isSpec: "True"
-  fullName: LibSodium.Net.LibraryInitializer.EnsureInitialized
+  fullName: LibSodium.LibraryInitializer.EnsureInitialized
   nameWithType: LibraryInitializer.EnsureInitialized
-- uid: LibSodium.Net.LibraryInitializer.IsInitialized
+- uid: LibSodium.LibraryInitializer.IsInitialized
   name: IsInitialized
-  href: api/LibSodium.Net.LibraryInitializer.html#LibSodium_Net_LibraryInitializer_IsInitialized
-  commentId: P:LibSodium.Net.LibraryInitializer.IsInitialized
-  fullName: LibSodium.Net.LibraryInitializer.IsInitialized
+  href: api/LibSodium.LibraryInitializer.html#LibSodium_LibraryInitializer_IsInitialized
+  commentId: P:LibSodium.LibraryInitializer.IsInitialized
+  fullName: LibSodium.LibraryInitializer.IsInitialized
   nameWithType: LibraryInitializer.IsInitialized
-- uid: LibSodium.Net.LibraryInitializer.IsInitialized*
+- uid: LibSodium.LibraryInitializer.IsInitialized*
   name: IsInitialized
-  href: api/LibSodium.Net.LibraryInitializer.html#LibSodium_Net_LibraryInitializer_IsInitialized_
-  commentId: Overload:LibSodium.Net.LibraryInitializer.IsInitialized
+  href: api/LibSodium.LibraryInitializer.html#LibSodium_LibraryInitializer_IsInitialized_
+  commentId: Overload:LibSodium.LibraryInitializer.IsInitialized
   isSpec: "True"
-  fullName: LibSodium.Net.LibraryInitializer.IsInitialized
+  fullName: LibSodium.LibraryInitializer.IsInitialized
   nameWithType: LibraryInitializer.IsInitialized
-- uid: LibSodium.Net.LibraryVersion
+- uid: LibSodium.LibraryVersion
   name: LibraryVersion
-  href: api/LibSodium.Net.LibraryVersion.html
-  commentId: T:LibSodium.Net.LibraryVersion
-  fullName: LibSodium.Net.LibraryVersion
+  href: api/LibSodium.LibraryVersion.html
+  commentId: T:LibSodium.LibraryVersion
+  fullName: LibSodium.LibraryVersion
   nameWithType: LibraryVersion
-- uid: LibSodium.Net.LibraryVersion.GetMajor
+- uid: LibSodium.LibraryVersion.GetMajor
   name: GetMajor()
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetMajor
-  commentId: M:LibSodium.Net.LibraryVersion.GetMajor
-  fullName: LibSodium.Net.LibraryVersion.GetMajor()
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetMajor
+  commentId: M:LibSodium.LibraryVersion.GetMajor
+  fullName: LibSodium.LibraryVersion.GetMajor()
   nameWithType: LibraryVersion.GetMajor()
-- uid: LibSodium.Net.LibraryVersion.GetMajor*
+- uid: LibSodium.LibraryVersion.GetMajor*
   name: GetMajor
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetMajor_
-  commentId: Overload:LibSodium.Net.LibraryVersion.GetMajor
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetMajor_
+  commentId: Overload:LibSodium.LibraryVersion.GetMajor
   isSpec: "True"
-  fullName: LibSodium.Net.LibraryVersion.GetMajor
+  fullName: LibSodium.LibraryVersion.GetMajor
   nameWithType: LibraryVersion.GetMajor
-- uid: LibSodium.Net.LibraryVersion.GetMinor
+- uid: LibSodium.LibraryVersion.GetMinor
   name: GetMinor()
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetMinor
-  commentId: M:LibSodium.Net.LibraryVersion.GetMinor
-  fullName: LibSodium.Net.LibraryVersion.GetMinor()
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetMinor
+  commentId: M:LibSodium.LibraryVersion.GetMinor
+  fullName: LibSodium.LibraryVersion.GetMinor()
   nameWithType: LibraryVersion.GetMinor()
-- uid: LibSodium.Net.LibraryVersion.GetMinor*
+- uid: LibSodium.LibraryVersion.GetMinor*
   name: GetMinor
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetMinor_
-  commentId: Overload:LibSodium.Net.LibraryVersion.GetMinor
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetMinor_
+  commentId: Overload:LibSodium.LibraryVersion.GetMinor
   isSpec: "True"
-  fullName: LibSodium.Net.LibraryVersion.GetMinor
+  fullName: LibSodium.LibraryVersion.GetMinor
   nameWithType: LibraryVersion.GetMinor
-- uid: LibSodium.Net.LibraryVersion.GetString
+- uid: LibSodium.LibraryVersion.GetString
   name: GetString()
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetString
-  commentId: M:LibSodium.Net.LibraryVersion.GetString
-  fullName: LibSodium.Net.LibraryVersion.GetString()
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetString
+  commentId: M:LibSodium.LibraryVersion.GetString
+  fullName: LibSodium.LibraryVersion.GetString()
   nameWithType: LibraryVersion.GetString()
-- uid: LibSodium.Net.LibraryVersion.GetString*
+- uid: LibSodium.LibraryVersion.GetString*
   name: GetString
-  href: api/LibSodium.Net.LibraryVersion.html#LibSodium_Net_LibraryVersion_GetString_
-  commentId: Overload:LibSodium.Net.LibraryVersion.GetString
+  href: api/LibSodium.LibraryVersion.html#LibSodium_LibraryVersion_GetString_
+  commentId: Overload:LibSodium.LibraryVersion.GetString
   isSpec: "True"
-  fullName: LibSodium.Net.LibraryVersion.GetString
+  fullName: LibSodium.LibraryVersion.GetString
   nameWithType: LibraryVersion.GetString
-- uid: LibSodium.Net.RandomGenerator
+- uid: LibSodium.RandomGenerator
   name: RandomGenerator
-  href: api/LibSodium.Net.RandomGenerator.html
-  commentId: T:LibSodium.Net.RandomGenerator
-  fullName: LibSodium.Net.RandomGenerator
+  href: api/LibSodium.RandomGenerator.html
+  commentId: T:LibSodium.RandomGenerator
+  fullName: LibSodium.RandomGenerator
   nameWithType: RandomGenerator
-- uid: LibSodium.Net.RandomGenerator.Close
+- uid: LibSodium.RandomGenerator.Close
   name: Close()
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Close
-  commentId: M:LibSodium.Net.RandomGenerator.Close
-  fullName: LibSodium.Net.RandomGenerator.Close()
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Close
+  commentId: M:LibSodium.RandomGenerator.Close
+  fullName: LibSodium.RandomGenerator.Close()
   nameWithType: RandomGenerator.Close()
-- uid: LibSodium.Net.RandomGenerator.Close*
+- uid: LibSodium.RandomGenerator.Close*
   name: Close
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Close_
-  commentId: Overload:LibSodium.Net.RandomGenerator.Close
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Close_
+  commentId: Overload:LibSodium.RandomGenerator.Close
   isSpec: "True"
-  fullName: LibSodium.Net.RandomGenerator.Close
+  fullName: LibSodium.RandomGenerator.Close
   nameWithType: RandomGenerator.Close
-- uid: LibSodium.Net.RandomGenerator.Fill(System.Span{System.Byte})
+- uid: LibSodium.RandomGenerator.Fill(System.Span{System.Byte})
   name: Fill(Span<byte>)
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Fill_System_Span_System_Byte__
-  commentId: M:LibSodium.Net.RandomGenerator.Fill(System.Span{System.Byte})
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Fill_System_Span_System_Byte__
+  commentId: M:LibSodium.RandomGenerator.Fill(System.Span{System.Byte})
   name.vb: Fill(Span(Of Byte))
-  fullName: LibSodium.Net.RandomGenerator.Fill(System.Span<byte>)
-  fullName.vb: LibSodium.Net.RandomGenerator.Fill(System.Span(Of Byte))
+  fullName: LibSodium.RandomGenerator.Fill(System.Span<byte>)
+  fullName.vb: LibSodium.RandomGenerator.Fill(System.Span(Of Byte))
   nameWithType: RandomGenerator.Fill(Span<byte>)
   nameWithType.vb: RandomGenerator.Fill(Span(Of Byte))
-- uid: LibSodium.Net.RandomGenerator.Fill*
+- uid: LibSodium.RandomGenerator.Fill*
   name: Fill
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Fill_
-  commentId: Overload:LibSodium.Net.RandomGenerator.Fill
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Fill_
+  commentId: Overload:LibSodium.RandomGenerator.Fill
   isSpec: "True"
-  fullName: LibSodium.Net.RandomGenerator.Fill
+  fullName: LibSodium.RandomGenerator.Fill
   nameWithType: RandomGenerator.Fill
-- uid: LibSodium.Net.RandomGenerator.FillDeterministic(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.RandomGenerator.FillDeterministic(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name: FillDeterministic(Span<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_FillDeterministic_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.RandomGenerator.FillDeterministic(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_FillDeterministic_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.RandomGenerator.FillDeterministic(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: FillDeterministic(Span(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.RandomGenerator.FillDeterministic(System.Span<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.RandomGenerator.FillDeterministic(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.RandomGenerator.FillDeterministic(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.RandomGenerator.FillDeterministic(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: RandomGenerator.FillDeterministic(Span<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: RandomGenerator.FillDeterministic(Span(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.RandomGenerator.FillDeterministic*
+- uid: LibSodium.RandomGenerator.FillDeterministic*
   name: FillDeterministic
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_FillDeterministic_
-  commentId: Overload:LibSodium.Net.RandomGenerator.FillDeterministic
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_FillDeterministic_
+  commentId: Overload:LibSodium.RandomGenerator.FillDeterministic
   isSpec: "True"
-  fullName: LibSodium.Net.RandomGenerator.FillDeterministic
+  fullName: LibSodium.RandomGenerator.FillDeterministic
   nameWithType: RandomGenerator.FillDeterministic
-- uid: LibSodium.Net.RandomGenerator.GetUInt32
+- uid: LibSodium.RandomGenerator.GetUInt32
   name: GetUInt32()
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_GetUInt32
-  commentId: M:LibSodium.Net.RandomGenerator.GetUInt32
-  fullName: LibSodium.Net.RandomGenerator.GetUInt32()
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_GetUInt32
+  commentId: M:LibSodium.RandomGenerator.GetUInt32
+  fullName: LibSodium.RandomGenerator.GetUInt32()
   nameWithType: RandomGenerator.GetUInt32()
-- uid: LibSodium.Net.RandomGenerator.GetUInt32(System.UInt32)
+- uid: LibSodium.RandomGenerator.GetUInt32(System.UInt32)
   name: GetUInt32(uint)
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_GetUInt32_System_UInt32_
-  commentId: M:LibSodium.Net.RandomGenerator.GetUInt32(System.UInt32)
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_GetUInt32_System_UInt32_
+  commentId: M:LibSodium.RandomGenerator.GetUInt32(System.UInt32)
   name.vb: GetUInt32(UInteger)
-  fullName: LibSodium.Net.RandomGenerator.GetUInt32(uint)
-  fullName.vb: LibSodium.Net.RandomGenerator.GetUInt32(UInteger)
+  fullName: LibSodium.RandomGenerator.GetUInt32(uint)
+  fullName.vb: LibSodium.RandomGenerator.GetUInt32(UInteger)
   nameWithType: RandomGenerator.GetUInt32(uint)
   nameWithType.vb: RandomGenerator.GetUInt32(UInteger)
-- uid: LibSodium.Net.RandomGenerator.GetUInt32*
+- uid: LibSodium.RandomGenerator.GetUInt32*
   name: GetUInt32
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_GetUInt32_
-  commentId: Overload:LibSodium.Net.RandomGenerator.GetUInt32
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_GetUInt32_
+  commentId: Overload:LibSodium.RandomGenerator.GetUInt32
   isSpec: "True"
-  fullName: LibSodium.Net.RandomGenerator.GetUInt32
+  fullName: LibSodium.RandomGenerator.GetUInt32
   nameWithType: RandomGenerator.GetUInt32
-- uid: LibSodium.Net.RandomGenerator.SeedLen
+- uid: LibSodium.RandomGenerator.SeedLen
   name: SeedLen
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_SeedLen
-  commentId: F:LibSodium.Net.RandomGenerator.SeedLen
-  fullName: LibSodium.Net.RandomGenerator.SeedLen
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_SeedLen
+  commentId: F:LibSodium.RandomGenerator.SeedLen
+  fullName: LibSodium.RandomGenerator.SeedLen
   nameWithType: RandomGenerator.SeedLen
-- uid: LibSodium.Net.RandomGenerator.Stir
+- uid: LibSodium.RandomGenerator.Stir
   name: Stir()
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Stir
-  commentId: M:LibSodium.Net.RandomGenerator.Stir
-  fullName: LibSodium.Net.RandomGenerator.Stir()
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Stir
+  commentId: M:LibSodium.RandomGenerator.Stir
+  fullName: LibSodium.RandomGenerator.Stir()
   nameWithType: RandomGenerator.Stir()
-- uid: LibSodium.Net.RandomGenerator.Stir*
+- uid: LibSodium.RandomGenerator.Stir*
   name: Stir
-  href: api/LibSodium.Net.RandomGenerator.html#LibSodium_Net_RandomGenerator_Stir_
-  commentId: Overload:LibSodium.Net.RandomGenerator.Stir
+  href: api/LibSodium.RandomGenerator.html#LibSodium_RandomGenerator_Stir_
+  commentId: Overload:LibSodium.RandomGenerator.Stir
   isSpec: "True"
-  fullName: LibSodium.Net.RandomGenerator.Stir
+  fullName: LibSodium.RandomGenerator.Stir
   nameWithType: RandomGenerator.Stir
-- uid: LibSodium.Net.SecretBox
+- uid: LibSodium.SecretBox
   name: SecretBox
-  href: api/LibSodium.Net.SecretBox.html
-  commentId: T:LibSodium.Net.SecretBox
-  fullName: LibSodium.Net.SecretBox
+  href: api/LibSodium.SecretBox.html
+  commentId: T:LibSodium.SecretBox
+  fullName: LibSodium.SecretBox
   nameWithType: SecretBox
-- uid: LibSodium.Net.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.DecryptCombined*
+- uid: LibSodium.SecretBox.DecryptCombined*
   name: DecryptCombined
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptCombined_
-  commentId: Overload:LibSodium.Net.SecretBox.DecryptCombined
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_
+  commentId: Overload:LibSodium.SecretBox.DecryptCombined
   isSpec: "True"
-  fullName: LibSodium.Net.SecretBox.DecryptCombined
+  fullName: LibSodium.SecretBox.DecryptCombined
   nameWithType: SecretBox.DecryptCombined
-- uid: LibSodium.Net.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.DecryptDetached*
+- uid: LibSodium.SecretBox.DecryptDetached*
   name: DecryptDetached
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_DecryptDetached_
-  commentId: Overload:LibSodium.Net.SecretBox.DecryptDetached
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_
+  commentId: Overload:LibSodium.SecretBox.DecryptDetached
   isSpec: "True"
-  fullName: LibSodium.Net.SecretBox.DecryptDetached
+  fullName: LibSodium.SecretBox.DecryptDetached
   nameWithType: SecretBox.DecryptDetached
-- uid: LibSodium.Net.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.EncryptCombined*
+- uid: LibSodium.SecretBox.EncryptCombined*
   name: EncryptCombined
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptCombined_
-  commentId: Overload:LibSodium.Net.SecretBox.EncryptCombined
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_
+  commentId: Overload:LibSodium.SecretBox.EncryptCombined
   isSpec: "True"
-  fullName: LibSodium.Net.SecretBox.EncryptCombined
+  fullName: LibSodium.SecretBox.EncryptCombined
   nameWithType: SecretBox.EncryptCombined
-- uid: LibSodium.Net.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecretBox.EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecretBox.EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecretBox.EncryptDetached*
+- uid: LibSodium.SecretBox.EncryptDetached*
   name: EncryptDetached
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_EncryptDetached_
-  commentId: Overload:LibSodium.Net.SecretBox.EncryptDetached
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_
+  commentId: Overload:LibSodium.SecretBox.EncryptDetached
   isSpec: "True"
-  fullName: LibSodium.Net.SecretBox.EncryptDetached
+  fullName: LibSodium.SecretBox.EncryptDetached
   nameWithType: SecretBox.EncryptDetached
-- uid: LibSodium.Net.SecretBox.KeyLen
+- uid: LibSodium.SecretBox.KeyLen
   name: KeyLen
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_KeyLen
-  commentId: F:LibSodium.Net.SecretBox.KeyLen
-  fullName: LibSodium.Net.SecretBox.KeyLen
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_KeyLen
+  commentId: F:LibSodium.SecretBox.KeyLen
+  fullName: LibSodium.SecretBox.KeyLen
   nameWithType: SecretBox.KeyLen
-- uid: LibSodium.Net.SecretBox.MacLen
+- uid: LibSodium.SecretBox.MacLen
   name: MacLen
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_MacLen
-  commentId: F:LibSodium.Net.SecretBox.MacLen
-  fullName: LibSodium.Net.SecretBox.MacLen
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_MacLen
+  commentId: F:LibSodium.SecretBox.MacLen
+  fullName: LibSodium.SecretBox.MacLen
   nameWithType: SecretBox.MacLen
-- uid: LibSodium.Net.SecretBox.NonceLen
+- uid: LibSodium.SecretBox.NonceLen
   name: NonceLen
-  href: api/LibSodium.Net.SecretBox.html#LibSodium_Net_SecretBox_NonceLen
-  commentId: F:LibSodium.Net.SecretBox.NonceLen
-  fullName: LibSodium.Net.SecretBox.NonceLen
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_NonceLen
+  commentId: F:LibSodium.SecretBox.NonceLen
+  fullName: LibSodium.SecretBox.NonceLen
   nameWithType: SecretBox.NonceLen
-- uid: LibSodium.Net.SecureBigUnsignedInteger
+- uid: LibSodium.SecureBigUnsignedInteger
   name: SecureBigUnsignedInteger
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html
-  commentId: T:LibSodium.Net.SecureBigUnsignedInteger
-  fullName: LibSodium.Net.SecureBigUnsignedInteger
+  href: api/LibSodium.SecureBigUnsignedInteger.html
+  commentId: T:LibSodium.SecureBigUnsignedInteger
+  fullName: LibSodium.SecureBigUnsignedInteger
   nameWithType: SecureBigUnsignedInteger
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Add(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.Add(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Add(Span<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Add_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Add(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Add_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Add(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: Add(Span(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Add(System.Span<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Add(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.Add(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Add(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecureBigUnsignedInteger.Add(Span<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.Add(Span(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Add*
+- uid: LibSodium.SecureBigUnsignedInteger.Add*
   name: Add
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Add_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.Add
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Add_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.Add
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Add
+  fullName: LibSodium.SecureBigUnsignedInteger.Add
   nameWithType: SecureBigUnsignedInteger.Add
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Compare(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Compare_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Compare_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: Compare(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Compare(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecureBigUnsignedInteger.Compare(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.Compare(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Compare*
+- uid: LibSodium.SecureBigUnsignedInteger.Compare*
   name: Compare
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Compare_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.Compare
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Compare_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.Compare
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Compare
+  fullName: LibSodium.SecureBigUnsignedInteger.Compare
   nameWithType: SecureBigUnsignedInteger.Compare
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Equals(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Equals_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Equals_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: Equals(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Equals(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecureBigUnsignedInteger.Equals(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.Equals(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Equals*
+- uid: LibSodium.SecureBigUnsignedInteger.Equals*
   name: Equals
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Equals_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.Equals
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Equals_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.Equals
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Equals
+  fullName: LibSodium.SecureBigUnsignedInteger.Equals
   nameWithType: SecureBigUnsignedInteger.Equals
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.Increment(System.Span{System.Byte})
   name: Increment(Span<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Increment_System_Span_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Increment_System_Span_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Increment(System.Span{System.Byte})
   name.vb: Increment(Span(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.Increment(System.Span<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Increment(System.Span(Of Byte))
   nameWithType: SecureBigUnsignedInteger.Increment(Span<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.Increment(Span(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span{System.Byte},System.UInt64)
+- uid: LibSodium.SecureBigUnsignedInteger.Increment(System.Span{System.Byte},System.UInt64)
   name: Increment(Span<byte>, ulong)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Increment_System_Span_System_Byte__System_UInt64_
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span{System.Byte},System.UInt64)
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Increment_System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Increment(System.Span{System.Byte},System.UInt64)
   name.vb: Increment(Span(Of Byte), ULong)
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span<byte>, ulong)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Increment(System.Span(Of Byte), ULong)
+  fullName: LibSodium.SecureBigUnsignedInteger.Increment(System.Span<byte>, ulong)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Increment(System.Span(Of Byte), ULong)
   nameWithType: SecureBigUnsignedInteger.Increment(Span<byte>, ulong)
   nameWithType.vb: SecureBigUnsignedInteger.Increment(Span(Of Byte), ULong)
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Increment*
+- uid: LibSodium.SecureBigUnsignedInteger.Increment*
   name: Increment
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Increment_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.Increment
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Increment_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.Increment
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Increment
+  fullName: LibSodium.SecureBigUnsignedInteger.Increment
   nameWithType: SecureBigUnsignedInteger.Increment
-- uid: LibSodium.Net.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan{System.Byte})
   name: IsZero(ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_IsZero_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_IsZero_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan{System.Byte})
   name.vb: IsZero(ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.IsZero(System.ReadOnlySpan(Of Byte))
   nameWithType: SecureBigUnsignedInteger.IsZero(ReadOnlySpan<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.IsZero(ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.IsZero*
+- uid: LibSodium.SecureBigUnsignedInteger.IsZero*
   name: IsZero
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_IsZero_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.IsZero
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_IsZero_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.IsZero
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.IsZero
+  fullName: LibSodium.SecureBigUnsignedInteger.IsZero
   nameWithType: SecureBigUnsignedInteger.IsZero
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Subtract(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureBigUnsignedInteger.Subtract(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Subtract(Span<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Subtract_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureBigUnsignedInteger.Subtract(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Subtract_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureBigUnsignedInteger.Subtract(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
   name.vb: Subtract(Span(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Subtract(System.Span<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureBigUnsignedInteger.Subtract(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureBigUnsignedInteger.Subtract(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureBigUnsignedInteger.Subtract(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
   nameWithType: SecureBigUnsignedInteger.Subtract(Span<byte>, ReadOnlySpan<byte>)
   nameWithType.vb: SecureBigUnsignedInteger.Subtract(Span(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureBigUnsignedInteger.Subtract*
+- uid: LibSodium.SecureBigUnsignedInteger.Subtract*
   name: Subtract
-  href: api/LibSodium.Net.SecureBigUnsignedInteger.html#LibSodium_Net_SecureBigUnsignedInteger_Subtract_
-  commentId: Overload:LibSodium.Net.SecureBigUnsignedInteger.Subtract
+  href: api/LibSodium.SecureBigUnsignedInteger.html#LibSodium_SecureBigUnsignedInteger_Subtract_
+  commentId: Overload:LibSodium.SecureBigUnsignedInteger.Subtract
   isSpec: "True"
-  fullName: LibSodium.Net.SecureBigUnsignedInteger.Subtract
+  fullName: LibSodium.SecureBigUnsignedInteger.Subtract
   nameWithType: SecureBigUnsignedInteger.Subtract
-- uid: LibSodium.Net.SecureMemory
+- uid: LibSodium.SecureMemory
   name: SecureMemory
-  href: api/LibSodium.Net.SecureMemory.html
-  commentId: T:LibSodium.Net.SecureMemory
-  fullName: LibSodium.Net.SecureMemory
+  href: api/LibSodium.SecureMemory.html
+  commentId: T:LibSodium.SecureMemory
+  fullName: LibSodium.SecureMemory
   nameWithType: SecureMemory
-- uid: LibSodium.Net.SecureMemory.Create*
+- uid: LibSodium.SecureMemory.Create*
   name: Create
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_Create_
-  commentId: Overload:LibSodium.Net.SecureMemory.Create
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_Create_
+  commentId: Overload:LibSodium.SecureMemory.Create
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory.Create
+  fullName: LibSodium.SecureMemory.Create
   nameWithType: SecureMemory.Create
-- uid: LibSodium.Net.SecureMemory.Create``1(System.Int32)
+- uid: LibSodium.SecureMemory.Create``1(System.Int32)
   name: Create<T>(int)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_Create__1_System_Int32_
-  commentId: M:LibSodium.Net.SecureMemory.Create``1(System.Int32)
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_Create__1_System_Int32_
+  commentId: M:LibSodium.SecureMemory.Create``1(System.Int32)
   name.vb: Create(Of T)(Integer)
-  fullName: LibSodium.Net.SecureMemory.Create<T>(int)
-  fullName.vb: LibSodium.Net.SecureMemory.Create(Of T)(Integer)
+  fullName: LibSodium.SecureMemory.Create<T>(int)
+  fullName.vb: LibSodium.SecureMemory.Create(Of T)(Integer)
   nameWithType: SecureMemory.Create<T>(int)
   nameWithType.vb: SecureMemory.Create(Of T)(Integer)
-- uid: LibSodium.Net.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})
   name: MemLock(ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemLock_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemLock_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})
   name.vb: MemLock(ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureMemory.MemLock(System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemLock(System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureMemory.MemLock(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureMemory.MemLock(System.ReadOnlySpan(Of Byte))
   nameWithType: SecureMemory.MemLock(ReadOnlySpan<byte>)
   nameWithType.vb: SecureMemory.MemLock(ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureMemory.MemLock*
+- uid: LibSodium.SecureMemory.MemLock*
   name: MemLock
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemLock_
-  commentId: Overload:LibSodium.Net.SecureMemory.MemLock
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemLock_
+  commentId: Overload:LibSodium.SecureMemory.MemLock
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory.MemLock
+  fullName: LibSodium.SecureMemory.MemLock
   nameWithType: SecureMemory.MemLock
-- uid: LibSodium.Net.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})
+- uid: LibSodium.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})
   name: MemLock<T>(ReadOnlySpan<T>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemLock__1_System_ReadOnlySpan___0__
-  commentId: M:LibSodium.Net.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemLock__1_System_ReadOnlySpan___0__
+  commentId: M:LibSodium.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})
   name.vb: MemLock(Of T)(ReadOnlySpan(Of T))
-  fullName: LibSodium.Net.SecureMemory.MemLock<T>(System.ReadOnlySpan<T>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemLock(Of T)(System.ReadOnlySpan(Of T))
+  fullName: LibSodium.SecureMemory.MemLock<T>(System.ReadOnlySpan<T>)
+  fullName.vb: LibSodium.SecureMemory.MemLock(Of T)(System.ReadOnlySpan(Of T))
   nameWithType: SecureMemory.MemLock<T>(ReadOnlySpan<T>)
   nameWithType.vb: SecureMemory.MemLock(Of T)(ReadOnlySpan(Of T))
-- uid: LibSodium.Net.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})
+- uid: LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})
   name: MemUnlock(ReadOnlySpan<byte>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemUnlock_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.Net.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemUnlock_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})
   name.vb: MemUnlock(ReadOnlySpan(Of Byte))
-  fullName: LibSodium.Net.SecureMemory.MemUnlock(System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemUnlock(System.ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan(Of Byte))
   nameWithType: SecureMemory.MemUnlock(ReadOnlySpan<byte>)
   nameWithType.vb: SecureMemory.MemUnlock(ReadOnlySpan(Of Byte))
-- uid: LibSodium.Net.SecureMemory.MemUnlock*
+- uid: LibSodium.SecureMemory.MemUnlock*
   name: MemUnlock
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemUnlock_
-  commentId: Overload:LibSodium.Net.SecureMemory.MemUnlock
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemUnlock_
+  commentId: Overload:LibSodium.SecureMemory.MemUnlock
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory.MemUnlock
+  fullName: LibSodium.SecureMemory.MemUnlock
   nameWithType: SecureMemory.MemUnlock
-- uid: LibSodium.Net.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})
+- uid: LibSodium.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})
   name: MemUnlock<T>(ReadOnlySpan<T>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemUnlock__1_System_ReadOnlySpan___0__
-  commentId: M:LibSodium.Net.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemUnlock__1_System_ReadOnlySpan___0__
+  commentId: M:LibSodium.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})
   name.vb: MemUnlock(Of T)(ReadOnlySpan(Of T))
-  fullName: LibSodium.Net.SecureMemory.MemUnlock<T>(System.ReadOnlySpan<T>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemUnlock(Of T)(System.ReadOnlySpan(Of T))
+  fullName: LibSodium.SecureMemory.MemUnlock<T>(System.ReadOnlySpan<T>)
+  fullName.vb: LibSodium.SecureMemory.MemUnlock(Of T)(System.ReadOnlySpan(Of T))
   nameWithType: SecureMemory.MemUnlock<T>(ReadOnlySpan<T>)
   nameWithType.vb: SecureMemory.MemUnlock(Of T)(ReadOnlySpan(Of T))
-- uid: LibSodium.Net.SecureMemory.MemZero(System.Byte[])
+- uid: LibSodium.SecureMemory.MemZero(System.Byte[])
   name: MemZero(byte[])
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemZero_System_Byte___
-  commentId: M:LibSodium.Net.SecureMemory.MemZero(System.Byte[])
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero_System_Byte___
+  commentId: M:LibSodium.SecureMemory.MemZero(System.Byte[])
   name.vb: MemZero(Byte())
-  fullName: LibSodium.Net.SecureMemory.MemZero(byte[])
-  fullName.vb: LibSodium.Net.SecureMemory.MemZero(Byte())
+  fullName: LibSodium.SecureMemory.MemZero(byte[])
+  fullName.vb: LibSodium.SecureMemory.MemZero(Byte())
   nameWithType: SecureMemory.MemZero(byte[])
   nameWithType.vb: SecureMemory.MemZero(Byte())
-- uid: LibSodium.Net.SecureMemory.MemZero(System.Span{System.Byte})
+- uid: LibSodium.SecureMemory.MemZero(System.Span{System.Byte})
   name: MemZero(Span<byte>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemZero_System_Span_System_Byte__
-  commentId: M:LibSodium.Net.SecureMemory.MemZero(System.Span{System.Byte})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero_System_Span_System_Byte__
+  commentId: M:LibSodium.SecureMemory.MemZero(System.Span{System.Byte})
   name.vb: MemZero(Span(Of Byte))
-  fullName: LibSodium.Net.SecureMemory.MemZero(System.Span<byte>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemZero(System.Span(Of Byte))
+  fullName: LibSodium.SecureMemory.MemZero(System.Span<byte>)
+  fullName.vb: LibSodium.SecureMemory.MemZero(System.Span(Of Byte))
   nameWithType: SecureMemory.MemZero(Span<byte>)
   nameWithType.vb: SecureMemory.MemZero(Span(Of Byte))
-- uid: LibSodium.Net.SecureMemory.MemZero*
+- uid: LibSodium.SecureMemory.MemZero*
   name: MemZero
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemZero_
-  commentId: Overload:LibSodium.Net.SecureMemory.MemZero
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero_
+  commentId: Overload:LibSodium.SecureMemory.MemZero
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory.MemZero
+  fullName: LibSodium.SecureMemory.MemZero
   nameWithType: SecureMemory.MemZero
-- uid: LibSodium.Net.SecureMemory.MemZero``1(System.Span{``0})
+- uid: LibSodium.SecureMemory.MemZero``1(System.Span{``0})
   name: MemZero<T>(Span<T>)
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemZero__1_System_Span___0__
-  commentId: M:LibSodium.Net.SecureMemory.MemZero``1(System.Span{``0})
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero__1_System_Span___0__
+  commentId: M:LibSodium.SecureMemory.MemZero``1(System.Span{``0})
   name.vb: MemZero(Of T)(Span(Of T))
-  fullName: LibSodium.Net.SecureMemory.MemZero<T>(System.Span<T>)
-  fullName.vb: LibSodium.Net.SecureMemory.MemZero(Of T)(System.Span(Of T))
+  fullName: LibSodium.SecureMemory.MemZero<T>(System.Span<T>)
+  fullName.vb: LibSodium.SecureMemory.MemZero(Of T)(System.Span(Of T))
   nameWithType: SecureMemory.MemZero<T>(Span<T>)
   nameWithType.vb: SecureMemory.MemZero(Of T)(Span(Of T))
-- uid: LibSodium.Net.SecureMemory.MemZero``1(``0[])
+- uid: LibSodium.SecureMemory.MemZero``1(``0[])
   name: MemZero<T>(T[])
-  href: api/LibSodium.Net.SecureMemory.html#LibSodium_Net_SecureMemory_MemZero__1___0___
-  commentId: M:LibSodium.Net.SecureMemory.MemZero``1(``0[])
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero__1___0___
+  commentId: M:LibSodium.SecureMemory.MemZero``1(``0[])
   name.vb: MemZero(Of T)(T())
-  fullName: LibSodium.Net.SecureMemory.MemZero<T>(T[])
-  fullName.vb: LibSodium.Net.SecureMemory.MemZero(Of T)(T())
+  fullName: LibSodium.SecureMemory.MemZero<T>(T[])
+  fullName.vb: LibSodium.SecureMemory.MemZero(Of T)(T())
   nameWithType: SecureMemory.MemZero<T>(T[])
   nameWithType.vb: SecureMemory.MemZero(Of T)(T())
-- uid: LibSodium.Net.SecureMemory`1
+- uid: LibSodium.SecureMemory`1
   name: SecureMemory<T>
-  href: api/LibSodium.Net.SecureMemory-1.html
-  commentId: T:LibSodium.Net.SecureMemory`1
+  href: api/LibSodium.SecureMemory-1.html
+  commentId: T:LibSodium.SecureMemory`1
   name.vb: SecureMemory(Of T)
-  fullName: LibSodium.Net.SecureMemory<T>
-  fullName.vb: LibSodium.Net.SecureMemory(Of T)
+  fullName: LibSodium.SecureMemory<T>
+  fullName.vb: LibSodium.SecureMemory(Of T)
   nameWithType: SecureMemory<T>
   nameWithType.vb: SecureMemory(Of T)
-- uid: LibSodium.Net.SecureMemory`1.#ctor(System.Int32)
+- uid: LibSodium.SecureMemory`1.#ctor(System.Int32)
   name: SecureMemory(int)
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1__ctor_System_Int32_
-  commentId: M:LibSodium.Net.SecureMemory`1.#ctor(System.Int32)
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1__ctor_System_Int32_
+  commentId: M:LibSodium.SecureMemory`1.#ctor(System.Int32)
   name.vb: New(Integer)
-  fullName: LibSodium.Net.SecureMemory<T>.SecureMemory(int)
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).New(Integer)
+  fullName: LibSodium.SecureMemory<T>.SecureMemory(int)
+  fullName.vb: LibSodium.SecureMemory(Of T).New(Integer)
   nameWithType: SecureMemory<T>.SecureMemory(int)
   nameWithType.vb: SecureMemory(Of T).New(Integer)
-- uid: LibSodium.Net.SecureMemory`1.#ctor*
+- uid: LibSodium.SecureMemory`1.#ctor*
   name: SecureMemory
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1__ctor_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.#ctor
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1__ctor_
+  commentId: Overload:LibSodium.SecureMemory`1.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: LibSodium.Net.SecureMemory<T>.SecureMemory
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).New
+  fullName: LibSodium.SecureMemory<T>.SecureMemory
+  fullName.vb: LibSodium.SecureMemory(Of T).New
   nameWithType: SecureMemory<T>.SecureMemory
   nameWithType.vb: SecureMemory(Of T).New
-- uid: LibSodium.Net.SecureMemory`1.AsReadOnlySpan
+- uid: LibSodium.SecureMemory`1.AsReadOnlySpan
   name: AsReadOnlySpan()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_AsReadOnlySpan
-  commentId: M:LibSodium.Net.SecureMemory`1.AsReadOnlySpan
-  fullName: LibSodium.Net.SecureMemory<T>.AsReadOnlySpan()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).AsReadOnlySpan()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsReadOnlySpan
+  commentId: M:LibSodium.SecureMemory`1.AsReadOnlySpan
+  fullName: LibSodium.SecureMemory<T>.AsReadOnlySpan()
+  fullName.vb: LibSodium.SecureMemory(Of T).AsReadOnlySpan()
   nameWithType: SecureMemory<T>.AsReadOnlySpan()
   nameWithType.vb: SecureMemory(Of T).AsReadOnlySpan()
-- uid: LibSodium.Net.SecureMemory`1.AsReadOnlySpan*
+- uid: LibSodium.SecureMemory`1.AsReadOnlySpan*
   name: AsReadOnlySpan
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_AsReadOnlySpan_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.AsReadOnlySpan
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsReadOnlySpan_
+  commentId: Overload:LibSodium.SecureMemory`1.AsReadOnlySpan
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.AsReadOnlySpan
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).AsReadOnlySpan
+  fullName: LibSodium.SecureMemory<T>.AsReadOnlySpan
+  fullName.vb: LibSodium.SecureMemory(Of T).AsReadOnlySpan
   nameWithType: SecureMemory<T>.AsReadOnlySpan
   nameWithType.vb: SecureMemory(Of T).AsReadOnlySpan
-- uid: LibSodium.Net.SecureMemory`1.AsSpan
+- uid: LibSodium.SecureMemory`1.AsSpan
   name: AsSpan()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_AsSpan
-  commentId: M:LibSodium.Net.SecureMemory`1.AsSpan
-  fullName: LibSodium.Net.SecureMemory<T>.AsSpan()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).AsSpan()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsSpan
+  commentId: M:LibSodium.SecureMemory`1.AsSpan
+  fullName: LibSodium.SecureMemory<T>.AsSpan()
+  fullName.vb: LibSodium.SecureMemory(Of T).AsSpan()
   nameWithType: SecureMemory<T>.AsSpan()
   nameWithType.vb: SecureMemory(Of T).AsSpan()
-- uid: LibSodium.Net.SecureMemory`1.AsSpan*
+- uid: LibSodium.SecureMemory`1.AsSpan*
   name: AsSpan
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_AsSpan_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.AsSpan
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsSpan_
+  commentId: Overload:LibSodium.SecureMemory`1.AsSpan
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.AsSpan
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).AsSpan
+  fullName: LibSodium.SecureMemory<T>.AsSpan
+  fullName.vb: LibSodium.SecureMemory(Of T).AsSpan
   nameWithType: SecureMemory<T>.AsSpan
   nameWithType.vb: SecureMemory(Of T).AsSpan
-- uid: LibSodium.Net.SecureMemory`1.Dispose
+- uid: LibSodium.SecureMemory`1.Dispose
   name: Dispose()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Dispose
-  commentId: M:LibSodium.Net.SecureMemory`1.Dispose
-  fullName: LibSodium.Net.SecureMemory<T>.Dispose()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).Dispose()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Dispose
+  commentId: M:LibSodium.SecureMemory`1.Dispose
+  fullName: LibSodium.SecureMemory<T>.Dispose()
+  fullName.vb: LibSodium.SecureMemory(Of T).Dispose()
   nameWithType: SecureMemory<T>.Dispose()
   nameWithType.vb: SecureMemory(Of T).Dispose()
-- uid: LibSodium.Net.SecureMemory`1.Dispose*
+- uid: LibSodium.SecureMemory`1.Dispose*
   name: Dispose
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Dispose_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.Dispose
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Dispose_
+  commentId: Overload:LibSodium.SecureMemory`1.Dispose
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.Dispose
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).Dispose
+  fullName: LibSodium.SecureMemory<T>.Dispose
+  fullName.vb: LibSodium.SecureMemory(Of T).Dispose
   nameWithType: SecureMemory<T>.Dispose
   nameWithType.vb: SecureMemory(Of T).Dispose
-- uid: LibSodium.Net.SecureMemory`1.Finalize
+- uid: LibSodium.SecureMemory`1.Finalize
   name: ~SecureMemory()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Finalize
-  commentId: M:LibSodium.Net.SecureMemory`1.Finalize
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Finalize
+  commentId: M:LibSodium.SecureMemory`1.Finalize
   name.vb: ''
-  fullName: LibSodium.Net.SecureMemory<T>.~SecureMemory()
+  fullName: LibSodium.SecureMemory<T>.~SecureMemory()
   fullName.vb: ''
   nameWithType: SecureMemory<T>.~SecureMemory()
   nameWithType.vb: ''
-- uid: LibSodium.Net.SecureMemory`1.Finalize*
+- uid: LibSodium.SecureMemory`1.Finalize*
   name: ~SecureMemory
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Finalize_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.Finalize
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Finalize_
+  commentId: Overload:LibSodium.SecureMemory`1.Finalize
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.~SecureMemory
+  fullName: LibSodium.SecureMemory<T>.~SecureMemory
   nameWithType: SecureMemory<T>.~SecureMemory
-- uid: LibSodium.Net.SecureMemory`1.IsDisposed
+- uid: LibSodium.SecureMemory`1.IsDisposed
   name: IsDisposed
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_IsDisposed
-  commentId: P:LibSodium.Net.SecureMemory`1.IsDisposed
-  fullName: LibSodium.Net.SecureMemory<T>.IsDisposed
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).IsDisposed
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsDisposed
+  commentId: P:LibSodium.SecureMemory`1.IsDisposed
+  fullName: LibSodium.SecureMemory<T>.IsDisposed
+  fullName.vb: LibSodium.SecureMemory(Of T).IsDisposed
   nameWithType: SecureMemory<T>.IsDisposed
   nameWithType.vb: SecureMemory(Of T).IsDisposed
-- uid: LibSodium.Net.SecureMemory`1.IsDisposed*
+- uid: LibSodium.SecureMemory`1.IsDisposed*
   name: IsDisposed
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_IsDisposed_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.IsDisposed
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsDisposed_
+  commentId: Overload:LibSodium.SecureMemory`1.IsDisposed
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.IsDisposed
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).IsDisposed
+  fullName: LibSodium.SecureMemory<T>.IsDisposed
+  fullName.vb: LibSodium.SecureMemory(Of T).IsDisposed
   nameWithType: SecureMemory<T>.IsDisposed
   nameWithType.vb: SecureMemory(Of T).IsDisposed
-- uid: LibSodium.Net.SecureMemory`1.IsReadOnly
+- uid: LibSodium.SecureMemory`1.IsReadOnly
   name: IsReadOnly
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_IsReadOnly
-  commentId: P:LibSodium.Net.SecureMemory`1.IsReadOnly
-  fullName: LibSodium.Net.SecureMemory<T>.IsReadOnly
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).IsReadOnly
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsReadOnly
+  commentId: P:LibSodium.SecureMemory`1.IsReadOnly
+  fullName: LibSodium.SecureMemory<T>.IsReadOnly
+  fullName.vb: LibSodium.SecureMemory(Of T).IsReadOnly
   nameWithType: SecureMemory<T>.IsReadOnly
   nameWithType.vb: SecureMemory(Of T).IsReadOnly
-- uid: LibSodium.Net.SecureMemory`1.IsReadOnly*
+- uid: LibSodium.SecureMemory`1.IsReadOnly*
   name: IsReadOnly
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_IsReadOnly_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.IsReadOnly
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsReadOnly_
+  commentId: Overload:LibSodium.SecureMemory`1.IsReadOnly
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.IsReadOnly
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).IsReadOnly
+  fullName: LibSodium.SecureMemory<T>.IsReadOnly
+  fullName.vb: LibSodium.SecureMemory(Of T).IsReadOnly
   nameWithType: SecureMemory<T>.IsReadOnly
   nameWithType.vb: SecureMemory(Of T).IsReadOnly
-- uid: LibSodium.Net.SecureMemory`1.Length
+- uid: LibSodium.SecureMemory`1.Length
   name: Length
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Length
-  commentId: P:LibSodium.Net.SecureMemory`1.Length
-  fullName: LibSodium.Net.SecureMemory<T>.Length
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).Length
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Length
+  commentId: P:LibSodium.SecureMemory`1.Length
+  fullName: LibSodium.SecureMemory<T>.Length
+  fullName.vb: LibSodium.SecureMemory(Of T).Length
   nameWithType: SecureMemory<T>.Length
   nameWithType.vb: SecureMemory(Of T).Length
-- uid: LibSodium.Net.SecureMemory`1.Length*
+- uid: LibSodium.SecureMemory`1.Length*
   name: Length
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_Length_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.Length
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Length_
+  commentId: Overload:LibSodium.SecureMemory`1.Length
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.Length
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).Length
+  fullName: LibSodium.SecureMemory<T>.Length
+  fullName.vb: LibSodium.SecureMemory(Of T).Length
   nameWithType: SecureMemory<T>.Length
   nameWithType.vb: SecureMemory(Of T).Length
-- uid: LibSodium.Net.SecureMemory`1.MemZero
+- uid: LibSodium.SecureMemory`1.MemZero
   name: MemZero()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_MemZero
-  commentId: M:LibSodium.Net.SecureMemory`1.MemZero
-  fullName: LibSodium.Net.SecureMemory<T>.MemZero()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).MemZero()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_MemZero
+  commentId: M:LibSodium.SecureMemory`1.MemZero
+  fullName: LibSodium.SecureMemory<T>.MemZero()
+  fullName.vb: LibSodium.SecureMemory(Of T).MemZero()
   nameWithType: SecureMemory<T>.MemZero()
   nameWithType.vb: SecureMemory(Of T).MemZero()
-- uid: LibSodium.Net.SecureMemory`1.MemZero*
+- uid: LibSodium.SecureMemory`1.MemZero*
   name: MemZero
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_MemZero_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.MemZero
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_MemZero_
+  commentId: Overload:LibSodium.SecureMemory`1.MemZero
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.MemZero
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).MemZero
+  fullName: LibSodium.SecureMemory<T>.MemZero
+  fullName.vb: LibSodium.SecureMemory(Of T).MemZero
   nameWithType: SecureMemory<T>.MemZero
   nameWithType.vb: SecureMemory(Of T).MemZero
-- uid: LibSodium.Net.SecureMemory`1.ProtectReadOnly
+- uid: LibSodium.SecureMemory`1.ProtectReadOnly
   name: ProtectReadOnly()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_ProtectReadOnly
-  commentId: M:LibSodium.Net.SecureMemory`1.ProtectReadOnly
-  fullName: LibSodium.Net.SecureMemory<T>.ProtectReadOnly()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).ProtectReadOnly()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_ProtectReadOnly
+  commentId: M:LibSodium.SecureMemory`1.ProtectReadOnly
+  fullName: LibSodium.SecureMemory<T>.ProtectReadOnly()
+  fullName.vb: LibSodium.SecureMemory(Of T).ProtectReadOnly()
   nameWithType: SecureMemory<T>.ProtectReadOnly()
   nameWithType.vb: SecureMemory(Of T).ProtectReadOnly()
-- uid: LibSodium.Net.SecureMemory`1.ProtectReadOnly*
+- uid: LibSodium.SecureMemory`1.ProtectReadOnly*
   name: ProtectReadOnly
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_ProtectReadOnly_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.ProtectReadOnly
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_ProtectReadOnly_
+  commentId: Overload:LibSodium.SecureMemory`1.ProtectReadOnly
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.ProtectReadOnly
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).ProtectReadOnly
+  fullName: LibSodium.SecureMemory<T>.ProtectReadOnly
+  fullName.vb: LibSodium.SecureMemory(Of T).ProtectReadOnly
   nameWithType: SecureMemory<T>.ProtectReadOnly
   nameWithType.vb: SecureMemory(Of T).ProtectReadOnly
-- uid: LibSodium.Net.SecureMemory`1.ProtectReadWrite
+- uid: LibSodium.SecureMemory`1.ProtectReadWrite
   name: ProtectReadWrite()
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_ProtectReadWrite
-  commentId: M:LibSodium.Net.SecureMemory`1.ProtectReadWrite
-  fullName: LibSodium.Net.SecureMemory<T>.ProtectReadWrite()
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).ProtectReadWrite()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_ProtectReadWrite
+  commentId: M:LibSodium.SecureMemory`1.ProtectReadWrite
+  fullName: LibSodium.SecureMemory<T>.ProtectReadWrite()
+  fullName.vb: LibSodium.SecureMemory(Of T).ProtectReadWrite()
   nameWithType: SecureMemory<T>.ProtectReadWrite()
   nameWithType.vb: SecureMemory(Of T).ProtectReadWrite()
-- uid: LibSodium.Net.SecureMemory`1.ProtectReadWrite*
+- uid: LibSodium.SecureMemory`1.ProtectReadWrite*
   name: ProtectReadWrite
-  href: api/LibSodium.Net.SecureMemory-1.html#LibSodium_Net_SecureMemory_1_ProtectReadWrite_
-  commentId: Overload:LibSodium.Net.SecureMemory`1.ProtectReadWrite
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_ProtectReadWrite_
+  commentId: Overload:LibSodium.SecureMemory`1.ProtectReadWrite
   isSpec: "True"
-  fullName: LibSodium.Net.SecureMemory<T>.ProtectReadWrite
-  fullName.vb: LibSodium.Net.SecureMemory(Of T).ProtectReadWrite
+  fullName: LibSodium.SecureMemory<T>.ProtectReadWrite
+  fullName.vb: LibSodium.SecureMemory(Of T).ProtectReadWrite
   nameWithType: SecureMemory<T>.ProtectReadWrite
   nameWithType.vb: SecureMemory(Of T).ProtectReadWrite
-- uid: LibSodium.Net.SecurePadding
+- uid: LibSodium.SecurePadding
   name: SecurePadding
-  href: api/LibSodium.Net.SecurePadding.html
-  commentId: T:LibSodium.Net.SecurePadding
-  fullName: LibSodium.Net.SecurePadding
+  href: api/LibSodium.SecurePadding.html
+  commentId: T:LibSodium.SecurePadding
+  fullName: LibSodium.SecurePadding
   nameWithType: SecurePadding
-- uid: LibSodium.Net.SecurePadding.Pad(System.Span{System.Byte},System.Int32,System.Int32)
+- uid: LibSodium.SecurePadding.Pad(System.Span{System.Byte},System.Int32,System.Int32)
   name: Pad(Span<byte>, int, int)
-  href: api/LibSodium.Net.SecurePadding.html#LibSodium_Net_SecurePadding_Pad_System_Span_System_Byte__System_Int32_System_Int32_
-  commentId: M:LibSodium.Net.SecurePadding.Pad(System.Span{System.Byte},System.Int32,System.Int32)
+  href: api/LibSodium.SecurePadding.html#LibSodium_SecurePadding_Pad_System_Span_System_Byte__System_Int32_System_Int32_
+  commentId: M:LibSodium.SecurePadding.Pad(System.Span{System.Byte},System.Int32,System.Int32)
   name.vb: Pad(Span(Of Byte), Integer, Integer)
-  fullName: LibSodium.Net.SecurePadding.Pad(System.Span<byte>, int, int)
-  fullName.vb: LibSodium.Net.SecurePadding.Pad(System.Span(Of Byte), Integer, Integer)
+  fullName: LibSodium.SecurePadding.Pad(System.Span<byte>, int, int)
+  fullName.vb: LibSodium.SecurePadding.Pad(System.Span(Of Byte), Integer, Integer)
   nameWithType: SecurePadding.Pad(Span<byte>, int, int)
   nameWithType.vb: SecurePadding.Pad(Span(Of Byte), Integer, Integer)
-- uid: LibSodium.Net.SecurePadding.Pad*
+- uid: LibSodium.SecurePadding.Pad*
   name: Pad
-  href: api/LibSodium.Net.SecurePadding.html#LibSodium_Net_SecurePadding_Pad_
-  commentId: Overload:LibSodium.Net.SecurePadding.Pad
+  href: api/LibSodium.SecurePadding.html#LibSodium_SecurePadding_Pad_
+  commentId: Overload:LibSodium.SecurePadding.Pad
   isSpec: "True"
-  fullName: LibSodium.Net.SecurePadding.Pad
+  fullName: LibSodium.SecurePadding.Pad
   nameWithType: SecurePadding.Pad
-- uid: LibSodium.Net.SecurePadding.Unpad(System.Span{System.Byte},System.Int32)
+- uid: LibSodium.SecurePadding.Unpad(System.Span{System.Byte},System.Int32)
   name: Unpad(Span<byte>, int)
-  href: api/LibSodium.Net.SecurePadding.html#LibSodium_Net_SecurePadding_Unpad_System_Span_System_Byte__System_Int32_
-  commentId: M:LibSodium.Net.SecurePadding.Unpad(System.Span{System.Byte},System.Int32)
+  href: api/LibSodium.SecurePadding.html#LibSodium_SecurePadding_Unpad_System_Span_System_Byte__System_Int32_
+  commentId: M:LibSodium.SecurePadding.Unpad(System.Span{System.Byte},System.Int32)
   name.vb: Unpad(Span(Of Byte), Integer)
-  fullName: LibSodium.Net.SecurePadding.Unpad(System.Span<byte>, int)
-  fullName.vb: LibSodium.Net.SecurePadding.Unpad(System.Span(Of Byte), Integer)
+  fullName: LibSodium.SecurePadding.Unpad(System.Span<byte>, int)
+  fullName.vb: LibSodium.SecurePadding.Unpad(System.Span(Of Byte), Integer)
   nameWithType: SecurePadding.Unpad(Span<byte>, int)
   nameWithType.vb: SecurePadding.Unpad(Span(Of Byte), Integer)
-- uid: LibSodium.Net.SecurePadding.Unpad*
+- uid: LibSodium.SecurePadding.Unpad*
   name: Unpad
-  href: api/LibSodium.Net.SecurePadding.html#LibSodium_Net_SecurePadding_Unpad_
-  commentId: Overload:LibSodium.Net.SecurePadding.Unpad
+  href: api/LibSodium.SecurePadding.html#LibSodium_SecurePadding_Unpad_
+  commentId: Overload:LibSodium.SecurePadding.Unpad
   isSpec: "True"
-  fullName: LibSodium.Net.SecurePadding.Unpad
+  fullName: LibSodium.SecurePadding.Unpad
   nameWithType: SecurePadding.Unpad
-- uid: LibSodium.Net.SodioException
+- uid: LibSodium.SodioException
   name: SodioException
-  href: api/LibSodium.Net.SodioException.html
-  commentId: T:LibSodium.Net.SodioException
-  fullName: LibSodium.Net.SodioException
+  href: api/LibSodium.SodioException.html
+  commentId: T:LibSodium.SodioException
+  fullName: LibSodium.SodioException
   nameWithType: SodioException
-- uid: LibSodium.Net.SodioException.#ctor
+- uid: LibSodium.SodioException.#ctor
   name: SodioException()
-  href: api/LibSodium.Net.SodioException.html#LibSodium_Net_SodioException__ctor
-  commentId: M:LibSodium.Net.SodioException.#ctor
+  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor
+  commentId: M:LibSodium.SodioException.#ctor
   name.vb: New()
-  fullName: LibSodium.Net.SodioException.SodioException()
-  fullName.vb: LibSodium.Net.SodioException.New()
+  fullName: LibSodium.SodioException.SodioException()
+  fullName.vb: LibSodium.SodioException.New()
   nameWithType: SodioException.SodioException()
   nameWithType.vb: SodioException.New()
-- uid: LibSodium.Net.SodioException.#ctor(System.String)
+- uid: LibSodium.SodioException.#ctor(System.String)
   name: SodioException(string?)
-  href: api/LibSodium.Net.SodioException.html#LibSodium_Net_SodioException__ctor_System_String_
-  commentId: M:LibSodium.Net.SodioException.#ctor(System.String)
+  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_System_String_
+  commentId: M:LibSodium.SodioException.#ctor(System.String)
   name.vb: New(String)
-  fullName: LibSodium.Net.SodioException.SodioException(string?)
-  fullName.vb: LibSodium.Net.SodioException.New(String)
+  fullName: LibSodium.SodioException.SodioException(string?)
+  fullName.vb: LibSodium.SodioException.New(String)
   nameWithType: SodioException.SodioException(string?)
   nameWithType.vb: SodioException.New(String)
-- uid: LibSodium.Net.SodioException.#ctor(System.String,System.Exception)
+- uid: LibSodium.SodioException.#ctor(System.String,System.Exception)
   name: SodioException(string?, Exception?)
-  href: api/LibSodium.Net.SodioException.html#LibSodium_Net_SodioException__ctor_System_String_System_Exception_
-  commentId: M:LibSodium.Net.SodioException.#ctor(System.String,System.Exception)
+  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_System_String_System_Exception_
+  commentId: M:LibSodium.SodioException.#ctor(System.String,System.Exception)
   name.vb: New(String, Exception)
-  fullName: LibSodium.Net.SodioException.SodioException(string?, System.Exception?)
-  fullName.vb: LibSodium.Net.SodioException.New(String, System.Exception)
+  fullName: LibSodium.SodioException.SodioException(string?, System.Exception?)
+  fullName.vb: LibSodium.SodioException.New(String, System.Exception)
   nameWithType: SodioException.SodioException(string?, Exception?)
   nameWithType.vb: SodioException.New(String, Exception)
-- uid: LibSodium.Net.SodioException.#ctor*
+- uid: LibSodium.SodioException.#ctor*
   name: SodioException
-  href: api/LibSodium.Net.SodioException.html#LibSodium_Net_SodioException__ctor_
-  commentId: Overload:LibSodium.Net.SodioException.#ctor
+  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_
+  commentId: Overload:LibSodium.SodioException.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: LibSodium.Net.SodioException.SodioException
-  fullName.vb: LibSodium.Net.SodioException.New
+  fullName: LibSodium.SodioException.SodioException
+  fullName.vb: LibSodium.SodioException.New
   nameWithType: SodioException.SodioException
   nameWithType.vb: SodioException.New
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1
+- uid: LibSodium.UnmanagedMemorySpanHolder`1
   name: UnmanagedMemorySpanHolder<T>
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html
-  commentId: T:LibSodium.Net.UnmanagedMemorySpanHolder`1
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html
+  commentId: T:LibSodium.UnmanagedMemorySpanHolder`1
   name.vb: UnmanagedMemorySpanHolder(Of T)
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T)
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T)
   nameWithType: UnmanagedMemorySpanHolder<T>
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T)
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor(System.ReadOnlySpan{`0})
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.#ctor(System.ReadOnlySpan{`0})
   name: UnmanagedMemorySpanHolder(ReadOnlySpan<T>)
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1__ctor_System_ReadOnlySpan__0__
-  commentId: M:LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor(System.ReadOnlySpan{`0})
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1__ctor_System_ReadOnlySpan__0__
+  commentId: M:LibSodium.UnmanagedMemorySpanHolder`1.#ctor(System.ReadOnlySpan{`0})
   name.vb: New(ReadOnlySpan(Of T))
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(System.ReadOnlySpan<T>)
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).New(System.ReadOnlySpan(Of T))
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(System.ReadOnlySpan<T>)
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).New(System.ReadOnlySpan(Of T))
   nameWithType: UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(ReadOnlySpan<T>)
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).New(ReadOnlySpan(Of T))
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor(System.Span{`0})
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.#ctor(System.Span{`0})
   name: UnmanagedMemorySpanHolder(Span<T>)
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1__ctor_System_Span__0__
-  commentId: M:LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor(System.Span{`0})
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1__ctor_System_Span__0__
+  commentId: M:LibSodium.UnmanagedMemorySpanHolder`1.#ctor(System.Span{`0})
   name.vb: New(Span(Of T))
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(System.Span<T>)
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).New(System.Span(Of T))
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(System.Span<T>)
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).New(System.Span(Of T))
   nameWithType: UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder(Span<T>)
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).New(Span(Of T))
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor*
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.#ctor*
   name: UnmanagedMemorySpanHolder
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1__ctor_
-  commentId: Overload:LibSodium.Net.UnmanagedMemorySpanHolder`1.#ctor
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1__ctor_
+  commentId: Overload:LibSodium.UnmanagedMemorySpanHolder`1.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).New
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).New
   nameWithType: UnmanagedMemorySpanHolder<T>.UnmanagedMemorySpanHolder
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).New
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
   name: GetOriginalReadOnlySpan()
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1_GetOriginalReadOnlySpan
-  commentId: M:LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan()
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan()
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1_GetOriginalReadOnlySpan
+  commentId: M:LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan()
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan()
   nameWithType: UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan()
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan()
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan*
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan*
   name: GetOriginalReadOnlySpan
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1_GetOriginalReadOnlySpan_
-  commentId: Overload:LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1_GetOriginalReadOnlySpan_
+  commentId: Overload:LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalReadOnlySpan
   isSpec: "True"
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan
   nameWithType: UnmanagedMemorySpanHolder<T>.GetOriginalReadOnlySpan
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).GetOriginalReadOnlySpan
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalSpan
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalSpan
   name: GetOriginalSpan()
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1_GetOriginalSpan
-  commentId: M:LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalSpan
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.GetOriginalSpan()
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).GetOriginalSpan()
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1_GetOriginalSpan
+  commentId: M:LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalSpan
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.GetOriginalSpan()
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).GetOriginalSpan()
   nameWithType: UnmanagedMemorySpanHolder<T>.GetOriginalSpan()
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).GetOriginalSpan()
-- uid: LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalSpan*
+- uid: LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalSpan*
   name: GetOriginalSpan
-  href: api/LibSodium.Net.UnmanagedMemorySpanHolder-1.html#LibSodium_Net_UnmanagedMemorySpanHolder_1_GetOriginalSpan_
-  commentId: Overload:LibSodium.Net.UnmanagedMemorySpanHolder`1.GetOriginalSpan
+  href: api/LibSodium.UnmanagedMemorySpanHolder-1.html#LibSodium_UnmanagedMemorySpanHolder_1_GetOriginalSpan_
+  commentId: Overload:LibSodium.UnmanagedMemorySpanHolder`1.GetOriginalSpan
   isSpec: "True"
-  fullName: LibSodium.Net.UnmanagedMemorySpanHolder<T>.GetOriginalSpan
-  fullName.vb: LibSodium.Net.UnmanagedMemorySpanHolder(Of T).GetOriginalSpan
+  fullName: LibSodium.UnmanagedMemorySpanHolder<T>.GetOriginalSpan
+  fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).GetOriginalSpan
   nameWithType: UnmanagedMemorySpanHolder<T>.GetOriginalSpan
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).GetOriginalSpan
