@@ -1,0 +1,295 @@
+{
+  "source_base_path": "C:/projects/LibSodium.Net/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.Base64Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.Base64Encoding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.Base64Encoding",
+      "Summary": "<p sourcefile=\"api/LibSodium.Base64Encoding.yml\" sourcestartlinenumber=\"1\">Provides methods for Base64 encoding and decoding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.Base64Variant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.Base64Variant.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.Base64Variant",
+      "Summary": "<p sourcefile=\"api/LibSodium.Base64Variant.yml\" sourcestartlinenumber=\"1\">Represents Base64 encoding variants.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.HexEncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.HexEncoding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.HexEncoding",
+      "Summary": "<p sourcefile=\"api/LibSodium.HexEncoding.yml\" sourcestartlinenumber=\"1\">Provides methods for encoding and decoding hexadecimal strings and byte buffers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.LibSodiumException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.LibSodiumException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.LibSodiumException",
+      "Summary": "<p sourcefile=\"api/LibSodium.LibSodiumException.yml\" sourcestartlinenumber=\"1\">Represents errors that occur during Sodium operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.LibraryInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.LibraryInitializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.LibraryInitializer",
+      "Summary": "<p sourcefile=\"api/LibSodium.LibraryInitializer.yml\" sourcestartlinenumber=\"1\">Static class that manages the initialization and configuration of libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.LibraryVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.LibraryVersion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.LibraryVersion",
+      "Summary": "<p sourcefile=\"api/LibSodium.LibraryVersion.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve the version information of the Sodium library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.RandomGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.RandomGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.RandomGenerator",
+      "Summary": "<p sourcefile=\"api/LibSodium.RandomGenerator.yml\" sourcestartlinenumber=\"1\">Static class for random number generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecretBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecretBox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecretBox",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecretBox.yml\" sourcestartlinenumber=\"1\">Provides static methods for authenticated symmetric encryption and decryption using the Sodium secretbox primitives,\nspecifically the XSalsa20 stream cipher and Poly1305 MAC for authentication.\nThese methods offer combined encryption/authentication and detached encryption/authentication,\nwith variations for handling nonces and Message Authentication Codes (MACs) within or separate from the ciphertext.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecureBigUnsignedInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecureBigUnsignedInteger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecureBigUnsignedInteger",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecureBigUnsignedInteger.yml\" sourcestartlinenumber=\"1\">Provides methods for working with arbitrary large little endian big unsigned integers in a secure way\n(constant time for a given length)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecureMemory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecureMemory-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecureMemory<T>",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecureMemory-1.yml\" sourcestartlinenumber=\"1\">Provides a secure unmanaged memory buffer for unmanaged types, using libsodium for memory protection.\nThis class encapsulates secure memory allocation, read-only protection, and zeroing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecureMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecureMemory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecureMemory",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecureMemory.yml\" sourcestartlinenumber=\"1\">Provides methods for secure memory management using libsodium.\nThese methods help protect sensitive data from being swapped to disk or accessed by other processes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecurePadding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecurePadding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecurePadding",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecurePadding.yml\" sourcestartlinenumber=\"1\">Provides methods for padding and unpadding byte buffers to ensure they meet specified block sizes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SodioException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SodioException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SodioException",
+      "Summary": "<p sourcefile=\"api/LibSodium.SodioException.yml\" sourcestartlinenumber=\"1\">Represents errors that occur during Sodium operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.UnmanagedMemorySpanHolder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.UnmanagedMemorySpanHolder-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.UnmanagedMemorySpanHolder<T>",
+      "Summary": "<p sourcefile=\"api/LibSodium.UnmanagedMemorySpanHolder-1.yml\" sourcestartlinenumber=\"1\">Holds the pointer and length of an <em sourcefile=\"api/LibSodium.UnmanagedMemorySpanHolder-1.yml\" sourcestartlinenumber=\"1\">unmanaged</em> memory span for later recreation. <strong sourcefile=\"api/LibSodium.UnmanagedMemorySpanHolder-1.yml\" sourcestartlinenumber=\"1\">Use only with unmanaged memory.</strong></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "features.md",
+      "output": {
+        ".html": {
+          "relative_path": "features.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Na.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Na.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
