@@ -40,6 +40,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoSecretStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoSecretStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoSecretStream",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStream.yml\" sourcestartlinenumber=\"1\">The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoSecretStreamTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoSecretStreamTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoSecretStreamTag",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStreamTag.yml\" sourcestartlinenumber=\"1\">The tags used in the secret stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.HexEncoding.yml",
       "output": {
         ".html": {
@@ -177,20 +205,6 @@
       "IsMRef": true,
       "Title": "LibSodium.SecurePadding",
       "Summary": "<p sourcefile=\"api/LibSodium.SecurePadding.yml\" sourcestartlinenumber=\"1\">Provides methods for padding and unpadding byte buffers to ensure they meet specified block sizes.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/LibSodium.SodioException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LibSodium.SodioException.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "LibSodium.SodioException",
-      "Summary": "<p sourcefile=\"api/LibSodium.SodioException.yml\" sourcestartlinenumber=\"1\">Represents errors that occur during Sodium operations.</p>\n"
     },
     {
       "type": "ManagedReference",

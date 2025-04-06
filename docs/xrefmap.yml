@@ -125,6 +125,164 @@ references:
   commentId: F:LibSodium.Base64Variant.UrlSafeNoPadding
   fullName: LibSodium.Base64Variant.UrlSafeNoPadding
   nameWithType: Base64Variant.UrlSafeNoPadding
+- uid: LibSodium.CryptoSecretStream
+  name: CryptoSecretStream
+  href: api/LibSodium.CryptoSecretStream.html
+  commentId: T:LibSodium.CryptoSecretStream
+  fullName: LibSodium.CryptoSecretStream
+  nameWithType: CryptoSecretStream
+- uid: LibSodium.CryptoSecretStream.DecryptChunk(System.Span{System.Byte},System.Span{System.Byte},LibSodium.CryptoSecretStreamTag@,System.ReadOnlySpan{System.Byte})
+  name: DecryptChunk(Span<byte>, Span<byte>, out CryptoSecretStreamTag, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_DecryptChunk_System_Span_System_Byte__System_Span_System_Byte__LibSodium_CryptoSecretStreamTag__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.DecryptChunk(System.Span{System.Byte},System.Span{System.Byte},LibSodium.CryptoSecretStreamTag@,System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptChunk(Span(Of Byte), Span(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.DecryptChunk(System.Span<byte>, System.Span<byte>, out LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.DecryptChunk(System.Span(Of Byte), System.Span(Of Byte), LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSecretStream.DecryptChunk(Span<byte>, Span<byte>, out CryptoSecretStreamTag, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSecretStream.DecryptChunk(Span(Of Byte), Span(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSecretStream.DecryptChunk(System.Span{System.Byte},System.Span{System.Byte},LibSodium.CryptoSecretStreamTag@,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptChunk(Span<byte>, Span<byte>, out CryptoSecretStreamTag, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_DecryptChunk_System_Span_System_Byte__System_Span_System_Byte__LibSodium_CryptoSecretStreamTag__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.DecryptChunk(System.Span{System.Byte},System.Span{System.Byte},LibSodium.CryptoSecretStreamTag@,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptChunk(Span(Of Byte), Span(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.DecryptChunk(System.Span<byte>, System.Span<byte>, out LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.DecryptChunk(System.Span(Of Byte), System.Span(Of Byte), LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSecretStream.DecryptChunk(Span<byte>, Span<byte>, out CryptoSecretStreamTag, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSecretStream.DecryptChunk(Span(Of Byte), Span(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSecretStream.DecryptChunk*
+  name: DecryptChunk
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_DecryptChunk_
+  commentId: Overload:LibSodium.CryptoSecretStream.DecryptChunk
+  isSpec: "True"
+  fullName: LibSodium.CryptoSecretStream.DecryptChunk
+  nameWithType: CryptoSecretStream.DecryptChunk
+- uid: LibSodium.CryptoSecretStream.EncryptChunk(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.CryptoSecretStreamTag)
+  name: EncryptChunk(Span<byte>, Span<byte>, ReadOnlySpan<byte>, CryptoSecretStreamTag)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_EncryptChunk_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__LibSodium_CryptoSecretStreamTag_
+  commentId: M:LibSodium.CryptoSecretStream.EncryptChunk(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.CryptoSecretStreamTag)
+  name.vb: EncryptChunk(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), CryptoSecretStreamTag)
+  fullName: LibSodium.CryptoSecretStream.EncryptChunk(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, LibSodium.CryptoSecretStreamTag)
+  fullName.vb: LibSodium.CryptoSecretStream.EncryptChunk(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), LibSodium.CryptoSecretStreamTag)
+  nameWithType: CryptoSecretStream.EncryptChunk(Span<byte>, Span<byte>, ReadOnlySpan<byte>, CryptoSecretStreamTag)
+  nameWithType.vb: CryptoSecretStream.EncryptChunk(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), CryptoSecretStreamTag)
+- uid: LibSodium.CryptoSecretStream.EncryptChunk(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.CryptoSecretStreamTag,System.ReadOnlySpan{System.Byte})
+  name: EncryptChunk(Span<byte>, Span<byte>, ReadOnlySpan<byte>, CryptoSecretStreamTag, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_EncryptChunk_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__LibSodium_CryptoSecretStreamTag_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.EncryptChunk(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.CryptoSecretStreamTag,System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptChunk(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.EncryptChunk(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.EncryptChunk(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), LibSodium.CryptoSecretStreamTag, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSecretStream.EncryptChunk(Span<byte>, Span<byte>, ReadOnlySpan<byte>, CryptoSecretStreamTag, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSecretStream.EncryptChunk(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), CryptoSecretStreamTag, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSecretStream.EncryptChunk*
+  name: EncryptChunk
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_EncryptChunk_
+  commentId: Overload:LibSodium.CryptoSecretStream.EncryptChunk
+  isSpec: "True"
+  fullName: LibSodium.CryptoSecretStream.EncryptChunk
+  nameWithType: CryptoSecretStream.EncryptChunk
+- uid: LibSodium.CryptoSecretStream.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoSecretStream.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoSecretStream.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoSecretStream.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_GenerateKey_
+  commentId: Overload:LibSodium.CryptoSecretStream.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoSecretStream.GenerateKey
+  nameWithType: CryptoSecretStream.GenerateKey
+- uid: LibSodium.CryptoSecretStream.HeaderLen
+  name: HeaderLen
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_HeaderLen
+  commentId: F:LibSodium.CryptoSecretStream.HeaderLen
+  fullName: LibSodium.CryptoSecretStream.HeaderLen
+  nameWithType: CryptoSecretStream.HeaderLen
+- uid: LibSodium.CryptoSecretStream.InitializeDecryption(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: InitializeDecryption(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_InitializeDecryption_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.InitializeDecryption(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: InitializeDecryption(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.InitializeDecryption(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.InitializeDecryption(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSecretStream.InitializeDecryption(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSecretStream.InitializeDecryption(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSecretStream.InitializeDecryption*
+  name: InitializeDecryption
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_InitializeDecryption_
+  commentId: Overload:LibSodium.CryptoSecretStream.InitializeDecryption
+  isSpec: "True"
+  fullName: LibSodium.CryptoSecretStream.InitializeDecryption
+  nameWithType: CryptoSecretStream.InitializeDecryption
+- uid: LibSodium.CryptoSecretStream.InitializeEncryption(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: InitializeEncryption(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_InitializeEncryption_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSecretStream.InitializeEncryption(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: InitializeEncryption(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSecretStream.InitializeEncryption(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSecretStream.InitializeEncryption(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSecretStream.InitializeEncryption(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSecretStream.InitializeEncryption(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSecretStream.InitializeEncryption*
+  name: InitializeEncryption
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_InitializeEncryption_
+  commentId: Overload:LibSodium.CryptoSecretStream.InitializeEncryption
+  isSpec: "True"
+  fullName: LibSodium.CryptoSecretStream.InitializeEncryption
+  nameWithType: CryptoSecretStream.InitializeEncryption
+- uid: LibSodium.CryptoSecretStream.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_KeyLen
+  commentId: F:LibSodium.CryptoSecretStream.KeyLen
+  fullName: LibSodium.CryptoSecretStream.KeyLen
+  nameWithType: CryptoSecretStream.KeyLen
+- uid: LibSodium.CryptoSecretStream.OverheadLen
+  name: OverheadLen
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_OverheadLen
+  commentId: F:LibSodium.CryptoSecretStream.OverheadLen
+  fullName: LibSodium.CryptoSecretStream.OverheadLen
+  nameWithType: CryptoSecretStream.OverheadLen
+- uid: LibSodium.CryptoSecretStream.StateLen
+  name: StateLen
+  href: api/LibSodium.CryptoSecretStream.html#LibSodium_CryptoSecretStream_StateLen
+  commentId: F:LibSodium.CryptoSecretStream.StateLen
+  fullName: LibSodium.CryptoSecretStream.StateLen
+  nameWithType: CryptoSecretStream.StateLen
+- uid: LibSodium.CryptoSecretStreamTag
+  name: CryptoSecretStreamTag
+  href: api/LibSodium.CryptoSecretStreamTag.html
+  commentId: T:LibSodium.CryptoSecretStreamTag
+  fullName: LibSodium.CryptoSecretStreamTag
+  nameWithType: CryptoSecretStreamTag
+- uid: LibSodium.CryptoSecretStreamTag.Final
+  name: Final
+  href: api/LibSodium.CryptoSecretStreamTag.html#LibSodium_CryptoSecretStreamTag_Final
+  commentId: F:LibSodium.CryptoSecretStreamTag.Final
+  fullName: LibSodium.CryptoSecretStreamTag.Final
+  nameWithType: CryptoSecretStreamTag.Final
+- uid: LibSodium.CryptoSecretStreamTag.Message
+  name: Message
+  href: api/LibSodium.CryptoSecretStreamTag.html#LibSodium_CryptoSecretStreamTag_Message
+  commentId: F:LibSodium.CryptoSecretStreamTag.Message
+  fullName: LibSodium.CryptoSecretStreamTag.Message
+  nameWithType: CryptoSecretStreamTag.Message
+- uid: LibSodium.CryptoSecretStreamTag.Push
+  name: Push
+  href: api/LibSodium.CryptoSecretStreamTag.html#LibSodium_CryptoSecretStreamTag_Push
+  commentId: F:LibSodium.CryptoSecretStreamTag.Push
+  fullName: LibSodium.CryptoSecretStreamTag.Push
+  nameWithType: CryptoSecretStreamTag.Push
+- uid: LibSodium.CryptoSecretStreamTag.Rekey
+  name: Rekey
+  href: api/LibSodium.CryptoSecretStreamTag.html#LibSodium_CryptoSecretStreamTag_Rekey
+  commentId: F:LibSodium.CryptoSecretStreamTag.Rekey
+  fullName: LibSodium.CryptoSecretStreamTag.Rekey
+  nameWithType: CryptoSecretStreamTag.Rekey
 - uid: LibSodium.HexEncoding
   name: HexEncoding
   href: api/LibSodium.HexEncoding.html
@@ -650,6 +808,38 @@ references:
   fullName.vb: LibSodium.SecureMemory.Create(Of T)(Integer)
   nameWithType: SecureMemory.Create<T>(int)
   nameWithType.vb: SecureMemory.Create(Of T)(Integer)
+- uid: LibSodium.SecureMemory.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Equals(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_Equals_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureMemory.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Equals(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureMemory.Equals(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureMemory.Equals(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: SecureMemory.Equals(ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: SecureMemory.Equals(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecureMemory.Equals*
+  name: Equals
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_Equals_
+  commentId: Overload:LibSodium.SecureMemory.Equals
+  isSpec: "True"
+  fullName: LibSodium.SecureMemory.Equals
+  nameWithType: SecureMemory.Equals
+- uid: LibSodium.SecureMemory.IsZero(System.ReadOnlySpan{System.Byte})
+  name: IsZero(ReadOnlySpan<byte>)
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_IsZero_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecureMemory.IsZero(System.ReadOnlySpan{System.Byte})
+  name.vb: IsZero(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecureMemory.IsZero(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecureMemory.IsZero(System.ReadOnlySpan(Of Byte))
+  nameWithType: SecureMemory.IsZero(ReadOnlySpan<byte>)
+  nameWithType.vb: SecureMemory.IsZero(ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecureMemory.IsZero*
+  name: IsZero
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_IsZero_
+  commentId: Overload:LibSodium.SecureMemory.IsZero
+  isSpec: "True"
+  fullName: LibSodium.SecureMemory.IsZero
+  nameWithType: SecureMemory.IsZero
 - uid: LibSodium.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})
   name: MemLock(ReadOnlySpan<byte>)
   href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemLock_System_ReadOnlySpan_System_Byte__
@@ -978,49 +1168,6 @@ references:
   isSpec: "True"
   fullName: LibSodium.SecurePadding.Unpad
   nameWithType: SecurePadding.Unpad
-- uid: LibSodium.SodioException
-  name: SodioException
-  href: api/LibSodium.SodioException.html
-  commentId: T:LibSodium.SodioException
-  fullName: LibSodium.SodioException
-  nameWithType: SodioException
-- uid: LibSodium.SodioException.#ctor
-  name: SodioException()
-  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor
-  commentId: M:LibSodium.SodioException.#ctor
-  name.vb: New()
-  fullName: LibSodium.SodioException.SodioException()
-  fullName.vb: LibSodium.SodioException.New()
-  nameWithType: SodioException.SodioException()
-  nameWithType.vb: SodioException.New()
-- uid: LibSodium.SodioException.#ctor(System.String)
-  name: SodioException(string?)
-  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_System_String_
-  commentId: M:LibSodium.SodioException.#ctor(System.String)
-  name.vb: New(String)
-  fullName: LibSodium.SodioException.SodioException(string?)
-  fullName.vb: LibSodium.SodioException.New(String)
-  nameWithType: SodioException.SodioException(string?)
-  nameWithType.vb: SodioException.New(String)
-- uid: LibSodium.SodioException.#ctor(System.String,System.Exception)
-  name: SodioException(string?, Exception?)
-  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_System_String_System_Exception_
-  commentId: M:LibSodium.SodioException.#ctor(System.String,System.Exception)
-  name.vb: New(String, Exception)
-  fullName: LibSodium.SodioException.SodioException(string?, System.Exception?)
-  fullName.vb: LibSodium.SodioException.New(String, System.Exception)
-  nameWithType: SodioException.SodioException(string?, Exception?)
-  nameWithType.vb: SodioException.New(String, Exception)
-- uid: LibSodium.SodioException.#ctor*
-  name: SodioException
-  href: api/LibSodium.SodioException.html#LibSodium_SodioException__ctor_
-  commentId: Overload:LibSodium.SodioException.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: LibSodium.SodioException.SodioException
-  fullName.vb: LibSodium.SodioException.New
-  nameWithType: SodioException.SodioException
-  nameWithType.vb: SodioException.New
 - uid: LibSodium.UnmanagedMemorySpanHolder`1
   name: UnmanagedMemorySpanHolder<T>
   href: api/LibSodium.UnmanagedMemorySpanHolder-1.html
