@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum CryptoSecretStreamTag | LibSodium.Net </title>
+      <title>&#127922; RandomGenerator | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum CryptoSecretStreamTag | LibSodium.Net ">
+      <meta name="title" content="&#127922; RandomGenerator | LibSodium.Net ">
       
-      <meta name="description" content="The tags used in the secret stream.">
+      
       <link rel="icon" href="../images/Na.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_CryptoSecretStreamTag.md&amp;value=---%0Auid%3A%20LibSodium.CryptoSecretStreamTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/RandomGenerator.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,62 +84,75 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LibSodium.CryptoSecretStreamTag">
+        <article data-uid="">
+<h1 id="-randomgenerator">🎲 RandomGenerator</h1>
 
+<p>The <code>RandomGenerator</code> class in <strong>LibSodium.Net</strong> provides access to cryptographically secure random values. It wraps several functions from libsodium's randombytes API and ensures correct initialization and exception safety.</p>
+<blockquote>
+<p>🧂Based on libsodium's <a href="https://doc.libsodium.org/generating_random_data">Generating random data</a><br>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.RandomGenerator.html">API Reference for <code>RandomGenerator</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-features">✨ Features</h2>
+<ul>
+<li>Generate random 32-bit unsigned integers.</li>
+<li>Generate bounded random integers.</li>
+<li>Fill buffers with secure random bytes.</li>
+<li>Generate deterministic random bytes using a seed.</li>
+<li>Stir or close the RNG engine as needed.</li>
+</ul>
+<hr>
+<h2 id="-getting-random-values">📦 Getting Random Values</h2>
+<h3 id="-get-a-random-32-bit-unsigned-integer">💻 Get a random 32-bit unsigned integer</h3>
+<pre><code class="lang-csharp">uint value = RandomGenerator.GetUInt32();
+</code></pre>
+<p>Returns a cryptographically secure, uniformly distributed value.</p>
+<h3 id="-get-a-random-value-less-than-an-upper-bound">💻 Get a random value less than an upper bound</h3>
+<pre><code class="lang-csharp">uint lessThan100 = RandomGenerator.GetUInt32(100);
+</code></pre>
+<p>Returns a value in the range <code>[0, upperBound)</code>.
+Uses a rejection sampling method to ensure uniform distribution.</p>
+<hr>
+<h2 id="-filling-buffers">📦 Filling Buffers</h2>
+<h3 id="-fill-a-buffer-with-random-bytes">💻 Fill a buffer with random bytes</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; buffer = stackalloc byte[32];
+RandomGenerator.Fill(buffer);
+</code></pre>
+<p>This fills the buffer with unpredictable cryptographic random bytes.</p>
+<h3 id="-fill-a-buffer-with-deterministic-random-bytes">💻 Fill a buffer with deterministic random bytes</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; seed = stackalloc byte[RandomGenerator.SeedLen];
+RandomGenerator.Fill(seed); // Generate a secure seed
 
-
-
-  <h1 id="LibSodium_CryptoSecretStreamTag" data-uid="LibSodium.CryptoSecretStreamTag" class="text-break">
-Enum CryptoSecretStreamTag  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSecretStream.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="LibSodium.html">LibSodium</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>LibSodium.Net.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>The tags used in the secret stream.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum CryptoSecretStreamTag</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="LibSodium_CryptoSecretStreamTag_Final"><code>Final = 3</code></dt>
-  
-  <dd><p>The value of the tag corresponding to the final message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Message"><code>Message = 0</code></dt>
-  
-  <dd><p>The value of the tag corresponding to a regular message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Push"><code>Push = 1</code></dt>
-  
-  <dd><p>Indicates that the message marks the end of a set of messages, but not the end of the stream</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Rekey"><code>Rekey = 2</code></dt>
-  
-  <dd><p>“forget” the key used to encrypt this message and the previous ones, and derive a new secret key</p>
-</dd>
-  </dl>
-
-
+Span&lt;byte&gt; buffer = stackalloc byte[32];
+RandomGenerator.FillDeterministic(buffer, seed);
+</code></pre>
+<p>The same seed and length will always produce the same output.</p>
+<blockquote>
+<p>⚠️ Seed must be exactly <code>RandomGenerator.SeedLen</code> bytes long. Otherwise, <code>ArgumentException</code> is thrown.</p>
+</blockquote>
+<hr>
+<h2 id="-stirring-and-closing-the-rng">📦 Stirring and Closing the RNG</h2>
+<h3 id="-stir-the-rng">💻 Stir the RNG</h3>
+<pre><code class="lang-csharp">RandomGenerator.Stir();
+</code></pre>
+<p>This reseeds the RNG, recommended after forking a process or when explicitly needed.</p>
+<h3 id="-close-the-rng">💻 Close the RNG</h3>
+<pre><code class="lang-csharp">RandomGenerator.Close();
+</code></pre>
+<p>Closes the randombytes subsystem. This may be needed in long-running processes or to release resources. Calling it more than once will throw <code>LibSodiumException</code>.</p>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — thrown when <code>FillDeterministic</code> receives an invalid seed length.</li>
+<li><code>LibSodiumException</code> — thrown when <code>Close()</code> fails (e.g., called twice).</li>
+</ul>
+<hr>
+<p>The <code>RandomGenerator</code> API is well-suited for cryptographic use cases and follows safe defaults. It gives you access to high-quality random data and control over deterministic randomness when reproducibility is required.</p>
 
 </article>
 
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

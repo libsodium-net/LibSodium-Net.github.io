@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/Na.png" alt="LibSodium.Net">
-            LibSodium.Net
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -101,7 +101,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="LibSodium.CryptoSecretStream.html">CryptoSecretStream</a></dt>
-      <dd><p>The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data.</p>
+      <dd><p>The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data. It is based on the XChaCha20-Poly1305 algorithm.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -135,6 +135,14 @@ Classes
 specifically the XSalsa20 stream cipher and Poly1305 MAC for authentication.
 These methods offer combined encryption/authentication and detached encryption/authentication,
 with variations for handling nonces and Message Authentication Codes (MACs) within or separate from the ciphertext.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="LibSodium.SecretStream.html">SecretStream</a></dt>
+      <dd><p>Provides high-level, stream-based authenticated encryption and decryption
+using the XChaCha20-Poly1305 algorithm. This class abstracts the complexity
+of securely processing large data streams, including chunking, authentication,
+and cryptographic state management.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -196,7 +204,7 @@ Enums
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
         </div>
       </div>
     </footer>

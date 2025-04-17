@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Guide | LibSodium.Net </title>
+      <title>&#128272; Introduction to LibSodium.Net | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Guide | LibSodium.Net ">
+      <meta name="title" content="&#128272; Introduction to LibSodium.Net | LibSodium.Net ">
       
       
       <link rel="icon" href="images/Na.png">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="images/Na.png" alt="LibSodium.Net">
-            LibSodium.Net
+            <img id="logo" class="svg" src="logo.svg" alt="Home">
+            Home
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -71,9 +71,263 @@
         </div>
 
         <article data-uid="">
-<h1 id="guide">Guide</h1>
+<h1 id="-introduction-to-libsodiumnet">🔐 Introduction to LibSodium.Net</h1>
 
-<p>Comming soon</p>
+<p><a href="https://github.com/LibSodium-Net/LibSodium.Net"><strong>LibSodium.Net</strong></a> provides .NET developers with easy-to-use bindings for <a href="https://doc.libsodium.org/">libsodium</a>, a powerful, modern cryptography library widely recognized for its simplicity and security. This makes it straightforward to add robust cryptographic functionality to your .NET applications.</p>
+<h2 id="-why-libsodiumnet">✨ Why LibSodium.Net?</h2>
+<ul>
+<li><strong>Cross-platform</strong>: Seamless support across Windows, Linux, and macOS.</li>
+<li><strong>Modern Cryptography</strong>: Includes authenticated encryption, public-key cryptography, hashing, key derivation, and digital signatures.</li>
+<li><strong>Simple and Secure API</strong>: Designed to reduce complexity, helping you implement cryptography correctly and securely.</li>
+<li><strong>Secure Memory Handling</strong>: Sensitive data management to minimize risks like memory leaks or data exposure.</li>
+<li><strong>Span<t> over Arrays</t></strong>: Optimized for performance and memory efficiency by using <code>Span&lt;T&gt;</code> instead of heap-allocated arrays.</li>
+<li><strong>AOT Compatible</strong>: Uses <code>LibraryImport</code> (source-generated P/Invoke) instead of <code>DllImport</code>, making it fully compatible with AOT compilation environments.</li>
+</ul>
+<hr>
+<h1 id="-getting-started-with-libsodiumnet">🚀 Getting Started with LibSodium.Net</h1>
+<p>Here's how you can quickly integrate LibSodium.Net into your .NET projects.</p>
+<h2 id="-install-via-nuget">📦 Install via NuGet</h2>
+<p>You can easily install LibSodium.Net using the NuGet package manager:</p>
+<h3 id="cli">CLI</h3>
+<p>Using the .NET CLI:</p>
+<pre><code class="lang-bash">dotnet add package LibSodium.Net
+</code></pre>
+<h3 id="visual-studio">Visual Studio</h3>
+<ol>
+<li>Right-click your project in Solution Explorer.</li>
+<li>Choose <strong>Manage NuGet Packages</strong>.</li>
+<li>Search for <code>LibSodium.Net</code> and click <strong>Install</strong>.</li>
+</ol>
+<h3 id="package-manager-console">Package Manager Console</h3>
+<pre><code class="lang-powershell">Install-Package LibSodium.Net
+</code></pre>
+<h1 id="-secretbox">🧱 SecretBox</h1>
+<p>The <code>SecretBox</code> API in <strong>LibSodium.Net</strong> provides a simple and secure way to perform symmetric authenticated encryption using the XSalsa20 stream cipher and Poly1305 MAC. It supports both combined and detached encryption modes.</p>
+<hr>
+<h2 id="-secretbox-features">🔐 SecretBox Features</h2>
+<ul>
+<li><strong>Symmetric authenticated encryption</strong> using XSalsa20-Poly1305</li>
+<li><strong>Support for combined and detached modes</strong></li>
+<li><strong>Automatic or manual nonce handling</strong></li>
+<li><strong>Tamper-proof via MAC verification</strong></li>
+</ul>
+<hr>
+<h2 id="-encrypting-and-decrypting-messages">🔒 Encrypting and Decrypting Messages</h2>
+<h3 id="-combined-mode-manual-nonce">✅ Combined Mode (Manual Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
+Span&lt;byte&gt; nonce = stackalloc byte[SecretBox.NonceLen];
+RandomGenerator.Fill(key);
+RandomGenerator.Fill(nonce);
+
+var plaintext = Encoding.UTF8.GetBytes(&quot;Hello, secure world!&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.MacLen];
+
+// Encrypt
+var result = SecretBox.EncryptCombined(ciphertext, plaintext, key, nonce);
+
+// Decrypt
+Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
+var recovered = SecretBox.DecryptCombined(decrypted, result, key, nonce);
+
+Console.WriteLine(Encoding.UTF8.GetString(recovered));
+</code></pre>
+<h3 id="-combined-mode-auto-nonce">✅ Combined Mode (Auto Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
+RandomGenerator.Fill(key);
+
+var plaintext = Encoding.UTF8.GetBytes(&quot;Auto-nonce mode test&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.MacLen + SecretBox.NonceLen];
+
+var encrypted = SecretBox.EncryptCombined(ciphertext, plaintext, key);
+Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
+
+var recovered = SecretBox.DecryptCombined(decrypted, encrypted, key);
+Console.WriteLine(Encoding.UTF8.GetString(recovered));
+</code></pre>
+<hr>
+<h3 id="-detached-mode-manual-nonce">🧩 Detached Mode (Manual Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
+Span&lt;byte&gt; nonce = stackalloc byte[SecretBox.NonceLen];
+RandomGenerator.Fill(key);
+RandomGenerator.Fill(nonce);
+
+var plaintext = Encoding.UTF8.GetBytes(&quot;Detached mode message&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length];
+Span&lt;byte&gt; mac = stackalloc byte[SecretBox.MacLen];
+
+SecretBox.EncryptDetached(ciphertext, mac, plaintext, key, nonce);
+
+Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
+var output = SecretBox.DecryptDetached(decrypted, ciphertext, key, mac, nonce);
+
+Console.WriteLine(Encoding.UTF8.GetString(output));
+</code></pre>
+<h3 id="-detached-mode-auto-nonce">🧩 Detached Mode (Auto Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
+RandomGenerator.Fill(key);
+
+var plaintext = Encoding.UTF8.GetBytes(&quot;Auto-nonce detached mode&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.NonceLen];
+Span&lt;byte&gt; mac = stackalloc byte[SecretBox.MacLen];
+
+SecretBox.EncryptDetached(ciphertext, mac, plaintext, key);
+
+Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
+var output = SecretBox.DecryptDetached(decrypted, ciphertext, key, mac);
+
+Console.WriteLine(Encoding.UTF8.GetString(output));
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<p>SecretBox methods throw:</p>
+<ul>
+<li><code>ArgumentException</code> — if inputs are the wrong size.</li>
+<li><code>LibSodiumException</code> — if decryption fails due to tampering or incorrect keys.</li>
+</ul>
+<hr>
+<h2 id="-notes">📌 Notes</h2>
+<ul>
+<li>Always use a <strong>new random nonce</strong> for each encryption.</li>
+<li>Decryption verifies the MAC before returning plaintext.</li>
+<li>Use <code>RandomGenerator.Fill()</code> to securely fill nonces and keys.</li>
+</ul>
+<hr>
+<h1 id="secretstream">SecretStream</h1>
+<p>The <code>SecretStream</code> class in <strong>LibSodium.Net</strong> provides secure, authenticated stream-based encryption and decryption using the <strong>XChaCha20-Poly1305</strong> algorithm. It's designed to handle large streams of data efficiently and securely.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Authenticated encryption ensures data integrity.</li>
+<li>Automatic chunking and handling of large data streams.</li>
+<li>Secure random key generation.</li>
+<li>Protection against nonce reuse.</li>
+</ul>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="1-generating-a-secret-key">1. Generating a Secret Key</h3>
+<p>A secret key must be securely generated and managed:</p>
+<pre><code class="lang-csharp">byte[] key = new byte[CryptoSecretStream.KeyLen];
+CryptoSecretStream.GenerateKey(key);
+</code></pre>
+<h3 id="2-encrypting-data">2. Encrypting Data</h3>
+<p>Encrypting data streams:</p>
+<pre><code class="lang-csharp">using var inputFile = File.OpenRead(&quot;plaintext.dat&quot;);
+using var encryptedFile = File.Create(&quot;encrypted.dat&quot;);
+
+await SecretStream.EncryptAsync(inputFile, encryptedFile, key);
+</code></pre>
+<h4 id="synchronous-encryption">Synchronous Encryption:</h4>
+<pre><code class="lang-csharp">using var inputFile = File.OpenRead(&quot;plaintext.dat&quot;);
+using var encryptedFile = File.Create(&quot;encrypted.dat&quot;);
+
+SecretStream.Encrypt(inputFile, encryptedFile, key);
+</code></pre>
+<h3 id="3-decrypting-data">3. Decrypting Data</h3>
+<p>Decrypting the encrypted data back to plaintext:</p>
+<pre><code class="lang-csharp">using var encryptedFile = File.OpenRead(&quot;encrypted.dat&quot;);
+using var decryptedFile = File.Create(&quot;decrypted.dat&quot;);
+
+await SecretStream.DecryptAsync(encryptedFile, decryptedFile, key);
+</code></pre>
+<h4 id="synchronous-decryption">Synchronous Decryption:</h4>
+<pre><code class="lang-csharp">using var encryptedFile = File.OpenRead(&quot;encrypted.dat&quot;);
+using var decryptedFile = File.Create(&quot;decrypted.dat&quot;);
+
+SecretStream.Decrypt(encryptedFile, decryptedFile, key);
+</code></pre>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li><strong>Secure Key Management:</strong> Protect your keys; losing them or exposing them compromises security.</li>
+<li><strong>Nonce Management:</strong> Handled internally by <code>SecretStream</code>; avoid manual nonce reuse.</li>
+<li><strong>Integrity Checks:</strong> Automatic using Poly1305 tags; any tampering results in exceptions.</li>
+</ul>
+<h2 id="error-handling">Error Handling</h2>
+<p>Encryption and decryption throw specific exceptions for error conditions:</p>
+<ul>
+<li><code>ArgumentException</code>: Invalid arguments (wrong key length, null streams).</li>
+<li><code>LibSodiumException</code>: Authentication failed, typically from tampered data.</li>
+</ul>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<ul>
+<li><code>SecretStream</code> processes data in chunks (default: 64KB) for optimal balance between memory usage and performance.</li>
+<li>Utilize asynchronous methods (<code>EncryptAsync</code>/<code>DecryptAsync</code>) for IO-bound scenarios for better scalability.</li>
+</ul>
+<h2 id="-securememory">🛡️ SecureMemory</h2>
+<p>When working with cryptographic data, it's essential to ensure that sensitive information doesn't get leaked through memory dumps, swapping, or garbage collection. LibSodium.Net provides <code>SecureMemory</code> and <code>SecureMemory&lt;T&gt;</code> as robust tools to manage sensitive data safely in unmanaged memory.</p>
+<p>These APIs leverage libsodium's <code>sodium_malloc</code>, <code>sodium_mlock</code>, and related memory protection functions to offer secure, optionally read-only memory regions that are wiped on disposal.</p>
+<hr>
+<h3 id="-securememoryt">🧩 SecureMemory&lt;T&gt;</h3>
+<p><code>SecureMemory&lt;T&gt;</code> is a managed wrapper around unmanaged memory that stores a span of unmanaged type <code>T</code>. It ensures:</p>
+<ul>
+<li>Memory is allocated using <code>sodium_allocarray</code>.</li>
+<li>Memory is wiped with <code>sodium_memzero</code> on disposal.</li>
+<li>Optional read-only protection using <code>ProtectReadOnly()</code>.</li>
+<li>Optional read-write toggle with <code>ProtectReadWrite()</code>.</li>
+<li>Safe access through <code>Span&lt;T&gt;</code>, <code>Memory&lt;T&gt;</code>, <code>ReadOnlySpan&lt;T&gt;</code>, and <code>ReadOnlyMemory&lt;T&gt;</code>.</li>
+</ul>
+<h4 id="-basic-usage">✅ Basic Usage</h4>
+<pre><code class="lang-csharp">using var secure = SecureMemory.Create&lt;byte&gt;(32); // Allocate secure memory
+var span = secure.AsSpan(); // Write access
+
+RandomGenerator.Fill(span); // Fill with sensitive data
+
+secure.ProtectReadOnly(); // Make it read-only
+var readOnly = secure.AsReadOnlySpan(); // Safe read-only view
+
+secure.ProtectReadWrite(); // Allow writing again
+</code></pre>
+<h4 id="-safety-features">🔒 Safety Features</h4>
+<ul>
+<li>Accessing a <code>SecureMemory&lt;T&gt;</code> object after disposal throws <code>ObjectDisposedException</code>.</li>
+<li>Accessing writable span when read-only throws <code>InvalidOperationException</code>.</li>
+<li>Any span or memory obtained prior to disposal becomes invalid. Using it after the object is disposed may result in <code>AccessViolationException</code>.</li>
+<li>Writing through a span obtained before marking the memory as read-only will throw an <code>AccessViolationException</code>.</li>
+<li>Memory is finalized and securely freed if not explicitly disposed.</li>
+</ul>
+<hr>
+<h3 id="-securememory-utilities">🔧 SecureMemory Utilities</h3>
+<p><code>SecureMemory</code> also provides utility methods for working with unmanaged memory spans directly:</p>
+<h4 id="-allocate-secure-buffers">🔐 Allocate Secure Buffers</h4>
+<pre><code class="lang-csharp">var span = SecureMemory.Allocate&lt;byte&gt;(64);
+// Use span...
+SecureMemory.Free(span); // Free when done
+</code></pre>
+<blockquote>
+<p>All allocations are initialized with <code>0xDB</code> for predictable testing.</p>
+</blockquote>
+<h4 id="-zeroing-buffers">🔐 Zeroing Buffers</h4>
+<pre><code class="lang-csharp">byte[] buffer = { 1, 2, 3 };
+SecureMemory.MemZero(buffer); // Zeros array securely
+</code></pre>
+<h4 id="-lockunlock-memory">🔐 Lock/Unlock Memory</h4>
+<pre><code class="lang-csharp">var span = SecureMemory.Allocate&lt;byte&gt;(128);
+SecureMemory.MemLock(span); // Prevents swapping to disk
+SecureMemory.MemUnlock(span);
+SecureMemory.Free(span);
+</code></pre>
+<h4 id="-read-only--read-write-protections">🔐 Read-Only &amp; Read-Write Protections</h4>
+<pre><code class="lang-csharp">var span = SecureMemory.Allocate&lt;long&gt;(4);
+var readOnlySpan = SecureMemory.ProtectReadOnly(span);
+var writableSpan = SecureMemory.ProtectReadWrite(readOnlySpan);
+</code></pre>
+<hr>
+<h3 id="-security-considerations">⚠️ Security Considerations</h3>
+<ul>
+<li>Do <strong>not</strong> pass managed memory (e.g., <code>new byte[1024]</code>) to <code>Free()</code>. Doing so can corrupt memory.</li>
+<li>Secure memory functions work only with unmanaged memory allocated by <code>SecureMemory.Allocate()</code>.</li>
+<li>Avoid using spans or memory references after the backing <code>SecureMemory&lt;T&gt;</code> has been disposed; doing so can cause undefined behavior or <code>AccessViolationException</code>.</li>
+<li>Writing to memory through a previously obtained span after calling <code>ProtectReadOnly()</code> will throw an <code>AccessViolationException</code>.</li>
+<li>Always dispose <code>SecureMemory&lt;T&gt;</code> when done, or use <code>using</code> to ensure cleanup.</li>
+</ul>
+<hr>
+<h3 id="-unit-tested-reliability">✅ Unit-Tested Reliability</h3>
+<p>The implementation is backed by comprehensive tests ensuring:</p>
+<ul>
+<li>Memory is initialized to <code>0xDB</code> for testing predictability</li>
+<li>Read-only enforcement and write protection</li>
+<li>Exception safety on misuse</li>
+<li>Proper finalization and disposal semantics</li>
+</ul>
+<hr>
+<p>SecureMemory APIs are essential for handling secrets like keys, passwords, or tokens securely. They give you granular control over how and when memory is allocated, accessed, and cleared—adding another layer of defense in your cryptographic applications.</p>
 
 </article>
 
@@ -92,7 +346,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
         </div>
       </div>
     </footer>

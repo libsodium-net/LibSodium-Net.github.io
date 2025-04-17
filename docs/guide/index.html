@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum CryptoSecretStreamTag | LibSodium.Net </title>
+      <title>&#128272; Introduction to LibSodium.Net | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum CryptoSecretStreamTag | LibSodium.Net ">
+      <meta name="title" content="&#128272; Introduction to LibSodium.Net | LibSodium.Net ">
       
-      <meta name="description" content="The tags used in the secret stream.">
+      
       <link rel="icon" href="../images/Na.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_CryptoSecretStreamTag.md&amp;value=---%0Auid%3A%20LibSodium.CryptoSecretStreamTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,62 +84,41 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LibSodium.CryptoSecretStreamTag">
+        <article data-uid="">
+<h1 id="-introduction-to-libsodiumnet">🔐 Introduction to LibSodium.Net</h1>
 
-
-
-
-  <h1 id="LibSodium_CryptoSecretStreamTag" data-uid="LibSodium.CryptoSecretStreamTag" class="text-break">
-Enum CryptoSecretStreamTag  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSecretStream.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="LibSodium.html">LibSodium</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>LibSodium.Net.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>The tags used in the secret stream.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum CryptoSecretStreamTag</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="LibSodium_CryptoSecretStreamTag_Final"><code>Final = 3</code></dt>
-  
-  <dd><p>The value of the tag corresponding to the final message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Message"><code>Message = 0</code></dt>
-  
-  <dd><p>The value of the tag corresponding to a regular message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Push"><code>Push = 1</code></dt>
-  
-  <dd><p>Indicates that the message marks the end of a set of messages, but not the end of the stream</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Rekey"><code>Rekey = 2</code></dt>
-  
-  <dd><p>“forget” the key used to encrypt this message and the previous ones, and derive a new secret key</p>
-</dd>
-  </dl>
-
-
+<p><a href="https://github.com/LibSodium-Net/LibSodium.Net"><strong>LibSodium.Net</strong></a> provides .NET developers with easy-to-use bindings for <a href="https://doc.libsodium.org/">libsodium</a>, a powerful, modern cryptography library widely recognized for its simplicity and security. This makes it straightforward to add robust cryptographic functionality to your .NET applications.</p>
+<h2 id="-why-libsodiumnet">✨ Why LibSodium.Net?</h2>
+<ul>
+<li><strong>Cross-platform</strong>: Seamless support across Windows, Linux, and macOS.</li>
+<li><strong>Modern Cryptography</strong>: Includes authenticated encryption, public-key cryptography, hashing, key derivation, and digital signatures.</li>
+<li><strong>Simple and Secure API</strong>: Designed to reduce complexity, helping you implement cryptography correctly and securely.</li>
+<li><strong>Secure Memory Handling</strong>: Sensitive data management to minimize risks like memory leaks or data exposure.</li>
+<li><strong>Span<t> over Arrays</t></strong>: Optimized for performance and memory efficiency by using <code>Span&lt;T&gt;</code> instead of heap-allocated arrays.</li>
+<li><strong>AOT Compatible</strong>: Uses <code>LibraryImport</code> (source-generated P/Invoke) instead of <code>DllImport</code>, making it fully compatible with AOT compilation environments.</li>
+</ul>
+<hr>
+<h1 id="-getting-started-with-libsodiumnet">🚀 Getting Started with LibSodium.Net</h1>
+<p>Here's how you can quickly integrate LibSodium.Net into your .NET projects.</p>
+<h2 id="-install-via-nuget">📦 Install via NuGet</h2>
+<p>You can easily install LibSodium.Net using the NuGet package manager:</p>
+<h3 id="cli">CLI</h3>
+<pre><code class="lang-bash">dotnet add package LibSodium.Net
+</code></pre>
+<h3 id="visual-studio">Visual Studio</h3>
+<ol>
+<li>Right-click your project in Solution Explorer.</li>
+<li>Choose <strong>Manage NuGet Packages</strong>.</li>
+<li>Search for <code>LibSodium.Net</code> and click <strong>Install</strong>.</li>
+</ol>
+<h3 id="package-manager-console">Package Manager Console</h3>
+<pre><code class="lang-powershell">Install-Package LibSodium.Net
+</code></pre>
 
 </article>
 
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

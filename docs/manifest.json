@@ -50,7 +50,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "LibSodium.CryptoSecretStream",
-      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStream.yml\" sourcestartlinenumber=\"1\">The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data.</p>\n"
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStream.yml\" sourcestartlinenumber=\"1\">The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data. It is based on the XChaCha20-Poly1305 algorithm.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -149,6 +149,20 @@
       "IsMRef": true,
       "Title": "LibSodium.SecretBox",
       "Summary": "<p sourcefile=\"api/LibSodium.SecretBox.yml\" sourcestartlinenumber=\"1\">Provides static methods for authenticated symmetric encryption and decryption using the Sodium secretbox primitives,\nspecifically the XSalsa20 stream cipher and Poly1305 MAC for authentication.\nThese methods offer combined encryption/authentication and detached encryption/authentication,\nwith variations for handling nonces and Message Authentication Codes (MACs) within or separate from the ciphertext.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.SecretStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.SecretStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.SecretStream",
+      "Summary": "<p sourcefile=\"api/LibSodium.SecretStream.yml\" sourcestartlinenumber=\"1\">Provides high-level, stream-based authenticated encryption and decryption\nusing the XChaCha20-Poly1305 algorithm. This class abstracts the complexity\nof securely processing large data streams, including chunking, authentication,\nand cryptographic state management.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -263,6 +277,99 @@
       "output": {
         ".html": {
           "relative_path": "guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/Encoding.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Encoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/RandomGenerator.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/RandomGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/SecretBox.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/SecretBox.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/SecretStream.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/SecretStream.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/SecureBigUnsignedInteger.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/SecureBigUnsignedInteger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/SecureMemory.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/SecureMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "guide/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "guide/toc.html"
+        },
+        ".json": {
+          "relative_path": "guide/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/LogoNa.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/LogoNa.png"
         }
       },
       "version": ""

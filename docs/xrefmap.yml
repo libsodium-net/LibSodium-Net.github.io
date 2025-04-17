@@ -675,6 +675,118 @@ references:
   commentId: F:LibSodium.SecretBox.NonceLen
   fullName: LibSodium.SecretBox.NonceLen
   nameWithType: SecretBox.NonceLen
+- uid: LibSodium.SecretStream
+  name: SecretStream
+  href: api/LibSodium.SecretStream.html
+  commentId: T:LibSodium.SecretStream
+  fullName: LibSodium.SecretStream
+  nameWithType: SecretStream
+- uid: LibSodium.SecretStream.Decrypt(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte})
+  name: Decrypt(Stream, Stream, SecureMemory<byte>)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Decrypt_System_IO_Stream_System_IO_Stream_LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.SecretStream.Decrypt(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte})
+  name.vb: Decrypt(Stream, Stream, SecureMemory(Of Byte))
+  fullName: LibSodium.SecretStream.Decrypt(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.SecretStream.Decrypt(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory(Of Byte))
+  nameWithType: SecretStream.Decrypt(Stream, Stream, SecureMemory<byte>)
+  nameWithType.vb: SecretStream.Decrypt(Stream, Stream, SecureMemory(Of Byte))
+- uid: LibSodium.SecretStream.Decrypt(System.IO.Stream,System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Stream, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Decrypt_System_IO_Stream_System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretStream.Decrypt(System.IO.Stream,System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Stream, Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretStream.Decrypt(System.IO.Stream, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretStream.Decrypt(System.IO.Stream, System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: SecretStream.Decrypt(Stream, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: SecretStream.Decrypt(Stream, Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecretStream.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Decrypt_
+  commentId: Overload:LibSodium.SecretStream.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.SecretStream.Decrypt
+  nameWithType: SecretStream.Decrypt
+- uid: LibSodium.SecretStream.DecryptAsync(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name: DecryptAsync(Stream, Stream, SecureMemory<byte>, CancellationToken)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_DecryptAsync_System_IO_Stream_System_IO_Stream_LibSodium_SecureMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.SecretStream.DecryptAsync(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: DecryptAsync(Stream, Stream, SecureMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.SecretStream.DecryptAsync(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.SecretStream.DecryptAsync(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: SecretStream.DecryptAsync(Stream, Stream, SecureMemory<byte>, CancellationToken)
+  nameWithType.vb: SecretStream.DecryptAsync(Stream, Stream, SecureMemory(Of Byte), CancellationToken)
+- uid: LibSodium.SecretStream.DecryptAsync(System.IO.Stream,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: DecryptAsync(Stream, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_DecryptAsync_System_IO_Stream_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.SecretStream.DecryptAsync(System.IO.Stream,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: DecryptAsync(Stream, Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.SecretStream.DecryptAsync(System.IO.Stream, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.SecretStream.DecryptAsync(System.IO.Stream, System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: SecretStream.DecryptAsync(Stream, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: SecretStream.DecryptAsync(Stream, Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.SecretStream.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_DecryptAsync_
+  commentId: Overload:LibSodium.SecretStream.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.SecretStream.DecryptAsync
+  nameWithType: SecretStream.DecryptAsync
+- uid: LibSodium.SecretStream.Encrypt(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte})
+  name: Encrypt(Stream, Stream, SecureMemory<byte>)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Encrypt_System_IO_Stream_System_IO_Stream_LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.SecretStream.Encrypt(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte})
+  name.vb: Encrypt(Stream, Stream, SecureMemory(Of Byte))
+  fullName: LibSodium.SecretStream.Encrypt(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.SecretStream.Encrypt(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory(Of Byte))
+  nameWithType: SecretStream.Encrypt(Stream, Stream, SecureMemory<byte>)
+  nameWithType.vb: SecretStream.Encrypt(Stream, Stream, SecureMemory(Of Byte))
+- uid: LibSodium.SecretStream.Encrypt(System.IO.Stream,System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Stream, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Encrypt_System_IO_Stream_System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretStream.Encrypt(System.IO.Stream,System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Stream, Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretStream.Encrypt(System.IO.Stream, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretStream.Encrypt(System.IO.Stream, System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: SecretStream.Encrypt(Stream, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: SecretStream.Encrypt(Stream, Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecretStream.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_Encrypt_
+  commentId: Overload:LibSodium.SecretStream.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.SecretStream.Encrypt
+  nameWithType: SecretStream.Encrypt
+- uid: LibSodium.SecretStream.EncryptAsync(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name: EncryptAsync(Stream, Stream, SecureMemory<byte>, CancellationToken)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_EncryptAsync_System_IO_Stream_System_IO_Stream_LibSodium_SecureMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.SecretStream.EncryptAsync(System.IO.Stream,System.IO.Stream,LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: EncryptAsync(Stream, Stream, SecureMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.SecretStream.EncryptAsync(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.SecretStream.EncryptAsync(System.IO.Stream, System.IO.Stream, LibSodium.SecureMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: SecretStream.EncryptAsync(Stream, Stream, SecureMemory<byte>, CancellationToken)
+  nameWithType.vb: SecretStream.EncryptAsync(Stream, Stream, SecureMemory(Of Byte), CancellationToken)
+- uid: LibSodium.SecretStream.EncryptAsync(System.IO.Stream,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: EncryptAsync(Stream, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_EncryptAsync_System_IO_Stream_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.SecretStream.EncryptAsync(System.IO.Stream,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: EncryptAsync(Stream, Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.SecretStream.EncryptAsync(System.IO.Stream, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.SecretStream.EncryptAsync(System.IO.Stream, System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: SecretStream.EncryptAsync(Stream, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: SecretStream.EncryptAsync(Stream, Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.SecretStream.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_EncryptAsync_
+  commentId: Overload:LibSodium.SecretStream.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.SecretStream.EncryptAsync
+  nameWithType: SecretStream.EncryptAsync
+- uid: LibSodium.SecretStream.PlainChunkSize
+  name: PlainChunkSize
+  href: api/LibSodium.SecretStream.html#LibSodium_SecretStream_PlainChunkSize
+  commentId: F:LibSodium.SecretStream.PlainChunkSize
+  fullName: LibSodium.SecretStream.PlainChunkSize
+  nameWithType: SecretStream.PlainChunkSize
 - uid: LibSodium.SecureBigUnsignedInteger
   name: SecureBigUnsignedInteger
   href: api/LibSodium.SecureBigUnsignedInteger.html
@@ -961,6 +1073,40 @@ references:
   fullName.vb: LibSodium.SecureMemory(Of T).New
   nameWithType: SecureMemory<T>.SecureMemory
   nameWithType.vb: SecureMemory(Of T).New
+- uid: LibSodium.SecureMemory`1.AsMemory
+  name: AsMemory()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsMemory
+  commentId: M:LibSodium.SecureMemory`1.AsMemory
+  fullName: LibSodium.SecureMemory<T>.AsMemory()
+  fullName.vb: LibSodium.SecureMemory(Of T).AsMemory()
+  nameWithType: SecureMemory<T>.AsMemory()
+  nameWithType.vb: SecureMemory(Of T).AsMemory()
+- uid: LibSodium.SecureMemory`1.AsMemory*
+  name: AsMemory
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsMemory_
+  commentId: Overload:LibSodium.SecureMemory`1.AsMemory
+  isSpec: "True"
+  fullName: LibSodium.SecureMemory<T>.AsMemory
+  fullName.vb: LibSodium.SecureMemory(Of T).AsMemory
+  nameWithType: SecureMemory<T>.AsMemory
+  nameWithType.vb: SecureMemory(Of T).AsMemory
+- uid: LibSodium.SecureMemory`1.AsReadOnlyMemory
+  name: AsReadOnlyMemory()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsReadOnlyMemory
+  commentId: M:LibSodium.SecureMemory`1.AsReadOnlyMemory
+  fullName: LibSodium.SecureMemory<T>.AsReadOnlyMemory()
+  fullName.vb: LibSodium.SecureMemory(Of T).AsReadOnlyMemory()
+  nameWithType: SecureMemory<T>.AsReadOnlyMemory()
+  nameWithType.vb: SecureMemory(Of T).AsReadOnlyMemory()
+- uid: LibSodium.SecureMemory`1.AsReadOnlyMemory*
+  name: AsReadOnlyMemory
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsReadOnlyMemory_
+  commentId: Overload:LibSodium.SecureMemory`1.AsReadOnlyMemory
+  isSpec: "True"
+  fullName: LibSodium.SecureMemory<T>.AsReadOnlyMemory
+  fullName.vb: LibSodium.SecureMemory(Of T).AsReadOnlyMemory
+  nameWithType: SecureMemory<T>.AsReadOnlyMemory
+  nameWithType.vb: SecureMemory(Of T).AsReadOnlyMemory
 - uid: LibSodium.SecureMemory`1.AsReadOnlySpan
   name: AsReadOnlySpan()
   href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_AsReadOnlySpan

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>✏️ Encoding | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="✏️ Encoding | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/Encoding.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-encoding">✏️ Encoding</h1>
+
+<p>LibSodium.Net provides high-performance, secure encoding utilities to convert binary data to and from human-readable formats. The library currently supports two types of encoding:</p>
+<ul>
+<li><strong>Hexadecimal</strong> via <code>HexEncoding</code></li>
+<li><strong>Base64</strong> via <code>Base64Encoding</code></li>
+</ul>
+<p>These classes are wrappers around libsodium's encoding utilities, providing constant-time and safe operations using spans.</p>
+<blockquote>
+<p>🧂 Based on libsodium’s <a href="https://doc.libsodium.org/helpers#hexadecimal-encoding-decoding">Hexadecimal encoding/decoding</a> and <a href="https://doc.libsodium.org/helpers#base64-encoding-decoding">Base64 encoding/decoding</a><br>
+ℹ️ <em>See also:</em> <a href="../api/LibSodium.HexEncoding.html">API Reference for <code>HexEncoding</code></a>, <a href="../api/LibSodium.Base64Encoding.html">API Reference for <code>Base64Encoding</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-security-considerations">🔐 Security Considerations</h2>
+<p>These encoding functions are implemented in <strong>constant time with respect to input size</strong>, which means they avoid data-dependent branching and timing variations. This makes them <strong>resistant to side-channel attacks</strong>, such as timing attacks, which can leak information through observable differences in computation time.</p>
+<p>LibSodium.Net ensures that these security properties are preserved in its managed API by:</p>
+<ul>
+<li>Using <code>Span&lt;T&gt;</code> and avoiding intermediate heap allocations.</li>
+<li>Delegating directly to libsodium’s hardened, constant-time implementations.</li>
+</ul>
+<p>These properties make <code>HexEncoding</code> and <code>Base64Encoding</code> suitable for encoding sensitive data like cryptographic keys, hashes, tokens, and other secrets.</p>
+<hr>
+<h2 id="-hexencoding">✨ HexEncoding</h2>
+<p><code>HexEncoding</code> provides methods to encode a byte array into a lowercase hexadecimal string and decode from hexadecimal back into binary. All operations are span-based for performance and safety.</p>
+<h3 id="-encode-to-hex">💻 Encode to hex</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; bin = stackalloc byte[] { 0x01, 0x23, 0x45 };
+string hex = HexEncoding.BinToHex(bin); // &quot;012345&quot;
+</code></pre>
+<p>You can also write the hex into a preallocated <code>Span&lt;char&gt;</code>:</p>
+<pre><code class="lang-csharp">Span&lt;char&gt; hexBuffer = stackalloc char[bin.Length * 2];
+HexEncoding.BinToHex(bin, hexBuffer);
+</code></pre>
+<h3 id="-decode-from-hex">💻 Decode from hex</h3>
+<pre><code class="lang-csharp">string hex = &quot;0123456789abcdef&quot;;
+Span&lt;byte&gt; buffer = stackalloc byte[hex.Length / 2];
+HexEncoding.HexToBin(hex, buffer);
+</code></pre>
+<p>You can also ignore separators such as colons:</p>
+<pre><code class="lang-csharp">string formatted = &quot;01:23:45:67&quot;;
+HexEncoding.HexToBin(formatted, buffer, &quot;:&quot;);
+</code></pre>
+<h3 id="-exceptions">⚠️ Exceptions</h3>
+<ul>
+<li><code>ArgumentException</code>: when hex buffer is too small.</li>
+<li><code>LibSodiumException</code>: on malformed hex input or destination buffer too small.</li>
+</ul>
+<hr>
+<h2 id="-base64encoding">✨ Base64Encoding</h2>
+<p><code>Base64Encoding</code> supports multiple Base64 variants, including URL-safe and no-padding modes.</p>
+<h3 id="-base64-variants">📘 Base64 variants</h3>
+<pre><code class="lang-csharp">public enum Base64Variant
+{
+    Original,
+    OriginalNoPadding,
+    UrlSafe,
+    UrlSafeNoPadding
+}
+</code></pre>
+<p>These map directly to <code>sodium_base64_VARIANT_*</code> in libsodium.</p>
+<h3 id="-encode-to-base64">💻 Encode to Base64</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; bin = stackalloc byte[] { 1, 2, 3, 4 };
+string b64 = Base64Encoding.BinToBase64(bin, Base64Variant.Original);
+</code></pre>
+<p>You can also write the result into a <code>Span&lt;char&gt;</code>:</p>
+<pre><code class="lang-csharp">Span&lt;char&gt; buffer = stackalloc char[Base64Encoding.GetBase64EncodedLen(bin.Length, Base64Variant.Original)];
+Base64Encoding.BinToBase64(bin, buffer, Base64Variant.Original);
+</code></pre>
+<h3 id="-decode-from-base64">💻 Decode from Base64</h3>
+<pre><code class="lang-csharp">string b64 = &quot;AQIDBA==&quot;;
+Span&lt;byte&gt; output = stackalloc byte[Base64Encoding.GetBase64DecodedMaxLen(b64.Length)];
+Base64Encoding.Base64ToBin(b64, output, Base64Variant.Original);
+</code></pre>
+<p>Optional ignored characters (e.g., formatting spaces):</p>
+<pre><code class="lang-csharp">Base64Encoding.Base64ToBin(&quot; AQ ID BA == &quot;, output, Base64Variant.Original, &quot; &quot;);
+</code></pre>
+<h3 id="-exceptions-1">⚠️ Exceptions</h3>
+<ul>
+<li><code>ArgumentException</code>: buffer too small.</li>
+<li><code>LibSodiumException</code>: invalid Base64 input or mismatched variant.</li>
+</ul>
+<hr>
+<p>These encoding utilities are highly optimized, secure, and suitable for cryptographic applications where constant-time guarantees and low-level memory control are essential.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

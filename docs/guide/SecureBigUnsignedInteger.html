@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum CryptoSecretStreamTag | LibSodium.Net </title>
+      <title>&#128290; SecureBigUnsignedInteger | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum CryptoSecretStreamTag | LibSodium.Net ">
+      <meta name="title" content="&#128290; SecureBigUnsignedInteger | LibSodium.Net ">
       
-      <meta name="description" content="The tags used in the secret stream.">
+      
       <link rel="icon" href="../images/Na.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_CryptoSecretStreamTag.md&amp;value=---%0Auid%3A%20LibSodium.CryptoSecretStreamTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/SecureBigUnsignedInteger.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,62 +84,62 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LibSodium.CryptoSecretStreamTag">
+        <article data-uid="">
+<h1 id="-securebigunsignedinteger">🔢 SecureBigUnsignedInteger</h1>
 
+<p>The <code>SecureBigUnsignedInteger</code> class provides constant-time operations for working with large, little-endian, unsigned integers represented as <code>Span&lt;byte&gt;</code>. It wraps several low-level functions from libsodium that are specifically designed to be safe against side-channel attacks.</p>
+<blockquote>
+<p>🧂 Based on libsodium’s <a href="https://doc.libsodium.org/helpers#incrementing-large-numbers">Integer manipulation helpers</a><br>
+ℹ️ <em>See also:</em> <a href="../api/LibSodium.SecureBigUnsignedInteger.html">API Reference for <code>SecureBigUnsignedInteger</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-security-considerations">🔐 Security Considerations</h2>
+<p>All operations in this class are evaluated in <strong>constant time with respect to buffer size</strong>, which helps prevent timing-based side-channel attacks. These methods are suitable for cryptographic contexts where comparisons, additions, or manipulations of secrets must not leak information through execution timing.</p>
+<hr>
+<h2 id="-features">✨ Features</h2>
+<ul>
+<li>Constant-time comparison, equality, addition, and subtraction.</li>
+<li>Increment by 1 or arbitrary 64-bit value.</li>
+<li>Zero-checking.</li>
+<li>Supports arbitrary-sized numbers (as long as both operands have the same length).</li>
+<li>Uses spans to avoid heap allocations.</li>
+</ul>
+<hr>
+<h2 id="-usage-examples">📦 Usage Examples</h2>
+<h3 id="-constant-time-equality-check">💻 Constant-Time Equality Check</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; a = stackalloc byte[] { 1, 2, 3 };
+Span&lt;byte&gt; b = stackalloc byte[] { 1, 2, 3 };
+bool areEqual = SecureBigUnsignedInteger.Equals(a, b); // true
+</code></pre>
+<h3 id="-constant-time-compare">💻 Constant-Time Compare</h3>
+<pre><code class="lang-csharp">int cmp = SecureBigUnsignedInteger.Compare(a, b); // 0 if equal, &lt;0 if a &lt; b, &gt;0 if a &gt; b
+</code></pre>
+<h3 id="-increment">💻 Increment</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; number = stackalloc byte[4];
+SecureBigUnsignedInteger.Increment(number); // adds 1
+SecureBigUnsignedInteger.Increment(number, 42); // adds 42
+</code></pre>
+<h3 id="-addition-and-subtraction">💻 Addition and Subtraction</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; a = stackalloc byte[] { 5, 0, 0 };
+ReadOnlySpan&lt;byte&gt; b = stackalloc byte[] { 3, 0, 0 };
 
-
-
-  <h1 id="LibSodium_CryptoSecretStreamTag" data-uid="LibSodium.CryptoSecretStreamTag" class="text-break">
-Enum CryptoSecretStreamTag  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSecretStream.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="LibSodium.html">LibSodium</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>LibSodium.Net.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>The tags used in the secret stream.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum CryptoSecretStreamTag</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="LibSodium_CryptoSecretStreamTag_Final"><code>Final = 3</code></dt>
-  
-  <dd><p>The value of the tag corresponding to the final message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Message"><code>Message = 0</code></dt>
-  
-  <dd><p>The value of the tag corresponding to a regular message.</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Push"><code>Push = 1</code></dt>
-  
-  <dd><p>Indicates that the message marks the end of a set of messages, but not the end of the stream</p>
-</dd>
-    <dt id="LibSodium_CryptoSecretStreamTag_Rekey"><code>Rekey = 2</code></dt>
-  
-  <dd><p>“forget” the key used to encrypt this message and the previous ones, and derive a new secret key</p>
-</dd>
-  </dl>
-
-
+SecureBigUnsignedInteger.Add(a, b);      // a = a + b
+SecureBigUnsignedInteger.Subtract(a, b); // a = a - b
+</code></pre>
+<blockquote>
+<p>⚠️ Both operands must have the same length. Otherwise, <code>ArgumentException</code> is thrown.</p>
+</blockquote>
+<h3 id="-zero-check">💻 Zero Check</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; n = stackalloc byte[] { 0, 0, 0 };
+bool isZero = SecureBigUnsignedInteger.IsZero(n); // true
+</code></pre>
+<hr>
+<p>This API is ideal for low-level cryptographic arithmetic where performance, determinism, and side-channel resistance are essential.</p>
 
 </article>
 
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

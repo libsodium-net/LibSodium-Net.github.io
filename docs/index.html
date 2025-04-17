@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | LibSodium.Net </title>
+      <title>LibSodium.Net | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | LibSodium.Net ">
+      <meta name="title" content="LibSodium.Net | LibSodium.Net ">
       
       
       <link rel="icon" href="images/Na.png">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="images/Na.png" alt="LibSodium.Net">
-            LibSodium.Net
+            <img id="logo" class="svg" src="logo.svg" alt="Home">
+            Home
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -72,8 +72,40 @@
 
         <article data-uid="">
 
-<h2 id="introduction">Introduction</h2>
-<p>LibSodium.Net is a library that provides .NET bindings for libsodium. It is designed to eventually support all of libsodium’s features while offering a modern and efficient approach to cryptographic operations.</p>
+<p align="center">
+  <img src="images/LogoNa.png" alt="LibSodium.Net logo" width="150">
+</p>
+<h1 align="center">LibSodium.Net</h1>
+<p align="center">Modern Cryptography for .NET</p>
+<hr>
+<p>Welcome to <strong>LibSodium.Net</strong>, the secure and developer-friendly .NET bindings for <a href="https://libsodium.org">libsodium</a> — a battle-tested, modern cryptographic library used around the world.</p>
+<p>Whether you're building web services, desktop apps, IoT devices, or cross-platform tools, <strong>LibSodium.Net</strong> helps you add robust, efficient, and secure cryptographic functionality with confidence.</p>
+<hr>
+<h2 id="-simple-powerful-and-secure">✨ Simple, Powerful, and Secure</h2>
+<ul>
+<li>Built on the trusted <a href="https://libsodium.org">libsodium</a> C library.</li>
+<li>Designed for modern .NET: efficient memory handling via <code>Span&lt;T&gt;</code>, support for AOT via <code>LibraryImport</code>.</li>
+<li>Safe-by-default APIs that help you do cryptography right.</li>
+<li>Includes secure memory utilities, symmetric and asymmetric encryption, hashing, key derivation, and more.</li>
+</ul>
+<hr>
+<h2 id="-first-class-streaming-encryption">🌊 First-Class Streaming Encryption</h2>
+<p>LibSodium.Net provides idiomatic support for large file and streaming authenticated encryption using libsodium’s XChaCha20-Poly1305.</p>
+<p>Powered by the <code>SecretStream </code>API, you can securely encrypt and decrypt files of any size with tamper-detection and zero nonce reuse risk — all in a few lines of code.</p>
+<h2 id="-get-started">🚀 Get Started</h2>
+<p>Install the NuGet package:</p>
+<pre><code class="lang-bash">dotnet add package LibSodium.Net
+</code></pre>
+<p>Then head over to our <a href="guide/index.html">Guide</a> to learn how to:</p>
+<ul>
+<li>Encrypt and decrypt data securely</li>
+<li>Generate cryptographic keys</li>
+<li>Work with secure memory</li>
+<li>Handle errors properly and safely</li>
+</ul>
+<hr>
+<h2 id="-reference-documentation">📄 Reference Documentation</h2>
+<p>Need details on specific APIs? Browse the full <a href="api/LibSodium.html">Reference Documentation</a> to explore everything from <code>SecretBox</code> and <code>SecureMemory&lt;T&gt;</code> to stream encryption and key generation helpers.</p>
 
 </article>
 
@@ -92,7 +124,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
         </div>
       </div>
     </footer>

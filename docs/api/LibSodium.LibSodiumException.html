@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/Na.png" alt="LibSodium.Net">
-            LibSodium.Net
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -89,7 +89,7 @@
 
 
   <h1 id="LibSodium_LibSodiumException" data-uid="LibSodium.LibSodiumException" class="text-break">
-Class LibSodiumException  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class LibSodiumException  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +103,7 @@ Class LibSodiumException  <a class="header-action link-secondary" title="View so
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class LibSodiumException : InvalidOperationException, ISerializable</code></pre>
+public class LibSodiumException : CryptographicException, ISerializable</code></pre>
   </div>
 
 
@@ -115,7 +115,7 @@ public class LibSodiumException : InvalidOperationException, ISerializable</code
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.systemexception">SystemException</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.cryptographicexception">CryptographicException</a></div>
       <div><span class="xref">LibSodiumException</span></div>
     </dd>
   </dl>
@@ -197,7 +197,7 @@ public class LibSodiumException : InvalidOperationException, ISerializable</code
 
   <h3 id="LibSodium_LibSodiumException__ctor" data-uid="LibSodium.LibSodiumException.#ctor">
   LibSodiumException()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a> class.</p>
@@ -224,7 +224,7 @@ public class LibSodiumException : InvalidOperationException, ISerializable</code
 
   <h3 id="LibSodium_LibSodiumException__ctor_System_String_" data-uid="LibSodium.LibSodiumException.#ctor(System.String)">
   LibSodiumException(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a> class
@@ -258,7 +258,7 @@ with a specified error message.</p>
 
   <h3 id="LibSodium_LibSodiumException__ctor_System_String_System_Exception_" data-uid="LibSodium.LibSodiumException.#ctor(System.String,System.Exception)">
   LibSodiumException(string?, Exception?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/LibSodiumException.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a> class
@@ -309,7 +309,7 @@ that is the cause of this exception.</p>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
         </div>
       </div>
     </footer>

@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/Na.png" alt="LibSodium.Net">
-            LibSodium.Net
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -306,11 +306,85 @@ This class encapsulates secure memory allocation, read-only protection, and zero
 </h2>
 
 
+  <a id="LibSodium_SecureMemory_1_AsMemory_" data-uid="LibSodium.SecureMemory`1.AsMemory*"></a>
+
+  <h3 id="LibSodium_SecureMemory_1_AsMemory" data-uid="LibSodium.SecureMemory`1.AsMemory">
+  AsMemory()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory&lt;T&gt;</a> representing the secure unmanaged memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Memory&lt;T&gt; AsMemory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="LibSodium_SecureMemory_1_AsReadOnlyMemory_" data-uid="LibSodium.SecureMemory`1.AsReadOnlyMemory*"></a>
+
+  <h3 id="LibSodium_SecureMemory_1_AsReadOnlyMemory" data-uid="LibSodium.SecureMemory`1.AsReadOnlyMemory">
+  AsReadOnlyMemory()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory&lt;T&gt;</a> representing the secure unmanaged memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyMemory&lt;T&gt; AsReadOnlyMemory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
   <a id="LibSodium_SecureMemory_1_AsReadOnlySpan_" data-uid="LibSodium.SecureMemory`1.AsReadOnlySpan*"></a>
 
   <h3 id="LibSodium_SecureMemory_1_AsReadOnlySpan" data-uid="LibSodium.SecureMemory`1.AsReadOnlySpan">
   AsReadOnlySpan()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L415"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> representing the secure unmanaged memory buffer.</p>
@@ -398,7 +472,7 @@ Modifications made through one span will be visible through any other span obtai
 
   <h3 id="LibSodium_SecureMemory_1_Dispose" data-uid="LibSodium.SecureMemory`1.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Releases all resources used by the <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory&lt;T&gt;</a> object, including the allocated unmanaged secure memory.</p>
@@ -425,7 +499,7 @@ Modifications made through one span will be visible through any other span obtai
 
   <h3 id="LibSodium_SecureMemory_1_Finalize" data-uid="LibSodium.SecureMemory`1.Finalize">
   ~SecureMemory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L481"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Finalizes an instance of the <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory&lt;T&gt;</a> class.</p>
@@ -452,7 +526,7 @@ Modifications made through one span will be visible through any other span obtai
 
   <h3 id="LibSodium_SecureMemory_1_MemZero" data-uid="LibSodium.SecureMemory`1.MemZero">
   MemZero()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills the secure unmanaged memory buffer with zeros, effectively erasing its contents.</p>
@@ -485,7 +559,7 @@ Modifications made through one span will be visible through any other span obtai
 
   <h3 id="LibSodium_SecureMemory_1_ProtectReadOnly" data-uid="LibSodium.SecureMemory`1.ProtectReadOnly">
   ProtectReadOnly()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L429"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Marks the secure unmanaged memory buffer as read-only.</p>
@@ -521,7 +595,7 @@ Modifications made through one span will be visible through any other span obtai
 
   <h3 id="LibSodium_SecureMemory_1_ProtectReadWrite" data-uid="LibSodium.SecureMemory`1.ProtectReadWrite">
   ProtectReadWrite()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L445"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Marks the secure unmanaged memory buffer as read-write.</p>
@@ -570,7 +644,7 @@ Modifications made through one span will be visible through any other span obtai
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
         </div>
       </div>
     </footer>
