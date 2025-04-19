@@ -125,6 +125,88 @@ references:
   commentId: F:LibSodium.Base64Variant.UrlSafeNoPadding
   fullName: LibSodium.Base64Variant.UrlSafeNoPadding
   nameWithType: Base64Variant.UrlSafeNoPadding
+- uid: LibSodium.CryptoAuth
+  name: CryptoAuth
+  href: api/LibSodium.CryptoAuth.html
+  commentId: T:LibSodium.CryptoAuth
+  fullName: LibSodium.CryptoAuth
+  nameWithType: CryptoAuth
+- uid: LibSodium.CryptoAuth.ComputeMac(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: ComputeMac(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_ComputeMac_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoAuth.ComputeMac(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: ComputeMac(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoAuth.ComputeMac(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoAuth.ComputeMac(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoAuth.ComputeMac(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoAuth.ComputeMac(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoAuth.ComputeMac*
+  name: ComputeMac
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_ComputeMac_
+  commentId: Overload:LibSodium.CryptoAuth.ComputeMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoAuth.ComputeMac
+  nameWithType: CryptoAuth.ComputeMac
+- uid: LibSodium.CryptoAuth.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoAuth.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoAuth.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoAuth.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoAuth.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoAuth.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoAuth.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_GenerateKey_
+  commentId: Overload:LibSodium.CryptoAuth.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoAuth.GenerateKey
+  nameWithType: CryptoAuth.GenerateKey
+- uid: LibSodium.CryptoAuth.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_KeyLen
+  commentId: F:LibSodium.CryptoAuth.KeyLen
+  fullName: LibSodium.CryptoAuth.KeyLen
+  nameWithType: CryptoAuth.KeyLen
+- uid: LibSodium.CryptoAuth.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_MacLen
+  commentId: F:LibSodium.CryptoAuth.MacLen
+  fullName: LibSodium.CryptoAuth.MacLen
+  nameWithType: CryptoAuth.MacLen
+- uid: LibSodium.CryptoAuth.TryVerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: TryVerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_TryVerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoAuth.TryVerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: TryVerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoAuth.TryVerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoAuth.TryVerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoAuth.TryVerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoAuth.TryVerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoAuth.TryVerifyMac*
+  name: TryVerifyMac
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_TryVerifyMac_
+  commentId: Overload:LibSodium.CryptoAuth.TryVerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoAuth.TryVerifyMac
+  nameWithType: CryptoAuth.TryVerifyMac
+- uid: LibSodium.CryptoAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoAuth.VerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoAuth.VerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoAuth.VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoAuth.VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoAuth.VerifyMac*
+  name: VerifyMac
+  href: api/LibSodium.CryptoAuth.html#LibSodium_CryptoAuth_VerifyMac_
+  commentId: Overload:LibSodium.CryptoAuth.VerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoAuth.VerifyMac
+  nameWithType: CryptoAuth.VerifyMac
 - uid: LibSodium.CryptoSecretStream
   name: CryptoSecretStream
   href: api/LibSodium.CryptoSecretStream.html
@@ -557,106 +639,38 @@ references:
   commentId: T:LibSodium.SecretBox
   fullName: LibSodium.SecretBox
   nameWithType: SecretBox
-- uid: LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.DecryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.DecryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.DecryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.DecryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.DecryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.DecryptCombined*
-  name: DecryptCombined
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptCombined_
-  commentId: Overload:LibSodium.SecretBox.DecryptCombined
+- uid: LibSodium.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: SecretBox.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecretBox.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_Decrypt_
+  commentId: Overload:LibSodium.SecretBox.Decrypt
   isSpec: "True"
-  fullName: LibSodium.SecretBox.DecryptCombined
-  nameWithType: SecretBox.DecryptCombined
-- uid: LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.DecryptDetached(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.DecryptDetached(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.DecryptDetached(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.DecryptDetached(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.DecryptDetached(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.DecryptDetached*
-  name: DecryptDetached
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_DecryptDetached_
-  commentId: Overload:LibSodium.SecretBox.DecryptDetached
+  fullName: LibSodium.SecretBox.Decrypt
+  nameWithType: SecretBox.Decrypt
+- uid: LibSodium.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.SecretBox.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.SecretBox.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: SecretBox.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.SecretBox.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_Encrypt_
+  commentId: Overload:LibSodium.SecretBox.Encrypt
   isSpec: "True"
-  fullName: LibSodium.SecretBox.DecryptDetached
-  nameWithType: SecretBox.DecryptDetached
-- uid: LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.EncryptCombined(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.EncryptCombined(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.EncryptCombined(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.EncryptCombined(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.EncryptCombined(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.EncryptCombined*
-  name: EncryptCombined
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptCombined_
-  commentId: Overload:LibSodium.SecretBox.EncryptCombined
-  isSpec: "True"
-  fullName: LibSodium.SecretBox.EncryptCombined
-  nameWithType: SecretBox.EncryptCombined
-- uid: LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.SecretBox.EncryptDetached(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.SecretBox.EncryptDetached(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.SecretBox.EncryptDetached(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: SecretBox.EncryptDetached(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: SecretBox.EncryptDetached(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.SecretBox.EncryptDetached*
-  name: EncryptDetached
-  href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_EncryptDetached_
-  commentId: Overload:LibSodium.SecretBox.EncryptDetached
-  isSpec: "True"
-  fullName: LibSodium.SecretBox.EncryptDetached
-  nameWithType: SecretBox.EncryptDetached
+  fullName: LibSodium.SecretBox.Encrypt
+  nameWithType: SecretBox.Encrypt
 - uid: LibSodium.SecretBox.KeyLen
   name: KeyLen
   href: api/LibSodium.SecretBox.html#LibSodium_SecretBox_KeyLen
@@ -1385,3 +1399,59 @@ references:
   fullName.vb: LibSodium.UnmanagedMemorySpanHolder(Of T).GetOriginalSpan
   nameWithType: UnmanagedMemorySpanHolder<T>.GetOriginalSpan
   nameWithType.vb: UnmanagedMemorySpanHolder(Of T).GetOriginalSpan
+- uid: LibSodium.XChaCha20Poly1305
+  name: XChaCha20Poly1305
+  href: api/LibSodium.XChaCha20Poly1305.html
+  commentId: T:LibSodium.XChaCha20Poly1305
+  fullName: LibSodium.XChaCha20Poly1305
+  nameWithType: XChaCha20Poly1305
+- uid: LibSodium.XChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.XChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.XChaCha20Poly1305.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.XChaCha20Poly1305.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: XChaCha20Poly1305.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: XChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.XChaCha20Poly1305.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_Decrypt_
+  commentId: Overload:LibSodium.XChaCha20Poly1305.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.XChaCha20Poly1305.Decrypt
+  nameWithType: XChaCha20Poly1305.Decrypt
+- uid: LibSodium.XChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.XChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.XChaCha20Poly1305.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.XChaCha20Poly1305.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: XChaCha20Poly1305.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: XChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.XChaCha20Poly1305.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_Encrypt_
+  commentId: Overload:LibSodium.XChaCha20Poly1305.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.XChaCha20Poly1305.Encrypt
+  nameWithType: XChaCha20Poly1305.Encrypt
+- uid: LibSodium.XChaCha20Poly1305.KeyLen
+  name: KeyLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_KeyLen
+  commentId: F:LibSodium.XChaCha20Poly1305.KeyLen
+  fullName: LibSodium.XChaCha20Poly1305.KeyLen
+  nameWithType: XChaCha20Poly1305.KeyLen
+- uid: LibSodium.XChaCha20Poly1305.MacLen
+  name: MacLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_MacLen
+  commentId: F:LibSodium.XChaCha20Poly1305.MacLen
+  fullName: LibSodium.XChaCha20Poly1305.MacLen
+  nameWithType: XChaCha20Poly1305.MacLen
+- uid: LibSodium.XChaCha20Poly1305.NonceLen
+  name: NonceLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_NonceLen
+  commentId: F:LibSodium.XChaCha20Poly1305.NonceLen
+  fullName: LibSodium.XChaCha20Poly1305.NonceLen
+  nameWithType: XChaCha20Poly1305.NonceLen

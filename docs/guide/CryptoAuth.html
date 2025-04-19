@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128220; CryptoAuth | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128220; CryptoAuth | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/CryptoAuth.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-cryptoauth">📜 CryptoAuth</h1>
+
+<p>The <code>CryptoAuth</code> API in <strong>LibSodium.Net</strong> provides secure message authentication using HMAC-SHA-512-256. This is useful for ensuring that a message was not altered and comes from a trusted sender who knows the secret key.</p>
+<blockquote>
+<p>🧂 Based on libsodium’s <a href="https://doc.libsodium.org/secret-key_cryptography/secret-key_authentication">Secret Key Authentication <code>crypto_auth</code></a> API<br>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.CryptoAuth.html">API Reference for <code>CryptoAuth</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-features">✨ Features</h2>
+<ul>
+<li>Message authentication using HMAC-SHA-512-256.</li>
+<li>Fixed-length secret keys and MACs.</li>
+<li>Strong tampering detection.</li>
+<li>Safe and efficient API using <code>Span&lt;T&gt;</code>.</li>
+<li>Fully interoperable with libsodium's <code>crypto_auth</code> functions.</li>
+</ul>
+<hr>
+<h2 id="-what-is-message-authentication">🔍 What is Message Authentication?</h2>
+<p>Unlike encryption, <strong>authentication</strong> doesn't hide the contents of a message. It ensures that the message has <strong>not been tampered with</strong> and was created by someone who <strong>knows the shared secret key</strong>.</p>
+<p>This is useful for protocols that need to validate integrity and authenticity but don't require confidentiality.</p>
+<p><code>CryptoAuth</code> uses:</p>
+<ul>
+<li><strong>HMAC-SHA-512-256</strong>: a strong MAC algorithm with 32-byte output.</li>
+<li>A <strong>32-byte key</strong> shared between sender and receiver.</li>
+</ul>
+<hr>
+<h2 id="usage-examples">📦Usage Examples</h2>
+<h3 id="-key-generation">💻 Key Generation</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[CryptoAuth.KeyLen];
+CryptoAuth.GenerateKey(key);
+</code></pre>
+<h3 id="-mac-generation">💻 MAC Generation</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoAuth.MacLen];
+ReadOnlySpan&lt;byte&gt; message = Encoding.UTF8.GetBytes(&quot;Message to authenticate&quot;);
+
+CryptoAuth.ComputeMac(mac, message, key);
+</code></pre>
+<h3 id="-mac-verification">💻 MAC Verification</h3>
+<pre><code class="lang-csharp">bool isValid = CryptoAuth.TryVerifyMac(mac, message, key);
+
+if (isValid)
+{
+    Console.WriteLine(&quot;MAC is valid.&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;MAC is invalid!&quot;);
+}
+</code></pre>
+<h3 id="-strict-verification-throws-on-failure">💻 Strict Verification (throws on failure)</h3>
+<pre><code class="lang-csharp">CryptoAuth.VerifyMac(mac, message, key); // Throws LibSodiumException if verification fails
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — input buffers are incorrect length.</li>
+<li><code>LibSodiumException</code> — MAC computation or verification failed unexpectedly.</li>
+</ul>
+<hr>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li>The MAC is <strong>32 bytes</strong> (<code>CryptoAuth.MacLen</code>).</li>
+<li>The secret key must be exactly <strong>32 bytes</strong> (<code>CryptoAuth.KeyLen</code>).</li>
+<li>This API does <strong>not</strong> encrypt your message, only authenticates it.</li>
+<li>Use <code>RandomGenerator.Fill()</code> or <code>CryptoAuth.GenerateKey()</code> to create secure keys.</li>
+<li>Never reuse keys across different algorithms or protocols.</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>&#128274; SecretBox | LibSodium.Net </title>
+      <title>&#128272; XChaCha20-Poly1305 | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="&#128274; SecretBox | LibSodium.Net ">
+      <meta name="title" content="&#128272; XChaCha20-Poly1305 | LibSodium.Net ">
       
       
       <link rel="icon" href="../images/Na.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/SecretBox.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/XChaCha20-Poly1305.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,105 +85,93 @@
         </div>
 
         <article data-uid="">
-<h1 id="-secretbox">🔒 SecretBox</h1>
+<h1 id="-xchacha20-poly1305">🔐 XChaCha20-Poly1305</h1>
 
-<p>The <code>SecretBox</code> API in <strong>LibSodium.Net</strong> provides a simple and secure way to perform symmetric authenticated encryption using the XSalsa20 stream cipher and Poly1305 MAC. It supports both <strong>combined</strong> and <strong>detached</strong> encryption modes, as well as <strong>manual</strong> or <strong>automatic</strong> nonce handling — all from a single, unified API.</p>
+<p>The <code>XChaCha20Poly1305</code> API in <strong>LibSodium.Net</strong> provides authenticated encryption with associated data (AEAD) and extended nonce support (192-bit), making it safer for use in systems where nonce reuse is a concern. It supports both <strong>combined</strong> and <strong>detached</strong> encryption modes, and allows <strong>manual</strong> or <strong>automatic</strong> nonce handling through a unified API.</p>
 <blockquote>
-<p>🧂Based on libsodium's <a href="https://doc.libsodium.org/secret-key_cryptography/secretbox">Authenticated encryption using <code>crypto_secretbox</code></a><br>
-ℹ️ <em>See also</em>: <a href="../api/LibSodium.SecretBox.html">API Reference for <code>SecretBox</code></a></p>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/secret-key_cryptography/aead/chacha20-poly1305/xchacha20-poly1305_construction">XChaCha20-Poly1305 construction</a><br>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.XChaCha20Poly1305.html">API Reference for <code>XChaCha20Poly1305</code></a></p>
 </blockquote>
 <hr>
 <h2 id="-features">✨ Features</h2>
 <ul>
-<li>Symmetric authenticated encryption using XSalsa20-Poly1305.</li>
-<li>Combined mode and detached mode support.</li>
-<li>Automatic or manual nonce handling.</li>
-<li>Built-in MAC verification (tamper detection).</li>
-<li>Unified <code>Encrypt</code> / <code>Decrypt</code> API with optional parameters.</li>
-<li>Safe and efficient <code>Span&lt;T&gt;</code>-based implementation.</li>
+<li>Authenticated encryption with associated data (AEAD).</li>
+<li>24-byte nonce (192-bit) minimizes risk of nonce reuse.</li>
+<li>Combined and detached mode support through a single API.</li>
+<li>Optional <code>additionalData</code> for protocol-level authentication.</li>
+<li>Manual or automatic nonce handling.</li>
+<li><code>Span&lt;T&gt;</code>-based API for high performance and low allocations.</li>
 </ul>
 <hr>
 <h2 id="-encrypting-and-decrypting-messages">📦 Encrypting and Decrypting Messages</h2>
-<p>Use the <code>Encrypt</code> and <code>Decrypt</code> methods. The behavior depends on whether you pass a <code>mac</code> buffer (detached) and/or a <code>nonce</code> (manual).</p>
-<h3 id="-combined-mode-auto-nonce">💻 Combined Mode (Auto Nonce)</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
+<p>Use the <code>Encrypt</code> and <code>Decrypt</code> methods to perform authenticated encryption. The mode is determined by the presence of the optional <code>mac</code> parameter.</p>
+<h3 id="-combined-mode-auto-nonce-no-aad">💻 Combined Mode (Auto Nonce, No AAD)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
 RandomGenerator.Fill(key);
 
-var plaintext = Encoding.UTF8.GetBytes(&quot;Hello, auto-nonce world!&quot;);
-Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.MacLen + SecretBox.NonceLen];
+var plaintext = Encoding.UTF8.GetBytes(&quot;Auto nonce test&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + XChaCha20Poly1305.MacLen + XChaCha20Poly1305.NonceLen];
 
-SecretBox.Encrypt(ciphertext, plaintext, key);
+XChaCha20Poly1305.Encrypt(ciphertext, plaintext, key);
 
 Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
-SecretBox.Decrypt(decrypted, ciphertext, key);
+XChaCha20Poly1305.Decrypt(decrypted, ciphertext, key);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
-<h3 id="-combined-mode-manual-nonce">💻 Combined Mode (Manual Nonce)</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
-Span&lt;byte&gt; nonce = stackalloc byte[SecretBox.NonceLen];
+<h3 id="-combined-mode-manual-nonce-with-aad">💻 Combined Mode (Manual Nonce with AAD)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
+Span&lt;byte&gt; nonce = stackalloc byte[XChaCha20Poly1305.NonceLen];
 RandomGenerator.Fill(key);
 RandomGenerator.Fill(nonce);
 
-var plaintext = Encoding.UTF8.GetBytes(&quot;Manual nonce combined&quot;);
-Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.MacLen];
+var plaintext = Encoding.UTF8.GetBytes(&quot;With AAD and nonce&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + XChaCha20Poly1305.MacLen];
+Span&lt;byte&gt; aad = Encoding.UTF8.GetBytes(&quot;metadata&quot;);
 
-SecretBox.Encrypt(ciphertext, plaintext, key, nonce: nonce);
-
-Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
-SecretBox.Decrypt(decrypted, ciphertext, key, nonce: nonce);
-Console.WriteLine(Encoding.UTF8.GetString(decrypted));
-</code></pre>
-<h3 id="-detached-mode-auto-nonce">💻 Detached Mode (Auto Nonce)</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
-RandomGenerator.Fill(key);
-
-var plaintext = Encoding.UTF8.GetBytes(&quot;Detached + auto nonce&quot;);
-Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length + SecretBox.NonceLen];
-Span&lt;byte&gt; mac = stackalloc byte[SecretBox.MacLen];
-
-SecretBox.Encrypt(ciphertext, plaintext, key, mac);
+XChaCha20Poly1305.Encrypt(ciphertext, plaintext, key, aad: aad, nonce: nonce);
 
 Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
-SecretBox.Decrypt(decrypted, ciphertext, key, mac);
+XChaCha20Poly1305.Decrypt(decrypted, ciphertext, key, aad: aad, nonce: nonce);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
 <h3 id="-detached-mode-manual-nonce">💻 Detached Mode (Manual Nonce)</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[SecretBox.KeyLen];
-Span&lt;byte&gt; nonce = stackalloc byte[SecretBox.NonceLen];
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
+Span&lt;byte&gt; nonce = stackalloc byte[XChaCha20Poly1305.NonceLen];
 RandomGenerator.Fill(key);
 RandomGenerator.Fill(nonce);
 
-var plaintext = Encoding.UTF8.GetBytes(&quot;Detached with nonce&quot;);
+var plaintext = Encoding.UTF8.GetBytes(&quot;Detached encryption&quot;);
 Span&lt;byte&gt; ciphertext = stackalloc byte[plaintext.Length];
-Span&lt;byte&gt; mac = stackalloc byte[SecretBox.MacLen];
+Span&lt;byte&gt; mac = stackalloc byte[XChaCha20Poly1305.MacLen];
 
-SecretBox.Encrypt(ciphertext, plaintext, key, mac, nonce);
+XChaCha20Poly1305.Encrypt(ciphertext, plaintext, key, mac, nonce: nonce);
 
 Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
-SecretBox.Decrypt(decrypted, ciphertext, key, mac, nonce);
+XChaCha20Poly1305.Decrypt(decrypted, ciphertext, key, mac, nonce: nonce);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
 <hr>
 <h2 id="-error-handling">⚠️ Error Handling</h2>
 <ul>
 <li><code>ArgumentException</code> — invalid input sizes.</li>
-<li><code>LibSodiumException</code> — authentication failed.</li>
+<li><code>LibSodiumException</code> — authentication failed (tampered data).</li>
 </ul>
 <hr>
 <h2 id="-notes">📝 Notes</h2>
 <ul>
-<li>Nonce must be exactly <code>SecretBox.NonceLen</code> bytes when passed manually.</li>
-<li>Auto-nonce is prepended to the ciphertext when not specified.</li>
-<li>Combined mode outputs ciphertext + MAC (+ optional nonce).</li>
-<li>Detached mode separates MAC from ciphertext.</li>
-<li>Buffers can be larger than required.</li>
-<li>Always use <code>RandomGenerator.Fill()</code> for secure key and nonce generation.</li>
+<li>Nonce must be exactly 24 bytes.</li>
+<li>Auto-nonce is prepended to ciphertext for easy reuse.</li>
+<li>Buffers must have space for output (e.g., ciphertext includes MAC and possibly nonce). It can be longer than needed.</li>
+<li><code>Encrypt</code> and <code>Decrypt</code> automatically choose combined or detached mode depending on the presence of the <code>mac</code> parameter.</li>
+<li>Use <code>RandomGenerator.Fill()</code> to safely generate keys and nonces.</li>
+<li>AAD is optional but recommended for additional authentication context.</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>
 <ul>
-<li><a href="https://doc.libsodium.org/secret-key_cryptography/secretbox">libsodium secretbox documentation</a></li>
-<li><a href="../api/LibSodium.SecretBox.html">API Reference</a></li>
+<li><a href="https://doc.libsodium.org/secret-key_cryptography/aead">libsodium AEAD documentation</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc8439">RFC 8439 - ChaCha20 and Poly1305 for IETF Protocols</a></li>
+<li><a href="../api/LibSodium.XChaCha20Poly1305.html">API Reference</a></li>
 </ul>
 
 </article>
