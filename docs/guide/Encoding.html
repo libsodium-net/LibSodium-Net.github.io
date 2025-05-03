@@ -109,7 +109,7 @@
 <hr>
 <h2 id="-hexencoding">✨ HexEncoding</h2>
 <p><code>HexEncoding</code> provides methods to encode a byte array into a lowercase hexadecimal string and decode from hexadecimal back into binary. All operations are span-based for performance and safety.</p>
-<h3 id="-encode-to-hex">💻 Encode to hex</h3>
+<h3 id="-encode-to-hex">📋 Encode to hex</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; bin = stackalloc byte[] { 0x01, 0x23, 0x45 };
 string hex = HexEncoding.BinToHex(bin); // &quot;012345&quot;
 </code></pre>
@@ -117,7 +117,7 @@ string hex = HexEncoding.BinToHex(bin); // &quot;012345&quot;
 <pre><code class="lang-csharp">Span&lt;char&gt; hexBuffer = stackalloc char[bin.Length * 2];
 HexEncoding.BinToHex(bin, hexBuffer);
 </code></pre>
-<h3 id="-decode-from-hex">💻 Decode from hex</h3>
+<h3 id="-decode-from-hex">📋 Decode from hex</h3>
 <pre><code class="lang-csharp">string hex = &quot;0123456789abcdef&quot;;
 Span&lt;byte&gt; buffer = stackalloc byte[hex.Length / 2];
 HexEncoding.HexToBin(hex, buffer);
@@ -144,7 +144,7 @@ HexEncoding.HexToBin(formatted, buffer, &quot;:&quot;);
 }
 </code></pre>
 <p>These map directly to <code>sodium_base64_VARIANT_*</code> in libsodium.</p>
-<h3 id="-encode-to-base64">💻 Encode to Base64</h3>
+<h3 id="-encode-to-base64">📋 Encode to Base64</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; bin = stackalloc byte[] { 1, 2, 3, 4 };
 string b64 = Base64Encoding.BinToBase64(bin, Base64Variant.Original);
 </code></pre>
@@ -152,7 +152,7 @@ string b64 = Base64Encoding.BinToBase64(bin, Base64Variant.Original);
 <pre><code class="lang-csharp">Span&lt;char&gt; buffer = stackalloc char[Base64Encoding.GetBase64EncodedLen(bin.Length, Base64Variant.Original)];
 Base64Encoding.BinToBase64(bin, buffer, Base64Variant.Original);
 </code></pre>
-<h3 id="-decode-from-base64">💻 Decode from Base64</h3>
+<h3 id="-decode-from-base64">📋 Decode from Base64</h3>
 <pre><code class="lang-csharp">string b64 = &quot;AQIDBA==&quot;;
 Span&lt;byte&gt; output = stackalloc byte[Base64Encoding.GetBase64DecodedMaxLen(b64.Length)];
 Base64Encoding.Base64ToBin(b64, output, Base64Variant.Original);

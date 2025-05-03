@@ -93,7 +93,7 @@
 ℹ️ <em>See also</em>: <a href="../api/LibSodium.CryptoAuth.html">API Reference for <code>CryptoAuth</code></a></p>
 </blockquote>
 <hr>
-<h2 id="-features">✨ Features</h2>
+<h2 id="-features">🌟 Features</h2>
 <ul>
 <li>Message authentication using HMAC-SHA-512-256.</li>
 <li>Fixed-length secret keys and MACs.</li>
@@ -111,18 +111,18 @@
 <li>A <strong>32-byte key</strong> shared between sender and receiver.</li>
 </ul>
 <hr>
-<h2 id="usage-examples">📦Usage Examples</h2>
-<h3 id="-key-generation">💻 Key Generation</h3>
+<h2 id="usage-examples">✨Usage Examples</h2>
+<h3 id="-key-generation">📋 Key Generation</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[CryptoAuth.KeyLen];
 CryptoAuth.GenerateKey(key);
 </code></pre>
-<h3 id="-mac-generation">💻 MAC Generation</h3>
+<h3 id="-mac-generation">📋 MAC Generation</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoAuth.MacLen];
 ReadOnlySpan&lt;byte&gt; message = Encoding.UTF8.GetBytes(&quot;Message to authenticate&quot;);
 
 CryptoAuth.ComputeMac(mac, message, key);
 </code></pre>
-<h3 id="-mac-verification">💻 MAC Verification</h3>
+<h3 id="-mac-verification">📋 MAC Verification</h3>
 <pre><code class="lang-csharp">bool isValid = CryptoAuth.TryVerifyMac(mac, message, key);
 
 if (isValid)
@@ -134,7 +134,7 @@ else
     Console.WriteLine(&quot;MAC is invalid!&quot;);
 }
 </code></pre>
-<h3 id="-strict-verification-throws-on-failure">💻 Strict Verification (throws on failure)</h3>
+<h3 id="-strict-verification-throws-on-failure">📋 Strict Verification (throws on failure)</h3>
 <pre><code class="lang-csharp">CryptoAuth.VerifyMac(mac, message, key); // Throws LibSodiumException if verification fails
 </code></pre>
 <hr>

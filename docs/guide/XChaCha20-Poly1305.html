@@ -93,7 +93,7 @@
 ℹ️ <em>See also</em>: <a href="../api/LibSodium.XChaCha20Poly1305.html">API Reference for <code>XChaCha20Poly1305</code></a></p>
 </blockquote>
 <hr>
-<h2 id="-features">✨ Features</h2>
+<h2 id="-features">🌟 Features</h2>
 <ul>
 <li>Authenticated encryption with associated data (AEAD).</li>
 <li>24-byte nonce (192-bit) minimizes risk of nonce reuse.</li>
@@ -103,9 +103,9 @@
 <li><code>Span&lt;T&gt;</code>-based API for high performance and low allocations.</li>
 </ul>
 <hr>
-<h2 id="-encrypting-and-decrypting-messages">📦 Encrypting and Decrypting Messages</h2>
+<h2 id="-encrypting-and-decrypting-messages">✨ Encrypting and Decrypting Messages</h2>
 <p>Use the <code>Encrypt</code> and <code>Decrypt</code> methods to perform authenticated encryption. The mode is determined by the presence of the optional <code>mac</code> parameter.</p>
-<h3 id="-combined-mode-auto-nonce-no-aad">💻 Combined Mode (Auto Nonce, No AAD)</h3>
+<h3 id="-combined-mode-auto-nonce-no-aad">📋 Combined Mode (Auto Nonce, No AAD)</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
 RandomGenerator.Fill(key);
 
@@ -118,7 +118,7 @@ Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
 XChaCha20Poly1305.Decrypt(decrypted, ciphertext, key);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
-<h3 id="-combined-mode-manual-nonce-with-aad">💻 Combined Mode (Manual Nonce with AAD)</h3>
+<h3 id="-combined-mode-manual-nonce-with-aad">📋 Combined Mode (Manual Nonce with AAD)</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
 Span&lt;byte&gt; nonce = stackalloc byte[XChaCha20Poly1305.NonceLen];
 RandomGenerator.Fill(key);
@@ -134,7 +134,7 @@ Span&lt;byte&gt; decrypted = stackalloc byte[plaintext.Length];
 XChaCha20Poly1305.Decrypt(decrypted, ciphertext, key, aad: aad, nonce: nonce);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
-<h3 id="-detached-mode-manual-nonce">💻 Detached Mode (Manual Nonce)</h3>
+<h3 id="-detached-mode-manual-nonce">📋 Detached Mode (Manual Nonce)</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[XChaCha20Poly1305.KeyLen];
 Span&lt;byte&gt; nonce = stackalloc byte[XChaCha20Poly1305.NonceLen];
 RandomGenerator.Fill(key);

@@ -7,6 +7,237 @@ references:
   commentId: N:LibSodium
   fullName: LibSodium
   nameWithType: LibSodium
+- uid: LibSodium.Aegis128L
+  name: Aegis128L
+  href: api/LibSodium.Aegis128L.html
+  commentId: T:LibSodium.Aegis128L
+  fullName: LibSodium.Aegis128L
+  nameWithType: Aegis128L
+- uid: LibSodium.Aegis128L.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aegis128L.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aegis128L.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aegis128L.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aegis128L.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aegis128L.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aegis128L.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_Decrypt_
+  commentId: Overload:LibSodium.Aegis128L.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.Aegis128L.Decrypt
+  nameWithType: Aegis128L.Decrypt
+- uid: LibSodium.Aegis128L.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aegis128L.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aegis128L.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aegis128L.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aegis128L.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aegis128L.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aegis128L.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_Encrypt_
+  commentId: Overload:LibSodium.Aegis128L.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.Aegis128L.Encrypt
+  nameWithType: Aegis128L.Encrypt
+- uid: LibSodium.Aegis128L.KeyLen
+  name: KeyLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_KeyLen
+  commentId: P:LibSodium.Aegis128L.KeyLen
+  fullName: LibSodium.Aegis128L.KeyLen
+  nameWithType: Aegis128L.KeyLen
+- uid: LibSodium.Aegis128L.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_KeyLen_
+  commentId: Overload:LibSodium.Aegis128L.KeyLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis128L.KeyLen
+  nameWithType: Aegis128L.KeyLen
+- uid: LibSodium.Aegis128L.MacLen
+  name: MacLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_MacLen
+  commentId: P:LibSodium.Aegis128L.MacLen
+  fullName: LibSodium.Aegis128L.MacLen
+  nameWithType: Aegis128L.MacLen
+- uid: LibSodium.Aegis128L.MacLen*
+  name: MacLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_MacLen_
+  commentId: Overload:LibSodium.Aegis128L.MacLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis128L.MacLen
+  nameWithType: Aegis128L.MacLen
+- uid: LibSodium.Aegis128L.NonceLen
+  name: NonceLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_NonceLen
+  commentId: P:LibSodium.Aegis128L.NonceLen
+  fullName: LibSodium.Aegis128L.NonceLen
+  nameWithType: Aegis128L.NonceLen
+- uid: LibSodium.Aegis128L.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.Aegis128L.html#LibSodium_Aegis128L_NonceLen_
+  commentId: Overload:LibSodium.Aegis128L.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis128L.NonceLen
+  nameWithType: Aegis128L.NonceLen
+- uid: LibSodium.Aegis256
+  name: Aegis256
+  href: api/LibSodium.Aegis256.html
+  commentId: T:LibSodium.Aegis256
+  fullName: LibSodium.Aegis256
+  nameWithType: Aegis256
+- uid: LibSodium.Aegis256.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aegis256.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aegis256.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aegis256.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aegis256.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aegis256.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aegis256.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_Decrypt_
+  commentId: Overload:LibSodium.Aegis256.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.Aegis256.Decrypt
+  nameWithType: Aegis256.Decrypt
+- uid: LibSodium.Aegis256.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aegis256.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aegis256.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aegis256.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aegis256.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aegis256.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aegis256.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_Encrypt_
+  commentId: Overload:LibSodium.Aegis256.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.Aegis256.Encrypt
+  nameWithType: Aegis256.Encrypt
+- uid: LibSodium.Aegis256.KeyLen
+  name: KeyLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_KeyLen
+  commentId: P:LibSodium.Aegis256.KeyLen
+  fullName: LibSodium.Aegis256.KeyLen
+  nameWithType: Aegis256.KeyLen
+- uid: LibSodium.Aegis256.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_KeyLen_
+  commentId: Overload:LibSodium.Aegis256.KeyLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis256.KeyLen
+  nameWithType: Aegis256.KeyLen
+- uid: LibSodium.Aegis256.MacLen
+  name: MacLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_MacLen
+  commentId: P:LibSodium.Aegis256.MacLen
+  fullName: LibSodium.Aegis256.MacLen
+  nameWithType: Aegis256.MacLen
+- uid: LibSodium.Aegis256.MacLen*
+  name: MacLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_MacLen_
+  commentId: Overload:LibSodium.Aegis256.MacLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis256.MacLen
+  nameWithType: Aegis256.MacLen
+- uid: LibSodium.Aegis256.NonceLen
+  name: NonceLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_NonceLen
+  commentId: P:LibSodium.Aegis256.NonceLen
+  fullName: LibSodium.Aegis256.NonceLen
+  nameWithType: Aegis256.NonceLen
+- uid: LibSodium.Aegis256.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.Aegis256.html#LibSodium_Aegis256_NonceLen_
+  commentId: Overload:LibSodium.Aegis256.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.Aegis256.NonceLen
+  nameWithType: Aegis256.NonceLen
+- uid: LibSodium.Aes256Gcm
+  name: Aes256Gcm
+  href: api/LibSodium.Aes256Gcm.html
+  commentId: T:LibSodium.Aes256Gcm
+  fullName: LibSodium.Aes256Gcm
+  nameWithType: Aes256Gcm
+- uid: LibSodium.Aes256Gcm.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aes256Gcm.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aes256Gcm.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aes256Gcm.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aes256Gcm.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aes256Gcm.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aes256Gcm.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_Decrypt_
+  commentId: Overload:LibSodium.Aes256Gcm.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.Aes256Gcm.Decrypt
+  nameWithType: Aes256Gcm.Decrypt
+- uid: LibSodium.Aes256Gcm.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.Aes256Gcm.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.Aes256Gcm.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.Aes256Gcm.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: Aes256Gcm.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: Aes256Gcm.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.Aes256Gcm.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_Encrypt_
+  commentId: Overload:LibSodium.Aes256Gcm.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.Aes256Gcm.Encrypt
+  nameWithType: Aes256Gcm.Encrypt
+- uid: LibSodium.Aes256Gcm.KeyLen
+  name: KeyLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_KeyLen
+  commentId: P:LibSodium.Aes256Gcm.KeyLen
+  fullName: LibSodium.Aes256Gcm.KeyLen
+  nameWithType: Aes256Gcm.KeyLen
+- uid: LibSodium.Aes256Gcm.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_KeyLen_
+  commentId: Overload:LibSodium.Aes256Gcm.KeyLen
+  isSpec: "True"
+  fullName: LibSodium.Aes256Gcm.KeyLen
+  nameWithType: Aes256Gcm.KeyLen
+- uid: LibSodium.Aes256Gcm.MacLen
+  name: MacLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_MacLen
+  commentId: P:LibSodium.Aes256Gcm.MacLen
+  fullName: LibSodium.Aes256Gcm.MacLen
+  nameWithType: Aes256Gcm.MacLen
+- uid: LibSodium.Aes256Gcm.MacLen*
+  name: MacLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_MacLen_
+  commentId: Overload:LibSodium.Aes256Gcm.MacLen
+  isSpec: "True"
+  fullName: LibSodium.Aes256Gcm.MacLen
+  nameWithType: Aes256Gcm.MacLen
+- uid: LibSodium.Aes256Gcm.NonceLen
+  name: NonceLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_NonceLen
+  commentId: P:LibSodium.Aes256Gcm.NonceLen
+  fullName: LibSodium.Aes256Gcm.NonceLen
+  nameWithType: Aes256Gcm.NonceLen
+- uid: LibSodium.Aes256Gcm.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.Aes256Gcm.html#LibSodium_Aes256Gcm_NonceLen_
+  commentId: Overload:LibSodium.Aes256Gcm.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.Aes256Gcm.NonceLen
+  nameWithType: Aes256Gcm.NonceLen
 - uid: LibSodium.Base64Encoding
   name: Base64Encoding
   href: api/LibSodium.Base64Encoding.html
@@ -125,6 +356,160 @@ references:
   commentId: F:LibSodium.Base64Variant.UrlSafeNoPadding
   fullName: LibSodium.Base64Variant.UrlSafeNoPadding
   nameWithType: Base64Variant.UrlSafeNoPadding
+- uid: LibSodium.ChaCha20Poly1305
+  name: ChaCha20Poly1305
+  href: api/LibSodium.ChaCha20Poly1305.html
+  commentId: T:LibSodium.ChaCha20Poly1305
+  fullName: LibSodium.ChaCha20Poly1305
+  nameWithType: ChaCha20Poly1305
+- uid: LibSodium.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.ChaCha20Poly1305.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ChaCha20Poly1305.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: ChaCha20Poly1305.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: ChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.ChaCha20Poly1305.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_Decrypt_
+  commentId: Overload:LibSodium.ChaCha20Poly1305.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305.Decrypt
+  nameWithType: ChaCha20Poly1305.Decrypt
+- uid: LibSodium.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.ChaCha20Poly1305.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ChaCha20Poly1305.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: ChaCha20Poly1305.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: ChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.ChaCha20Poly1305.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_Encrypt_
+  commentId: Overload:LibSodium.ChaCha20Poly1305.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305.Encrypt
+  nameWithType: ChaCha20Poly1305.Encrypt
+- uid: LibSodium.ChaCha20Poly1305.KeyLen
+  name: KeyLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_KeyLen
+  commentId: P:LibSodium.ChaCha20Poly1305.KeyLen
+  fullName: LibSodium.ChaCha20Poly1305.KeyLen
+  nameWithType: ChaCha20Poly1305.KeyLen
+- uid: LibSodium.ChaCha20Poly1305.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_KeyLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305.KeyLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305.KeyLen
+  nameWithType: ChaCha20Poly1305.KeyLen
+- uid: LibSodium.ChaCha20Poly1305.MacLen
+  name: MacLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_MacLen
+  commentId: P:LibSodium.ChaCha20Poly1305.MacLen
+  fullName: LibSodium.ChaCha20Poly1305.MacLen
+  nameWithType: ChaCha20Poly1305.MacLen
+- uid: LibSodium.ChaCha20Poly1305.MacLen*
+  name: MacLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_MacLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305.MacLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305.MacLen
+  nameWithType: ChaCha20Poly1305.MacLen
+- uid: LibSodium.ChaCha20Poly1305.NonceLen
+  name: NonceLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_NonceLen
+  commentId: P:LibSodium.ChaCha20Poly1305.NonceLen
+  fullName: LibSodium.ChaCha20Poly1305.NonceLen
+  nameWithType: ChaCha20Poly1305.NonceLen
+- uid: LibSodium.ChaCha20Poly1305.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.ChaCha20Poly1305.html#LibSodium_ChaCha20Poly1305_NonceLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305.NonceLen
+  nameWithType: ChaCha20Poly1305.NonceLen
+- uid: LibSodium.ChaCha20Poly1305Ietf
+  name: ChaCha20Poly1305Ietf
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html
+  commentId: T:LibSodium.ChaCha20Poly1305Ietf
+  fullName: LibSodium.ChaCha20Poly1305Ietf
+  nameWithType: ChaCha20Poly1305Ietf
+- uid: LibSodium.ChaCha20Poly1305Ietf.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ChaCha20Poly1305Ietf.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.ChaCha20Poly1305Ietf.Decrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ChaCha20Poly1305Ietf.Decrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: ChaCha20Poly1305Ietf.Decrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: ChaCha20Poly1305Ietf.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.ChaCha20Poly1305Ietf.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_Decrypt_
+  commentId: Overload:LibSodium.ChaCha20Poly1305Ietf.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305Ietf.Decrypt
+  nameWithType: ChaCha20Poly1305Ietf.Decrypt
+- uid: LibSodium.ChaCha20Poly1305Ietf.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ChaCha20Poly1305Ietf.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.ChaCha20Poly1305Ietf.Encrypt(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ChaCha20Poly1305Ietf.Encrypt(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: ChaCha20Poly1305Ietf.Encrypt(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: ChaCha20Poly1305Ietf.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.ChaCha20Poly1305Ietf.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_Encrypt_
+  commentId: Overload:LibSodium.ChaCha20Poly1305Ietf.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305Ietf.Encrypt
+  nameWithType: ChaCha20Poly1305Ietf.Encrypt
+- uid: LibSodium.ChaCha20Poly1305Ietf.KeyLen
+  name: KeyLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_KeyLen
+  commentId: P:LibSodium.ChaCha20Poly1305Ietf.KeyLen
+  fullName: LibSodium.ChaCha20Poly1305Ietf.KeyLen
+  nameWithType: ChaCha20Poly1305Ietf.KeyLen
+- uid: LibSodium.ChaCha20Poly1305Ietf.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_KeyLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305Ietf.KeyLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305Ietf.KeyLen
+  nameWithType: ChaCha20Poly1305Ietf.KeyLen
+- uid: LibSodium.ChaCha20Poly1305Ietf.MacLen
+  name: MacLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_MacLen
+  commentId: P:LibSodium.ChaCha20Poly1305Ietf.MacLen
+  fullName: LibSodium.ChaCha20Poly1305Ietf.MacLen
+  nameWithType: ChaCha20Poly1305Ietf.MacLen
+- uid: LibSodium.ChaCha20Poly1305Ietf.MacLen*
+  name: MacLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_MacLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305Ietf.MacLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305Ietf.MacLen
+  nameWithType: ChaCha20Poly1305Ietf.MacLen
+- uid: LibSodium.ChaCha20Poly1305Ietf.NonceLen
+  name: NonceLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_NonceLen
+  commentId: P:LibSodium.ChaCha20Poly1305Ietf.NonceLen
+  fullName: LibSodium.ChaCha20Poly1305Ietf.NonceLen
+  nameWithType: ChaCha20Poly1305Ietf.NonceLen
+- uid: LibSodium.ChaCha20Poly1305Ietf.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.ChaCha20Poly1305Ietf.html#LibSodium_ChaCha20Poly1305Ietf_NonceLen_
+  commentId: Overload:LibSodium.ChaCha20Poly1305Ietf.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.ChaCha20Poly1305Ietf.NonceLen
+  nameWithType: ChaCha20Poly1305Ietf.NonceLen
 - uid: LibSodium.CryptoAuth
   name: CryptoAuth
   href: api/LibSodium.CryptoAuth.html
@@ -1440,18 +1825,39 @@ references:
 - uid: LibSodium.XChaCha20Poly1305.KeyLen
   name: KeyLen
   href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_KeyLen
-  commentId: F:LibSodium.XChaCha20Poly1305.KeyLen
+  commentId: P:LibSodium.XChaCha20Poly1305.KeyLen
+  fullName: LibSodium.XChaCha20Poly1305.KeyLen
+  nameWithType: XChaCha20Poly1305.KeyLen
+- uid: LibSodium.XChaCha20Poly1305.KeyLen*
+  name: KeyLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_KeyLen_
+  commentId: Overload:LibSodium.XChaCha20Poly1305.KeyLen
+  isSpec: "True"
   fullName: LibSodium.XChaCha20Poly1305.KeyLen
   nameWithType: XChaCha20Poly1305.KeyLen
 - uid: LibSodium.XChaCha20Poly1305.MacLen
   name: MacLen
   href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_MacLen
-  commentId: F:LibSodium.XChaCha20Poly1305.MacLen
+  commentId: P:LibSodium.XChaCha20Poly1305.MacLen
+  fullName: LibSodium.XChaCha20Poly1305.MacLen
+  nameWithType: XChaCha20Poly1305.MacLen
+- uid: LibSodium.XChaCha20Poly1305.MacLen*
+  name: MacLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_MacLen_
+  commentId: Overload:LibSodium.XChaCha20Poly1305.MacLen
+  isSpec: "True"
   fullName: LibSodium.XChaCha20Poly1305.MacLen
   nameWithType: XChaCha20Poly1305.MacLen
 - uid: LibSodium.XChaCha20Poly1305.NonceLen
   name: NonceLen
   href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_NonceLen
-  commentId: F:LibSodium.XChaCha20Poly1305.NonceLen
+  commentId: P:LibSodium.XChaCha20Poly1305.NonceLen
+  fullName: LibSodium.XChaCha20Poly1305.NonceLen
+  nameWithType: XChaCha20Poly1305.NonceLen
+- uid: LibSodium.XChaCha20Poly1305.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.XChaCha20Poly1305.html#LibSodium_XChaCha20Poly1305_NonceLen_
+  commentId: Overload:LibSodium.XChaCha20Poly1305.NonceLen
+  isSpec: "True"
   fullName: LibSodium.XChaCha20Poly1305.NonceLen
   nameWithType: XChaCha20Poly1305.NonceLen

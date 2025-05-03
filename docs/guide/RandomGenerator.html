@@ -93,7 +93,7 @@
 ℹ️ <em>See also</em>: <a href="../api/LibSodium.RandomGenerator.html">API Reference for <code>RandomGenerator</code></a></p>
 </blockquote>
 <hr>
-<h2 id="-features">✨ Features</h2>
+<h2 id="-features">🌟 Features</h2>
 <ul>
 <li>Generate random 32-bit unsigned integers.</li>
 <li>Generate bounded random integers.</li>
@@ -102,24 +102,24 @@
 <li>Stir or close the RNG engine as needed.</li>
 </ul>
 <hr>
-<h2 id="-getting-random-values">📦 Getting Random Values</h2>
-<h3 id="-get-a-random-32-bit-unsigned-integer">💻 Get a random 32-bit unsigned integer</h3>
+<h2 id="-getting-random-values">✨ Getting Random Values</h2>
+<h3 id="-get-a-random-32-bit-unsigned-integer">📋 Get a random 32-bit unsigned integer</h3>
 <pre><code class="lang-csharp">uint value = RandomGenerator.GetUInt32();
 </code></pre>
 <p>Returns a cryptographically secure, uniformly distributed value.</p>
-<h3 id="-get-a-random-value-less-than-an-upper-bound">💻 Get a random value less than an upper bound</h3>
+<h3 id="-get-a-random-value-less-than-an-upper-bound">📋 Get a random value less than an upper bound</h3>
 <pre><code class="lang-csharp">uint lessThan100 = RandomGenerator.GetUInt32(100);
 </code></pre>
 <p>Returns a value in the range <code>[0, upperBound)</code>.
 Uses a rejection sampling method to ensure uniform distribution.</p>
 <hr>
-<h2 id="-filling-buffers">📦 Filling Buffers</h2>
-<h3 id="-fill-a-buffer-with-random-bytes">💻 Fill a buffer with random bytes</h3>
+<h2 id="-filling-buffers">✨ Filling Buffers</h2>
+<h3 id="-fill-a-buffer-with-random-bytes">📋 Fill a buffer with random bytes</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; buffer = stackalloc byte[32];
 RandomGenerator.Fill(buffer);
 </code></pre>
 <p>This fills the buffer with unpredictable cryptographic random bytes.</p>
-<h3 id="-fill-a-buffer-with-deterministic-random-bytes">💻 Fill a buffer with deterministic random bytes</h3>
+<h3 id="-fill-a-buffer-with-deterministic-random-bytes">📋 Fill a buffer with deterministic random bytes</h3>
 <pre><code class="lang-csharp">Span&lt;byte&gt; seed = stackalloc byte[RandomGenerator.SeedLen];
 RandomGenerator.Fill(seed); // Generate a secure seed
 
@@ -131,12 +131,12 @@ RandomGenerator.FillDeterministic(buffer, seed);
 <p>⚠️ Seed must be exactly <code>RandomGenerator.SeedLen</code> bytes long. Otherwise, <code>ArgumentException</code> is thrown.</p>
 </blockquote>
 <hr>
-<h2 id="-stirring-and-closing-the-rng">📦 Stirring and Closing the RNG</h2>
-<h3 id="-stir-the-rng">💻 Stir the RNG</h3>
+<h2 id="-stirring-and-closing-the-rng">✨ Stirring and Closing the RNG</h2>
+<h3 id="-stir-the-rng">📋 Stir the RNG</h3>
 <pre><code class="lang-csharp">RandomGenerator.Stir();
 </code></pre>
 <p>This reseeds the RNG, recommended after forking a process or when explicitly needed.</p>
-<h3 id="-close-the-rng">💻 Close the RNG</h3>
+<h3 id="-close-the-rng">📋 Close the RNG</h3>
 <pre><code class="lang-csharp">RandomGenerator.Close();
 </code></pre>
 <p>Closes the randombytes subsystem. This may be needed in long-running processes or to release resources. Calling it more than once will throw <code>LibSodiumException</code>.</p>

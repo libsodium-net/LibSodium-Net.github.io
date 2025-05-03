@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>&#128290; SecureBigUnsignedInteger | LibSodium.Net </title>
+      <title>&#129517; Design Philosophy | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="&#128290; SecureBigUnsignedInteger | LibSodium.Net ">
+      <meta name="title" content="&#129517; Design Philosophy | LibSodium.Net ">
       
       
       <link rel="icon" href="../images/Na.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/SecureBigUnsignedInteger.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/DesignPhilosophy.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,56 +85,36 @@
         </div>
 
         <article data-uid="">
-<h1 id="-securebigunsignedinteger">🔢 SecureBigUnsignedInteger</h1>
+<h1 id="-design-philosophy">🧭 Design Philosophy</h1>
 
-<p>The <code>SecureBigUnsignedInteger</code> class provides constant-time operations for working with large, little-endian, unsigned integers represented as <code>Span&lt;byte&gt;</code>. It wraps several low-level functions from libsodium that are specifically designed to be safe against side-channel attacks.</p>
+<p><strong>LibSodium.Net</strong> is built around a simple but powerful idea:</p>
 <blockquote>
-<p>🧂 Based on libsodium’s <a href="https://doc.libsodium.org/helpers#incrementing-large-numbers">Integer manipulation helpers</a><br>
-ℹ️ <em>See also:</em> <a href="../api/LibSodium.SecureBigUnsignedInteger.html">API Reference for <code>SecureBigUnsignedInteger</code></a></p>
+<p><em>Expose all of libsodium’s capabilities exactly as they are, without hiding anything, while making them ergonomic for .NET developers.</em></p>
 </blockquote>
-<hr>
-<h2 id="-security-considerations">🔐 Security Considerations</h2>
-<p>All operations in this class are evaluated in <strong>constant time with respect to buffer size</strong>, which helps prevent timing-based side-channel attacks. These methods are suitable for cryptographic contexts where comparisons, additions, or manipulations of secrets must not leak information through execution timing.</p>
-<hr>
-<h2 id="-features">🌟 Features</h2>
+<h2 id="-transparent">🔍 Transparent</h2>
+<p>We don’t reinvent cryptographic primitives. We expose them as they are implemented in libsodium, preserving their guarantees, formats, and conventions.</p>
+<h2 id="-ergonomic">⚙️ Ergonomic</h2>
+<p>Our API is intuitive and natural in .NET:</p>
 <ul>
-<li>Constant-time comparison, equality, addition, and subtraction.</li>
-<li>Increment by 1 or arbitrary 64-bit value.</li>
-<li>Zero-checking.</li>
-<li>Supports arbitrary-sized numbers (as long as both operands have the same length).</li>
-<li>Uses spans to avoid heap allocations.</li>
+<li>Full support for <code>Span&lt;byte&gt;</code> and <code>ReadOnlySpan&lt;byte&gt;</code></li>
+<li>Combined and detached modes</li>
+<li>Optional automatic nonce generation</li>
+<li>Additional authenticated data (AAD)</li>
+<li>Clear exceptions and strict input validation</li>
 </ul>
-<hr>
-<h2 id="-usage-examples">✨ Usage Examples</h2>
-<h3 id="-constant-time-equality-check">📋 Constant-Time Equality Check</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; a = stackalloc byte[] { 1, 2, 3 };
-Span&lt;byte&gt; b = stackalloc byte[] { 1, 2, 3 };
-bool areEqual = SecureBigUnsignedInteger.Equals(a, b); // true
-</code></pre>
-<h3 id="-constant-time-compare">📋 Constant-Time Compare</h3>
-<pre><code class="lang-csharp">int cmp = SecureBigUnsignedInteger.Compare(a, b); // 0 if equal, &lt;0 if a &lt; b, &gt;0 if a &gt; b
-</code></pre>
-<h3 id="-increment">📋 Increment</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; number = stackalloc byte[4];
-SecureBigUnsignedInteger.Increment(number); // adds 1
-SecureBigUnsignedInteger.Increment(number, 42); // adds 42
-</code></pre>
-<h3 id="-addition-and-subtraction">📋 Addition and Subtraction</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; a = stackalloc byte[] { 5, 0, 0 };
-ReadOnlySpan&lt;byte&gt; b = stackalloc byte[] { 3, 0, 0 };
-
-SecureBigUnsignedInteger.Add(a, b);      // a = a + b
-SecureBigUnsignedInteger.Subtract(a, b); // a = a - b
-</code></pre>
-<blockquote>
-<p>⚠️ Both operands must have the same length. Otherwise, <code>ArgumentException</code> is thrown.</p>
-</blockquote>
-<h3 id="-zero-check">📋 Zero Check</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; n = stackalloc byte[] { 0, 0, 0 };
-bool isZero = SecureBigUnsignedInteger.IsZero(n); // true
-</code></pre>
-<hr>
-<p>This API is ideal for low-level cryptographic arithmetic where performance, determinism, and side-channel resistance are essential.</p>
+<h2 id="-no-unnecessary-abstractions">🔓 No unnecessary abstractions</h2>
+<p>We don’t force you to wrap keys into opaque classes like <code>Key</code>.<br>
+You decide how to handle secrets: <code>stackalloc</code>, <code>byte[]</code>, derived keys, externally injected material, etc.</p>
+<p>If you need a higher-level abstraction, you’re free to build one <strong>on top of our minimal, consistent API</strong>.</p>
+<h2 id="-unopinionated-by-design">🎯 Unopinionated by design</h2>
+<p><strong>LibSodium.Net is not opinionated.</strong> It doesn’t tell you how to structure your cryptography — it simply gives you the tools to do it right.</p>
+<h2 id="-built-for">🧪 Built for</h2>
+<ul>
+<li>Developers who want to <strong>understand and control</strong> what’s happening under the hood.</li>
+<li>Projects that need to <strong>interoperate</strong> with other libsodium implementations (in C, Rust, Go, etc.).</li>
+<li>Systems with flexible key management (e.g. key derivation, ephemeral keys, external sources).</li>
+<li>Teams who value an API that’s <strong>simple, secure, and predictable</strong>.</li>
+</ul>
 
 </article>
 

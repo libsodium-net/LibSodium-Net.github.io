@@ -12,6 +12,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.Aegis128L.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.Aegis128L.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.Aegis128L",
+      "Summary": "<p sourcefile=\"api/LibSodium.Aegis128L.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the AEGIS-128L AEAD construction from Libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.Aegis256.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.Aegis256.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.Aegis256",
+      "Summary": "<p sourcefile=\"api/LibSodium.Aegis256.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the AEGIS-256 AEAD construction from Libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.Aes256Gcm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.Aes256Gcm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.Aes256Gcm",
+      "Summary": "<p sourcefile=\"api/LibSodium.Aes256Gcm.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the AES256-GCM AEAD construction from Libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.Base64Encoding.yml",
       "output": {
         ".html": {
@@ -37,6 +79,34 @@
       "IsMRef": true,
       "Title": "LibSodium.Base64Variant",
       "Summary": "<p sourcefile=\"api/LibSodium.Base64Variant.yml\" sourcestartlinenumber=\"1\">Represents Base64 encoding variants.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.ChaCha20Poly1305.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.ChaCha20Poly1305.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.ChaCha20Poly1305",
+      "Summary": "<p sourcefile=\"api/LibSodium.ChaCha20Poly1305.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the ChaCha20-Poly1305 AEAD construction from Libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.ChaCha20Poly1305Ietf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.ChaCha20Poly1305Ietf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.ChaCha20Poly1305Ietf",
+      "Summary": "<p sourcefile=\"api/LibSodium.ChaCha20Poly1305Ietf.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the IETF variant of the ChaCha20-Poly1305 AEAD construction from Libsodium.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -311,10 +381,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "guide/AEAD.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/AEAD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "guide/CryptoAuth.md",
       "output": {
         ".html": {
           "relative_path": "guide/CryptoAuth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/DesignPhilosophy.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/DesignPhilosophy.html"
         }
       },
       "version": ""

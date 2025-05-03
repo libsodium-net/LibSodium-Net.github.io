@@ -104,7 +104,7 @@
 <li>Safe access through <code>Span&lt;T&gt;</code>, <code>Memory&lt;T&gt;</code>, <code>ReadOnlySpan&lt;T&gt;</code>, and <code>ReadOnlyMemory&lt;T&gt;</code>.</li>
 </ul>
 <hr>
-<h2 id="-basic-usage">💻 Basic Usage</h2>
+<h2 id="-basic-usage">📋 Basic Usage</h2>
 <pre><code class="lang-csharp">using var secure = SecureMemory.Create&lt;byte&gt;(32); // Allocate secure memory
 var span = secure.AsSpan(); // Write access
 
@@ -122,18 +122,18 @@ var readOnly = secure.AsReadOnlySpan(); // Safe read-only view
 <li>Memory is automatically zeroed out upon disposal using <code>sodium_memzero</code>.</li>
 </ul>
 <hr>
-<h2 id="-securememoryt-utilities">📦 SecureMemory&lt;T&gt; Utilities</h2>
-<h3 id="-allocate-secure-buffers">💻 Allocate Secure Buffers</h3>
+<h2 id="-securememoryt-utilities">✨ SecureMemory&lt;T&gt; Utilities</h2>
+<h3 id="-allocate-secure-buffers">📋 Allocate Secure Buffers</h3>
 <pre><code class="lang-csharp">using var buffer = SecureMemory.Create&lt;byte&gt;(64);
 </code></pre>
-<h3 id="-zeroing-buffers">💻 Zeroing Buffers</h3>
+<h3 id="-zeroing-buffers">📋 Zeroing Buffers</h3>
 <pre><code class="lang-csharp">buffer.MemZero(); // Overwrites memory with zeroes
 </code></pre>
-<h3 id="-protect-memory">💻 Protect Memory</h3>
+<h3 id="-protect-memory">📋 Protect Memory</h3>
 <pre><code class="lang-csharp">buffer.ProtectReadOnly();
 buffer.ProtectReadWrite();
 </code></pre>
-<h3 id="-read-only--read-write-access">💻 Read-Only &amp; Read-Write Access</h3>
+<h3 id="-read-only--read-write-access">📋 Read-Only &amp; Read-Write Access</h3>
 <ul>
 <li>Use <code>.AsSpan()</code> to get mutable access.</li>
 <li>Use <code>.AsReadOnlySpan()</code> to get immutable view.</li>
