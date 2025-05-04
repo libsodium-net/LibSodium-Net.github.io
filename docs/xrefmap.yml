@@ -592,6 +592,318 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoAuth.VerifyMac
   nameWithType: CryptoAuth.VerifyMac
+- uid: LibSodium.CryptoBox
+  name: CryptoBox
+  href: api/LibSodium.CryptoBox.html
+  commentId: T:LibSodium.CryptoBox
+  fullName: LibSodium.CryptoBox
+  nameWithType: CryptoBox
+- uid: LibSodium.CryptoBox.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: CalculatePublicKey(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_CalculatePublicKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: CalculatePublicKey(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.CalculatePublicKey(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.CalculatePublicKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.CalculatePublicKey(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.CalculatePublicKey(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.CalculatePublicKey*
+  name: CalculatePublicKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_CalculatePublicKey_
+  commentId: Overload:LibSodium.CryptoBox.CalculatePublicKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.CalculatePublicKey
+  nameWithType: CryptoBox.CalculatePublicKey
+- uid: LibSodium.CryptoBox.CalculateSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: CalculateSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_CalculateSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.CalculateSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: CalculateSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.CalculateSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.CalculateSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.CalculateSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.CalculateSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.CalculateSharedKey*
+  name: CalculateSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_CalculateSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.CalculateSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.CalculateSharedKey
+  nameWithType: CryptoBox.CalculateSharedKey
+- uid: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptCombinedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptCombinedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptCombinedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptCombinedWithSharedKey*
+  name: DecryptCombinedWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptCombinedWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.DecryptCombinedWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.DecryptCombinedWithSharedKey
+  nameWithType: CryptoBox.DecryptCombinedWithSharedKey
+- uid: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptDetachedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptDetachedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptDetachedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptDetachedWithSharedKey*
+  name: DecryptDetachedWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptDetachedWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.DecryptDetachedWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.DecryptDetachedWithSharedKey
+  nameWithType: CryptoBox.DecryptDetachedWithSharedKey
+- uid: LibSodium.CryptoBox.DecryptWithKeypair(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptWithKeypair(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptWithKeypair_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptWithKeypair(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptWithKeypair(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptWithKeypair(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptWithKeypair(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptWithKeypair(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptWithKeypair(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptWithKeypair*
+  name: DecryptWithKeypair
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptWithKeypair_
+  commentId: Overload:LibSodium.CryptoBox.DecryptWithKeypair
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.DecryptWithKeypair
+  nameWithType: CryptoBox.DecryptWithKeypair
+- uid: LibSodium.CryptoBox.DecryptWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DecryptWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.DecryptWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DecryptWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.DecryptWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.DecryptWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.DecryptWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.DecryptWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.DecryptWithSharedKey*
+  name: DecryptWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_DecryptWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.DecryptWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.DecryptWithSharedKey
+  nameWithType: CryptoBox.DecryptWithSharedKey
+- uid: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: EncryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptCombinedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.EncryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.EncryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: EncryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptCombinedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptCombinedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.EncryptCombinedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.EncryptCombinedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptCombinedWithSharedKey*
+  name: EncryptCombinedWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptCombinedWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.EncryptCombinedWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.EncryptCombinedWithSharedKey
+  nameWithType: CryptoBox.EncryptCombinedWithSharedKey
+- uid: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: EncryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptDetachedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: EncryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoBox.EncryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoBox.EncryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: EncryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptDetachedWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptDetachedWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.EncryptDetachedWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.EncryptDetachedWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptDetachedWithSharedKey*
+  name: EncryptDetachedWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptDetachedWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.EncryptDetachedWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.EncryptDetachedWithSharedKey
+  nameWithType: CryptoBox.EncryptDetachedWithSharedKey
+- uid: LibSodium.CryptoBox.EncryptWithKeypair(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: EncryptWithKeypair(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptWithKeypair_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptWithKeypair(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptWithKeypair(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptWithKeypair(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptWithKeypair(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.EncryptWithKeypair(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.EncryptWithKeypair(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptWithKeypair*
+  name: EncryptWithKeypair
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptWithKeypair_
+  commentId: Overload:LibSodium.CryptoBox.EncryptWithKeypair
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.EncryptWithKeypair
+  nameWithType: CryptoBox.EncryptWithKeypair
+- uid: LibSodium.CryptoBox.EncryptWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: EncryptWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptWithSharedKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.EncryptWithSharedKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: EncryptWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.EncryptWithSharedKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.EncryptWithSharedKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.EncryptWithSharedKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.EncryptWithSharedKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.EncryptWithSharedKey*
+  name: EncryptWithSharedKey
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_EncryptWithSharedKey_
+  commentId: Overload:LibSodium.CryptoBox.EncryptWithSharedKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.EncryptWithSharedKey
+  nameWithType: CryptoBox.EncryptWithSharedKey
+- uid: LibSodium.CryptoBox.GenerateKeypair(System.Span{System.Byte},System.Span{System.Byte})
+  name: GenerateKeypair(Span<byte>, Span<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_GenerateKeypair_System_Span_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoBox.GenerateKeypair(System.Span{System.Byte},System.Span{System.Byte})
+  name.vb: GenerateKeypair(Span(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoBox.GenerateKeypair(System.Span<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoBox.GenerateKeypair(System.Span(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoBox.GenerateKeypair(Span<byte>, Span<byte>)
+  nameWithType.vb: CryptoBox.GenerateKeypair(Span(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoBox.GenerateKeypair*
+  name: GenerateKeypair
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_GenerateKeypair_
+  commentId: Overload:LibSodium.CryptoBox.GenerateKeypair
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.GenerateKeypair
+  nameWithType: CryptoBox.GenerateKeypair
+- uid: LibSodium.CryptoBox.GenerateKeypairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeypairDeterministically(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_GenerateKeypairDeterministically_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoBox.GenerateKeypairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeypairDeterministically(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoBox.GenerateKeypairDeterministically(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoBox.GenerateKeypairDeterministically(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoBox.GenerateKeypairDeterministically(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoBox.GenerateKeypairDeterministically(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoBox.GenerateKeypairDeterministically*
+  name: GenerateKeypairDeterministically
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_GenerateKeypairDeterministically_
+  commentId: Overload:LibSodium.CryptoBox.GenerateKeypairDeterministically
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.GenerateKeypairDeterministically
+  nameWithType: CryptoBox.GenerateKeypairDeterministically
+- uid: LibSodium.CryptoBox.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_MacLen
+  commentId: P:LibSodium.CryptoBox.MacLen
+  fullName: LibSodium.CryptoBox.MacLen
+  nameWithType: CryptoBox.MacLen
+- uid: LibSodium.CryptoBox.MacLen*
+  name: MacLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_MacLen_
+  commentId: Overload:LibSodium.CryptoBox.MacLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.MacLen
+  nameWithType: CryptoBox.MacLen
+- uid: LibSodium.CryptoBox.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_NonceLen
+  commentId: P:LibSodium.CryptoBox.NonceLen
+  fullName: LibSodium.CryptoBox.NonceLen
+  nameWithType: CryptoBox.NonceLen
+- uid: LibSodium.CryptoBox.NonceLen*
+  name: NonceLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_NonceLen_
+  commentId: Overload:LibSodium.CryptoBox.NonceLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.NonceLen
+  nameWithType: CryptoBox.NonceLen
+- uid: LibSodium.CryptoBox.PrivateKeyLen
+  name: PrivateKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_PrivateKeyLen
+  commentId: P:LibSodium.CryptoBox.PrivateKeyLen
+  fullName: LibSodium.CryptoBox.PrivateKeyLen
+  nameWithType: CryptoBox.PrivateKeyLen
+- uid: LibSodium.CryptoBox.PrivateKeyLen*
+  name: PrivateKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_PrivateKeyLen_
+  commentId: Overload:LibSodium.CryptoBox.PrivateKeyLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.PrivateKeyLen
+  nameWithType: CryptoBox.PrivateKeyLen
+- uid: LibSodium.CryptoBox.PublicKeyLen
+  name: PublicKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_PublicKeyLen
+  commentId: P:LibSodium.CryptoBox.PublicKeyLen
+  fullName: LibSodium.CryptoBox.PublicKeyLen
+  nameWithType: CryptoBox.PublicKeyLen
+- uid: LibSodium.CryptoBox.PublicKeyLen*
+  name: PublicKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_PublicKeyLen_
+  commentId: Overload:LibSodium.CryptoBox.PublicKeyLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.PublicKeyLen
+  nameWithType: CryptoBox.PublicKeyLen
+- uid: LibSodium.CryptoBox.SeedLen
+  name: SeedLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_SeedLen
+  commentId: P:LibSodium.CryptoBox.SeedLen
+  fullName: LibSodium.CryptoBox.SeedLen
+  nameWithType: CryptoBox.SeedLen
+- uid: LibSodium.CryptoBox.SeedLen*
+  name: SeedLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_SeedLen_
+  commentId: Overload:LibSodium.CryptoBox.SeedLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.SeedLen
+  nameWithType: CryptoBox.SeedLen
+- uid: LibSodium.CryptoBox.SharedKeyLen
+  name: SharedKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_SharedKeyLen
+  commentId: P:LibSodium.CryptoBox.SharedKeyLen
+  fullName: LibSodium.CryptoBox.SharedKeyLen
+  nameWithType: CryptoBox.SharedKeyLen
+- uid: LibSodium.CryptoBox.SharedKeyLen*
+  name: SharedKeyLen
+  href: api/LibSodium.CryptoBox.html#LibSodium_CryptoBox_SharedKeyLen_
+  commentId: Overload:LibSodium.CryptoBox.SharedKeyLen
+  isSpec: "True"
+  fullName: LibSodium.CryptoBox.SharedKeyLen
+  nameWithType: CryptoBox.SharedKeyLen
 - uid: LibSodium.CryptoSecretStream
   name: CryptoSecretStream
   href: api/LibSodium.CryptoSecretStream.html

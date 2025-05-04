@@ -124,6 +124,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoBox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoBox",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoBox.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the Curve25519-based public-key authenticated encryption (crypto_box) from Libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoSecretStream.yml",
       "output": {
         ".html": {
@@ -395,6 +409,16 @@
       "output": {
         ".html": {
           "relative_path": "guide/CryptoAuth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/CryptoBox.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CryptoBox.html"
         }
       },
       "version": ""
