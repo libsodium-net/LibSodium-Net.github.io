@@ -202,7 +202,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_Equals_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.SecureMemory.Equals(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   Equals(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compares two byte buffers for equality in constant time.</p>
@@ -279,11 +279,99 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
 
 
+  <a id="LibSodium_SecureMemory_IsZero_" data-uid="LibSodium.SecureMemory.IsZero*"></a>
+
+  <h3 id="LibSodium_SecureMemory_IsZero__1_System_ReadOnlySpan___0__" data-uid="LibSodium.SecureMemory.IsZero``1(System.ReadOnlySpan{``0})">
+  IsZero&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the given buffer is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsZero&lt;T&gt;(ReadOnlySpan&lt;T&gt; b) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>The byte buffer to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the byte buffer is zero, false otherwise.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="LibSodium_SecureMemory_IsZero_" data-uid="LibSodium.SecureMemory.IsZero*"></a>
+
+  <h3 id="LibSodium_SecureMemory_IsZero__1___0___" data-uid="LibSodium.SecureMemory.IsZero``1(``0[])">
+  IsZero&lt;T&gt;(T[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the given buffer is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsZero&lt;T&gt;(T[] b) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>b</code> T[]</dt>
+    <dd><p>The byte buffer to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the byte buffer is zero, false otherwise.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="LibSodium_SecureMemory_MemLock_" data-uid="LibSodium.SecureMemory.MemLock*"></a>
 
   <h3 id="LibSodium_SecureMemory_MemLock_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})">
   MemLock(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Locks an unmanaged memory buffer, preventing it from being swapped to disk.</p>
@@ -322,7 +410,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemLock__1_System_ReadOnlySpan___0__" data-uid="LibSodium.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})">
   MemLock&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Locks an unmanaged memory buffer, preventing it from being swapped to disk.</p>
@@ -366,7 +454,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemUnlock_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})">
   MemUnlock(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unlocks an unmanaged memory buffer, allowing it to be swapped to disk if necessary.</p>
@@ -405,7 +493,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemUnlock__1_System_ReadOnlySpan___0__" data-uid="LibSodium.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})">
   MemUnlock&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unlocks an unmanaged memory buffer, allowing it to be swapped to disk if necessary.</p>
@@ -449,7 +537,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemZero_System_Byte___" data-uid="LibSodium.SecureMemory.MemZero(System.Byte[])">
   MemZero(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills a buffer with zeros, effectively erasing its contents.</p>
@@ -482,7 +570,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemZero_System_Span_System_Byte__" data-uid="LibSodium.SecureMemory.MemZero(System.Span{System.Byte})">
   MemZero(Span&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills a buffer with zeros, effectively erasing its contents.</p>
@@ -515,7 +603,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemZero__1_System_Span___0__" data-uid="LibSodium.SecureMemory.MemZero``1(System.Span{``0})">
   MemZero&lt;T&gt;(Span&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills a buffer with zeros, effectively erasing its contents.</p>
@@ -553,7 +641,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemZero__1___0___" data-uid="LibSodium.SecureMemory.MemZero``1(``0[])">
   MemZero&lt;T&gt;(T[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills a buffer with zeros, effectively erasing its contents.</p>

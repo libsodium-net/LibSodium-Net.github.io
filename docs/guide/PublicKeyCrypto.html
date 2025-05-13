@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128273; Public Key Cryptography | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128273; Public Key Cryptography | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/PublicKeyCrypto.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-public-key-cryptography">🔑 Public Key Cryptography</h1>
+
+<p>LibSodium.Net provides high-level APIs for public-key cryptography based on Curve25519 and Ed25519. This includes secure encryption between peers (<code>CryptoBox</code>), anonymous encryption (<code>Sealed Boxes</code>), and digital signatures (<code>CryptoSign</code>).</p>
+<blockquote>
+<p>🧂 Based on <a href="https://doc.libsodium.org/public-key_cryptography/">libsodium's Public-Key Cryptography</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoBox.html">API Reference: CryptoBox</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></p>
+</blockquote>
+<hr>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li>Public-key authenticated encryption (<code>CryptoBox</code>)</li>
+<li>Anonymous encryption for messages (Sealed Boxes)</li>
+<li>Digital signatures with Ed25519 (<code>CryptoSign</code>)</li>
+<li>Span-based APIs for efficient, allocation-free usage</li>
+</ul>
+<hr>
+<h2 id="-cryptobox--authenticated-encryption">✨ CryptoBox — Authenticated Encryption</h2>
+<p>The <code>CryptoBox</code> API securely encrypts messages between two parties using public-key cryptography. The sender and the recipient each have a key pair, and the message is both encrypted and authenticated.</p>
+<p>It also supports <strong>Sealed Boxes</strong> for anonymous encryption, allowing anyone to encrypt a message to a recipient without revealing their identity.</p>
+<p>Internally, it uses Curve25519 for key exchange, XSalsa20 for encryption, and Poly1305 for authentication. It supports both <strong>combined</strong> and <strong>detached</strong> modes, encryption using either a <strong>keypair</strong> or a <strong>precomputed shared key</strong>, and offers <strong>automatic or manual nonce handling</strong> — all through a unified, ergonomic API.</p>
+<blockquote>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/public-key_cryptography/authenticated_encryption">Authenticated encryption using <code>crypto_box</code></a><br>
+👀 <a href="../api/LibSodium.CryptoBox.html">API Reference for <code>CryptoBox</code></a></p>
+</blockquote>
+<h3 id="-constants">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Curve25519 public key length</td>
+</tr>
+<tr>
+<td><code>PrivateKeyLen</code></td>
+<td>32</td>
+<td>Curve25519 private key length</td>
+</tr>
+<tr>
+<td><code>SharedKeyLen</code></td>
+<td>32</td>
+<td>Precomputed shared key length</td>
+</tr>
+<tr>
+<td><code>NonceLen</code></td>
+<td>24</td>
+<td>Nonce length</td>
+</tr>
+<tr>
+<td><code>MacLen</code></td>
+<td>16</td>
+<td>Authentication tag length</td>
+</tr>
+<tr>
+<td><code>SealOverheadLen</code></td>
+<td>48</td>
+<td>Overhead added by <code>EncryptWithPublicKey</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-key-management">🗝️ Key Management</h2>
+<h3 id="-generate-keypair">📋 Generate Keypair</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
+Span&lt;byte&gt; privateKey = stackalloc byte[CryptoBox.PrivateKeyLen];
+CryptoBox.GenerateKeypair(publicKey, privateKey);
+</code></pre>
+<h3 id="-deterministic-keypair-from-seed">📋 Deterministic Keypair from Seed</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; seed = stackalloc byte[CryptoBox.SeedLen];
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
+Span&lt;byte&gt; privateKey = stackalloc byte[CryptoBox.PrivateKeyLen];
+CryptoBox.GenerateKeypairDeterministically(publicKey, privateKey, seed);
+</code></pre>
+<h3 id="-precompute-shared-key">📋 Precompute Shared Key</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; sharedKey = stackalloc byte[CryptoBox.SharedKeyLen];
+CryptoBox.CalculateSharedKey(sharedKey, otherPartyPublicKey, myPrivateKey);
+</code></pre>
+<hr>
+<h2 id="-encryption-modes">✨ Encryption Modes</h2>
+<h3 id="-encrypt--decrypt-with-keypair-combined-auto-nonce">📋 Encrypt / Decrypt with Keypair (Combined, Auto Nonce)</h3>
+<pre><code class="lang-csharp">var message = Encoding.UTF8.GetBytes(&quot;Hello, world!&quot;);
+Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.MacLen + CryptoBox.NonceLen];
+CryptoBox.EncryptWithKeypair(ciphertext, message, recipientPublicKey, senderPrivateKey);
+
+Span&lt;byte&gt; decrypted = stackalloc byte[message.Length];
+CryptoBox.DecryptWithKeypair(decrypted, ciphertext, senderPublicKey, recipientPrivateKey);
+AssertLite.True(decrypted.SequenceEqual(message));
+</code></pre>
+<h3 id="-encrypt--decrypt-with-keypair-detached-manual-nonce">📋 Encrypt / Decrypt with Keypair (Detached, Manual Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; nonce = stackalloc byte[CryptoBox.NonceLen];
+Span&lt;byte&gt; mac = stackalloc byte[CryptoBox.MacLen];
+Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length];
+CryptoBox.EncryptWithKeypair(ciphertext, message, recipientPublicKey, senderPrivateKey, mac, nonce);
+CryptoBox.DecryptWithKeypair(decrypted, ciphertext, senderPublicKey, recipientPublicKey, mac, nonce);
+</code></pre>
+<h3 id="-encrypt--decrypt-with-shared-key-combined-auto-nonce">📋 Encrypt / Decrypt with Shared Key (Combined, Auto Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.MacLen + CryptoBox.NonceLen];
+CryptoBox.EncryptWithSharedKey(ciphertext, message, sharedKey);
+CryptoBox.DecryptWithSharedKey(decrypted, ciphertext, sharedKey);
+AssertLite.True(decrypted.SequenceEqual(message));
+</code></pre>
+<h3 id="-encrypt--decrypt-with-shared-key-detached-manual-nonce">📋 Encrypt / Decrypt with Shared Key (Detached, Manual Nonce)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; nonce = stackalloc byte[CryptoBox.NonceLen];
+Span&lt;byte&gt; mac = stackalloc byte[CryptoBox.MacLen];
+Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length];
+CryptoBox.EncryptWithSharedKey(ciphertext, message, sharedKey, mac, nonce);
+CryptoBox.DecryptWithSharedKey(decrypted, ciphertext, sharedKey, mac, nonce);
+</code></pre>
+<h3 id="-sealed-boxes--anonymous-encryption">📋 Sealed Boxes — Anonymous Encryption</h3>
+<p>Sealed boxes enable <strong>anonymous encryption</strong>: anyone can encrypt a message to a recipient’s public key without revealing their identity. Internally, a random ephemeral keypair is generated and embedded in the ciphertext.</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.SealOverheadLen];
+CryptoBox.EncryptWithPublicKey(ciphertext, message, recipientPublicKey);
+
+Span&lt;byte&gt; decrypted = stackalloc byte[message.Length];
+CryptoBox.DecryptWithPrivateKey(decrypted, ciphertext, recipientPrivateKey);
+AssertLite.True(decrypted.SequenceEqual(message));
+</code></pre>
+<hr>
+<h2 id="-cryptosign--digital-signatures">✨ CryptoSign — Digital Signatures</h2>
+<p>Uses Ed25519 to sign and verify messages. Produces 64-byte signatures. This is useful for verifying authenticity <strong>without encryption</strong>.</p>
+<blockquote>
+<p>🧂 See: <a href="https://doc.libsodium.org/public-key_cryptography/public-key_signatures">libsodium crypto_sign</a><br>
+👀 <a href="../api/LibSodium.CryptoSign.html">API Reference for <code>CryptoSign</code></a></p>
+</blockquote>
+<h3 id="-constants-1">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Ed25519 public key length</td>
+</tr>
+<tr>
+<td><code>PrivateKeyLen</code></td>
+<td>64</td>
+<td>Ed25519 private key length</td>
+</tr>
+<tr>
+<td><code>SignatureLen</code></td>
+<td>64</td>
+<td>Signature length</td>
+</tr>
+<tr>
+<td><code>SeedLen</code></td>
+<td>32</td>
+<td>Seed length for deterministic key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-generate-keypair-1">📋 Generate Keypair</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; privateKey = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(publicKey, privateKey);
+</code></pre>
+<h3 id="-sign-and-verify">📋 Sign and Verify</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; signature = stackalloc byte[CryptoSign.SignatureLen];
+CryptoSign.Sign(message, signature, privateKey);
+
+bool ok = CryptoSign.TryVerify(message, signature, publicKey);
+CryptoSign.Verify(message, signature, publicKey); // throws LibSodiumException if the signature is invalid
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — when input buffers have incorrect lengths or invalid parameters.</li>
+<li><code>LibSodiumException</code> — when authentication fails or a crypto operation cannot complete.</li>
+</ul>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li>Sealed boxes are anonymous: the recipient cannot identify the sender.</li>
+<li><code>CryptoBox</code> uses <code>crypto_box_easy</code> internally; <code>CryptoSign</code> uses <code>crypto_sign_detached</code>.</li>
+<li>All APIs are Span-friendly and do not allocate memory internally.</li>
+<li><code>EncryptWithPublicKey</code> prepends a 32-byte ephemeral public key and 16-byte MAC.</li>
+<li>Use <code>CryptoSign</code> when authentication is required <strong>without</strong> encryption.</li>
+</ul>
+<hr>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li><a href="../api/LibSodium.CryptoBox.html">API Reference: CryptoBox</a></li>
+<li><a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></li>
+<li><a href="https://doc.libsodium.org/public-key_cryptography/">libsodium.org Public-Key Crypto</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
