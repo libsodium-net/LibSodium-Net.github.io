@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128256; Hashing | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128256; Hashing | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/Hashing.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-hashing">🔀 Hashing</h1>
+
+<p>LibSodium.Net provides multiple hashing APIs for different use cases:</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Algorithm</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GenericHash</code></td>
+<td>BLAKE2b</td>
+<td>Cryptographic hash with optional key. Use for MAC, PRF, fingerprints.</td>
+</tr>
+<tr>
+<td><code>ShortHash</code></td>
+<td>SipHash-2-4</td>
+<td>Keyed hash designed to prevent collisions in hash tables. Fast for short inputs.</td>
+</tr>
+<tr>
+<td><code>CryptoPasswordHash</code></td>
+<td>Argon2id/i13</td>
+<td>Password hashing and key derivation (slow &amp; memory hard)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🧂 Based on <a href="https://doc.libsodium.org/hashing">libsodium's Hashing</a> and <a href="https://doc.libsodium.org/password_hashing">Password Hashing</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoGenericHash.html">API Reference: CryptoGenericHash</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoShortHash.html">API Reference: CryptoShortHash</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoPasswordHash.html">API Reference: CryptoPasswordHash</a></p>
+</blockquote>
+<hr>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li>Cryptographic hashing with variable output length (GenericHash)</li>
+<li>SipHash-based keyed hash for short inputs (ShortHash)</li>
+<li>Password hashing and key derivation using Argon2 (CryptoPasswordHash)</li>
+<li>All methods are allocation-free, Span-based, and deterministic (except password hash, which is randomized)</li>
+<li>Stream and async support for large input hashing (GenericHash)</li>
+</ul>
+<hr>
+<h2 id="-generichash--blake2b">✨ GenericHash — BLAKE2b</h2>
+<p>BLAKE2b is a cryptographic hash function designed as a faster and safer alternative to SHA-2. It provides high-performance hashing with optional key support, making it suitable for:</p>
+<ul>
+<li>Cryptographic checksums (fingerprints)</li>
+<li>Message authentication codes (MACs)</li>
+<li>Deriving identifiers or integrity tags</li>
+<li>Hashing files or streams of arbitrary size</li>
+<li>Unique deterministic identifiers</li>
+<li>Pseudorandom functions (PRF) when keyed</li>
+</ul>
+<p>By default, it produces 32-byte output, but can be configured to return between 16 and 64 bytes. It supports <em>keyed hashing</em> for MAC-like behavior, or <em>unkeyed hashing</em> for general-purpose hashing.</p>
+<h3 id="-constants">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HashLen</code></td>
+<td>32</td>
+<td>Default output length</td>
+</tr>
+<tr>
+<td><code>MinHashLen</code></td>
+<td>16</td>
+<td>Minimum output length</td>
+</tr>
+<tr>
+<td><code>MaxHashLen</code></td>
+<td>64</td>
+<td>Maximum output length</td>
+</tr>
+<tr>
+<td><code>KeyLen</code></td>
+<td>32</td>
+<td>Default key length</td>
+</tr>
+<tr>
+<td><code>MinKeyLen</code></td>
+<td>16</td>
+<td>Minimum key length</td>
+</tr>
+<tr>
+<td><code>MaxKeyLen</code></td>
+<td>64</td>
+<td>Maximum key length</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-hash-with-optional-key">📋 Hash with optional key</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoGenericHash.HashLen];
+CryptoGenericHash.ComputeHash(hash, message); // unkeyed
+CryptoGenericHash.ComputeHash(hash, message, key); // keyed (MAC or PRF)
+</code></pre>
+<h3 id="-hash-from-a-stream">📋 Hash from a stream</h3>
+<pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-input.dat&quot;);
+CryptoGenericHash.ComputeHash(hash, stream);
+</code></pre>
+<h3 id="-async-stream-support">📋 Async stream support</h3>
+<pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-input.dat&quot;);
+await CryptoGenericHash.ComputeHashAsync(hash, stream);
+</code></pre>
+<hr>
+<h2 id="-shorthash--siphash-2-4">✨ ShortHash — SipHash-2-4</h2>
+<blockquote>
+<p>⚠️ ShortHash is not a cryptographic hash. Do not use it for fingerprinting, content integrity, password hashing, or digital signatures.</p>
+</blockquote>
+<p>SipHash is a fast keyed hash function optimized for short inputs. It is designed to mitigate hash-flooding attacks in hash tables and similar data structures where untrusted input might lead to performance degradation.</p>
+<p>It should be used for:</p>
+<ul>
+<li>Hash table key protection</li>
+<li>Fast authentication of short data</li>
+<li>Use cases where speed and DoS-resistance are more important than collision resistance</li>
+</ul>
+<p>SipHash is always keyed, and its output is always 8 bytes.</p>
+<h3 id="-constants-1">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HashLen</code></td>
+<td>8</td>
+<td>Output length (8 bytes)</td>
+</tr>
+<tr>
+<td><code>KeyLen</code></td>
+<td>16</td>
+<td>Key length (16 bytes)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-hash-with-key">📋 Hash with key</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoShortHash.HashLen];
+CryptoShortHash.ComputeHash(hash, message, key);
+</code></pre>
+<hr>
+<h2 id="-passwordhash--argon2id--argon2i13">✨ PasswordHash — Argon2id / Argon2i13</h2>
+<p>Secure password hashing and key derivation using Argon2. This algorithm is specifically designed to defend against brute-force attacks by requiring significant computational work and memory. It is ideal for storing passwords, deriving keys from passphrases, or implementing authentication mechanisms.</p>
+<p>Unlike fast cryptographic hash functions (like SHA-256 or BLAKE2b), Argon2 is <em>deliberately slow</em> and <em>memory-intensive</em>, which drastically increases the cost of large-scale password cracking (e.g., GPU attacks). LibSodium.Net exposes both Argon2id (recommended) and Argon2i.</p>
+<p>The cost parameters (iterations and memory) can be tuned to balance security and performance depending on the context:</p>
+<ul>
+<li><strong>Interactive</strong>: suitable for login forms.</li>
+<li><strong>Moderate</strong>: for higher value secrets.</li>
+<li><strong>Sensitive</strong>: for long-term or critical secrets.</li>
+</ul>
+<h3 id="-constants-2">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SaltLen</code></td>
+<td>16</td>
+<td>Length of the salt in bytes</td>
+</tr>
+<tr>
+<td><code>MinKeyLen</code></td>
+<td>16</td>
+<td>Minimum key length for derivation</td>
+</tr>
+<tr>
+<td><code>EncodedLen</code></td>
+<td>128</td>
+<td>Length of the encoded hash string</td>
+</tr>
+<tr>
+<td><code>Prefix</code></td>
+<td>&quot;$argon2id$&quot;</td>
+<td>Prefix for Argon2id encoded hash</td>
+</tr>
+<tr>
+<td><code>InteractiveIterations</code></td>
+<td>2</td>
+<td>Iteration count for interactive targets</td>
+</tr>
+<tr>
+<td><code>InteractiveMemoryLen</code></td>
+<td>64 MB</td>
+<td>Memory usage for interactive targets</td>
+</tr>
+<tr>
+<td><code>SensitiveIterations</code></td>
+<td>4</td>
+<td>Iteration count for sensitive targets</td>
+</tr>
+<tr>
+<td><code>SensitiveMemoryLen</code></td>
+<td>1 GB</td>
+<td>Memory usage for sensitive targets</td>
+</tr>
+<tr>
+<td><code>MinMemoryLen</code></td>
+<td>8 KB</td>
+<td>Minimum acceptable memory for hashing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-hash-a-password-encoded-random-salt">📋 Hash a password (encoded, random salt)</h3>
+<pre><code class="lang-csharp">string hash = CryptoPasswordHash.HashPassword(&quot;my password&quot;);
+</code></pre>
+<h3 id="-verify-a-password">📋 Verify a password</h3>
+<pre><code class="lang-csharp">bool valid = CryptoPasswordHash.VerifyPassword(hash, &quot;my password&quot;);
+</code></pre>
+<h3 id="-derive-a-secret-key-from-a-password-eg-for-encryption">📋 Derive a secret key from a password (e.g. for encryption)</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[32];
+Span&lt;byte&gt; salt = stackalloc byte[CryptoPasswordHash.SaltLen];
+RandomGenerator.Fill(salt);
+CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
+</code></pre>
+<p>You can customize the computational cost:</p>
+<pre><code class="lang-csharp">CryptoPasswordHash.DeriveKey(
+    key, &quot;password&quot;, salt,
+    iterations: CryptoPasswordHash.SensitiveIterations,
+    requiredMemoryLen: CryptoPasswordHash.SensitiveMemoryLen);
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — when input or key lengths are invalid</li>
+<li><code>ArgumentOutOfRangeException</code> — when iterations or memory limits are too low</li>
+<li><code>LibSodiumException</code> — if the underlying native function fails</li>
+</ul>
+<hr>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li><code>GenericHash</code> is based on BLAKE2b and supports variable-length output and optional keys. It is suitable for both fingerprinting, MACs, PRFs, and unique identifier generation.</li>
+<li><code>ShortHash</code> is based on SipHash-2-4 — not a cryptographic hash function, but a keyed primitive appropriate for protecting hash tables against collision-based attacks.</li>
+<li><code>CryptoPasswordHash</code> uses Argon2id/Argon2i13, with computational and memory hardness</li>
+<li>All hash functions are deterministic: same input and key produce same output — <strong>except</strong> for <code>CryptoPasswordHash.HashPassword</code>, which includes a random salt and produces a different hash each time.</li>
+<li>Use <code>ShortHash</code> only when you can keep the key secret</li>
+</ul>
+<hr>
+<h2 id="-choosing-the-right-hash-api">🧭 Choosing the Right Hash API</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommended API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content integrity (files, blobs)</td>
+<td><code>GenericHash</code> (unkeyed)</td>
+</tr>
+<tr>
+<td>MAC or PRF</td>
+<td><code>GenericHash</code> (keyed)</td>
+</tr>
+<tr>
+<td>Hashing short keys in tables</td>
+<td><code>ShortHash</code></td>
+</tr>
+<tr>
+<td>Password storage</td>
+<td><code>CryptoPasswordHash</code></td>
+</tr>
+<tr>
+<td>Key derivation from passphrase</td>
+<td><code>CryptoPasswordHash</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li><a href="../api/LibSodium.CryptoGenericHash.html">API Reference: CryptoGenericHash</a></li>
+<li><a href="../api/LibSodium.CryptoShortHash.html">API Reference: CryptoShortHash</a></li>
+<li><a href="../api/LibSodium.CryptoPasswordHash.html">API Reference: CryptoPasswordHash</a></li>
+<li><a href="https://doc.libsodium.org/hashing">libsodium.org Hashing</a></li>
+<li><a href="https://doc.libsodium.org/password_hashing">libsodium Password Hashing</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

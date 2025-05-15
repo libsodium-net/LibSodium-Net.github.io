@@ -138,6 +138,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoGenericHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoGenericHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoGenericHash",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoGenericHash.yml\" sourcestartlinenumber=\"1\">Provides a high-level interface to the libsodium generic hash function, based on BLAKE2b.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoPasswordHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoPasswordHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoPasswordHash",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoPasswordHash.yml\" sourcestartlinenumber=\"1\">Provides password hashing and key derivation using Argon2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoSecretStream.yml",
       "output": {
         ".html": {
@@ -163,6 +191,20 @@
       "IsMRef": true,
       "Title": "LibSodium.CryptoSecretStreamTag",
       "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStreamTag.yml\" sourcestartlinenumber=\"1\">The tags used in the secret stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoShortHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoShortHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoShortHash",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoShortHash.yml\" sourcestartlinenumber=\"1\">Provides a high-level interface to the libsodium short-input hash function, based on SipHash-2-4.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -233,6 +275,20 @@
       "IsMRef": true,
       "Title": "LibSodium.LibraryVersion",
       "Summary": "<p sourcefile=\"api/LibSodium.LibraryVersion.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve the version information of the Sodium library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.PasswordHashAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.PasswordHashAlgorithm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.PasswordHashAlgorithm",
+      "Summary": "<p sourcefile=\"api/LibSodium.PasswordHashAlgorithm.yml\" sourcestartlinenumber=\"1\">Supported password hashing algorithms.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -453,6 +509,26 @@
       "output": {
         ".html": {
           "relative_path": "guide/Encoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/Hashing.V0.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Hashing.V0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/Hashing.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Hashing.html"
         }
       },
       "version": ""
