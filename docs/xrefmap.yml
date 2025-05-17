@@ -932,6 +932,77 @@ references:
   commentId: F:LibSodium.CryptoGenericHash.MinKeyLen
   fullName: LibSodium.CryptoGenericHash.MinKeyLen
   nameWithType: CryptoGenericHash.MinKeyLen
+- uid: LibSodium.CryptoKeyDerivation
+  name: CryptoKeyDerivation
+  href: api/LibSodium.CryptoKeyDerivation.html
+  commentId: T:LibSodium.CryptoKeyDerivation
+  fullName: LibSodium.CryptoKeyDerivation
+  nameWithType: CryptoKeyDerivation
+- uid: LibSodium.CryptoKeyDerivation.ContextLen
+  name: ContextLen
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_ContextLen
+  commentId: F:LibSodium.CryptoKeyDerivation.ContextLen
+  fullName: LibSodium.CryptoKeyDerivation.ContextLen
+  nameWithType: CryptoKeyDerivation.ContextLen
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(Span<byte>, ulong, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_System_Span_System_Byte__System_UInt64_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(Span(Of Byte), ULong, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span<byte>, ulong, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span(Of Byte), ULong, System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(Span<byte>, ulong, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(Span(Of Byte), ULong, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span{System.Byte},System.UInt64,System.String,System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(Span<byte>, ulong, string, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_System_Span_System_Byte__System_UInt64_System_String_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span{System.Byte},System.UInt64,System.String,System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(Span(Of Byte), ULong, String, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span<byte>, ulong, string, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span(Of Byte), ULong, String, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(Span<byte>, ulong, string, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(Span(Of Byte), ULong, String, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey*
+  name: DeriveSubkey
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_
+  commentId: Overload:LibSodium.CryptoKeyDerivation.DeriveSubkey
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey
+  nameWithType: CryptoKeyDerivation.DeriveSubkey
+- uid: LibSodium.CryptoKeyDerivation.GenerateMasterKey(System.Span{System.Byte})
+  name: GenerateMasterKey(Span<byte>)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_GenerateMasterKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoKeyDerivation.GenerateMasterKey(System.Span{System.Byte})
+  name.vb: GenerateMasterKey(Span(Of Byte))
+  fullName: LibSodium.CryptoKeyDerivation.GenerateMasterKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoKeyDerivation.GenerateMasterKey(System.Span(Of Byte))
+  nameWithType: CryptoKeyDerivation.GenerateMasterKey(Span<byte>)
+  nameWithType.vb: CryptoKeyDerivation.GenerateMasterKey(Span(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.GenerateMasterKey*
+  name: GenerateMasterKey
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_GenerateMasterKey_
+  commentId: Overload:LibSodium.CryptoKeyDerivation.GenerateMasterKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyDerivation.GenerateMasterKey
+  nameWithType: CryptoKeyDerivation.GenerateMasterKey
+- uid: LibSodium.CryptoKeyDerivation.MasterKeyLen
+  name: MasterKeyLen
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_MasterKeyLen
+  commentId: F:LibSodium.CryptoKeyDerivation.MasterKeyLen
+  fullName: LibSodium.CryptoKeyDerivation.MasterKeyLen
+  nameWithType: CryptoKeyDerivation.MasterKeyLen
+- uid: LibSodium.CryptoKeyDerivation.MaxSubkeyLen
+  name: MaxSubkeyLen
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_MaxSubkeyLen
+  commentId: F:LibSodium.CryptoKeyDerivation.MaxSubkeyLen
+  fullName: LibSodium.CryptoKeyDerivation.MaxSubkeyLen
+  nameWithType: CryptoKeyDerivation.MaxSubkeyLen
+- uid: LibSodium.CryptoKeyDerivation.MinSubkeyLen
+  name: MinSubkeyLen
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_MinSubkeyLen
+  commentId: F:LibSodium.CryptoKeyDerivation.MinSubkeyLen
+  fullName: LibSodium.CryptoKeyDerivation.MinSubkeyLen
+  nameWithType: CryptoKeyDerivation.MinSubkeyLen
 - uid: LibSodium.CryptoPasswordHash
   name: CryptoPasswordHash
   href: api/LibSodium.CryptoPasswordHash.html
@@ -1393,6 +1464,140 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoSign.Verify
   nameWithType: CryptoSign.Verify
+- uid: LibSodium.HKDF
+  name: HKDF
+  href: api/LibSodium.HKDF.html
+  commentId: T:LibSodium.HKDF
+  fullName: LibSodium.HKDF
+  nameWithType: HKDF
+- uid: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveKey(HashAlgorithmName, Stream, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_DeriveKey_System_Security_Cryptography_HashAlgorithmName_System_IO_Stream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveKey(HashAlgorithmName, Stream, Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: HKDF.DeriveKey(HashAlgorithmName, Stream, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: HKDF.DeriveKey(HashAlgorithmName, Stream, Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveKey(HashAlgorithmName, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_DeriveKey_System_Security_Cryptography_HashAlgorithmName_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveKey(HashAlgorithmName, ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.HKDF.DeriveKey(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: HKDF.DeriveKey(HashAlgorithmName, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: HKDF.DeriveKey(HashAlgorithmName, ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.HKDF.DeriveKey*
+  name: DeriveKey
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_DeriveKey_
+  commentId: Overload:LibSodium.HKDF.DeriveKey
+  isSpec: "True"
+  fullName: LibSodium.HKDF.DeriveKey
+  nameWithType: HKDF.DeriveKey
+- uid: LibSodium.HKDF.DeriveKeyAsync(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.Memory{System.Byte},System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: DeriveKeyAsync(HashAlgorithmName, Stream, Memory<byte>, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_DeriveKeyAsync_System_Security_Cryptography_HashAlgorithmName_System_IO_Stream_System_Memory_System_Byte__System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.HKDF.DeriveKeyAsync(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.Memory{System.Byte},System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: DeriveKeyAsync(HashAlgorithmName, Stream, Memory(Of Byte), ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.HKDF.DeriveKeyAsync(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.Memory<byte>, System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.HKDF.DeriveKeyAsync(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.Memory(Of Byte), System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: HKDF.DeriveKeyAsync(HashAlgorithmName, Stream, Memory<byte>, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: HKDF.DeriveKeyAsync(HashAlgorithmName, Stream, Memory(Of Byte), ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.HKDF.DeriveKeyAsync*
+  name: DeriveKeyAsync
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_DeriveKeyAsync_
+  commentId: Overload:LibSodium.HKDF.DeriveKeyAsync
+  isSpec: "True"
+  fullName: LibSodium.HKDF.DeriveKeyAsync
+  nameWithType: HKDF.DeriveKeyAsync
+- uid: LibSodium.HKDF.Expand(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Expand(HashAlgorithmName, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Expand_System_Security_Cryptography_HashAlgorithmName_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.HKDF.Expand(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Expand(HashAlgorithmName, ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.HKDF.Expand(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.HKDF.Expand(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: HKDF.Expand(HashAlgorithmName, ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: HKDF.Expand(HashAlgorithmName, ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.HKDF.Expand*
+  name: Expand
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Expand_
+  commentId: Overload:LibSodium.HKDF.Expand
+  isSpec: "True"
+  fullName: LibSodium.HKDF.Expand
+  nameWithType: HKDF.Expand
+- uid: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: Extract(HashAlgorithmName, Stream, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Extract_System_Security_Cryptography_HashAlgorithmName_System_IO_Stream_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: Extract(HashAlgorithmName, Stream, ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: HKDF.Extract(HashAlgorithmName, Stream, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: HKDF.Extract(HashAlgorithmName, Stream, ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: Extract(HashAlgorithmName, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Extract_System_Security_Cryptography_HashAlgorithmName_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: Extract(HashAlgorithmName, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.HKDF.Extract(System.Security.Cryptography.HashAlgorithmName, System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: HKDF.Extract(HashAlgorithmName, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: HKDF.Extract(HashAlgorithmName, ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.HKDF.Extract*
+  name: Extract
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Extract_
+  commentId: Overload:LibSodium.HKDF.Extract
+  isSpec: "True"
+  fullName: LibSodium.HKDF.Extract
+  nameWithType: HKDF.Extract
+- uid: LibSodium.HKDF.ExtractAsync(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Memory{System.Byte},System.Threading.CancellationToken)
+  name: ExtractAsync(HashAlgorithmName, Stream, ReadOnlyMemory<byte>, Memory<byte>, CancellationToken)
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_ExtractAsync_System_Security_Cryptography_HashAlgorithmName_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Memory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.HKDF.ExtractAsync(System.Security.Cryptography.HashAlgorithmName,System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Memory{System.Byte},System.Threading.CancellationToken)
+  name.vb: ExtractAsync(HashAlgorithmName, Stream, ReadOnlyMemory(Of Byte), Memory(Of Byte), CancellationToken)
+  fullName: LibSodium.HKDF.ExtractAsync(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Memory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.HKDF.ExtractAsync(System.Security.Cryptography.HashAlgorithmName, System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Memory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: HKDF.ExtractAsync(HashAlgorithmName, Stream, ReadOnlyMemory<byte>, Memory<byte>, CancellationToken)
+  nameWithType.vb: HKDF.ExtractAsync(HashAlgorithmName, Stream, ReadOnlyMemory(Of Byte), Memory(Of Byte), CancellationToken)
+- uid: LibSodium.HKDF.ExtractAsync*
+  name: ExtractAsync
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_ExtractAsync_
+  commentId: Overload:LibSodium.HKDF.ExtractAsync
+  isSpec: "True"
+  fullName: LibSodium.HKDF.ExtractAsync
+  nameWithType: HKDF.ExtractAsync
+- uid: LibSodium.HKDF.MinOkmLen
+  name: MinOkmLen
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_MinOkmLen
+  commentId: F:LibSodium.HKDF.MinOkmLen
+  fullName: LibSodium.HKDF.MinOkmLen
+  nameWithType: HKDF.MinOkmLen
+- uid: LibSodium.HKDF.Sha256MaxOkmLen
+  name: Sha256MaxOkmLen
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Sha256MaxOkmLen
+  commentId: F:LibSodium.HKDF.Sha256MaxOkmLen
+  fullName: LibSodium.HKDF.Sha256MaxOkmLen
+  nameWithType: HKDF.Sha256MaxOkmLen
+- uid: LibSodium.HKDF.Sha256PrkLen
+  name: Sha256PrkLen
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Sha256PrkLen
+  commentId: F:LibSodium.HKDF.Sha256PrkLen
+  fullName: LibSodium.HKDF.Sha256PrkLen
+  nameWithType: HKDF.Sha256PrkLen
+- uid: LibSodium.HKDF.Sha512MaxOkmLen
+  name: Sha512MaxOkmLen
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Sha512MaxOkmLen
+  commentId: F:LibSodium.HKDF.Sha512MaxOkmLen
+  fullName: LibSodium.HKDF.Sha512MaxOkmLen
+  nameWithType: HKDF.Sha512MaxOkmLen
+- uid: LibSodium.HKDF.Sha512PrkLen
+  name: Sha512PrkLen
+  href: api/LibSodium.HKDF.html#LibSodium_HKDF_Sha512PrkLen
+  commentId: F:LibSodium.HKDF.Sha512PrkLen
+  fullName: LibSodium.HKDF.Sha512PrkLen
+  nameWithType: HKDF.Sha512PrkLen
 - uid: LibSodium.HexEncoding
   name: HexEncoding
   href: api/LibSodium.HexEncoding.html

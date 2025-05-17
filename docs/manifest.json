@@ -11,6 +11,16 @@
       }
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "GPT/DeveloperProfile.md",
+      "output": {
+        ".html": {
+          "relative_path": "GPT/DeveloperProfile.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.Aegis128L.yml",
       "output": {
@@ -152,6 +162,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoKeyDerivation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoKeyDerivation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoKeyDerivation",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoKeyDerivation.yml\" sourcestartlinenumber=\"1\">Provides deterministic key derivation using libsodium's crypto_kdf_* API,\nbased on the BLAKE2b hash function.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoPasswordHash.yml",
       "output": {
         ".html": {
@@ -219,6 +243,20 @@
       "IsMRef": true,
       "Title": "LibSodium.CryptoSign",
       "Summary": "<p sourcefile=\"api/LibSodium.CryptoSign.yml\" sourcestartlinenumber=\"1\">Provides digital signature functionality using Ed25519, as implemented by libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.HKDF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.HKDF.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.HKDF",
+      "Summary": "<p sourcefile=\"api/LibSodium.HKDF.yml\" sourcestartlinenumber=\"1\">Provides HKDF key derivation (RFC 5869) using SHA-256 or SHA-512.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -529,6 +567,16 @@
       "output": {
         ".html": {
           "relative_path": "guide/Hashing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/KeyDerivation.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/KeyDerivation.html"
         }
       },
       "version": ""
