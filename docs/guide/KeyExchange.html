@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128273; Key Exchange with CryptoKeyExchange | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128273; Key Exchange with CryptoKeyExchange | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/KeyExchange.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-key-exchange-with-cryptokeyexchange">🔑 Key Exchange with CryptoKeyExchange</h1>
+
+<p>Securely establishing a shared secret between two parties is a foundational step for any encrypted communication channel. LibSodium.Net wraps libsodium’s <strong>crypto_kx</strong> primitive in an ergonomic, allocation‑free API that is safe by default and AOT‑friendly.</p>
+<blockquote>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/key_exchange">Key Exchange</a>**<br>
+ℹ️ See also: <a href="../api/LibSodium.CryptoKeyExchange.html">API Reference for <code>CryptoKeyExchange</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-what-does-key-exchange-do">✨ What Does Key Exchange Do?</h2>
+<p>Key exchange (sometimes called <em>authenticated key agreement</em>) lets two peers that each own a long‑term key pair derive <strong>two fresh 32‑byte session keys</strong> – one for sending (TX) and one for receiving (RX). These session keys can then be fed into other LibSodium.Net constructs such as <strong>SecretBox</strong> or <strong>SecretStream</strong> to encrypt traffic.</p>
+<ul>
+<li><strong>Confidential</strong> – Only the two parties learn the session keys.</li>
+<li><strong>Integrity &amp; Authenticity</strong> – Each side proves possession of its secret key, preventing MitM attacks.</li>
+<li><strong>Speed</strong> – Single round‑trip and constant‑time operations on Curve25519.</li>
+</ul>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li><strong>Allocation‑free <code>Span&lt;T&gt;</code> API</strong> – zero heap allocations.</li>
+<li><strong>Deterministic or random key generation</strong> – choose reproducibility or fresh randomness.</li>
+<li><strong>Separate TX/RX keys</strong> – enforces directionality and prevents nonce reuse.</li>
+<li><strong>AOT &amp; Unity friendly</strong> – works seamlessly in Ahead‑of‑Time compiled environments.</li>
+<li><strong>Defensive size checks</strong> – throws early on invalid input lengths.</li>
+</ul>
+<h2 id="-typical-scenarios">✨ Typical Scenarios</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Why Key Exchange Fits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client ↔️ Server TLS‑like handshake</strong></td>
+<td>Derive symmetric keys before switching to an AEAD cipher for bulk data.</td>
+</tr>
+<tr>
+<td><strong>IoT device onboarding</strong></td>
+<td>Small code size &amp; no certificates required.</td>
+</tr>
+<tr>
+<td><strong>P2P chat/file sharing</strong></td>
+<td>Each participant becomes <em>client</em> or <em>server</em> dynamically to agree on forward‑secure channels.</td>
+</tr>
+<tr>
+<td><strong>Session re‑keying</strong></td>
+<td>Periodically refresh symmetric keys without exchanging new public keys.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📝 <em>The crypto_kx API does <strong>not</strong> provide Perfect Forward Secrecy by itself; re‑run the exchange whenever you need new keys.</em></p>
+</blockquote>
+<h2 id="-api-overview">✨ API Overview</h2>
+<h3 id="-constants">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Size (bytes)</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Curve25519 public key.</td>
+</tr>
+<tr>
+<td><code>SecretKeyLen</code></td>
+<td>32</td>
+<td>Private key.</td>
+</tr>
+<tr>
+<td><code>SeedLen</code></td>
+<td>32</td>
+<td>Deterministic key‑pair seed.</td>
+</tr>
+<tr>
+<td><code>SessionKeyLen</code></td>
+<td>32</td>
+<td>TX or RX session key.</td>
+</tr>
+</tbody>
+</table>
+<p>All constants are surfaced on <strong><code>CryptoKeyExchange</code></strong> for zero‑cost access.</p>
+<h3 id="-core-methods">📋 Core Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GenerateKeyPair</code></td>
+<td>Random key pair.</td>
+</tr>
+<tr>
+<td><code>GenerateKeyPairDeterministically</code></td>
+<td>Reproducible key pair from a 32‑byte seed.</td>
+</tr>
+<tr>
+<td><code>DeriveClientSessionKeys</code></td>
+<td>Client side of the handshake → produces (rx, tx).</td>
+</tr>
+<tr>
+<td><code>DeriveServerSessionKeys</code></td>
+<td>Server side of the handshake → produces (rx, tx).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ℹ️ <strong>Naming convention:</strong> <em>Client TX = data you SEND</em>, <em>Client RX = data you RECEIVE</em>.</p>
+</blockquote>
+<h2 id="-usage-example">📋 Usage Example</h2>
+<pre><code class="lang-csharp">// Key generation (once)
+Span&lt;byte&gt; clientPublicKey = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+Span&lt;byte&gt; clientSecretKey = stackalloc byte[CryptoKeyExchange.SecretKeyLen];
+CryptoKeyExchange.GenerateKeyPair(clientPublicKey, clientSecretKey);
+
+Span&lt;byte&gt; serverPublicKey = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+Span&lt;byte&gt; serverSecretKey = stackalloc byte[CryptoKeyExchange.SecretKeyLen];
+CryptoKeyExchange.GenerateKeyPair(serverPublicKey, serverSecretKey);
+
+// Derive session keys (per connection)
+Span&lt;byte&gt; clientReceiveKey = stackalloc byte[CryptoKeyExchange.SessionKeyLen];
+Span&lt;byte&gt; clientSendKey    = stackalloc byte[CryptoKeyExchange.SessionKeyLen];
+CryptoKeyExchange.DeriveClientSessionKeys(clientReceiveKey, clientSendKey, clientPublicKey, clientSecretKey, serverPublicKey);
+
+Span&lt;byte&gt; serverReceiveKey = stackalloc byte[CryptoKeyExchange.SessionKeyLen];
+Span&lt;byte&gt; serverSendKey    = stackalloc byte[CryptoKeyExchange.SessionKeyLen];
+CryptoKeyExchange.DeriveServerSessionKeys(serverReceiveKey, serverSendKey, serverPublicKey, serverSecretKey, clientPublicKey);
+
+// Verify keys match
+Debug.Assert(clientSendKey.SequenceEqual(serverReceiveKey)); // Upstream traffic
+Debug.Assert(clientReceiveKey.SequenceEqual(serverSendKey)); // Downstream traffic
+
+// Use with SecretBox
+var ciphertext = SecretBox.Encrypt(message, nonce, clientSendKey);
+var plaintext  = SecretBox.Decrypt(ciphertext, nonce, serverReceiveKey);
+</code></pre>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><strong>Size checks</strong> – All spans <strong>must</strong> match the declared constants. Otherwise <code>ArgumentException</code> or <code>ArgumentOutOfRangeException</code> is thrown.</li>
+<li><strong>Return codes</strong> – Non‑zero return from native libsodium maps to <code>LibSodiumException</code>.</li>
+<li><strong>Dispose secrets carefully</strong> – Zero out secret keys (<code>SecretKeyLen</code>) after use; consider <code>fixed</code> + <code>CryptographicOperations.ZeroMemory</code>.</li>
+</ul>
+<h2 id="-security-notes">📝 Security Notes</h2>
+<ul>
+<li>Always transmit public keys over an authenticated channel or pin them out‑of‑band.</li>
+<li>Re‑key often if you require PFS. The operation is cheap.</li>
+<li>Combine with <strong>SecretStream.Encrypt</strong> / <strong>Decrypt</strong> (or their <code>Async</code> variants) for long‑lived encrypted pipes.</li>
+<li>Do <strong>not</strong> share the same session key across protocols; derive one per purpose using an HKDF if needed.</li>
+</ul>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li>🧂 <a href="https://doc.libsodium.org/key_exchange">libsodium Key Exchange</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoKeyExchange.html">API Reference for <code>CryptoKeyExchange</code></a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

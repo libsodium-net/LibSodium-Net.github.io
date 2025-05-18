@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CryptoKeyExchange | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CryptoKeyExchange | LibSodium.Net ">
+      
+      <meta name="description" content="Provides methods for secure, fast, and simple key exchange using libsodium&#39;s crypto_kx API. Allows two parties to derive shared session keys securely.">
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_CryptoKeyExchange.md&amp;value=---%0Auid%3A%20LibSodium.CryptoKeyExchange%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="LibSodium.CryptoKeyExchange">
+
+
+
+  <h1 id="LibSodium_CryptoKeyExchange" data-uid="LibSodium.CryptoKeyExchange" class="text-break">
+Class CryptoKeyExchange  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="LibSodium.html">LibSodium</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>LibSodium.Net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods for secure, fast, and simple key exchange using libsodium's crypto_kx API.
+Allows two parties to derive shared session keys securely.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CryptoKeyExchange</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CryptoKeyExchange</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="LibSodium_CryptoKeyExchange_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>🧂 Based on libsodium's crypto_kx API: <a href="https://doc.libsodium.org/key_exchange">https://doc.libsodium.org/key_exchange</a></p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="LibSodium_CryptoKeyExchange_PublicKeyLen" data-uid="LibSodium.CryptoKeyExchange.PublicKeyLen">
+  PublicKeyLen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of the public key in bytes (32).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PublicKeyLen = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="LibSodium_CryptoKeyExchange_SecretKeyLen" data-uid="LibSodium.CryptoKeyExchange.SecretKeyLen">
+  SecretKeyLen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of the secret (private) key in bytes (32).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SecretKeyLen = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="LibSodium_CryptoKeyExchange_SeedLen" data-uid="LibSodium.CryptoKeyExchange.SeedLen">
+  SeedLen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of the seed used for deterministic key pair generation (32 bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SeedLen = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="LibSodium_CryptoKeyExchange_SessionKeyLen" data-uid="LibSodium.CryptoKeyExchange.SessionKeyLen">
+  SessionKeyLen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of derived session keys in bytes (32).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SessionKeyLen = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="LibSodium_CryptoKeyExchange_DeriveClientSessionKeys_" data-uid="LibSodium.CryptoKeyExchange.DeriveClientSessionKeys*"></a>
+
+  <h3 id="LibSodium_CryptoKeyExchange_DeriveClientSessionKeys_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoKeyExchange.DeriveClientSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DeriveClientSessionKeys(Span&lt;byte&gt;, Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Derives client-side session keys for secure communication with a server.
+The generated keys allow secure and authenticated data exchange.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DeriveClientSessionKeys(Span&lt;byte&gt; rx, Span&lt;byte&gt; tx, ReadOnlySpan&lt;byte&gt; clientPk, ReadOnlySpan&lt;byte&gt; clientSk, ReadOnlySpan&lt;byte&gt; serverPk)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the client's receiving key (used to decrypt data from server). Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>tx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the client's transmitting key (used to encrypt data sent to server). Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>clientPk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Client's public key (32 bytes).</p>
+</dd>
+    <dt><code>clientSk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Client's secret key (32 bytes).</p>
+</dd>
+    <dt><code>serverPk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Server's public key (32 bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any provided buffer (<code class="paramref">rx</code>, <code class="paramref">tx</code>, <code class="paramref">clientPk</code>, <code class="paramref">clientSk</code>, <code class="paramref">serverPk</code>) is not exactly 32 bytes.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if client-side session key derivation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoKeyExchange_DeriveServerSessionKeys_" data-uid="LibSodium.CryptoKeyExchange.DeriveServerSessionKeys*"></a>
+
+  <h3 id="LibSodium_CryptoKeyExchange_DeriveServerSessionKeys_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoKeyExchange.DeriveServerSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DeriveServerSessionKeys(Span&lt;byte&gt;, Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Derives server-side session keys for secure communication with a client.
+The generated keys allow secure and authenticated data exchange.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DeriveServerSessionKeys(Span&lt;byte&gt; rx, Span&lt;byte&gt; tx, ReadOnlySpan&lt;byte&gt; serverPk, ReadOnlySpan&lt;byte&gt; serverSk, ReadOnlySpan&lt;byte&gt; clientPk)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the server's receiving key (used to decrypt data from client). Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>tx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the server's transmitting key (used to encrypt data sent to client). Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>serverPk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Server's public key (32 bytes).</p>
+</dd>
+    <dt><code>serverSk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Server's secret key (32 bytes).</p>
+</dd>
+    <dt><code>clientPk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Client's public key (32 bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any provided buffer (<code class="paramref">rx</code>, <code class="paramref">tx</code>, <code class="paramref">serverPk</code>, <code class="paramref">serverSk</code>, <code class="paramref">clientPk</code>) is not exactly 32 bytes.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if server-side session key derivation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoKeyExchange_GenerateKeyPair_" data-uid="LibSodium.CryptoKeyExchange.GenerateKeyPair*"></a>
+
+  <h3 id="LibSodium_CryptoKeyExchange_GenerateKeyPair_System_Span_System_Byte__System_Span_System_Byte__" data-uid="LibSodium.CryptoKeyExchange.GenerateKeyPair(System.Span{System.Byte},System.Span{System.Byte})">
+  GenerateKeyPair(Span&lt;byte&gt;, Span&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a new random key pair suitable for key exchange (crypto_kx).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKeyPair(Span&lt;byte&gt; publicKey, Span&lt;byte&gt; secretKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the generated public key. Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>secretKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the generated secret key. Must be exactly 32 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">publicKey</code> or <code class="paramref">secretKey</code> are not exactly 32 bytes.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if key pair generation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoKeyExchange_GenerateKeyPairDeterministically_" data-uid="LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically*"></a>
+
+  <h3 id="LibSodium_CryptoKeyExchange_GenerateKeyPairDeterministically_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  GenerateKeyPairDeterministically(Span&lt;byte&gt;, Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoKeyExchange.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deterministically generates a key pair from a provided seed.
+This method always produces the same key pair for the same seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKeyPairDeterministically(Span&lt;byte&gt; publicKey, Span&lt;byte&gt; secretKey, ReadOnlySpan&lt;byte&gt; seed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the derived public key. Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>secretKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to receive the derived secret key. Must be exactly 32 bytes.</p>
+</dd>
+    <dt><code>seed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Seed used for deterministic generation. Must be exactly 32 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">publicKey</code>, <code class="paramref">secretKey</code>, or <code class="paramref">seed</code> are not exactly 32 bytes.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if deterministic key pair generation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1003,6 +1003,100 @@ references:
   commentId: F:LibSodium.CryptoKeyDerivation.MinSubkeyLen
   fullName: LibSodium.CryptoKeyDerivation.MinSubkeyLen
   nameWithType: CryptoKeyDerivation.MinSubkeyLen
+- uid: LibSodium.CryptoKeyExchange
+  name: CryptoKeyExchange
+  href: api/LibSodium.CryptoKeyExchange.html
+  commentId: T:LibSodium.CryptoKeyExchange
+  fullName: LibSodium.CryptoKeyExchange
+  nameWithType: CryptoKeyExchange
+- uid: LibSodium.CryptoKeyExchange.DeriveClientSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveClientSessionKeys(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_DeriveClientSessionKeys_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyExchange.DeriveClientSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveClientSessionKeys(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyExchange.DeriveClientSessionKeys(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyExchange.DeriveClientSessionKeys(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyExchange.DeriveClientSessionKeys(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyExchange.DeriveClientSessionKeys(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyExchange.DeriveClientSessionKeys*
+  name: DeriveClientSessionKeys
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_DeriveClientSessionKeys_
+  commentId: Overload:LibSodium.CryptoKeyExchange.DeriveClientSessionKeys
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyExchange.DeriveClientSessionKeys
+  nameWithType: CryptoKeyExchange.DeriveClientSessionKeys
+- uid: LibSodium.CryptoKeyExchange.DeriveServerSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveServerSessionKeys(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_DeriveServerSessionKeys_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyExchange.DeriveServerSessionKeys(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveServerSessionKeys(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyExchange.DeriveServerSessionKeys(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyExchange.DeriveServerSessionKeys(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyExchange.DeriveServerSessionKeys(Span<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyExchange.DeriveServerSessionKeys(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyExchange.DeriveServerSessionKeys*
+  name: DeriveServerSessionKeys
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_DeriveServerSessionKeys_
+  commentId: Overload:LibSodium.CryptoKeyExchange.DeriveServerSessionKeys
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyExchange.DeriveServerSessionKeys
+  nameWithType: CryptoKeyExchange.DeriveServerSessionKeys
+- uid: LibSodium.CryptoKeyExchange.GenerateKeyPair(System.Span{System.Byte},System.Span{System.Byte})
+  name: GenerateKeyPair(Span<byte>, Span<byte>)
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_GenerateKeyPair_System_Span_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoKeyExchange.GenerateKeyPair(System.Span{System.Byte},System.Span{System.Byte})
+  name.vb: GenerateKeyPair(Span(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoKeyExchange.GenerateKeyPair(System.Span<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoKeyExchange.GenerateKeyPair(System.Span(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoKeyExchange.GenerateKeyPair(Span<byte>, Span<byte>)
+  nameWithType.vb: CryptoKeyExchange.GenerateKeyPair(Span(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoKeyExchange.GenerateKeyPair*
+  name: GenerateKeyPair
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_GenerateKeyPair_
+  commentId: Overload:LibSodium.CryptoKeyExchange.GenerateKeyPair
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyExchange.GenerateKeyPair
+  nameWithType: CryptoKeyExchange.GenerateKeyPair
+- uid: LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeyPairDeterministically(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_GenerateKeyPairDeterministically_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeyPairDeterministically(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically(System.Span<byte>, System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically(System.Span(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyExchange.GenerateKeyPairDeterministically(Span<byte>, Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyExchange.GenerateKeyPairDeterministically(Span(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically*
+  name: GenerateKeyPairDeterministically
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_GenerateKeyPairDeterministically_
+  commentId: Overload:LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically
+  isSpec: "True"
+  fullName: LibSodium.CryptoKeyExchange.GenerateKeyPairDeterministically
+  nameWithType: CryptoKeyExchange.GenerateKeyPairDeterministically
+- uid: LibSodium.CryptoKeyExchange.PublicKeyLen
+  name: PublicKeyLen
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_PublicKeyLen
+  commentId: F:LibSodium.CryptoKeyExchange.PublicKeyLen
+  fullName: LibSodium.CryptoKeyExchange.PublicKeyLen
+  nameWithType: CryptoKeyExchange.PublicKeyLen
+- uid: LibSodium.CryptoKeyExchange.SecretKeyLen
+  name: SecretKeyLen
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_SecretKeyLen
+  commentId: F:LibSodium.CryptoKeyExchange.SecretKeyLen
+  fullName: LibSodium.CryptoKeyExchange.SecretKeyLen
+  nameWithType: CryptoKeyExchange.SecretKeyLen
+- uid: LibSodium.CryptoKeyExchange.SeedLen
+  name: SeedLen
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_SeedLen
+  commentId: F:LibSodium.CryptoKeyExchange.SeedLen
+  fullName: LibSodium.CryptoKeyExchange.SeedLen
+  nameWithType: CryptoKeyExchange.SeedLen
+- uid: LibSodium.CryptoKeyExchange.SessionKeyLen
+  name: SessionKeyLen
+  href: api/LibSodium.CryptoKeyExchange.html#LibSodium_CryptoKeyExchange_SessionKeyLen
+  commentId: F:LibSodium.CryptoKeyExchange.SessionKeyLen
+  fullName: LibSodium.CryptoKeyExchange.SessionKeyLen
+  nameWithType: CryptoKeyExchange.SessionKeyLen
 - uid: LibSodium.CryptoPasswordHash
   name: CryptoPasswordHash
   href: api/LibSodium.CryptoPasswordHash.html
@@ -1320,6 +1414,112 @@ references:
   commentId: F:LibSodium.CryptoSecretStreamTag.Rekey
   fullName: LibSodium.CryptoSecretStreamTag.Rekey
   nameWithType: CryptoSecretStreamTag.Rekey
+- uid: LibSodium.CryptoSha256
+  name: CryptoSha256
+  href: api/LibSodium.CryptoSha256.html
+  commentId: T:LibSodium.CryptoSha256
+  fullName: LibSodium.CryptoSha256
+  nameWithType: CryptoSha256
+- uid: LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.IO.Stream)
+  name: ComputeHash(Span<byte>, Stream)
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_ComputeHash_System_Span_System_Byte__System_IO_Stream_
+  commentId: M:LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.IO.Stream)
+  name.vb: ComputeHash(Span(Of Byte), Stream)
+  fullName: LibSodium.CryptoSha256.ComputeHash(System.Span<byte>, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoSha256.ComputeHash(System.Span(Of Byte), System.IO.Stream)
+  nameWithType: CryptoSha256.ComputeHash(Span<byte>, Stream)
+  nameWithType.vb: CryptoSha256.ComputeHash(Span(Of Byte), Stream)
+- uid: LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: ComputeHash(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_ComputeHash_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: ComputeHash(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSha256.ComputeHash(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSha256.ComputeHash(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSha256.ComputeHash(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSha256.ComputeHash(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSha256.ComputeHash*
+  name: ComputeHash
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_ComputeHash_
+  commentId: Overload:LibSodium.CryptoSha256.ComputeHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha256.ComputeHash
+  nameWithType: CryptoSha256.ComputeHash
+- uid: LibSodium.CryptoSha256.ComputeHashAsync(System.Memory{System.Byte},System.IO.Stream,System.Threading.CancellationToken)
+  name: ComputeHashAsync(Memory<byte>, Stream, CancellationToken)
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_ComputeHashAsync_System_Memory_System_Byte__System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoSha256.ComputeHashAsync(System.Memory{System.Byte},System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: ComputeHashAsync(Memory(Of Byte), Stream, CancellationToken)
+  fullName: LibSodium.CryptoSha256.ComputeHashAsync(System.Memory<byte>, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoSha256.ComputeHashAsync(System.Memory(Of Byte), System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoSha256.ComputeHashAsync(Memory<byte>, Stream, CancellationToken)
+  nameWithType.vb: CryptoSha256.ComputeHashAsync(Memory(Of Byte), Stream, CancellationToken)
+- uid: LibSodium.CryptoSha256.ComputeHashAsync*
+  name: ComputeHashAsync
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_ComputeHashAsync_
+  commentId: Overload:LibSodium.CryptoSha256.ComputeHashAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha256.ComputeHashAsync
+  nameWithType: CryptoSha256.ComputeHashAsync
+- uid: LibSodium.CryptoSha256.HashLen
+  name: HashLen
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_HashLen
+  commentId: F:LibSodium.CryptoSha256.HashLen
+  fullName: LibSodium.CryptoSha256.HashLen
+  nameWithType: CryptoSha256.HashLen
+- uid: LibSodium.CryptoSha512
+  name: CryptoSha512
+  href: api/LibSodium.CryptoSha512.html
+  commentId: T:LibSodium.CryptoSha512
+  fullName: LibSodium.CryptoSha512
+  nameWithType: CryptoSha512
+- uid: LibSodium.CryptoSha512.ComputeHash(System.Span{System.Byte},System.IO.Stream)
+  name: ComputeHash(Span<byte>, Stream)
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_ComputeHash_System_Span_System_Byte__System_IO_Stream_
+  commentId: M:LibSodium.CryptoSha512.ComputeHash(System.Span{System.Byte},System.IO.Stream)
+  name.vb: ComputeHash(Span(Of Byte), Stream)
+  fullName: LibSodium.CryptoSha512.ComputeHash(System.Span<byte>, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoSha512.ComputeHash(System.Span(Of Byte), System.IO.Stream)
+  nameWithType: CryptoSha512.ComputeHash(Span<byte>, Stream)
+  nameWithType.vb: CryptoSha512.ComputeHash(Span(Of Byte), Stream)
+- uid: LibSodium.CryptoSha512.ComputeHash(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: ComputeHash(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_ComputeHash_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSha512.ComputeHash(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: ComputeHash(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSha512.ComputeHash(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSha512.ComputeHash(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSha512.ComputeHash(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSha512.ComputeHash(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSha512.ComputeHash*
+  name: ComputeHash
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_ComputeHash_
+  commentId: Overload:LibSodium.CryptoSha512.ComputeHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha512.ComputeHash
+  nameWithType: CryptoSha512.ComputeHash
+- uid: LibSodium.CryptoSha512.ComputeHashAsync(System.Memory{System.Byte},System.IO.Stream,System.Threading.CancellationToken)
+  name: ComputeHashAsync(Memory<byte>, Stream, CancellationToken)
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_ComputeHashAsync_System_Memory_System_Byte__System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoSha512.ComputeHashAsync(System.Memory{System.Byte},System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: ComputeHashAsync(Memory(Of Byte), Stream, CancellationToken)
+  fullName: LibSodium.CryptoSha512.ComputeHashAsync(System.Memory<byte>, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoSha512.ComputeHashAsync(System.Memory(Of Byte), System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoSha512.ComputeHashAsync(Memory<byte>, Stream, CancellationToken)
+  nameWithType.vb: CryptoSha512.ComputeHashAsync(Memory(Of Byte), Stream, CancellationToken)
+- uid: LibSodium.CryptoSha512.ComputeHashAsync*
+  name: ComputeHashAsync
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_ComputeHashAsync_
+  commentId: Overload:LibSodium.CryptoSha512.ComputeHashAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha512.ComputeHashAsync
+  nameWithType: CryptoSha512.ComputeHashAsync
+- uid: LibSodium.CryptoSha512.HashLen
+  name: HashLen
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_HashLen
+  commentId: F:LibSodium.CryptoSha512.HashLen
+  fullName: LibSodium.CryptoSha512.HashLen
+  nameWithType: CryptoSha512.HashLen
 - uid: LibSodium.CryptoShortHash
   name: CryptoShortHash
   href: api/LibSodium.CryptoShortHash.html

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128273; Key Derivation in LibSodium.Net | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128273; Key Derivation in LibSodium.Net | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/GPT/KeyDerivationBundle.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-key-derivation-in-libsodiumnet">🔑 Key Derivation in LibSodium.Net</h1>
+
+<p>LibSodium.Net provides two powerful primitives for key derivation:</p>
+<ul>
+<li><code>CryptoKeyDerivation</code>: libsodium's native KDF built on BLAKE2b.</li>
+<li><code>Hkdf</code>: a standard HKDF implementation based on HMAC (SHA-256 or SHA-512).</li>
+</ul>
+<blockquote>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/key_derivation">Key derivation</a><br>
+🧂 Based on libsodium's <a href="https://doc.libsodium.org/key_derivation/hkdf">HKDF</a><br>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.CryptoKeyDerivation.html">API Reference for <code>CryptoKeyDerivation</code></a><br>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.HKDF.html">API Reference for <code>HKDF</code></a></p>
+</blockquote>
+<p>This guide compares both options, shows how to choose between them, and offers practical usage advice.</p>
+<hr>
+<h2 id="-overview-of-alternatives">📋 Overview of Alternatives</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>CryptoKeyDerivation</code></th>
+<th><code>Hkdf</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algorithm</td>
+<td>BLAKE2b</td>
+<td>HMAC-SHA-256 / HMAC-SHA-512</td>
+</tr>
+<tr>
+<td>Based on</td>
+<td><code>crypto_kdf_*</code> API</td>
+<td><code>crypto_kdf_hkdf_{sha256,sha512}</code></td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>No</td>
+<td>RFC 5869</td>
+</tr>
+<tr>
+<td>Derivation style</td>
+<td>Single-step</td>
+<td>Extract-then-expand</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td>masterKey, subkeyId, context</td>
+<td>ikm, salt, info</td>
+</tr>
+<tr>
+<td>Deterministic</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Faster</td>
+<td>Slower</td>
+</tr>
+<tr>
+<td>Interoperability</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-practical-differences">⚙️ Practical Differences</h2>
+<h3 id="subkey-identifier-and-state">Subkey Identifier and State</h3>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th><code>CryptoKeyDerivation</code></th>
+<th><code>Hkdf</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subkey uniqueness driver</td>
+<td><code>ulong subkeyId</code> + 8-byte <code>context</code></td>
+<td>Arbitrary <code>salt</code> and <code>info</code></td>
+</tr>
+<tr>
+<td>Max identifier size</td>
+<td>16 bytes total (id + context)</td>
+<td>Arbitrary</td>
+</tr>
+<tr>
+<td>Collisions with random IDs</td>
+<td>Realistic risk</td>
+<td>Practically zero (if inputs are long)</td>
+</tr>
+<tr>
+<td>State requirement</td>
+<td>Yes (track last subkeyId)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Stateless randomness</td>
+<td>Not safe</td>
+<td>Safe</td>
+</tr>
+<tr>
+<td>Best practice</td>
+<td>Use a database sequence</td>
+<td>Use long random salt/info</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance">Performance</h3>
+<ul>
+<li><code>CryptoKeyDerivation</code> is faster due to BLAKE2b.</li>
+<li><code>HKDF</code> (especially SHA-512) is slower but widely standardized.</li>
+</ul>
+<h3 id="sha-256-vs-sha-512-in-hkdf">SHA-256 vs SHA-512 in HKDF</h3>
+<ul>
+<li>SHA-256: smaller hash, historically faster on constrained environments (e.g., old ARM cores).</li>
+<li>SHA-512: stronger and typically faster on modern 64-bit CPUs due to optimized instructions and wider registers.</li>
+</ul>
+<p>Use <code>SHA-512</code> unless you have specific compatibility or performance constraints.</p>
+<hr>
+<h2 id="-when-to-use-each">✨ When to Use Each</h2>
+<h3 id="choose-hkdf-when">Choose <code>HKDF</code> when:</h3>
+<ul>
+<li>You need RFC 5869 compliance.</li>
+<li>You want to avoid state tracking.</li>
+<li>You can safely randomize inputs (salt/info).</li>
+<li>You’re interoperating with non-libsodium systems.</li>
+</ul>
+<h3 id="choose-cryptokeyderivation-when">Choose <code>CryptoKeyDerivation</code> when:</h3>
+<ul>
+<li>You need to derive many related subkeys (e.g., message sequence).</li>
+<li>You control the environment and want maximum speed.</li>
+<li>You can track <code>subkeyId</code> safely (e.g., in a DB or in-memory).</li>
+</ul>
+<p>📝 Example: For a secure message stream, generate one random <code>subkeyId</code> per session, then increment it for each message. This yields high performance and unique keys.</p>
+<hr>
+<h2 id="-recommendation">🧭 Recommendation</h2>
+<p>Use <code>HKDF</code> (preferably SHA-512) by default unless you have a controlled use case requiring deterministic subkey sequences with high performance.</p>
+<hr>
+<h2 id="-cryptokeyderivation">✨ <code>CryptoKeyDerivation</code></h2>
+<p>This API is built on libsodium’s BLAKE2b-based <code>crypto_kdf_*</code> functions. It allows fast deterministic derivation of many subkeys from a single master key and a context+id pair.</p>
+<h3 id="-constants">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MasterKeyLen</code></td>
+<td>32</td>
+<td>Length of master key (32 bytes)</td>
+</tr>
+<tr>
+<td><code>ContextLen</code></td>
+<td>8</td>
+<td>Length of context string (8 bytes)</td>
+</tr>
+<tr>
+<td><code>MinSubkeyLen</code></td>
+<td>16</td>
+<td>Minimum subkey length</td>
+</tr>
+<tr>
+<td><code>MaxSubkeyLen</code></td>
+<td>64</td>
+<td>Maximum subkey length</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-generate-a-master-key">📋 Generate a master key</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; masterKey = stackalloc byte[CryptoKeyDerivation.MasterKeyLen];
+CryptoKeyDerivation.GenerateMasterKey(masterKey);
+</code></pre>
+<h3 id="-derive-a-subkey">📋 Derive a subkey</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; subkey = stackalloc byte[32];
+CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
+</code></pre>
+<p>📝 Context must be exactly 8 bytes. Strings shorter than 8 are zero-padded.</p>
+<hr>
+<h2 id="-hkdf">✨ <code>HKDF</code></h2>
+<p><code>HKDF</code> implements RFC 5869 using HMAC-SHA-256 or HMAC-SHA-512. It is compatible with <code>System.Security.Cryptography.HKDF.DeriveKey</code> and produces identical outputs when the inputs match.</p>
+<p>📝 LibSodium.Net's <code>HKDF</code> is fully interoperable with <code>System.Security.Cryptography.HKDF</code> from .NET — both produce identical outputs when using the same inputs and hash algorithm.</p>
+<h3 id="-constants-1">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>SHA256</th>
+<th>SHA512</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PrkLen</code></td>
+<td>32</td>
+<td>64</td>
+<td>Length of PRK (pseudorandom key)</td>
+</tr>
+<tr>
+<td><code>MinOkmLen</code></td>
+<td>4</td>
+<td>4</td>
+<td>Minimum output length</td>
+</tr>
+<tr>
+<td><code>MaxOkmLen</code></td>
+<td>8160</td>
+<td>16320</td>
+<td>Maximum output length (255 * hash size)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-hkdf-phases">🪄 HKDF Phases</h3>
+<ul>
+<li><code>Extract</code>: converts input keying material (IKM) and salt into a pseudorandom key (PRK).</li>
+<li><code>Expand</code>: derives the final output key material (OKM) from the PRK and optional <code>info</code>.</li>
+<li><code>DeriveKey</code>: performs both steps in one call.</li>
+</ul>
+<h4 id="when-to-use-which">When to use which:</h4>
+<ul>
+<li>Use <code>DeriveKey</code> for simple cases where no reuse of PRK is needed.</li>
+<li>Use <code>Extract</code> + <code>Expand</code> when you want to reuse PRK for multiple outputs.</li>
+<li>Use <code>Expand</code> when you already have a good master key.</li>
+</ul>
+<h3 id="-derive-a-key-in-one-step">📋 Derive a key in one step</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[64];
+HKDF.DeriveKey(HashAlgorithmName.SHA512, ikm, key, salt, info);
+</code></pre>
+<h3 id="-separate-extract-and-expand">📋 Separate extract and expand</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; prk = stackalloc byte[HKDF.Sha512PrkLen];
+HKDF.Extract(HashAlgorithmName.SHA512, ikm, salt, prk);
+
+Span&lt;byte&gt; okm = stackalloc byte[64];
+HKDF.Expand(HashAlgorithmName.SHA512, prk, okm, info);
+</code></pre>
+<h3 id="-extract-from-stream-incremental-entropy">📋 Extract from stream (incremental entropy)</h3>
+<p>This allows deriving a PRK from streamed IKM's.</p>
+<pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-secret.bin&quot;);
+Span&lt;byte&gt; prk = stackalloc byte[HKDF.Sha512PrkLen];
+await HKDF.ExtractAsync(HashAlgorithmName.SHA512, stream, salt, prk);
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — for invalid sizes or null contexts.</li>
+<li><code>ArgumentOutOfRangeException</code> — when lengths are outside defined bounds.</li>
+<li><code>NotSupportedException</code> — if unsupported hash algorithm is selected.</li>
+<li><code>LibSodiumException</code> — if the native call fails.</li>
+</ul>
+<hr>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li>Prefer <code>DeriveKey()</code> when simplicity is more important than flexibility.</li>
+<li>Use <code>Extract</code>/<code>Expand</code> for advanced scenarios: PRK reuse, incremental entropy, or interoperability layers.</li>
+<li>Only <code>HKDF</code> supports streaming input for IKM.</li>
+<li><code>CryptoKeyDerivation</code> is deterministic and optimized for fast sequential subkey derivation.</li>
+</ul>
+<hr>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li><a href="https://doc.libsodium.org/key_derivation">libsodium key derivation</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc5869">RFC 5869</a></li>
+<li><a href="../api/LibSodium.CryptoKeyDerivation.html">API Reference: CryptoKeyDerivation</a></li>
+<li><a href="../api/LibSodium.HKDF.html">API Reference: HKDF</a></li>
+</ul>
+<h2 id="cryptokeyderivationcs-native">CryptoKeyDerivation.cs Native</h2>
+<pre><code class="lang-csharp">using System.Runtime.InteropServices;
+
+namespace LibSodium.Interop
+{
+	internal static partial class Native
+	{
+		public const string CRYPTO_KDF_PRIMITIVE = &quot;blake2b&quot;;
+		public const int CRYPTO_KDF_BYTES_MIN = 16;
+		public const int CRYPTO_KDF_BYTES_MAX = 64;
+		public const int CRYPTO_KDF_CONTEXTBYTES = 8;
+		public const int CRYPTO_KDF_KEYBYTES = 32;
+
+		/// &lt;summary&gt;
+		/// Generates a random master key for use with crypto_kdf_derive_from_key.
+		/// &lt;/summary&gt;
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_keygen))]
+		internal static partial void crypto_kdf_keygen(Span&lt;byte&gt; key);
+
+		/// &lt;summary&gt;
+		/// Derives a subkey from a master key.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;subkey&quot;&gt;Output buffer for the derived subkey.&lt;/param&gt;
+		/// &lt;param name=&quot;subkeyLen&quot;&gt;Length of the subkey to derive.&lt;/param&gt;
+		/// &lt;param name=&quot;subkeyId&quot;&gt;Unique identifier for the subkey.&lt;/param&gt;
+		/// &lt;param name=&quot;context&quot;&gt;8-byte context string to namespace subkeys.&lt;/param&gt;
+		/// &lt;param name=&quot;masterKey&quot;&gt;The 32-byte master key.&lt;/param&gt;
+		/// &lt;returns&gt;0 on success, -1 on failure.&lt;/returns&gt;
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_derive_from_key))]
+		internal static partial int crypto_kdf_derive_from_key(
+			Span&lt;byte&gt; subkey,
+			nuint subkeyLen,
+			ulong subkeyId,
+			ReadOnlySpan&lt;byte&gt; context,
+			ReadOnlySpan&lt;byte&gt; masterKey);
+	}
+}
+
+</code></pre>
+<h2 id="cryptokeyderivationcs-api">CryptoKeyDerivation.cs API</h2>
+<pre><code class="lang-csharp">using System;
+using System.Text;
+using LibSodium.Interop;
+
+namespace LibSodium
+{
+	/// &lt;summary&gt;
+	/// Provides deterministic key derivation using libsodium's crypto_kdf_* API,
+	/// based on the BLAKE2b hash function.
+	/// &lt;/summary&gt;
+	public static class CryptoKeyDerivation
+	{
+		/// &lt;summary&gt;
+		/// Length of the master key in bytes (32).
+		/// &lt;/summary&gt;
+		public const int MasterKeyLen = Native.CRYPTO_KDF_KEYBYTES;
+
+		/// &lt;summary&gt;
+		/// Minimum length of a derived subkey (16).
+		/// &lt;/summary&gt;
+		public const int MinSubkeyLen = Native.CRYPTO_KDF_BYTES_MIN;
+
+		/// &lt;summary&gt;
+		/// Maximum length of a derived subkey (64).
+		/// &lt;/summary&gt;
+		public const int MaxSubkeyLen = Native.CRYPTO_KDF_BYTES_MAX;
+
+		/// &lt;summary&gt;
+		/// Length of the context in bytes (8).
+		/// &lt;/summary&gt;
+		public const int ContextLen = Native.CRYPTO_KDF_CONTEXTBYTES;
+
+		/// &lt;summary&gt;
+		/// Fills the given buffer with a new random master key (32 bytes).
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;masterKey&quot;&gt;The buffer to fill. Must be 32 bytes.&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown when &lt;paramref name=&quot;masterKey&quot;/&gt; is not 32 bytes.&lt;/exception&gt;
+		public static void GenerateMasterKey(Span&lt;byte&gt; masterKey)
+		{
+			if (masterKey.Length != MasterKeyLen)
+				throw new ArgumentException($&quot;Master key must be {MasterKeyLen} bytes long.&quot;, nameof(masterKey));
+			LibraryInitializer.EnsureInitialized();
+			Native.crypto_kdf_keygen(masterKey);
+		}
+
+		/// &lt;summary&gt;
+		/// Deterministically derives a subkey from a master key, context, and subkey ID.
+		/// Uses the BLAKE2b hash function internally.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;subkey&quot;&gt;The buffer where the derived subkey will be written. Its length must be between 16 and 64 bytes.&lt;/param&gt;
+		/// &lt;param name=&quot;subkeyId&quot;&gt;The identifier for the subkey (application-defined).&lt;/param&gt;
+		/// &lt;param name=&quot;context&quot;&gt;8-byte context describing the usage.&lt;/param&gt;
+		/// &lt;param name=&quot;masterKey&quot;&gt;The master key (32 bytes).&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;
+		/// Thrown when &lt;paramref name=&quot;subkey&quot;/&gt; is out of bounds, &lt;paramref name=&quot;context&quot;/&gt; is not 8 bytes,
+		/// or &lt;paramref name=&quot;masterKey&quot;/&gt; is not 32 bytes.
+		/// &lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the native key derivation fails.&lt;/exception&gt;
+		public static void DeriveSubkey(
+			Span&lt;byte&gt; subkey,
+			ulong subkeyId,
+			ReadOnlySpan&lt;byte&gt; context,
+			ReadOnlySpan&lt;byte&gt; masterKey)
+		{
+			if (subkey.Length &lt; MinSubkeyLen || subkey.Length &gt; MaxSubkeyLen)
+				throw new ArgumentException($&quot;Subkey length must be between {MinSubkeyLen} and {MaxSubkeyLen} bytes.&quot;, nameof(subkey));
+
+			if (context.Length != ContextLen)
+				throw new ArgumentException($&quot;Context must be exactly {ContextLen} bytes.&quot;, nameof(context));
+
+			if (masterKey.Length != MasterKeyLen)
+				throw new ArgumentException($&quot;Master key must be {MasterKeyLen} bytes.&quot;, nameof(masterKey));
+			LibraryInitializer.EnsureInitialized();
+			int rc = Native.crypto_kdf_derive_from_key(subkey, (nuint)subkey.Length, subkeyId, context, masterKey);
+			if (rc != 0)
+				throw new LibSodiumException(&quot;Key derivation failed.&quot;);
+		}
+
+		/// &lt;summary&gt;
+		/// Deterministically derives a subkey from a master key, using a context string whose UTF-8 representation is at most 8 bytes,
+		/// and a subkey ID. If the string is shorter, it is padded with zeros. Uses the BLAKE2b hash function internally.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;subkey&quot;&gt;The buffer where the derived subkey will be written. Its length must be between 16 and 64 bytes.&lt;/param&gt;
+		/// &lt;param name=&quot;subkeyId&quot;&gt;The identifier for the subkey (application-defined).&lt;/param&gt;
+		/// &lt;param name=&quot;context&quot;&gt;A string whose UTF-8 representation must be at most 8 bytes and describes the usage context.&lt;/param&gt;
+		/// &lt;param name=&quot;masterKey&quot;&gt;The master key (32 bytes).&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentNullException&quot;&gt;Thrown when &lt;paramref name=&quot;context&quot;/&gt; is null.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;
+		/// Thrown when &lt;paramref name=&quot;context&quot;/&gt; exceeds 8 UTF-8 bytes,
+		/// or &lt;paramref name=&quot;subkey&quot;/&gt; or &lt;paramref name=&quot;masterKey&quot;/&gt; are of invalid length.
+		/// &lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the native key derivation fails.&lt;/exception&gt;
+		public static void DeriveSubkey(
+			Span&lt;byte&gt; subkey,
+			ulong subkeyId,
+			string context,
+			ReadOnlySpan&lt;byte&gt; masterKey)
+		{
+			ArgumentNullException.ThrowIfNull(context);
+
+			Span&lt;byte&gt; utf8Context = stackalloc byte[ContextLen];
+			try
+			{
+				Encoding.UTF8.GetBytes(context, utf8Context);
+			}
+			catch (ArgumentException ex)
+			{
+				throw new ArgumentException($&quot;Context must be a UTF-8 representable string of at most {ContextLen} bytes.&quot;, nameof(context), ex);
+			}
+
+			DeriveSubkey(subkey, subkeyId, utf8Context, masterKey);
+		}
+	}
+}
+</code></pre>
+<h2 id="hkdfcs-native">HKDF.cs Native</h2>
+<pre><code class="lang-csharp">using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace LibSodium.Interop
+{
+	internal static partial class Native
+	{
+		public const int CRYPTO_KDF_HKDF_SHA256_KEYBYTES = 32;
+		public const int CRYPTO_KDF_HKDF_SHA256_BYTES_MIN = 0;
+		public const int CRYPTO_KDF_HKDF_SHA256_BYTES_MAX = 8160;
+
+		public const int CRYPTO_KDF_HKDF_SHA512_KEYBYTES = 64;
+		public const int CRYPTO_KDF_HKDF_SHA512_BYTES_MIN = 0;
+		public const int CRYPTO_KDF_HKDF_SHA512_BYTES_MAX = 16320;
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_extract))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha256_extract(
+			Span&lt;byte&gt; prk,
+			ReadOnlySpan&lt;byte&gt; salt,
+			nuint salt_len,
+			ReadOnlySpan&lt;byte&gt; ikm,
+			nuint ikm_len);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_expand))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha256_expand(
+			Span&lt;byte&gt; okm,
+			nuint okm_len,
+			ReadOnlySpan&lt;byte&gt; info,
+			nuint info_len,
+			ReadOnlySpan&lt;byte&gt; prk);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_extract))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha512_extract(
+			Span&lt;byte&gt; prk,
+			ReadOnlySpan&lt;byte&gt; salt,
+			nuint saltLen,
+			ReadOnlySpan&lt;byte&gt; ikm,
+			nuint ikmLen);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_expand))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha512_expand(
+			Span&lt;byte&gt; okm,
+			nuint okmLen,
+			ReadOnlySpan&lt;byte&gt; info,
+			nuint infoLen,
+			ReadOnlySpan&lt;byte&gt; prk);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_statebytes))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial nuint crypto_kdf_hkdf_sha256_statebytes();
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_statebytes))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial nuint crypto_kdf_hkdf_sha512_statebytes();
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_extract_init))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha256_extract_init(
+			Span&lt;byte&gt; state,
+			ReadOnlySpan&lt;byte&gt; salt,
+			nuint salt_len);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_extract_update))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha256_extract_update(
+			Span&lt;byte&gt; state,
+			ReadOnlySpan&lt;byte&gt; ikm,
+			nuint ikm_len);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha256_extract_final))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha256_extract_final(
+			Span&lt;byte&gt; state,
+			Span&lt;byte&gt; prk);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_extract_init))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha512_extract_init(
+			Span&lt;byte&gt; state,
+			ReadOnlySpan&lt;byte&gt; salt,
+			nuint salt_len);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_extract_update))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha512_extract_update(
+			Span&lt;byte&gt; state,
+			ReadOnlySpan&lt;byte&gt; ikm,
+			nuint ikm_len);
+
+		[LibraryImport(LibSodiumNativeLibraryName, EntryPoint = nameof(crypto_kdf_hkdf_sha512_extract_final))]
+		[UnmanagedCallConv(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
+		internal static partial int crypto_kdf_hkdf_sha512_extract_final(
+			Span&lt;byte&gt; state,
+			Span&lt;byte&gt; prk);
+	}
+}
+</code></pre>
+<h2 id="hkdfcs-api">HKDF.cs API</h2>
+<pre><code class="lang-csharp">using System.Security.Cryptography;
+using LibSodium.Interop;
+
+namespace LibSodium
+{
+	/// &lt;summary&gt;
+	/// Provides HKDF key derivation (RFC 5869) using SHA-256 or SHA-512.
+	/// &lt;/summary&gt;
+	public static class HKDF
+	{
+		/// &lt;summary&gt;
+		/// Length of the pseudorandom key (PRK) for SHA256 in bytes (32).
+		/// &lt;/summary&gt;
+		public const int Sha256PrkLen = 32;
+
+		/// &lt;summary&gt;
+		/// Length of the pseudorandom key (PRK) for SHA256 in bytes (32).
+		/// &lt;/summary&gt;
+		public const int Sha512PrkLen = 64;
+
+		/// &lt;summary&gt;
+		/// Minimum length of output key material (OKM) in bytes (4).
+		/// &lt;/summary&gt;
+		public const int MinOkmLen = 4;
+
+		/// &lt;summary&gt;
+		/// Maximum length of output key material (OKM) for SHA256 in bytes (8160 = 32 * 255).
+		/// &lt;/summary&gt;
+		public const int Sha256MaxOkmLen = 8160;
+
+		/// &lt;summary&gt;
+		/// Maximum length of output key material (OKM) for SHA512 in bytes (8160 = 64 * 255).
+		/// &lt;/summary&gt;
+		public const int Sha512MaxOkmLen = 16320;
+
+
+		internal static readonly int Sha256StateLen = (int)Native.crypto_kdf_hkdf_sha256_statebytes();
+		internal static readonly int Sha512StateLen = (int)Native.crypto_kdf_hkdf_sha512_statebytes();
+
+		private static int FillBuffer(Stream stream, byte[] buffer, int offset, int count)
+		{
+			int totalRead = 0;
+			while (totalRead &lt; count)
+			{
+				int read = stream.Read(buffer, offset + totalRead, count - totalRead);
+				if (read == 0)
+					break; // EOF
+				totalRead += read;
+			}
+			return totalRead;
+		}
+
+		private static async Task&lt;int&gt; FillBufferAsync(Stream stream, byte[] buffer, int offset, int count, CancellationToken ct)
+		{
+			int totalRead = 0;
+			while (totalRead &lt; count)
+			{
+				int read = await stream.ReadAsync(buffer, offset + totalRead, count - totalRead, ct).ConfigureAwait(false);
+				if (read == 0)
+					break; // EOF
+				totalRead += read;
+			}
+			return totalRead;
+		}
+
+		/// &lt;summary&gt;
+		/// Performs the extract step of HKDF (RFC 5869), using the specified hash algorithm.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Input keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value (can be empty).&lt;/param&gt;
+		/// &lt;param name=&quot;prk&quot;&gt;Buffer to receive the pseudorandom key (32 bytes for SHA256 and 64 bytes for SHA512).&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if &lt;paramref name=&quot;prk&quot;/&gt; is not exactly the required size.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+		public static void Extract(HashAlgorithmName hashAlgorithmName, ReadOnlySpan&lt;byte&gt; ikm, ReadOnlySpan&lt;byte&gt; salt, Span&lt;byte&gt; prk)
+		{
+			int result = 0;
+			switch (hashAlgorithmName.Name)
+			{
+				case nameof(HashAlgorithmName.SHA256):
+					if (prk.Length != Sha256PrkLen) throw new ArgumentException($&quot;PRK buffer must be exactly {Sha256PrkLen} bytes for SHA256.&quot;, nameof(prk));
+					LibraryInitializer.EnsureInitialized();
+					result = Native.crypto_kdf_hkdf_sha256_extract(prk, salt, (nuint)salt.Length, ikm, (nuint)ikm.Length); break;
+
+				case nameof(HashAlgorithmName.SHA512):
+					if (prk.Length != Sha512PrkLen) throw new ArgumentException($&quot;PRK buffer must be exactly {Sha512PrkLen} bytes for SHA512.&quot;, nameof(prk));
+					LibraryInitializer.EnsureInitialized();
+					result = Native.crypto_kdf_hkdf_sha512_extract(prk, salt, (nuint)salt.Length, ikm, (nuint)ikm.Length); break;
+				default:
+					throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;);
+
+			}
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to extract prk using hash algorithm {hashAlgorithmName.Name}&quot;);
+		}
+
+		/// &lt;summary&gt;
+		/// Performs the expand step of HKDF (RFC 5869), using the specified hash algorithm.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;prk&quot;&gt;Pseudorandom key obtained from the extract step (32 or 64 bytes).&lt;/param&gt;
+		/// &lt;param name=&quot;okm&quot;&gt;Output buffer to receive the derived keying material (4–8160 or 16320 bytes).&lt;/param&gt;
+		/// &lt;param name=&quot;info&quot;&gt;Optional context and application-specific information.&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentOutOfRangeException&quot;&gt;Thrown if &lt;paramref name=&quot;okm&quot;/&gt; is not in valid range.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if &lt;paramref name=&quot;prk&quot;/&gt; is not valid size for the selected hash.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+		public static void Expand(HashAlgorithmName hashAlgorithmName, ReadOnlySpan&lt;byte&gt; prk, Span&lt;byte&gt; okm, ReadOnlySpan&lt;byte&gt; info)
+		{
+			int result = 0;
+			switch (hashAlgorithmName.Name)
+			{
+				case nameof(HashAlgorithmName.SHA256):
+					if (okm.Length &lt; MinOkmLen || okm.Length &gt; Sha256MaxOkmLen)
+						throw new ArgumentOutOfRangeException(nameof(okm), $&quot;Output length must be between {MinOkmLen} and {Sha256MaxOkmLen} bytes for SHA256.&quot;);
+					if (prk.Length != Sha256PrkLen)
+						throw new ArgumentException($&quot;PRK must be exactly {Sha256PrkLen} bytes for SHA256.&quot;, nameof(prk));
+					LibraryInitializer.EnsureInitialized();
+					result = Native.crypto_kdf_hkdf_sha256_expand(okm, (nuint)okm.Length, info, (nuint)info.Length, prk);
+					break;
+				case nameof(HashAlgorithmName.SHA512):
+					if (okm.Length &lt; MinOkmLen || okm.Length &gt; Sha512MaxOkmLen)
+						throw new ArgumentOutOfRangeException(nameof(okm), $&quot;Output length must be between {MinOkmLen} and {Sha512MaxOkmLen} bytes for SHA512.&quot;);
+					if (prk.Length != Sha512PrkLen)
+						throw new ArgumentException($&quot;PRK must be exactly {Sha512PrkLen} bytes for SHA512.&quot;, nameof(prk));
+					LibraryInitializer.EnsureInitialized();
+					result = Native.crypto_kdf_hkdf_sha512_expand(okm, (nuint)okm.Length, info, (nuint)info.Length, prk);
+					break;
+				default:
+					throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;);
+			}
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to expand using hash algorithm {hashAlgorithmName.Name}&quot;);
+		}
+
+		/// &lt;summary&gt;
+		/// Derives key material from input key material in one step using HKDF (RFC 5869).
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Input keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;okm&quot;&gt;Output buffer to receive the derived keying material (16–64 bytes).&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value (can be empty).&lt;/param&gt;
+		/// &lt;param name=&quot;info&quot;&gt;Optional context and application-specific information.&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if &lt;paramref name=&quot;okm&quot;/&gt; or internal buffers have invalid lengths.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+		public static void DeriveKey(HashAlgorithmName hashAlgorithmName, ReadOnlySpan&lt;byte&gt; ikm, Span&lt;byte&gt; okm, ReadOnlySpan&lt;byte&gt; salt, ReadOnlySpan&lt;byte&gt; info)
+		{
+			var prkLen = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Sha256PrkLen,
+				nameof(HashAlgorithmName.SHA512) =&gt; Sha512PrkLen,
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+			Span&lt;byte&gt; prk = stackalloc byte[prkLen];
+			Extract(hashAlgorithmName, ikm, salt, prk);
+			Expand(hashAlgorithmName, prk, okm, info);
+		}
+
+		/// &lt;summary&gt;
+		/// Performs the extract step of HKDF (RFC 5869) using a stream as input keying material.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Stream of input keying material (IKM).&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value (can be empty).&lt;/param&gt;
+		/// &lt;param name=&quot;prk&quot;&gt;Buffer to receive the pseudorandom key (32 bytes for SHA256 and 64 bytes for SHA512).&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentNullException&quot;&gt;Thrown if &lt;paramref name=&quot;ikm&quot;/&gt; is null.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if &lt;paramref name=&quot;prk&quot;/&gt; length is incorrect.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+		public static void Extract(HashAlgorithmName hashAlgorithmName, Stream ikm, ReadOnlySpan&lt;byte&gt; salt, Span&lt;byte&gt; prk)
+		{
+			if (ikm == null) throw new ArgumentNullException(nameof(ikm));
+
+			Span&lt;byte&gt; state = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; stackalloc byte[Sha256StateLen],
+				nameof(HashAlgorithmName.SHA512) =&gt; stackalloc byte[Sha512StateLen],
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			int result;
+			LibraryInitializer.EnsureInitialized();
+
+			result = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_init(state, salt, (nuint)salt.Length),
+				nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_init(state, salt, (nuint)salt.Length),
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to initialize extract state for {hashAlgorithmName.Name}&quot;);
+
+			byte[] buffer = new byte[4096];
+			int read;
+			while ((read = FillBuffer(ikm, buffer, 0, buffer.Length)) &gt; 0)
+			{
+				Span&lt;byte&gt; chunk = buffer.AsSpan(0, read);
+				result = hashAlgorithmName.Name switch
+				{
+					nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_update(state, chunk, (nuint)chunk.Length),
+					nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_update(state, chunk, (nuint)chunk.Length),
+					_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+				};
+				if (result != 0)
+					throw new LibSodiumException($&quot;Failed to update extract state for {hashAlgorithmName.Name}&quot;);
+			}
+
+			result = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_final(state, prk),
+				nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_final(state, prk),
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to finalize extract for {hashAlgorithmName.Name}&quot;);
+		}
+
+		/// &lt;summary&gt;
+		/// Asynchronously performs the extract step of HKDF (RFC 5869) using a stream as input keying material.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Stream of input keying material (IKM).&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value (can be empty).&lt;/param&gt;
+		/// &lt;param name=&quot;prk&quot;&gt;Buffer to receive the pseudorandom key (32 bytes for SHA256 and 64 bytes for SHA512).&lt;/param&gt;
+		/// &lt;param name=&quot;cancellationToken&quot;&gt;Cancellation token.&lt;/param&gt;
+		/// &lt;exception cref=&quot;ArgumentNullException&quot;&gt;Thrown if &lt;paramref name=&quot;ikm&quot;/&gt; is null.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if &lt;paramref name=&quot;prk&quot;/&gt; length is incorrect.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+
+		public static async Task ExtractAsync(HashAlgorithmName hashAlgorithmName, Stream ikm, ReadOnlyMemory&lt;byte&gt; salt, Memory&lt;byte&gt; prk, CancellationToken cancellationToken = default)
+		{
+			if (ikm == null) throw new ArgumentNullException(nameof(ikm));
+
+			var state = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; new byte[Sha256StateLen],
+				nameof(HashAlgorithmName.SHA512) =&gt; new byte[Sha512StateLen],
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			int result;
+			LibraryInitializer.EnsureInitialized();
+
+			result = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_init(state, salt.Span, (nuint)salt.Length),
+				nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_init(state, salt.Span, (nuint)salt.Length),
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to initialize extract state for {hashAlgorithmName.Name}&quot;);
+
+			byte[] buffer = new byte[4096];
+			int read;
+			while ((read = await FillBufferAsync(ikm, buffer, 0, buffer.Length, cancellationToken).ConfigureAwait(false)) &gt; 0)
+			{
+				result = hashAlgorithmName.Name switch
+				{
+					nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_update(state, buffer.AsSpan(0, read), (nuint)read),
+					nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_update(state, buffer.AsSpan(0, read), (nuint)read),
+					_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+				};
+				if (result != 0)
+					throw new LibSodiumException($&quot;Failed to update extract state for {hashAlgorithmName.Name}&quot;);
+			}
+
+			result = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Native.crypto_kdf_hkdf_sha256_extract_final(state, prk.Span),
+				nameof(HashAlgorithmName.SHA512) =&gt; Native.crypto_kdf_hkdf_sha512_extract_final(state, prk.Span),
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+
+			if (result != 0)
+				throw new LibSodiumException($&quot;Failed to finalize extract for {hashAlgorithmName.Name}&quot;);
+		}
+
+		/// &lt;summary&gt;
+		/// Derives key material from input key material in one step using HKDF (RFC 5869) from a stream.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Stream of input keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;okm&quot;&gt;Buffer to receive the output keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value.&lt;/param&gt;
+		/// &lt;param name=&quot;info&quot;&gt;Optional application-specific information.&lt;/param&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+
+		public static void DeriveKey(HashAlgorithmName hashAlgorithmName, Stream ikm, Span&lt;byte&gt; okm, ReadOnlySpan&lt;byte&gt; salt, ReadOnlySpan&lt;byte&gt; info)
+		{
+			var prkLen = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Sha256PrkLen,
+				nameof(HashAlgorithmName.SHA512) =&gt; Sha512PrkLen,
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+			Span&lt;byte&gt; prk = stackalloc byte[prkLen];
+			Extract(hashAlgorithmName, ikm, salt, prk);
+			Expand(hashAlgorithmName, prk, okm, info);
+		}
+
+		/// &lt;summary&gt;
+		/// Asynchronously derives key material from input key material in one step using HKDF (RFC 5869) from a stream.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;hashAlgorithmName&quot;&gt;Hash algorithm to use (SHA-256 or SHA-512).&lt;/param&gt;
+		/// &lt;param name=&quot;ikm&quot;&gt;Stream of input keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;okm&quot;&gt;Buffer to receive the output keying material.&lt;/param&gt;
+		/// &lt;param name=&quot;salt&quot;&gt;Optional salt value.&lt;/param&gt;
+		/// &lt;param name=&quot;info&quot;&gt;Optional application-specific information.&lt;/param&gt;
+		/// &lt;param name=&quot;cancellationToken&quot;&gt;Cancellation token.&lt;/param&gt;
+		/// &lt;exception cref=&quot;NotSupportedException&quot;&gt;Thrown if the hash algorithm is unsupported.&lt;/exception&gt;
+		/// &lt;exception cref=&quot;LibSodiumException&quot;&gt;Thrown if the underlying native call fails.&lt;/exception&gt;
+		public static async Task DeriveKeyAsync(HashAlgorithmName hashAlgorithmName, Stream ikm, Memory&lt;byte&gt; okm, ReadOnlyMemory&lt;byte&gt; salt, ReadOnlyMemory&lt;byte&gt; info, CancellationToken cancellationToken = default)
+		{
+			int prkLen = hashAlgorithmName.Name switch
+			{
+				nameof(HashAlgorithmName.SHA256) =&gt; Sha256PrkLen,
+				nameof(HashAlgorithmName.SHA512) =&gt; Sha512PrkLen,
+				_ =&gt; throw new NotSupportedException($&quot;Unsupported hash algorithm: {hashAlgorithmName.Name}&quot;)
+			};
+			var prk = new byte[prkLen];
+			await ExtractAsync(hashAlgorithmName, ikm, salt, prk, cancellationToken).ConfigureAwait(false);
+			Expand(hashAlgorithmName, prk, okm.Span, info.Span);
+		}
+	}
+}
+</code></pre>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

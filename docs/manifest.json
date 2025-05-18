@@ -21,6 +21,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "GPT/KeyDerivationBundle.md",
+      "output": {
+        ".html": {
+          "relative_path": "GPT/KeyDerivationBundle.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.Aegis128L.yml",
       "output": {
@@ -176,6 +186,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoKeyExchange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoKeyExchange.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoKeyExchange",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoKeyExchange.yml\" sourcestartlinenumber=\"1\">Provides methods for secure, fast, and simple key exchange using libsodium's crypto_kx API.\nAllows two parties to derive shared session keys securely.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoPasswordHash.yml",
       "output": {
         ".html": {
@@ -215,6 +239,34 @@
       "IsMRef": true,
       "Title": "LibSodium.CryptoSecretStreamTag",
       "Summary": "<p sourcefile=\"api/LibSodium.CryptoSecretStreamTag.yml\" sourcestartlinenumber=\"1\">The tags used in the secret stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoSha256.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoSha256.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoSha256",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSha256.yml\" sourcestartlinenumber=\"1\">Provides one‑shot and streaming <b>SHA‑256</b> hashing helpers built on libsodium’s\n<code>crypto_hash_sha256</code> API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoSha512.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoSha512.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoSha512",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoSha512.yml\" sourcestartlinenumber=\"1\">Provides one‑shot and streaming <b>SHA‑512</b> hashing helpers built on libsodium’s\n<code>crypto_hash_sha512</code> API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -563,6 +615,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "guide/Hashing.V1.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Hashing.V1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "guide/Hashing.md",
       "output": {
         ".html": {
@@ -577,6 +639,16 @@
       "output": {
         ".html": {
           "relative_path": "guide/KeyDerivation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/KeyExchange.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/KeyExchange.html"
         }
       },
       "version": ""
