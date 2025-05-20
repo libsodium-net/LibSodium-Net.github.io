@@ -932,6 +932,354 @@ references:
   commentId: F:LibSodium.CryptoGenericHash.MinKeyLen
   fullName: LibSodium.CryptoGenericHash.MinKeyLen
   nameWithType: CryptoGenericHash.MinKeyLen
+- uid: LibSodium.CryptoHmacSha256
+  name: CryptoHmacSha256
+  href: api/LibSodium.CryptoHmacSha256.html
+  commentId: T:LibSodium.CryptoHmacSha256
+  fullName: LibSodium.CryptoHmacSha256
+  nameWithType: CryptoHmacSha256
+- uid: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_ComputeMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.Span(Of Byte))
+  nameWithType: CryptoHmacSha256.ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  nameWithType.vb: CryptoHmacSha256.ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_ComputeMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.ComputeMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoHmacSha256.ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoHmacSha256.ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.ComputeMac*
+  name: ComputeMac
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_ComputeMac_
+  commentId: Overload:LibSodium.CryptoHmacSha256.ComputeMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.ComputeMac
+  nameWithType: CryptoHmacSha256.ComputeMac
+- uid: LibSodium.CryptoHmacSha256.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name: ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_ComputeMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha256.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name.vb: ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha256.ComputeMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.Memory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha256.ComputeMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.Memory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha256.ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha256.ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha256.ComputeMacAsync*
+  name: ComputeMacAsync
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_ComputeMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha256.ComputeMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.ComputeMacAsync
+  nameWithType: CryptoHmacSha256.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha256.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoHmacSha256.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoHmacSha256.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_GenerateKey_
+  commentId: Overload:LibSodium.CryptoHmacSha256.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.GenerateKey
+  nameWithType: CryptoHmacSha256.GenerateKey
+- uid: LibSodium.CryptoHmacSha256.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_KeyLen
+  commentId: F:LibSodium.CryptoHmacSha256.KeyLen
+  fullName: LibSodium.CryptoHmacSha256.KeyLen
+  nameWithType: CryptoHmacSha256.KeyLen
+- uid: LibSodium.CryptoHmacSha256.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_MacLen
+  commentId: F:LibSodium.CryptoHmacSha256.MacLen
+  fullName: LibSodium.CryptoHmacSha256.MacLen
+  nameWithType: CryptoHmacSha256.MacLen
+- uid: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_VerifyMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha256.VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha256.VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.VerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha256.VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha256.VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.VerifyMac*
+  name: VerifyMac
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_VerifyMac_
+  commentId: Overload:LibSodium.CryptoHmacSha256.VerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.VerifyMac
+  nameWithType: CryptoHmacSha256.VerifyMac
+- uid: LibSodium.CryptoHmacSha256.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_VerifyMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha256.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha256.VerifyMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha256.VerifyMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha256.VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha256.VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha256.VerifyMacAsync*
+  name: VerifyMacAsync
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_VerifyMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha256.VerifyMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.VerifyMacAsync
+  nameWithType: CryptoHmacSha256.VerifyMacAsync
+- uid: LibSodium.CryptoHmacSha512
+  name: CryptoHmacSha512
+  href: api/LibSodium.CryptoHmacSha512.html
+  commentId: T:LibSodium.CryptoHmacSha512
+  fullName: LibSodium.CryptoHmacSha512
+  nameWithType: CryptoHmacSha512
+- uid: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_ComputeMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512.ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  nameWithType.vb: CryptoHmacSha512.ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_ComputeMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.ComputeMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512.ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoHmacSha512.ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.ComputeMac*
+  name: ComputeMac
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_ComputeMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512.ComputeMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.ComputeMac
+  nameWithType: CryptoHmacSha512.ComputeMac
+- uid: LibSodium.CryptoHmacSha512.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name: ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_ComputeMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha512.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name.vb: ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha512.ComputeMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.Memory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha512.ComputeMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.Memory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha512.ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha512.ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha512.ComputeMacAsync*
+  name: ComputeMacAsync
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_ComputeMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha512.ComputeMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.ComputeMacAsync
+  nameWithType: CryptoHmacSha512.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha512.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoHmacSha512.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_GenerateKey_
+  commentId: Overload:LibSodium.CryptoHmacSha512.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.GenerateKey
+  nameWithType: CryptoHmacSha512.GenerateKey
+- uid: LibSodium.CryptoHmacSha512.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_KeyLen
+  commentId: F:LibSodium.CryptoHmacSha512.KeyLen
+  fullName: LibSodium.CryptoHmacSha512.KeyLen
+  nameWithType: CryptoHmacSha512.KeyLen
+- uid: LibSodium.CryptoHmacSha512.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_MacLen
+  commentId: F:LibSodium.CryptoHmacSha512.MacLen
+  fullName: LibSodium.CryptoHmacSha512.MacLen
+  nameWithType: CryptoHmacSha512.MacLen
+- uid: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_VerifyMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512.VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512.VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.VerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512.VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512.VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.VerifyMac*
+  name: VerifyMac
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_VerifyMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512.VerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.VerifyMac
+  nameWithType: CryptoHmacSha512.VerifyMac
+- uid: LibSodium.CryptoHmacSha512.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_VerifyMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha512.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha512.VerifyMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha512.VerifyMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha512.VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha512.VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha512.VerifyMacAsync*
+  name: VerifyMacAsync
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_VerifyMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha512.VerifyMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.VerifyMacAsync
+  nameWithType: CryptoHmacSha512.VerifyMacAsync
+- uid: LibSodium.CryptoHmacSha512_256
+  name: CryptoHmacSha512_256
+  href: api/LibSodium.CryptoHmacSha512_256.html
+  commentId: T:LibSodium.CryptoHmacSha512_256
+  fullName: LibSodium.CryptoHmacSha512_256
+  nameWithType: CryptoHmacSha512_256
+- uid: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_ComputeMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512_256.ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_ComputeMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512_256.ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.ComputeMac*
+  name: ComputeMac
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_ComputeMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.ComputeMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.ComputeMac
+  nameWithType: CryptoHmacSha512_256.ComputeMac
+- uid: LibSodium.CryptoHmacSha512_256.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name: ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_ComputeMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha512_256.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name.vb: ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha512_256.ComputeMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.Memory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.ComputeMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.Memory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha512_256.ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha512_256.ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha512_256.ComputeMacAsync*
+  name: ComputeMacAsync
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_ComputeMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.ComputeMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.ComputeMacAsync
+  nameWithType: CryptoHmacSha512_256.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoHmacSha512_256.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_GenerateKey_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.GenerateKey
+  nameWithType: CryptoHmacSha512_256.GenerateKey
+- uid: LibSodium.CryptoHmacSha512_256.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_KeyLen
+  commentId: F:LibSodium.CryptoHmacSha512_256.KeyLen
+  fullName: LibSodium.CryptoHmacSha512_256.KeyLen
+  nameWithType: CryptoHmacSha512_256.KeyLen
+- uid: LibSodium.CryptoHmacSha512_256.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_MacLen
+  commentId: F:LibSodium.CryptoHmacSha512_256.MacLen
+  fullName: LibSodium.CryptoHmacSha512_256.MacLen
+  nameWithType: CryptoHmacSha512_256.MacLen
+- uid: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_VerifyMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512_256.VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512_256.VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.VerifyMac*
+  name: VerifyMac
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_VerifyMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.VerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.VerifyMac
+  nameWithType: CryptoHmacSha512_256.VerifyMac
+- uid: LibSodium.CryptoHmacSha512_256.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_VerifyMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoHmacSha512_256.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoHmacSha512_256.VerifyMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.VerifyMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoHmacSha512_256.VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoHmacSha512_256.VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoHmacSha512_256.VerifyMacAsync*
+  name: VerifyMacAsync
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_VerifyMacAsync_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.VerifyMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.VerifyMacAsync
+  nameWithType: CryptoHmacSha512_256.VerifyMacAsync
 - uid: LibSodium.CryptoKeyDerivation
   name: CryptoKeyDerivation
   href: api/LibSodium.CryptoKeyDerivation.html
@@ -1097,6 +1445,122 @@ references:
   commentId: F:LibSodium.CryptoKeyExchange.SessionKeyLen
   fullName: LibSodium.CryptoKeyExchange.SessionKeyLen
   nameWithType: CryptoKeyExchange.SessionKeyLen
+- uid: LibSodium.CryptoOneTimeAuth
+  name: CryptoOneTimeAuth
+  href: api/LibSodium.CryptoOneTimeAuth.html
+  commentId: T:LibSodium.CryptoOneTimeAuth
+  fullName: LibSodium.CryptoOneTimeAuth
+  nameWithType: CryptoOneTimeAuth
+- uid: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_ComputeMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.Span(Of Byte))
+  nameWithType: CryptoOneTimeAuth.ComputeMac(ReadOnlySpan<byte>, Stream, Span<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.ComputeMac(ReadOnlySpan(Of Byte), Stream, Span(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_ComputeMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.ComputeMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoOneTimeAuth.ComputeMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.ComputeMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.ComputeMac*
+  name: ComputeMac
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_ComputeMac_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.ComputeMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.ComputeMac
+  nameWithType: CryptoOneTimeAuth.ComputeMac
+- uid: LibSodium.CryptoOneTimeAuth.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name: ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_ComputeMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoOneTimeAuth.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  name.vb: ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoOneTimeAuth.ComputeMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.Memory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.ComputeMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.Memory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoOneTimeAuth.ComputeMacAsync(ReadOnlyMemory<byte>, Stream, Memory<byte>, CancellationToken)
+  nameWithType.vb: CryptoOneTimeAuth.ComputeMacAsync(ReadOnlyMemory(Of Byte), Stream, Memory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoOneTimeAuth.ComputeMacAsync*
+  name: ComputeMacAsync
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_ComputeMacAsync_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.ComputeMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.ComputeMacAsync
+  nameWithType: CryptoOneTimeAuth.ComputeMacAsync
+- uid: LibSodium.CryptoOneTimeAuth.GenerateKey(System.Span{System.Byte})
+  name: GenerateKey(Span<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_GenerateKey_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.GenerateKey(System.Span{System.Byte})
+  name.vb: GenerateKey(Span(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.GenerateKey(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.GenerateKey(System.Span(Of Byte))
+  nameWithType: CryptoOneTimeAuth.GenerateKey(Span<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.GenerateKey(Span(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.GenerateKey*
+  name: GenerateKey
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_GenerateKey_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.GenerateKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.GenerateKey
+  nameWithType: CryptoOneTimeAuth.GenerateKey
+- uid: LibSodium.CryptoOneTimeAuth.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_KeyLen
+  commentId: F:LibSodium.CryptoOneTimeAuth.KeyLen
+  fullName: LibSodium.CryptoOneTimeAuth.KeyLen
+  nameWithType: CryptoOneTimeAuth.KeyLen
+- uid: LibSodium.CryptoOneTimeAuth.MacLen
+  name: MacLen
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_MacLen
+  commentId: F:LibSodium.CryptoOneTimeAuth.MacLen
+  fullName: LibSodium.CryptoOneTimeAuth.MacLen
+  nameWithType: CryptoOneTimeAuth.MacLen
+- uid: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_VerifyMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan<byte>, System.IO.Stream, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan(Of Byte), System.IO.Stream, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoOneTimeAuth.VerifyMac(ReadOnlySpan<byte>, Stream, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.VerifyMac(ReadOnlySpan(Of Byte), Stream, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.VerifyMac(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoOneTimeAuth.VerifyMac(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.VerifyMac(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.VerifyMac*
+  name: VerifyMac
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_VerifyMac_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.VerifyMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.VerifyMac
+  nameWithType: CryptoOneTimeAuth.VerifyMac
+- uid: LibSodium.CryptoOneTimeAuth.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_VerifyMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoOneTimeAuth.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoOneTimeAuth.VerifyMacAsync(System.ReadOnlyMemory<byte>, System.IO.Stream, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.VerifyMacAsync(System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoOneTimeAuth.VerifyMacAsync(ReadOnlyMemory<byte>, Stream, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoOneTimeAuth.VerifyMacAsync(ReadOnlyMemory(Of Byte), Stream, ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoOneTimeAuth.VerifyMacAsync*
+  name: VerifyMacAsync
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_VerifyMacAsync_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.VerifyMacAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.VerifyMacAsync
+  nameWithType: CryptoOneTimeAuth.VerifyMacAsync
 - uid: LibSodium.CryptoPasswordHash
   name: CryptoPasswordHash
   href: api/LibSodium.CryptoPasswordHash.html
