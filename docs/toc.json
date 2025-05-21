@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Features","href":"features.html","topicHref":"features.html"},{"name":"API Reference","href":"api/LibSodium.html","topicHref":"api/LibSodium.html"},{"name":"Guide","href":"guide/index.html","topicHref":"guide/index.html","homepage":"guide/index.html"}],"pdf":false}
+{"items":[{"name":"Guide","href":"guide/index.html","topicHref":"guide/index.html"},{"name":"API Reference","href":"api/LibSodium.html","topicHref":"api/LibSodium.html"},{"name":"GitHub Repository","href":"https://github.com/LibSodium-Net/LibSodium.Net","topicHref":"https://github.com/LibSodium-Net/LibSodium.Net"}],"pdf":false}
