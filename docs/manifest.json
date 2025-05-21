@@ -334,6 +334,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoStreamChaCha20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoStreamChaCha20.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoStreamChaCha20",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamChaCha20.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>ChaCha20</code> stream cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoStreamChaCha20Ietf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoStreamChaCha20Ietf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoStreamChaCha20Ietf",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamChaCha20Ietf.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>ChaCha20Ietf</code> stream cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoStreamSalsa20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoStreamSalsa20.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoStreamSalsa20",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamSalsa20.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>Salsa20</code> stream cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoStreamXChaCha20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoStreamXChaCha20.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoStreamXChaCha20",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamXChaCha20.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>XChaCha20</code> stream cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoStreamXSalsa20.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoStreamXSalsa20.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoStreamXSalsa20",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamXSalsa20.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>XSalsa20</code> stream cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.HKDF.yml",
       "output": {
         ".html": {
@@ -755,6 +825,16 @@
       "output": {
         ".html": {
           "relative_path": "guide/SecureMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/StreamCiphers.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/StreamCiphers.html"
         }
       },
       "version": ""

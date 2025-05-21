@@ -276,10 +276,11 @@
 // We use byte[] because it implicitly converts to both Memory&lt;byte&gt; and Span&lt;byte&gt;.
 byte[] key = new byte[CryptoHmacSha256.KeyLen];
 byte[] mac = new byte[CryptoHmacSha256.MacLen];
+
 CryptoHmacSha256.GenerateKey(key);
 
-ReadOnlySpan&lt;byte&gt; message = &quot;hello&quot;u8; // UTF‑8 string literal (.NET 8+)
-
+// UTF‑8 string literal (.NET 8+)
+ReadOnlySpan&lt;byte&gt; message = &quot;hello&quot;u8; 
 
 // Calculate MAC
 CryptoHmacSha256.ComputeMac(key, message, mac);
@@ -289,7 +290,7 @@ bool ok = CryptoHmacSha256.VerifyMac(key, message, mac);
 Debug.Assert(ok);
 
 // Stream example (sync)
-using var stream = File.OpenRead(&quot;large.bin&quot;);
+using var stream = File.OpenRead(&quot;file.bin&quot;);
 CryptoHmacSha256.ComputeMac(key, stream, mac);
 stream.Position = 0; // rewind
 bool okStream = CryptoHmacSha256.VerifyMac(key, stream, mac);
@@ -365,12 +366,9 @@ Debug.Assert(okStreamAsync);
 <hr>
 <h2 id="-notes">📝 Notes</h2>
 <ul>
-<li><p>All APIs are <strong>deterministic</strong>: same key + message ⇒ same MAC.</p>
-</li>
-<li><p>Verification is <strong>constant‑time</strong> to avoid timing attacks.</p>
-</li>
-<li><p>The secret key length is fixed (32). Truncating or extending reduces security.</p>
-</li>
+<li>All APIs are <strong>deterministic</strong>: same key + message ⇒ same MAC.</li>
+<li>Verification is <strong>constant‑time</strong> to avoid timing attacks.</li>
+<li>The secret key length is fixed (32).</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>

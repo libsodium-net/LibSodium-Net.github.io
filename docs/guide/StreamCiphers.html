@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128274; Stream Ciphers | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128274; Stream Ciphers | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/StreamCiphers.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-stream-ciphers">🔒 Stream Ciphers</h1>
+
+<p>Stream ciphers provide <strong>confidentiality</strong> for messages of any length —short or long— turning data into a sequence indistinguishable from random noise.
+They operate on fixed-size blocks of data, using minimal memory, which makes them perfect for real-time streams, huge files, or jumping directly to any part of a message without processing everything before it.</p>
+<p><strong>How they work:</strong> A stream cipher generates a pseudorandom sequence called the <em>keystream</em> from a secret <em>key</em> and a fresh <em>nonce</em>, then combines it with the plaintext or ciphertext using XOR to encrypt or decrypt; the operation is symmetric, so the same process is used for both encryption and decryption.</p>
+<p>⚠️ <strong>No built-in authentication</strong>: Stream ciphers only provide confidentiality. They do <em>not</em> protect against tampering — an attacker can flip bits undetected. Always combine with a MAC (e.g., Poly1305) or use an AEAD construction
+when integrity or authenticity matters.</p>
+<p>Why use them?</p>
+<ul>
+<li>Works on the fly: ideal for live audio, video, chat, or sensor feeds.</li>
+<li>Minimal buffering: great for very large files or constrained devices.</li>
+<li>Random access: you can decrypt any block independently.</li>
+</ul>
+<p>Beyond encryption you can treat the keystream itself as a fast <strong>pseudorandom function (PRF)</strong> for masking or key‑derivation tasks.</p>
+<blockquote>
+<p>🧂 Based on libsodium’s <a href="https://doc.libsodium.org/advanced/stream_ciphers">Stream ciphers</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoStreamXSalsa20.html">API Reference: CryptoStreamXSalsa20</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoStreamSalsa20.html">API Reference: CryptoStreamSalsa20</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoStreamChaCha20.html">API Reference: CryptoStreamChaCha20</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoStreamChaCha20Ietf.html">API Reference: CryptoStreamChaCha20Ietf</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoStreamXChaCha20.html">API Reference: CryptoStreamXChaCha20</a></p>
+</blockquote>
+<hr>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li><strong>Allocation‑free <code>Span&lt;T&gt;</code> API</strong> plus streaming &amp; <code>async</code> overloads.</li>
+<li>Unified method names: <code>Encrypt</code>, <code>Decrypt</code>, <code>GenerateKeystream</code>.</li>
+<li>Supports encryption and decryption starting at a given block index (<code>initialCounter</code>).</li>
+<li>Key &amp; nonce length checks throw early (<code>ArgumentException</code>).</li>
+<li>Deterministic: same key + nonce ⇒ same keystream.</li>
+<li>Huge keystream period: 2^64 blocks ≈ 2^70 bytes —except for the IETF variant— <em>practically</em> limitless but <strong>not infinite</strong>.</li>
+</ul>
+<hr>
+<h2 id="-common-api">✨ Common API</h2>
+<p>All stream cipher classes share the following members:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KeyLen</code></td>
+<td>Constant</td>
+<td>Length of the secret key in bytes.</td>
+</tr>
+<tr>
+<td><code>NonceLen</code></td>
+<td>Constant</td>
+<td>Length of the nonce in bytes.</td>
+</tr>
+<tr>
+<td><code>BlockLen</code></td>
+<td>Constant</td>
+<td>Keystream block size in bytes.</td>
+</tr>
+<tr>
+<td><code>Encrypt</code></td>
+<td>Method</td>
+<td>Encrypts data using key and nonce. Applies to both span-based and stream-based.</td>
+</tr>
+<tr>
+<td><code>Decrypt</code></td>
+<td>Method</td>
+<td>Decrypts data using key and nonce. Applies to both span-based and stream-based.</td>
+</tr>
+<tr>
+<td><code>GenerateKeystream</code></td>
+<td>Method</td>
+<td>Generates keystream into an output buffer using key and nonce.</td>
+</tr>
+<tr>
+<td><code>EncryptAsync</code></td>
+<td>Method</td>
+<td>Asynchronously encrypts stream input to stream output with key and nonce.</td>
+</tr>
+<tr>
+<td><code>DecryptAsync</code></td>
+<td>Method</td>
+<td>Asynchronously decrypts stream input to stream output with key and nonce.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-algorithm-comparison">⚖️ Algorithm Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>KeyLen</th>
+<th>NonceLen</th>
+<th>BlockLen</th>
+<th>Keystream Period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CryptoStreamXSalsa20</code></td>
+<td>32</td>
+<td>24</td>
+<td>64</td>
+<td>2⁶⁴ blocks = 1 ZiB</td>
+</tr>
+<tr>
+<td><code>CryptoStreamSalsa20</code></td>
+<td>32</td>
+<td>8</td>
+<td>64</td>
+<td>2⁶⁴ blocks = 1 ZiB</td>
+</tr>
+<tr>
+<td><code>CryptoStreamChaCha20</code></td>
+<td>32</td>
+<td>8</td>
+<td>64</td>
+<td>2⁶⁴ blocks = 1 ZiB</td>
+</tr>
+<tr>
+<td><code>CryptoStreamChaCha20Ietf</code></td>
+<td>32</td>
+<td>12</td>
+<td>64</td>
+<td>2³² blocks = 256 GiB</td>
+</tr>
+<tr>
+<td><code>CryptoStreamXChaCha20</code></td>
+<td>32</td>
+<td>24</td>
+<td>64</td>
+<td>2⁶⁴ blocks = 1 ZiB</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>KeyLen, NonceLen, and BlockLen are in bytes.</p>
+</blockquote>
+<hr>
+<h2 id="-choosing-the-right-stream-cipher">🧭 Choosing the Right Stream Cipher</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random nonces, enormous message count</td>
+<td><code>CryptoStreamXChaCha20</code></td>
+</tr>
+<tr>
+<td>Interop with RFC 8439 / HTTP / QUIC</td>
+<td><code>CryptoStreamChaCha20Ietf</code></td>
+</tr>
+<tr>
+<td>NaCl / libsodium pre‑2018 compatibility</td>
+<td><code>CryptoStreamXSalsa20</code> or Salsa20</td>
+</tr>
+<tr>
+<td>Embedded / resource‑constrained but need ChaCha core</td>
+<td><code>CryptoStreamChaCha20</code></td>
+</tr>
+<tr>
+<td><strong>Never reuse nonces</strong> &amp; bounded message number</td>
+<td>Any variant (pick nonce length)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-usage-example">📋 Usage Example</h2>
+<p>All examples are in C# and work for all stream cipher algorithms, just change the class name.</p>
+<pre><code class="lang-csharp">// Async overloads accept Memory&lt;byte&gt;/ReadOnlyMemory&lt;byte&gt;, not Span&lt;byte&gt;.
+// We use byte[] because it implicitly converts to both Memory&lt;byte&gt; and Span&lt;byte&gt;.
+byte[] key = new byte[CryptoStreamXChaCha20.KeyLen];
+byte[] nonce = new byte[CryptoStreamXChaCha20.NonceLen];
+RandomGenerator.Fill(key);
+RandomGenerator.Fill(nonce);
+
+// 1. Basic usage encrypt and decrypt buffer
+ReadOnlySpan&lt;byte&gt; plaintext = &quot;secret&quot;u8;
+// Encrypting a buffer:
+byte[] ciphertext = new byte[plaintext.Length];
+CryptoStreamXChaCha20.Encrypt(key, nonce, plaintext, ciphertext);
+// Decrypting a buffer:
+byte[] decrypted = new byte[ciphertext.Length];
+CryptoStreamXChaCha20.Decrypt(key, nonce, ciphertext, decrypted);
+
+// Check that the decrypted buffer matches the original plaintext
+Debug.Assert(plaintext.SequenceEqual(decrypted));
+
+// 2. Stream-based (sync)
+using (var inputFile = File.OpenRead(&quot;video.raw&quot;))
+using (var encryptedFile = File.Create(&quot;video.enc&quot;))
+using (var decryptedFile = File.Create(&quot;video.dec&quot;))
+{
+	// Encrypting a file:
+	CryptoStreamXChaCha20.Encrypt(key, nonce, inputFile, encryptedFile);
+	// Decrypting a file:
+	encryptedFile.Position = 0; // Reset the position of the encrypted file to the beginning
+	CryptoStreamXChaCha20.Decrypt(key, nonce, encryptedFile, decryptedFile);
+}
+
+// 3. Stream-based (async)
+using (var inputFile = File.OpenRead(&quot;video.raw&quot;))
+using (var encryptedFile = File.Create(&quot;video.enc&quot;))
+using (var decryptedFile = File.Create(&quot;video.dec&quot;))
+{
+	// Encrypting a file:
+	await CryptoStreamXChaCha20.EncryptAsync(key, nonce, inputFile, encryptedFile);
+	// Decrypting a file:
+	encryptedFile.Position = 0; // Reset the position of the encrypted file to the beginning
+	await CryptoStreamXChaCha20.DecryptAsync(key, nonce, encryptedFile, decryptedFile);
+}
+
+// 4. Generate raw keystream
+Span&lt;byte&gt; keystream = stackalloc byte[128];
+CryptoStreamXChaCha20.GenerateKeystream(keystream, nonce, key);
+
+// 5. Start encryption/decryption from a specific block index (e.g., resume or skip)
+CryptoStreamXChaCha20.Encrypt(key, nonce, plaintext, ciphertext, initialCounter: 10);
+CryptoStreamXChaCha20.Decrypt(key, nonce, ciphertext, decrypted, initialCounter: 10);
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Exception</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong key / nonce length</td>
+<td><code>ArgumentException</code></td>
+</tr>
+<tr>
+<td>Output buffer too small</td>
+<td><code>ArgumentException</code></td>
+</tr>
+<tr>
+<td>I/O failure in stream overloads</td>
+<td><code>LibSodiumException</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-key--nonce-management-tips">🗝️ Key &amp; Nonce Management Tips</h2>
+<ul>
+<li>Generate keys with <code>RandomGenerator.Fill</code> or <code>GenerateKey</code>.</li>
+<li><strong>Never</strong> reuse a nonce with the same key—this reveals keystream and breaks confidentiality.</li>
+<li>Prefer 24‑byte variants for random nonces; use counters for 8/12‑byte variants.</li>
+<li>Rotate keys well before exceeding <strong>2^64 blocks</strong> (≈ 1 PiB) of keystream.</li>
+</ul>
+<hr>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li>Stream ciphers offer <strong>no built‑in authentication</strong>, pair them with a MAC (Poly1305/HMAC) or use an AEAD construction.</li>
+<li>Keystream period is 2^64 blocks (64 bytes each), except <code>CryptoStreamChaCha20Ietf</code> with 2^32.</li>
+<li>All APIs are constant‑time with respect to secret data.</li>
+</ul>
+<hr>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li>🧂 <a href="https://doc.libsodium.org/advanced/stream_ciphers">Stream ciphers</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoStreamXSalsa20.html">API Reference: CryptoStreamXSalsa20</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoStreamSalsa20.html">API Reference: CryptoStreamSalsa20</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoStreamChaCha20.html">API Reference: CryptoStreamChaCha20</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoStreamChaCha20Ietf.html">API Reference: CryptoStreamChaCha20Ietf</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoStreamXChaCha20.html">API Reference: CryptoStreamXChaCha20</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ using <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -331,7 +331,7 @@ HKDF.Expand(HashAlgorithmName.SHA512, prk, okm, info);
 <h3 id="-extract-from-stream-incremental-entropy">📋 Extract from stream (incremental entropy)</h3>
 <p>This allows deriving a PRK from streamed IKM's.</p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-secret.bin&quot;);
-Span&lt;byte&gt; prk = stackalloc byte[HKDF.Sha512PrkLen];
+var prk = new byte[HKDF.Sha512PrkLen];
 await HKDF.ExtractAsync(HashAlgorithmName.SHA512, stream, salt, prk);
 </code></pre>
 <hr>

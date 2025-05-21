@@ -165,7 +165,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; Pad(Span&lt;byte&gt; buffer, int unpaddedLen, int blockSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; Pad(Span&lt;byte&gt; buffer, int unpaddedLen, int blockLen)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -176,7 +176,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
     <dt><code>unpaddedLen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The length of the data before padding.</p>
 </dd>
-    <dt><code>blockSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>blockLen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The block size to pad to.</p>
 </dd>
   </dl>
@@ -198,7 +198,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when blockSize is less than or equal to 0 or unpaddedLen is greater than buffer length.</p>
+    <dd><p>Thrown when BlockLen is less than or equal to 0 or unpaddedLen is greater than buffer length.</p>
 </dd>
   </dl>
 
@@ -216,7 +216,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; Unpad(Span&lt;byte&gt; buffer, int blockSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; Unpad(Span&lt;byte&gt; buffer, int blockLen)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -224,7 +224,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
     <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
     <dd><p>The buffer to unpad.</p>
 </dd>
-    <dt><code>blockSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>blockLen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The block size that was used for padding.</p>
 </dd>
   </dl>
@@ -246,7 +246,7 @@ Class SecurePadding  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when blockSize is less than or equal to 0.</p>
+    <dd><p>Thrown when BlockLen is less than or equal to 0.</p>
 </dd>
     <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
     <dd><p>Thrown when unpadding fails.</p>

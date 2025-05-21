@@ -2128,6 +2128,616 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoSign.Verify
   nameWithType: CryptoSign.Verify
+- uid: LibSodium.CryptoStreamChaCha20
+  name: CryptoStreamChaCha20
+  href: api/LibSodium.CryptoStreamChaCha20.html
+  commentId: T:LibSodium.CryptoStreamChaCha20
+  fullName: LibSodium.CryptoStreamChaCha20
+  nameWithType: CryptoStreamChaCha20
+- uid: LibSodium.CryptoStreamChaCha20.BlockLen
+  name: BlockLen
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_BlockLen
+  commentId: F:LibSodium.CryptoStreamChaCha20.BlockLen
+  fullName: LibSodium.CryptoStreamChaCha20.BlockLen
+  nameWithType: CryptoStreamChaCha20.BlockLen
+- uid: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamChaCha20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamChaCha20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamChaCha20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamChaCha20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamChaCha20.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Decrypt_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20.Decrypt
+  nameWithType: CryptoStreamChaCha20.Decrypt
+- uid: LibSodium.CryptoStreamChaCha20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamChaCha20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamChaCha20.DecryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.DecryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamChaCha20.DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamChaCha20.DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamChaCha20.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_DecryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20.DecryptAsync
+  nameWithType: CryptoStreamChaCha20.DecryptAsync
+- uid: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamChaCha20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamChaCha20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamChaCha20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamChaCha20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamChaCha20.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_Encrypt_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20.Encrypt
+  nameWithType: CryptoStreamChaCha20.Encrypt
+- uid: LibSodium.CryptoStreamChaCha20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamChaCha20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamChaCha20.EncryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.EncryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamChaCha20.EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamChaCha20.EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamChaCha20.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_EncryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20.EncryptAsync
+  nameWithType: CryptoStreamChaCha20.EncryptAsync
+- uid: LibSodium.CryptoStreamChaCha20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoStreamChaCha20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoStreamChaCha20.GenerateKeystream(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoStreamChaCha20.GenerateKeystream(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoStreamChaCha20.GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoStreamChaCha20.GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoStreamChaCha20.GenerateKeystream*
+  name: GenerateKeystream
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_GenerateKeystream_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20.GenerateKeystream
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20.GenerateKeystream
+  nameWithType: CryptoStreamChaCha20.GenerateKeystream
+- uid: LibSodium.CryptoStreamChaCha20.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_KeyLen
+  commentId: F:LibSodium.CryptoStreamChaCha20.KeyLen
+  fullName: LibSodium.CryptoStreamChaCha20.KeyLen
+  nameWithType: CryptoStreamChaCha20.KeyLen
+- uid: LibSodium.CryptoStreamChaCha20.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoStreamChaCha20.html#LibSodium_CryptoStreamChaCha20_NonceLen
+  commentId: F:LibSodium.CryptoStreamChaCha20.NonceLen
+  fullName: LibSodium.CryptoStreamChaCha20.NonceLen
+  nameWithType: CryptoStreamChaCha20.NonceLen
+- uid: LibSodium.CryptoStreamChaCha20Ietf
+  name: CryptoStreamChaCha20Ietf
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html
+  commentId: T:LibSodium.CryptoStreamChaCha20Ietf
+  fullName: LibSodium.CryptoStreamChaCha20Ietf
+  nameWithType: CryptoStreamChaCha20Ietf
+- uid: LibSodium.CryptoStreamChaCha20Ietf.BlockLen
+  name: BlockLen
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_BlockLen
+  commentId: F:LibSodium.CryptoStreamChaCha20Ietf.BlockLen
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.BlockLen
+  nameWithType: CryptoStreamChaCha20Ietf.BlockLen
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamChaCha20Ietf.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamChaCha20Ietf.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Decrypt_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20Ietf.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Decrypt
+  nameWithType: CryptoStreamChaCha20Ietf.Decrypt
+- uid: LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamChaCha20Ietf.DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync
+  nameWithType: CryptoStreamChaCha20Ietf.DecryptAsync
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamChaCha20Ietf.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamChaCha20Ietf.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_Encrypt_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20Ietf.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.Encrypt
+  nameWithType: CryptoStreamChaCha20Ietf.Encrypt
+- uid: LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamChaCha20Ietf.EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync
+  nameWithType: CryptoStreamChaCha20Ietf.EncryptAsync
+- uid: LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoStreamChaCha20Ietf.GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoStreamChaCha20Ietf.GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream*
+  name: GenerateKeystream
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_
+  commentId: Overload:LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream
+  nameWithType: CryptoStreamChaCha20Ietf.GenerateKeystream
+- uid: LibSodium.CryptoStreamChaCha20Ietf.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_KeyLen
+  commentId: F:LibSodium.CryptoStreamChaCha20Ietf.KeyLen
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.KeyLen
+  nameWithType: CryptoStreamChaCha20Ietf.KeyLen
+- uid: LibSodium.CryptoStreamChaCha20Ietf.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoStreamChaCha20Ietf.html#LibSodium_CryptoStreamChaCha20Ietf_NonceLen
+  commentId: F:LibSodium.CryptoStreamChaCha20Ietf.NonceLen
+  fullName: LibSodium.CryptoStreamChaCha20Ietf.NonceLen
+  nameWithType: CryptoStreamChaCha20Ietf.NonceLen
+- uid: LibSodium.CryptoStreamSalsa20
+  name: CryptoStreamSalsa20
+  href: api/LibSodium.CryptoStreamSalsa20.html
+  commentId: T:LibSodium.CryptoStreamSalsa20
+  fullName: LibSodium.CryptoStreamSalsa20
+  nameWithType: CryptoStreamSalsa20
+- uid: LibSodium.CryptoStreamSalsa20.BlockLen
+  name: BlockLen
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_BlockLen
+  commentId: F:LibSodium.CryptoStreamSalsa20.BlockLen
+  fullName: LibSodium.CryptoStreamSalsa20.BlockLen
+  nameWithType: CryptoStreamSalsa20.BlockLen
+- uid: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamSalsa20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamSalsa20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamSalsa20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamSalsa20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamSalsa20.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Decrypt_
+  commentId: Overload:LibSodium.CryptoStreamSalsa20.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamSalsa20.Decrypt
+  nameWithType: CryptoStreamSalsa20.Decrypt
+- uid: LibSodium.CryptoStreamSalsa20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamSalsa20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamSalsa20.DecryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.DecryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamSalsa20.DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamSalsa20.DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamSalsa20.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_DecryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamSalsa20.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamSalsa20.DecryptAsync
+  nameWithType: CryptoStreamSalsa20.DecryptAsync
+- uid: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamSalsa20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamSalsa20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamSalsa20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamSalsa20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamSalsa20.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_Encrypt_
+  commentId: Overload:LibSodium.CryptoStreamSalsa20.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamSalsa20.Encrypt
+  nameWithType: CryptoStreamSalsa20.Encrypt
+- uid: LibSodium.CryptoStreamSalsa20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamSalsa20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamSalsa20.EncryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.EncryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamSalsa20.EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamSalsa20.EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamSalsa20.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_EncryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamSalsa20.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamSalsa20.EncryptAsync
+  nameWithType: CryptoStreamSalsa20.EncryptAsync
+- uid: LibSodium.CryptoStreamSalsa20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoStreamSalsa20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoStreamSalsa20.GenerateKeystream(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoStreamSalsa20.GenerateKeystream(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoStreamSalsa20.GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoStreamSalsa20.GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoStreamSalsa20.GenerateKeystream*
+  name: GenerateKeystream
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_GenerateKeystream_
+  commentId: Overload:LibSodium.CryptoStreamSalsa20.GenerateKeystream
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamSalsa20.GenerateKeystream
+  nameWithType: CryptoStreamSalsa20.GenerateKeystream
+- uid: LibSodium.CryptoStreamSalsa20.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_KeyLen
+  commentId: F:LibSodium.CryptoStreamSalsa20.KeyLen
+  fullName: LibSodium.CryptoStreamSalsa20.KeyLen
+  nameWithType: CryptoStreamSalsa20.KeyLen
+- uid: LibSodium.CryptoStreamSalsa20.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoStreamSalsa20.html#LibSodium_CryptoStreamSalsa20_NonceLen
+  commentId: F:LibSodium.CryptoStreamSalsa20.NonceLen
+  fullName: LibSodium.CryptoStreamSalsa20.NonceLen
+  nameWithType: CryptoStreamSalsa20.NonceLen
+- uid: LibSodium.CryptoStreamXChaCha20
+  name: CryptoStreamXChaCha20
+  href: api/LibSodium.CryptoStreamXChaCha20.html
+  commentId: T:LibSodium.CryptoStreamXChaCha20
+  fullName: LibSodium.CryptoStreamXChaCha20
+  nameWithType: CryptoStreamXChaCha20
+- uid: LibSodium.CryptoStreamXChaCha20.BlockLen
+  name: BlockLen
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_BlockLen
+  commentId: F:LibSodium.CryptoStreamXChaCha20.BlockLen
+  fullName: LibSodium.CryptoStreamXChaCha20.BlockLen
+  nameWithType: CryptoStreamXChaCha20.BlockLen
+- uid: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamXChaCha20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamXChaCha20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamXChaCha20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamXChaCha20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamXChaCha20.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Decrypt_
+  commentId: Overload:LibSodium.CryptoStreamXChaCha20.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXChaCha20.Decrypt
+  nameWithType: CryptoStreamXChaCha20.Decrypt
+- uid: LibSodium.CryptoStreamXChaCha20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamXChaCha20.DecryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.DecryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamXChaCha20.DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamXChaCha20.DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamXChaCha20.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_DecryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamXChaCha20.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXChaCha20.DecryptAsync
+  nameWithType: CryptoStreamXChaCha20.DecryptAsync
+- uid: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamXChaCha20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamXChaCha20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamXChaCha20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamXChaCha20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamXChaCha20.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_Encrypt_
+  commentId: Overload:LibSodium.CryptoStreamXChaCha20.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXChaCha20.Encrypt
+  nameWithType: CryptoStreamXChaCha20.Encrypt
+- uid: LibSodium.CryptoStreamXChaCha20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamXChaCha20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamXChaCha20.EncryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.EncryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamXChaCha20.EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamXChaCha20.EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamXChaCha20.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_EncryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamXChaCha20.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXChaCha20.EncryptAsync
+  nameWithType: CryptoStreamXChaCha20.EncryptAsync
+- uid: LibSodium.CryptoStreamXChaCha20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoStreamXChaCha20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoStreamXChaCha20.GenerateKeystream(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoStreamXChaCha20.GenerateKeystream(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoStreamXChaCha20.GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoStreamXChaCha20.GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoStreamXChaCha20.GenerateKeystream*
+  name: GenerateKeystream
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_GenerateKeystream_
+  commentId: Overload:LibSodium.CryptoStreamXChaCha20.GenerateKeystream
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXChaCha20.GenerateKeystream
+  nameWithType: CryptoStreamXChaCha20.GenerateKeystream
+- uid: LibSodium.CryptoStreamXChaCha20.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_KeyLen
+  commentId: F:LibSodium.CryptoStreamXChaCha20.KeyLen
+  fullName: LibSodium.CryptoStreamXChaCha20.KeyLen
+  nameWithType: CryptoStreamXChaCha20.KeyLen
+- uid: LibSodium.CryptoStreamXChaCha20.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoStreamXChaCha20.html#LibSodium_CryptoStreamXChaCha20_NonceLen
+  commentId: F:LibSodium.CryptoStreamXChaCha20.NonceLen
+  fullName: LibSodium.CryptoStreamXChaCha20.NonceLen
+  nameWithType: CryptoStreamXChaCha20.NonceLen
+- uid: LibSodium.CryptoStreamXSalsa20
+  name: CryptoStreamXSalsa20
+  href: api/LibSodium.CryptoStreamXSalsa20.html
+  commentId: T:LibSodium.CryptoStreamXSalsa20
+  fullName: LibSodium.CryptoStreamXSalsa20
+  nameWithType: CryptoStreamXSalsa20
+- uid: LibSodium.CryptoStreamXSalsa20.BlockLen
+  name: BlockLen
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_BlockLen
+  commentId: F:LibSodium.CryptoStreamXSalsa20.BlockLen
+  fullName: LibSodium.CryptoStreamXSalsa20.BlockLen
+  nameWithType: CryptoStreamXSalsa20.BlockLen
+- uid: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamXSalsa20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamXSalsa20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.Decrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamXSalsa20.Decrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamXSalsa20.Decrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamXSalsa20.Decrypt*
+  name: Decrypt
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Decrypt_
+  commentId: Overload:LibSodium.CryptoStreamXSalsa20.Decrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXSalsa20.Decrypt
+  nameWithType: CryptoStreamXSalsa20.Decrypt
+- uid: LibSodium.CryptoStreamXSalsa20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamXSalsa20.DecryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.DecryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamXSalsa20.DecryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamXSalsa20.DecryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamXSalsa20.DecryptAsync*
+  name: DecryptAsync
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_DecryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamXSalsa20.DecryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXSalsa20.DecryptAsync
+  nameWithType: CryptoStreamXSalsa20.DecryptAsync
+- uid: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+  fullName: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.IO.Stream, System.IO.Stream)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.IO.Stream, System.IO.Stream)
+  nameWithType: CryptoStreamXSalsa20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Stream, Stream)
+  nameWithType.vb: CryptoStreamXSalsa20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Stream, Stream)
+- uid: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name: Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)
+  name.vb: Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+  fullName: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>, ulong)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.Encrypt(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong)
+  nameWithType: CryptoStreamXSalsa20.Encrypt(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>, ulong)
+  nameWithType.vb: CryptoStreamXSalsa20.Encrypt(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte), ULong)
+- uid: LibSodium.CryptoStreamXSalsa20.Encrypt*
+  name: Encrypt
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_Encrypt_
+  commentId: Overload:LibSodium.CryptoStreamXSalsa20.Encrypt
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXSalsa20.Encrypt
+  nameWithType: CryptoStreamXSalsa20.Encrypt
+- uid: LibSodium.CryptoStreamXSalsa20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoStreamXSalsa20.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name.vb: EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+  fullName: LibSodium.CryptoStreamXSalsa20.EncryptAsync(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.EncryptAsync(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.IO.Stream, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: CryptoStreamXSalsa20.EncryptAsync(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, Stream, Stream, CancellationToken)
+  nameWithType.vb: CryptoStreamXSalsa20.EncryptAsync(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), Stream, Stream, CancellationToken)
+- uid: LibSodium.CryptoStreamXSalsa20.EncryptAsync*
+  name: EncryptAsync
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_EncryptAsync_
+  commentId: Overload:LibSodium.CryptoStreamXSalsa20.EncryptAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXSalsa20.EncryptAsync
+  nameWithType: CryptoStreamXSalsa20.EncryptAsync
+- uid: LibSodium.CryptoStreamXSalsa20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoStreamXSalsa20.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoStreamXSalsa20.GenerateKeystream(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoStreamXSalsa20.GenerateKeystream(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoStreamXSalsa20.GenerateKeystream(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoStreamXSalsa20.GenerateKeystream(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoStreamXSalsa20.GenerateKeystream*
+  name: GenerateKeystream
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_GenerateKeystream_
+  commentId: Overload:LibSodium.CryptoStreamXSalsa20.GenerateKeystream
+  isSpec: "True"
+  fullName: LibSodium.CryptoStreamXSalsa20.GenerateKeystream
+  nameWithType: CryptoStreamXSalsa20.GenerateKeystream
+- uid: LibSodium.CryptoStreamXSalsa20.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_KeyLen
+  commentId: F:LibSodium.CryptoStreamXSalsa20.KeyLen
+  fullName: LibSodium.CryptoStreamXSalsa20.KeyLen
+  nameWithType: CryptoStreamXSalsa20.KeyLen
+- uid: LibSodium.CryptoStreamXSalsa20.NonceLen
+  name: NonceLen
+  href: api/LibSodium.CryptoStreamXSalsa20.html#LibSodium_CryptoStreamXSalsa20_NonceLen
+  commentId: F:LibSodium.CryptoStreamXSalsa20.NonceLen
+  fullName: LibSodium.CryptoStreamXSalsa20.NonceLen
+  nameWithType: CryptoStreamXSalsa20.NonceLen
 - uid: LibSodium.HKDF
   name: HKDF
   href: api/LibSodium.HKDF.html
