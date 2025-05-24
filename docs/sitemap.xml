@@ -2,415 +2,403 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://libsodium.net/api/LibSodium.Aegis128L.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.Aegis256.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.Aes256Gcm.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.Base64Encoding.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.Base64Variant.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.ChaCha20Poly1305.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.ChaCha20Poly1305Ietf.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoAuth.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoBox.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoGenericHash.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoHmacSha256.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoHmacSha512.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoHmacSha512_256.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoKeyDerivation.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoKeyExchange.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoOneTimeAuth.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoPasswordHashArgon.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoPasswordHashScrypt.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoSecretStream.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoSecretStreamTag.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoSha256.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoSha512.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoShortHash.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoSign.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoStreamChaCha20.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoStreamChaCha20Ietf.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoStreamSalsa20.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoStreamXChaCha20.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.CryptoStreamXSalsa20.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.HKDF.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.HexEncoding.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.LibSodiumException.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.LibraryInitializer.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.LibraryVersion.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.PasswordHashArgonAlgorithm.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.RandomGenerator.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecretBox.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecretStream.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecureBigUnsignedInteger.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecureMemory-1.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecureMemory.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.SecurePadding.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.UnmanagedMemorySpanHolder-1.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.XChaCha20Poly1305.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/api/LibSodium.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/features.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/AEAD.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/CryptoAuth.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/CryptoBox.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/DesignPhilosophy.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/DualPhasePasswordHashing.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/Encoding.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://libsodium.net/guide/Hashing.V0.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://libsodium.net/guide/Hashing.V1.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/Hashing.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/KeyDerivation.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/KeyExchange.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/MAC.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/PublicKeyCrypto.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/RandomGenerator.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/SecretBox.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/SecretStream.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/SecureBigUnsignedInteger.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/SecureMemory.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/StreamCiphers.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/XChaCha20-Poly1305.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/guide/index.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://libsodium.net/index.html</loc>
-    <lastmod>2025-05-24T07:37:07+01:00</lastmod>
+    <lastmod>2025-05-24T07:45:47+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url>

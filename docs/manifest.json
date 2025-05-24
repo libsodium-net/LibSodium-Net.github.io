@@ -740,26 +740,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "guide/Hashing.V0.md",
-      "output": {
-        ".html": {
-          "relative_path": "guide/Hashing.V0.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "guide/Hashing.V1.md",
-      "output": {
-        ".html": {
-          "relative_path": "guide/Hashing.V1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "guide/Hashing.md",
       "output": {
         ".html": {
