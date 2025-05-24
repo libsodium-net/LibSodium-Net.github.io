@@ -241,17 +241,31 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LibSodium.CryptoPasswordHash.yml",
+      "source_relative_path": "api/LibSodium.CryptoPasswordHashArgon.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LibSodium.CryptoPasswordHash.html"
+          "relative_path": "api/LibSodium.CryptoPasswordHashArgon.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "LibSodium.CryptoPasswordHash",
-      "Summary": "<p sourcefile=\"api/LibSodium.CryptoPasswordHash.yml\" sourcestartlinenumber=\"1\">Provides password hashing and key derivation using Argon2.</p>\n"
+      "Title": "LibSodium.CryptoPasswordHashArgon",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoPasswordHashArgon.yml\" sourcestartlinenumber=\"1\">Provides password hashing and key derivation using Argon2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoPasswordHashScrypt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoPasswordHashScrypt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoPasswordHashScrypt",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoPasswordHashScrypt.yml\" sourcestartlinenumber=\"1\">Provides password hashing and key derivation using the Scrypt algorithm.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -479,17 +493,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LibSodium.PasswordHashAlgorithm.yml",
+      "source_relative_path": "api/LibSodium.PasswordHashArgonAlgorithm.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LibSodium.PasswordHashAlgorithm.html"
+          "relative_path": "api/LibSodium.PasswordHashArgonAlgorithm.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "LibSodium.PasswordHashAlgorithm",
-      "Summary": "<p sourcefile=\"api/LibSodium.PasswordHashAlgorithm.yml\" sourcestartlinenumber=\"1\">Supported password hashing algorithms.</p>\n"
+      "Title": "LibSodium.PasswordHashArgonAlgorithm",
+      "Summary": "<p sourcefile=\"api/LibSodium.PasswordHashArgonAlgorithm.yml\" sourcestartlinenumber=\"1\">Supported password hashing algorithms.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -700,6 +714,16 @@
       "output": {
         ".html": {
           "relative_path": "guide/DesignPhilosophy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/DualPhasePasswordHashing.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/DualPhasePasswordHashing.html"
         }
       },
       "version": ""

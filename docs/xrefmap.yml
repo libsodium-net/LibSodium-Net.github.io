@@ -1561,165 +1561,324 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoOneTimeAuth.VerifyMacAsync
   nameWithType: CryptoOneTimeAuth.VerifyMacAsync
-- uid: LibSodium.CryptoPasswordHash
-  name: CryptoPasswordHash
-  href: api/LibSodium.CryptoPasswordHash.html
-  commentId: T:LibSodium.CryptoPasswordHash
-  fullName: LibSodium.CryptoPasswordHash
-  nameWithType: CryptoPasswordHash
-- uid: LibSodium.CryptoPasswordHash.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashAlgorithm)
-  name: DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int, PasswordHashAlgorithm)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_DeriveKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_LibSodium_PasswordHashAlgorithm_
-  commentId: M:LibSodium.CryptoPasswordHash.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashAlgorithm)
-  name.vb: DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashAlgorithm)
-  fullName: LibSodium.CryptoPasswordHash.DeriveKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, int, int, LibSodium.PasswordHashAlgorithm)
-  fullName.vb: LibSodium.CryptoPasswordHash.DeriveKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), Integer, Integer, LibSodium.PasswordHashAlgorithm)
-  nameWithType: CryptoPasswordHash.DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int, PasswordHashAlgorithm)
-  nameWithType.vb: CryptoPasswordHash.DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashAlgorithm)
-- uid: LibSodium.CryptoPasswordHash.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashAlgorithm)
-  name: DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int, PasswordHashAlgorithm)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_DeriveKey_System_Span_System_Byte__System_String_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_LibSodium_PasswordHashAlgorithm_
-  commentId: M:LibSodium.CryptoPasswordHash.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashAlgorithm)
-  name.vb: DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashAlgorithm)
-  fullName: LibSodium.CryptoPasswordHash.DeriveKey(System.Span<byte>, string, System.ReadOnlySpan<byte>, int, int, LibSodium.PasswordHashAlgorithm)
-  fullName.vb: LibSodium.CryptoPasswordHash.DeriveKey(System.Span(Of Byte), String, System.ReadOnlySpan(Of Byte), Integer, Integer, LibSodium.PasswordHashAlgorithm)
-  nameWithType: CryptoPasswordHash.DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int, PasswordHashAlgorithm)
-  nameWithType.vb: CryptoPasswordHash.DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashAlgorithm)
-- uid: LibSodium.CryptoPasswordHash.DeriveKey*
+- uid: LibSodium.CryptoPasswordHashArgon
+  name: CryptoPasswordHashArgon
+  href: api/LibSodium.CryptoPasswordHashArgon.html
+  commentId: T:LibSodium.CryptoPasswordHashArgon
+  fullName: LibSodium.CryptoPasswordHashArgon
+  nameWithType: CryptoPasswordHashArgon
+- uid: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashArgonAlgorithm)
+  name: DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int, PasswordHashArgonAlgorithm)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_DeriveKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_LibSodium_PasswordHashArgonAlgorithm_
+  commentId: M:LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashArgonAlgorithm)
+  name.vb: DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashArgonAlgorithm)
+  fullName: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, int, int, LibSodium.PasswordHashArgonAlgorithm)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), Integer, Integer, LibSodium.PasswordHashArgonAlgorithm)
+  nameWithType: CryptoPasswordHashArgon.DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int, PasswordHashArgonAlgorithm)
+  nameWithType.vb: CryptoPasswordHashArgon.DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashArgonAlgorithm)
+- uid: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashArgonAlgorithm)
+  name: DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int, PasswordHashArgonAlgorithm)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_DeriveKey_System_Span_System_Byte__System_String_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_LibSodium_PasswordHashArgonAlgorithm_
+  commentId: M:LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,LibSodium.PasswordHashArgonAlgorithm)
+  name.vb: DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashArgonAlgorithm)
+  fullName: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span<byte>, string, System.ReadOnlySpan<byte>, int, int, LibSodium.PasswordHashArgonAlgorithm)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.DeriveKey(System.Span(Of Byte), String, System.ReadOnlySpan(Of Byte), Integer, Integer, LibSodium.PasswordHashArgonAlgorithm)
+  nameWithType: CryptoPasswordHashArgon.DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int, PasswordHashArgonAlgorithm)
+  nameWithType.vb: CryptoPasswordHashArgon.DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer, PasswordHashArgonAlgorithm)
+- uid: LibSodium.CryptoPasswordHashArgon.DeriveKey*
   name: DeriveKey
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_DeriveKey_
-  commentId: Overload:LibSodium.CryptoPasswordHash.DeriveKey
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_DeriveKey_
+  commentId: Overload:LibSodium.CryptoPasswordHashArgon.DeriveKey
   isSpec: "True"
-  fullName: LibSodium.CryptoPasswordHash.DeriveKey
-  nameWithType: CryptoPasswordHash.DeriveKey
-- uid: LibSodium.CryptoPasswordHash.EncodedLen
+  fullName: LibSodium.CryptoPasswordHashArgon.DeriveKey
+  nameWithType: CryptoPasswordHashArgon.DeriveKey
+- uid: LibSodium.CryptoPasswordHashArgon.EncodedLen
   name: EncodedLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_EncodedLen
-  commentId: F:LibSodium.CryptoPasswordHash.EncodedLen
-  fullName: LibSodium.CryptoPasswordHash.EncodedLen
-  nameWithType: CryptoPasswordHash.EncodedLen
-- uid: LibSodium.CryptoPasswordHash.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_EncodedLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.EncodedLen
+  fullName: LibSodium.CryptoPasswordHashArgon.EncodedLen
+  nameWithType: CryptoPasswordHashArgon.EncodedLen
+- uid: LibSodium.CryptoPasswordHashArgon.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
   name: HashPassword(ReadOnlySpan<byte>, int, int)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_HashPassword_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_
-  commentId: M:LibSodium.CryptoPasswordHash.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_HashPassword_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashArgon.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
   name.vb: HashPassword(ReadOnlySpan(Of Byte), Integer, Integer)
-  fullName: LibSodium.CryptoPasswordHash.HashPassword(System.ReadOnlySpan<byte>, int, int)
-  fullName.vb: LibSodium.CryptoPasswordHash.HashPassword(System.ReadOnlySpan(Of Byte), Integer, Integer)
-  nameWithType: CryptoPasswordHash.HashPassword(ReadOnlySpan<byte>, int, int)
-  nameWithType.vb: CryptoPasswordHash.HashPassword(ReadOnlySpan(Of Byte), Integer, Integer)
-- uid: LibSodium.CryptoPasswordHash.HashPassword(System.String,System.Int32,System.Int32)
+  fullName: LibSodium.CryptoPasswordHashArgon.HashPassword(System.ReadOnlySpan<byte>, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.HashPassword(System.ReadOnlySpan(Of Byte), Integer, Integer)
+  nameWithType: CryptoPasswordHashArgon.HashPassword(ReadOnlySpan<byte>, int, int)
+  nameWithType.vb: CryptoPasswordHashArgon.HashPassword(ReadOnlySpan(Of Byte), Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashArgon.HashPassword(System.String,System.Int32,System.Int32)
   name: HashPassword(string, int, int)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_HashPassword_System_String_System_Int32_System_Int32_
-  commentId: M:LibSodium.CryptoPasswordHash.HashPassword(System.String,System.Int32,System.Int32)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_HashPassword_System_String_System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashArgon.HashPassword(System.String,System.Int32,System.Int32)
   name.vb: HashPassword(String, Integer, Integer)
-  fullName: LibSodium.CryptoPasswordHash.HashPassword(string, int, int)
-  fullName.vb: LibSodium.CryptoPasswordHash.HashPassword(String, Integer, Integer)
-  nameWithType: CryptoPasswordHash.HashPassword(string, int, int)
-  nameWithType.vb: CryptoPasswordHash.HashPassword(String, Integer, Integer)
-- uid: LibSodium.CryptoPasswordHash.HashPassword*
+  fullName: LibSodium.CryptoPasswordHashArgon.HashPassword(string, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.HashPassword(String, Integer, Integer)
+  nameWithType: CryptoPasswordHashArgon.HashPassword(string, int, int)
+  nameWithType.vb: CryptoPasswordHashArgon.HashPassword(String, Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashArgon.HashPassword*
   name: HashPassword
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_HashPassword_
-  commentId: Overload:LibSodium.CryptoPasswordHash.HashPassword
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_HashPassword_
+  commentId: Overload:LibSodium.CryptoPasswordHashArgon.HashPassword
   isSpec: "True"
-  fullName: LibSodium.CryptoPasswordHash.HashPassword
-  nameWithType: CryptoPasswordHash.HashPassword
-- uid: LibSodium.CryptoPasswordHash.InteractiveIterations
+  fullName: LibSodium.CryptoPasswordHashArgon.HashPassword
+  nameWithType: CryptoPasswordHashArgon.HashPassword
+- uid: LibSodium.CryptoPasswordHashArgon.InteractiveIterations
   name: InteractiveIterations
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_InteractiveIterations
-  commentId: F:LibSodium.CryptoPasswordHash.InteractiveIterations
-  fullName: LibSodium.CryptoPasswordHash.InteractiveIterations
-  nameWithType: CryptoPasswordHash.InteractiveIterations
-- uid: LibSodium.CryptoPasswordHash.InteractiveMemoryLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_InteractiveIterations
+  commentId: F:LibSodium.CryptoPasswordHashArgon.InteractiveIterations
+  fullName: LibSodium.CryptoPasswordHashArgon.InteractiveIterations
+  nameWithType: CryptoPasswordHashArgon.InteractiveIterations
+- uid: LibSodium.CryptoPasswordHashArgon.InteractiveMemoryLen
   name: InteractiveMemoryLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_InteractiveMemoryLen
-  commentId: F:LibSodium.CryptoPasswordHash.InteractiveMemoryLen
-  fullName: LibSodium.CryptoPasswordHash.InteractiveMemoryLen
-  nameWithType: CryptoPasswordHash.InteractiveMemoryLen
-- uid: LibSodium.CryptoPasswordHash.MinIterations
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_InteractiveMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.InteractiveMemoryLen
+  fullName: LibSodium.CryptoPasswordHashArgon.InteractiveMemoryLen
+  nameWithType: CryptoPasswordHashArgon.InteractiveMemoryLen
+- uid: LibSodium.CryptoPasswordHashArgon.MinIterations
   name: MinIterations
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_MinIterations
-  commentId: F:LibSodium.CryptoPasswordHash.MinIterations
-  fullName: LibSodium.CryptoPasswordHash.MinIterations
-  nameWithType: CryptoPasswordHash.MinIterations
-- uid: LibSodium.CryptoPasswordHash.MinKeyLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_MinIterations
+  commentId: F:LibSodium.CryptoPasswordHashArgon.MinIterations
+  fullName: LibSodium.CryptoPasswordHashArgon.MinIterations
+  nameWithType: CryptoPasswordHashArgon.MinIterations
+- uid: LibSodium.CryptoPasswordHashArgon.MinKeyLen
   name: MinKeyLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_MinKeyLen
-  commentId: F:LibSodium.CryptoPasswordHash.MinKeyLen
-  fullName: LibSodium.CryptoPasswordHash.MinKeyLen
-  nameWithType: CryptoPasswordHash.MinKeyLen
-- uid: LibSodium.CryptoPasswordHash.MinMemoryLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_MinKeyLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.MinKeyLen
+  fullName: LibSodium.CryptoPasswordHashArgon.MinKeyLen
+  nameWithType: CryptoPasswordHashArgon.MinKeyLen
+- uid: LibSodium.CryptoPasswordHashArgon.MinMemoryLen
   name: MinMemoryLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_MinMemoryLen
-  commentId: F:LibSodium.CryptoPasswordHash.MinMemoryLen
-  fullName: LibSodium.CryptoPasswordHash.MinMemoryLen
-  nameWithType: CryptoPasswordHash.MinMemoryLen
-- uid: LibSodium.CryptoPasswordHash.MinPasswordLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_MinMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.MinMemoryLen
+  fullName: LibSodium.CryptoPasswordHashArgon.MinMemoryLen
+  nameWithType: CryptoPasswordHashArgon.MinMemoryLen
+- uid: LibSodium.CryptoPasswordHashArgon.MinPasswordLen
   name: MinPasswordLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_MinPasswordLen
-  commentId: F:LibSodium.CryptoPasswordHash.MinPasswordLen
-  fullName: LibSodium.CryptoPasswordHash.MinPasswordLen
-  nameWithType: CryptoPasswordHash.MinPasswordLen
-- uid: LibSodium.CryptoPasswordHash.ModerateIterations
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_MinPasswordLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.MinPasswordLen
+  fullName: LibSodium.CryptoPasswordHashArgon.MinPasswordLen
+  nameWithType: CryptoPasswordHashArgon.MinPasswordLen
+- uid: LibSodium.CryptoPasswordHashArgon.ModerateIterations
   name: ModerateIterations
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_ModerateIterations
-  commentId: F:LibSodium.CryptoPasswordHash.ModerateIterations
-  fullName: LibSodium.CryptoPasswordHash.ModerateIterations
-  nameWithType: CryptoPasswordHash.ModerateIterations
-- uid: LibSodium.CryptoPasswordHash.ModerateMemoryLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_ModerateIterations
+  commentId: F:LibSodium.CryptoPasswordHashArgon.ModerateIterations
+  fullName: LibSodium.CryptoPasswordHashArgon.ModerateIterations
+  nameWithType: CryptoPasswordHashArgon.ModerateIterations
+- uid: LibSodium.CryptoPasswordHashArgon.ModerateMemoryLen
   name: ModerateMemoryLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_ModerateMemoryLen
-  commentId: F:LibSodium.CryptoPasswordHash.ModerateMemoryLen
-  fullName: LibSodium.CryptoPasswordHash.ModerateMemoryLen
-  nameWithType: CryptoPasswordHash.ModerateMemoryLen
-- uid: LibSodium.CryptoPasswordHash.Prefix
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_ModerateMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.ModerateMemoryLen
+  fullName: LibSodium.CryptoPasswordHashArgon.ModerateMemoryLen
+  nameWithType: CryptoPasswordHashArgon.ModerateMemoryLen
+- uid: LibSodium.CryptoPasswordHashArgon.Prefix
   name: Prefix
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_Prefix
-  commentId: F:LibSodium.CryptoPasswordHash.Prefix
-  fullName: LibSodium.CryptoPasswordHash.Prefix
-  nameWithType: CryptoPasswordHash.Prefix
-- uid: LibSodium.CryptoPasswordHash.SaltLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_Prefix
+  commentId: F:LibSodium.CryptoPasswordHashArgon.Prefix
+  fullName: LibSodium.CryptoPasswordHashArgon.Prefix
+  nameWithType: CryptoPasswordHashArgon.Prefix
+- uid: LibSodium.CryptoPasswordHashArgon.SaltLen
   name: SaltLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_SaltLen
-  commentId: F:LibSodium.CryptoPasswordHash.SaltLen
-  fullName: LibSodium.CryptoPasswordHash.SaltLen
-  nameWithType: CryptoPasswordHash.SaltLen
-- uid: LibSodium.CryptoPasswordHash.SensitiveIterations
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_SaltLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.SaltLen
+  fullName: LibSodium.CryptoPasswordHashArgon.SaltLen
+  nameWithType: CryptoPasswordHashArgon.SaltLen
+- uid: LibSodium.CryptoPasswordHashArgon.SensitiveIterations
   name: SensitiveIterations
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_SensitiveIterations
-  commentId: F:LibSodium.CryptoPasswordHash.SensitiveIterations
-  fullName: LibSodium.CryptoPasswordHash.SensitiveIterations
-  nameWithType: CryptoPasswordHash.SensitiveIterations
-- uid: LibSodium.CryptoPasswordHash.SensitiveMemoryLen
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_SensitiveIterations
+  commentId: F:LibSodium.CryptoPasswordHashArgon.SensitiveIterations
+  fullName: LibSodium.CryptoPasswordHashArgon.SensitiveIterations
+  nameWithType: CryptoPasswordHashArgon.SensitiveIterations
+- uid: LibSodium.CryptoPasswordHashArgon.SensitiveMemoryLen
   name: SensitiveMemoryLen
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_SensitiveMemoryLen
-  commentId: F:LibSodium.CryptoPasswordHash.SensitiveMemoryLen
-  fullName: LibSodium.CryptoPasswordHash.SensitiveMemoryLen
-  nameWithType: CryptoPasswordHash.SensitiveMemoryLen
-- uid: LibSodium.CryptoPasswordHash.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_SensitiveMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashArgon.SensitiveMemoryLen
+  fullName: LibSodium.CryptoPasswordHashArgon.SensitiveMemoryLen
+  nameWithType: CryptoPasswordHashArgon.SensitiveMemoryLen
+- uid: LibSodium.CryptoPasswordHashArgon.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
   name: VerifyPassword(string, ReadOnlySpan<byte>)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_VerifyPassword_System_String_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.CryptoPasswordHash.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_VerifyPassword_System_String_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoPasswordHashArgon.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
   name.vb: VerifyPassword(String, ReadOnlySpan(Of Byte))
-  fullName: LibSodium.CryptoPasswordHash.VerifyPassword(string, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.CryptoPasswordHash.VerifyPassword(String, System.ReadOnlySpan(Of Byte))
-  nameWithType: CryptoPasswordHash.VerifyPassword(string, ReadOnlySpan<byte>)
-  nameWithType.vb: CryptoPasswordHash.VerifyPassword(String, ReadOnlySpan(Of Byte))
-- uid: LibSodium.CryptoPasswordHash.VerifyPassword(System.String,System.String)
+  fullName: LibSodium.CryptoPasswordHashArgon.VerifyPassword(string, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.VerifyPassword(String, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoPasswordHashArgon.VerifyPassword(string, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoPasswordHashArgon.VerifyPassword(String, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoPasswordHashArgon.VerifyPassword(System.String,System.String)
   name: VerifyPassword(string, string)
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_VerifyPassword_System_String_System_String_
-  commentId: M:LibSodium.CryptoPasswordHash.VerifyPassword(System.String,System.String)
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_VerifyPassword_System_String_System_String_
+  commentId: M:LibSodium.CryptoPasswordHashArgon.VerifyPassword(System.String,System.String)
   name.vb: VerifyPassword(String, String)
-  fullName: LibSodium.CryptoPasswordHash.VerifyPassword(string, string)
-  fullName.vb: LibSodium.CryptoPasswordHash.VerifyPassword(String, String)
-  nameWithType: CryptoPasswordHash.VerifyPassword(string, string)
-  nameWithType.vb: CryptoPasswordHash.VerifyPassword(String, String)
-- uid: LibSodium.CryptoPasswordHash.VerifyPassword*
+  fullName: LibSodium.CryptoPasswordHashArgon.VerifyPassword(string, string)
+  fullName.vb: LibSodium.CryptoPasswordHashArgon.VerifyPassword(String, String)
+  nameWithType: CryptoPasswordHashArgon.VerifyPassword(string, string)
+  nameWithType.vb: CryptoPasswordHashArgon.VerifyPassword(String, String)
+- uid: LibSodium.CryptoPasswordHashArgon.VerifyPassword*
   name: VerifyPassword
-  href: api/LibSodium.CryptoPasswordHash.html#LibSodium_CryptoPasswordHash_VerifyPassword_
-  commentId: Overload:LibSodium.CryptoPasswordHash.VerifyPassword
+  href: api/LibSodium.CryptoPasswordHashArgon.html#LibSodium_CryptoPasswordHashArgon_VerifyPassword_
+  commentId: Overload:LibSodium.CryptoPasswordHashArgon.VerifyPassword
   isSpec: "True"
-  fullName: LibSodium.CryptoPasswordHash.VerifyPassword
-  nameWithType: CryptoPasswordHash.VerifyPassword
+  fullName: LibSodium.CryptoPasswordHashArgon.VerifyPassword
+  nameWithType: CryptoPasswordHashArgon.VerifyPassword
+- uid: LibSodium.CryptoPasswordHashScrypt
+  name: CryptoPasswordHashScrypt
+  href: api/LibSodium.CryptoPasswordHashScrypt.html
+  commentId: T:LibSodium.CryptoPasswordHashScrypt
+  fullName: LibSodium.CryptoPasswordHashScrypt
+  nameWithType: CryptoPasswordHashScrypt
+- uid: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name: DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_DeriveKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name.vb: DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer)
+  fullName: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), Integer, Integer)
+  nameWithType: CryptoPasswordHashScrypt.DeriveKey(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>, int, int)
+  nameWithType.vb: CryptoPasswordHashScrypt.DeriveKey(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name: DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_DeriveKey_System_Span_System_Byte__System_String_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span{System.Byte},System.String,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name.vb: DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer)
+  fullName: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span<byte>, string, System.ReadOnlySpan<byte>, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.DeriveKey(System.Span(Of Byte), String, System.ReadOnlySpan(Of Byte), Integer, Integer)
+  nameWithType: CryptoPasswordHashScrypt.DeriveKey(Span<byte>, string, ReadOnlySpan<byte>, int, int)
+  nameWithType.vb: CryptoPasswordHashScrypt.DeriveKey(Span(Of Byte), String, ReadOnlySpan(Of Byte), Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashScrypt.DeriveKey*
+  name: DeriveKey
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_DeriveKey_
+  commentId: Overload:LibSodium.CryptoPasswordHashScrypt.DeriveKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoPasswordHashScrypt.DeriveKey
+  nameWithType: CryptoPasswordHashScrypt.DeriveKey
+- uid: LibSodium.CryptoPasswordHashScrypt.EncodedLen
+  name: EncodedLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_EncodedLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.EncodedLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.EncodedLen
+  nameWithType: CryptoPasswordHashScrypt.EncodedLen
+- uid: LibSodium.CryptoPasswordHashScrypt.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name: HashPassword(ReadOnlySpan<byte>, int, int)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_HashPassword_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.HashPassword(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)
+  name.vb: HashPassword(ReadOnlySpan(Of Byte), Integer, Integer)
+  fullName: LibSodium.CryptoPasswordHashScrypt.HashPassword(System.ReadOnlySpan<byte>, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.HashPassword(System.ReadOnlySpan(Of Byte), Integer, Integer)
+  nameWithType: CryptoPasswordHashScrypt.HashPassword(ReadOnlySpan<byte>, int, int)
+  nameWithType.vb: CryptoPasswordHashScrypt.HashPassword(ReadOnlySpan(Of Byte), Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashScrypt.HashPassword(System.String,System.Int32,System.Int32)
+  name: HashPassword(string, int, int)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_HashPassword_System_String_System_Int32_System_Int32_
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.HashPassword(System.String,System.Int32,System.Int32)
+  name.vb: HashPassword(String, Integer, Integer)
+  fullName: LibSodium.CryptoPasswordHashScrypt.HashPassword(string, int, int)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.HashPassword(String, Integer, Integer)
+  nameWithType: CryptoPasswordHashScrypt.HashPassword(string, int, int)
+  nameWithType.vb: CryptoPasswordHashScrypt.HashPassword(String, Integer, Integer)
+- uid: LibSodium.CryptoPasswordHashScrypt.HashPassword*
+  name: HashPassword
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_HashPassword_
+  commentId: Overload:LibSodium.CryptoPasswordHashScrypt.HashPassword
+  isSpec: "True"
+  fullName: LibSodium.CryptoPasswordHashScrypt.HashPassword
+  nameWithType: CryptoPasswordHashScrypt.HashPassword
+- uid: LibSodium.CryptoPasswordHashScrypt.InteractiveIterations
+  name: InteractiveIterations
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_InteractiveIterations
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.InteractiveIterations
+  fullName: LibSodium.CryptoPasswordHashScrypt.InteractiveIterations
+  nameWithType: CryptoPasswordHashScrypt.InteractiveIterations
+- uid: LibSodium.CryptoPasswordHashScrypt.InteractiveMemoryLen
+  name: InteractiveMemoryLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_InteractiveMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.InteractiveMemoryLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.InteractiveMemoryLen
+  nameWithType: CryptoPasswordHashScrypt.InteractiveMemoryLen
+- uid: LibSodium.CryptoPasswordHashScrypt.MinIterations
+  name: MinIterations
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_MinIterations
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.MinIterations
+  fullName: LibSodium.CryptoPasswordHashScrypt.MinIterations
+  nameWithType: CryptoPasswordHashScrypt.MinIterations
+- uid: LibSodium.CryptoPasswordHashScrypt.MinKeyLen
+  name: MinKeyLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_MinKeyLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.MinKeyLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.MinKeyLen
+  nameWithType: CryptoPasswordHashScrypt.MinKeyLen
+- uid: LibSodium.CryptoPasswordHashScrypt.MinMemoryLen
+  name: MinMemoryLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_MinMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.MinMemoryLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.MinMemoryLen
+  nameWithType: CryptoPasswordHashScrypt.MinMemoryLen
+- uid: LibSodium.CryptoPasswordHashScrypt.MinPasswordLen
+  name: MinPasswordLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_MinPasswordLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.MinPasswordLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.MinPasswordLen
+  nameWithType: CryptoPasswordHashScrypt.MinPasswordLen
+- uid: LibSodium.CryptoPasswordHashScrypt.ModerateIterations
+  name: ModerateIterations
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_ModerateIterations
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.ModerateIterations
+  fullName: LibSodium.CryptoPasswordHashScrypt.ModerateIterations
+  nameWithType: CryptoPasswordHashScrypt.ModerateIterations
+- uid: LibSodium.CryptoPasswordHashScrypt.ModerateMemoryLen
+  name: ModerateMemoryLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_ModerateMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.ModerateMemoryLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.ModerateMemoryLen
+  nameWithType: CryptoPasswordHashScrypt.ModerateMemoryLen
+- uid: LibSodium.CryptoPasswordHashScrypt.Prefix
+  name: Prefix
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_Prefix
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.Prefix
+  fullName: LibSodium.CryptoPasswordHashScrypt.Prefix
+  nameWithType: CryptoPasswordHashScrypt.Prefix
+- uid: LibSodium.CryptoPasswordHashScrypt.SaltLen
+  name: SaltLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_SaltLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.SaltLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.SaltLen
+  nameWithType: CryptoPasswordHashScrypt.SaltLen
+- uid: LibSodium.CryptoPasswordHashScrypt.SensitiveIterations
+  name: SensitiveIterations
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_SensitiveIterations
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.SensitiveIterations
+  fullName: LibSodium.CryptoPasswordHashScrypt.SensitiveIterations
+  nameWithType: CryptoPasswordHashScrypt.SensitiveIterations
+- uid: LibSodium.CryptoPasswordHashScrypt.SensitiveMemoryLen
+  name: SensitiveMemoryLen
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_SensitiveMemoryLen
+  commentId: F:LibSodium.CryptoPasswordHashScrypt.SensitiveMemoryLen
+  fullName: LibSodium.CryptoPasswordHashScrypt.SensitiveMemoryLen
+  nameWithType: CryptoPasswordHashScrypt.SensitiveMemoryLen
+- uid: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
+  name: VerifyPassword(string, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_VerifyPassword_System_String_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.VerifyPassword(System.String,System.ReadOnlySpan{System.Byte})
+  name.vb: VerifyPassword(String, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(string, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(String, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoPasswordHashScrypt.VerifyPassword(string, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoPasswordHashScrypt.VerifyPassword(String, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(System.String,System.String)
+  name: VerifyPassword(string, string)
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_VerifyPassword_System_String_System_String_
+  commentId: M:LibSodium.CryptoPasswordHashScrypt.VerifyPassword(System.String,System.String)
+  name.vb: VerifyPassword(String, String)
+  fullName: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(string, string)
+  fullName.vb: LibSodium.CryptoPasswordHashScrypt.VerifyPassword(String, String)
+  nameWithType: CryptoPasswordHashScrypt.VerifyPassword(string, string)
+  nameWithType.vb: CryptoPasswordHashScrypt.VerifyPassword(String, String)
+- uid: LibSodium.CryptoPasswordHashScrypt.VerifyPassword*
+  name: VerifyPassword
+  href: api/LibSodium.CryptoPasswordHashScrypt.html#LibSodium_CryptoPasswordHashScrypt_VerifyPassword_
+  commentId: Overload:LibSodium.CryptoPasswordHashScrypt.VerifyPassword
+  isSpec: "True"
+  fullName: LibSodium.CryptoPasswordHashScrypt.VerifyPassword
+  nameWithType: CryptoPasswordHashScrypt.VerifyPassword
 - uid: LibSodium.CryptoSecretStream
   name: CryptoSecretStream
   href: api/LibSodium.CryptoSecretStream.html
@@ -3048,24 +3207,24 @@ references:
   isSpec: "True"
   fullName: LibSodium.LibraryVersion.GetString
   nameWithType: LibraryVersion.GetString
-- uid: LibSodium.PasswordHashAlgorithm
-  name: PasswordHashAlgorithm
-  href: api/LibSodium.PasswordHashAlgorithm.html
-  commentId: T:LibSodium.PasswordHashAlgorithm
-  fullName: LibSodium.PasswordHashAlgorithm
-  nameWithType: PasswordHashAlgorithm
-- uid: LibSodium.PasswordHashAlgorithm.Argon2i13
+- uid: LibSodium.PasswordHashArgonAlgorithm
+  name: PasswordHashArgonAlgorithm
+  href: api/LibSodium.PasswordHashArgonAlgorithm.html
+  commentId: T:LibSodium.PasswordHashArgonAlgorithm
+  fullName: LibSodium.PasswordHashArgonAlgorithm
+  nameWithType: PasswordHashArgonAlgorithm
+- uid: LibSodium.PasswordHashArgonAlgorithm.Argon2i13
   name: Argon2i13
-  href: api/LibSodium.PasswordHashAlgorithm.html#LibSodium_PasswordHashAlgorithm_Argon2i13
-  commentId: F:LibSodium.PasswordHashAlgorithm.Argon2i13
-  fullName: LibSodium.PasswordHashAlgorithm.Argon2i13
-  nameWithType: PasswordHashAlgorithm.Argon2i13
-- uid: LibSodium.PasswordHashAlgorithm.Argon2id13
+  href: api/LibSodium.PasswordHashArgonAlgorithm.html#LibSodium_PasswordHashArgonAlgorithm_Argon2i13
+  commentId: F:LibSodium.PasswordHashArgonAlgorithm.Argon2i13
+  fullName: LibSodium.PasswordHashArgonAlgorithm.Argon2i13
+  nameWithType: PasswordHashArgonAlgorithm.Argon2i13
+- uid: LibSodium.PasswordHashArgonAlgorithm.Argon2id13
   name: Argon2id13
-  href: api/LibSodium.PasswordHashAlgorithm.html#LibSodium_PasswordHashAlgorithm_Argon2id13
-  commentId: F:LibSodium.PasswordHashAlgorithm.Argon2id13
-  fullName: LibSodium.PasswordHashAlgorithm.Argon2id13
-  nameWithType: PasswordHashAlgorithm.Argon2id13
+  href: api/LibSodium.PasswordHashArgonAlgorithm.html#LibSodium_PasswordHashArgonAlgorithm_Argon2id13
+  commentId: F:LibSodium.PasswordHashArgonAlgorithm.Argon2id13
+  fullName: LibSodium.PasswordHashArgonAlgorithm.Argon2id13
+  nameWithType: PasswordHashArgonAlgorithm.Argon2id13
 - uid: LibSodium.RandomGenerator
   name: RandomGenerator
   href: api/LibSodium.RandomGenerator.html

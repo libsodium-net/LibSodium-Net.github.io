@@ -118,9 +118,14 @@
 <td>Fast fixed‑length (64‑byte) hash for high‑strength integrity and digital signatures.</td>
 </tr>
 <tr>
-<td><code>CryptoPasswordHash</code></td>
+<td><code>CryptoPasswordHashArgon</code></td>
 <td>Argon2id/i13</td>
 <td>Password hashing and key derivation (slow &amp; memory‑hard)</td>
+</tr>
+<tr>
+<td><code>CryptoPasswordHashScrypt</code></td>
+<td>Scrypt</td>
+<td>Password hashing and key derivation (slow &amp; memory‑hard, legacy)</td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +136,7 @@
 🧂 Based on <a href="https://doc.libsodium.org/advanced/sha-2_hash_function">SHA-2</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoGenericHash.html">API Reference: CryptoGenericHash</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoShortHash.html">API Reference: CryptoShortHash</a><br>
-ℹ️ <a href="../api/LibSodium.CryptoPasswordHash.html">API Reference: CryptoPasswordHash</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoPasswordHash.yml">API Reference: CryptoPasswordHash</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoSha256.html">API Reference: CryptoSha256</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoSha512.html">API Reference: CryptoSha512</a></p>
 </div>
@@ -314,7 +319,7 @@ CryptoSha512.ComputeHash(hash, stream);
 CryptoShortHash.ComputeHash(hash, message, key);
 </code></pre>
 <hr>
-<h2 id="-passwordhash">✨ PasswordHash</h2>
+<h2 id="-passwordhashargon">✨ PasswordHashArgon</h2>
 <p>Secure password hashing and key derivation using Argon2 (Argon2id / Argon2i13). This algorithm is specifically designed to defend against brute‑force attacks by requiring significant computational work and memory. It is ideal for storing passwords, deriving keys from passphrases, or implementing authentication mechanisms.</p>
 <p>Unlike fast cryptographic hash functions (like SHA‑256 or BLAKE2b), Argon2 is <em>deliberately slow</em> and <em>memory‑intensive</em>, which drastically increases the cost of large‑scale password cracking (e.g., GPU attacks). LibSodium.Net exposes both Argon2id (recommended) and Argon2i.</p>
 <p>The cost parameters (iterations and memory) can be tuned to balance security and performance depending on the context:</p>
@@ -354,6 +359,16 @@ CryptoShortHash.ComputeHash(hash, message, key);
 <td>Prefix for Argon2id encoded hash</td>
 </tr>
 <tr>
+<td><code>MinMemoryLen</code></td>
+<td>8 KB</td>
+<td>Minimum acceptable memory for hashing</td>
+</tr>
+<tr>
+<td><code>MinInterations</code></td>
+<td>1</td>
+<td>Minimum acceptable iterations</td>
+</tr>
+<tr>
 <td><code>InteractiveIterations</code></td>
 <td>2</td>
 <td>Iteration count for interactive targets</td>
@@ -364,6 +379,16 @@ CryptoShortHash.ComputeHash(hash, message, key);
 <td>Memory usage for interactive targets</td>
 </tr>
 <tr>
+<td><code>ModerateIterations</code></td>
+<td>3</td>
+<td>For app secrets or backup keys</td>
+</tr>
+<tr>
+<td><code>ModerateMemoryLen</code></td>
+<td>256Mb</td>
+<td>For app secrets or backup keys</td>
+</tr>
+<tr>
 <td><code>SensitiveIterations</code></td>
 <td>4</td>
 <td>Iteration count for sensitive targets</td>
@@ -372,11 +397,6 @@ CryptoShortHash.ComputeHash(hash, message, key);
 <td><code>SensitiveMemoryLen</code></td>
 <td>1 GB</td>
 <td>Memory usage for sensitive targets</td>
-</tr>
-<tr>
-<td><code>MinMemoryLen</code></td>
-<td>8 KB</td>
-<td>Minimum acceptable memory for hashing</td>
 </tr>
 </tbody>
 </table>
@@ -399,6 +419,93 @@ CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
     requiredMemoryLen: CryptoPasswordHash.SensitiveMemoryLen);
 </code></pre>
 <hr>
+<h2 id="-passwordhashscrypt">✨ PasswordHashScrypt</h2>
+<p>Password hashing and key derivation using <code>scrypt</code>, a memory-hard function introduced before Argon2. Though not side-channel resistant, it is still widely used and interoperable.</p>
+<p>LibSodium.Net improves over libsodium by offering consistent tuning options (<code>Min</code>, <code>Interactive</code>, <code>Moderate</code>, <code>Sensitive</code>) and full validation coverage.</p>
+<h3 id="-constants-5">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SaltLen</code></td>
+<td>32</td>
+<td>Length of the salt in bytes</td>
+</tr>
+<tr>
+<td><code>MinKeyLen</code></td>
+<td>16</td>
+<td>Minimum key length for derivation</td>
+</tr>
+<tr>
+<td><code>EncodedLen</code></td>
+<td>102</td>
+<td>Length of the encoded hash string</td>
+</tr>
+<tr>
+<td><code>Prefix</code></td>
+<td>&quot;$7$&quot;</td>
+<td>Prefix for scrypt encoded hash</td>
+</tr>
+<tr>
+<td><code>MinIterations</code></td>
+<td>1024 (2^10)</td>
+<td>Minimum recommended iterations</td>
+</tr>
+<tr>
+<td><code>MinMemoryLen</code></td>
+<td>32 KiB (2^15)</td>
+<td>Minimum recommended memory</td>
+</tr>
+<tr>
+<td><code>InteractiveIterations</code></td>
+<td>524288 (2^19)</td>
+<td>For login/password use</td>
+</tr>
+<tr>
+<td><code>InteractiveMemoryLen</code></td>
+<td>16 MiB (2^24)</td>
+<td>For login/password use</td>
+</tr>
+<tr>
+<td><code>ModerateIterations</code></td>
+<td>4194304 (2^22)</td>
+<td>For app secrets or backup keys</td>
+</tr>
+<tr>
+<td><code>ModerateMemoryLen</code></td>
+<td>128 MiB (2^27)</td>
+<td>For app secrets or backup keys</td>
+</tr>
+<tr>
+<td><code>SensitiveIterations</code></td>
+<td>33554432 (2^25)</td>
+<td>For long-term or high-value secrets</td>
+</tr>
+<tr>
+<td><code>SensitiveMemoryLen</code></td>
+<td>1 GiB (2^30)</td>
+<td>For long-term or high-value secrets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-examples">📋 Examples</h3>
+<pre><code class="lang-csharp">string hash = CryptoPasswordHashScrypt.HashPassword(&quot;my password&quot;);
+bool valid = CryptoPasswordHashScrypt.VerifyPassword(hash, &quot;my password&quot;);
+</code></pre>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[32];
+Span&lt;byte&gt; salt = stackalloc byte[CryptoPasswordHashScrypt.SaltLen];
+RandomGenerator.Fill(salt);
+CryptoPasswordHashScrypt.DeriveKey(key, &quot;password&quot;, salt,
+    iterations: CryptoPasswordHashScrypt.ModerateIterations,
+    requiredMemoryLen: CryptoPasswordHashScrypt.ModerateMemoryLen);
+</code></pre>
+<hr>
 <h2 id="-error-handling">⚠️ Error Handling</h2>
 <ul>
 <li><code>ArgumentException</code> — when input or key lengths are invalid</li>
@@ -411,8 +518,9 @@ CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
 <li><code>GenericHash</code> is based on BLAKE2b and supports variable‑length output and optional keys.</li>
 <li><code>CryptoSha256</code> and <code>CryptoSha512</code> provide interoperable SHA‑2 digests and are the best choice when you need a <em>fixed‑length</em> checksum or compatibility with external systems.</li>
 <li><code>ShortHash</code> is based on SipHash‑2‑4 — <em>not</em> a general‑purpose cryptographic hash, but a keyed primitive for protecting hash tables.</li>
-<li><code>CryptoPasswordHash</code> uses Argon2id/Argon2i13 with computational and memory hardness.</li>
+<li><code>CryptoPasswordHashArgon</code> uses Argon2id/Argon2i13 with computational and memory hardness.</li>
 <li>All hash functions are deterministic: same input and key produce same output — <strong>except</strong> <code>CryptoPasswordHash.HashPassword</code>, which includes a random salt and produces a different hash each time.</li>
+<li><code>Scrypt</code> is <strong>not side-channel resistant</strong>. Use <code>Argon2i13</code> or <code>Argon2id13</code> for high-security or shared-host scenarios.</li>
 <li>Use <code>ShortHash</code> only when you can keep the key secret.</li>
 </ul>
 <hr>
@@ -447,17 +555,22 @@ CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
 </tr>
 <tr>
 <td>Password storage / passphrase‑derived keys</td>
-<td><code>CryptoPasswordHash</code></td>
+<td><code>CryptoPasswordHashArgon</code></td>
+</tr>
+<tr>
+<td>Legacy Password storage / passphrase‑derived keys</td>
+<td><code>CryptoPasswordHashScrypt</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="-see-also">👀 See Also</h2>
 <ul>
-<li>ℹ️ <a href="../api/LibSodium.CryptoGenericHash.html">API Reference: CryptoGenericHash</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoGenericHashArgon.yml">API Reference: CryptoGenericHashArgon</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoGenericHashScrypt.yml">API Reference: CryptoGenericHashArgon</a></li>
 <li>ℹ️ <a href="../api/LibSodium.CryptoSha256.html">API Reference: CryptoSha256</a></li>
 <li>ℹ️ <a href="../api/LibSodium.CryptoSha512.html">API Reference: CryptoSha512</a></li>
 <li>ℹ️ <a href="../api/LibSodium.CryptoShortHash.html">API Reference: CryptoShortHash</a></li>
-<li>ℹ️ <a href="../api/LibSodium.CryptoPasswordHash.html">API Reference: CryptoPasswordHash</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoPasswordHash.yml">API Reference: CryptoPasswordHash</a></li>
 <li>🧂 <a href="https://doc.libsodium.org/hashing">libsodium Hashing</a></li>
 <li>🧂 <a href="https://doc.libsodium.org/password_hashing">libsodium Password Hashing</a></li>
 <li>🧂 <a href="https://doc.libsodium.org/advanced/sha-2_hash_function">libsodium SHA-2</a><br></li>
