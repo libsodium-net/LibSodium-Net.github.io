@@ -103,10 +103,11 @@
 <h2 id="-features">🌟 Features</h2>
 <ul>
 <li><strong>Keyed authentication</strong> with proven constructions (HMAC‑SHA‑2 &amp; Poly1305).</li>
-<li>Allocation‑free <code>Span&lt;T&gt;</code> API + streaming + async overloads (HMACs).</li>
+<li>Allocation‑free <code>Span&lt;T&gt;</code> API + streaming + async overloads.</li>
 <li>Unified method names: <code>ComputeMac</code>, <code>VerifyMac</code>, <code>GenerateKey</code>.</li>
 <li>Safe size checks that throw early (<code>ArgumentException</code>).</li>
 <li>Deterministic output – same key + message ⇒ same tag.</li>
+<li>Incremental (Multi-Part) MAC construction.</li>
 </ul>
 <hr>
 <h2 id="-algorithm-comparison-bytes">⚖️ Algorithm Comparison (bytes)</h2>
@@ -306,6 +307,44 @@ Debug.Assert(okStreamAsync);
 </code></pre>
 <blockquote>
 <p>ℹ️ <strong>Same API across algorithms</strong> – swap the class name to change the MAC primitive.</p>
+</blockquote>
+<hr>
+<h2 id="-incremental-mac">✨ Incremental MAC</h2>
+<p>All MAC algorithms in LibSodium.Net support <strong>incremental MAC construction</strong>, allowing you to compute a tag over a sequence of message parts (e.g., <code>MAC(key, a || b || c)</code>) without allocating or copying them into a single buffer.</p>
+<p>This is useful when authenticating structured messages, layered protocols, or data assembled in multiple stages.</p>
+<p>The following APIs expose incremental MAC support via the <code>ICryptoIncrementalHash</code> interface:</p>
+<ul>
+<li><code>CryptoHmacSha256</code></li>
+<li><code>CryptoHmacSha512</code></li>
+<li><code>CryptoHmacSha512_256</code></li>
+<li><code>CryptoOneTimeAuth</code></li>
+</ul>
+<p>Each class provides a <code>CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code> method.</p>
+<h3 id="-compute-mac-over-multiple-parts">📋 Compute MAC over multiple parts</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoHmacSha512.MacLen];
+Span&lt;byte&gt; key = stackalloc byte[CryptoHmacSha512.KeyLen];
+RandomGenerator.Fill(key);
+
+var part1 = Encoding.UTF8.GetBytes(&quot;hello &quot;);
+var part2 = Encoding.UTF8.GetBytes(&quot;world&quot;);
+
+using var macCalc = CryptoHmacSha512.CreateIncrementalMac(key);
+macCalc.Update(part1);
+macCalc.Update(part2);
+macCalc.Final(mac);
+</code></pre>
+<h3 id="-poly1305-incremental-mac">📋 Poly1305 incremental MAC</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoOneTimeAuth.MacLen];
+Span&lt;byte&gt; key = stackalloc byte[CryptoOneTimeAuth.KeyLen];
+RandomGenerator.Fill(key);
+
+using var macCalc = CryptoOneTimeAuth.CreateIncrementalMac(key);
+macCalc.Update(data1);
+macCalc.Update(data2);
+macCalc.Final(mac);
+</code></pre>
+<blockquote>
+<p>⚠️ The <code>Final()</code> method may only be called once. Create a new incremental MAC instance for each new message.</p>
 </blockquote>
 <hr>
 <h2 id="-choosing-the-right-mac">🧭 Choosing the Right MAC</h2>

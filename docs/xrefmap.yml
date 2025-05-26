@@ -896,6 +896,22 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoGenericHash.ComputeHashAsync
   nameWithType: CryptoGenericHash.ComputeHashAsync
+- uid: LibSodium.CryptoGenericHash.CreateIncrementalHash(System.ReadOnlySpan{System.Byte},System.Int32)
+  name: CreateIncrementalHash(ReadOnlySpan<byte>, int)
+  href: api/LibSodium.CryptoGenericHash.html#LibSodium_CryptoGenericHash_CreateIncrementalHash_System_ReadOnlySpan_System_Byte__System_Int32_
+  commentId: M:LibSodium.CryptoGenericHash.CreateIncrementalHash(System.ReadOnlySpan{System.Byte},System.Int32)
+  name.vb: CreateIncrementalHash(ReadOnlySpan(Of Byte), Integer)
+  fullName: LibSodium.CryptoGenericHash.CreateIncrementalHash(System.ReadOnlySpan<byte>, int)
+  fullName.vb: LibSodium.CryptoGenericHash.CreateIncrementalHash(System.ReadOnlySpan(Of Byte), Integer)
+  nameWithType: CryptoGenericHash.CreateIncrementalHash(ReadOnlySpan<byte>, int)
+  nameWithType.vb: CryptoGenericHash.CreateIncrementalHash(ReadOnlySpan(Of Byte), Integer)
+- uid: LibSodium.CryptoGenericHash.CreateIncrementalHash*
+  name: CreateIncrementalHash
+  href: api/LibSodium.CryptoGenericHash.html#LibSodium_CryptoGenericHash_CreateIncrementalHash_
+  commentId: Overload:LibSodium.CryptoGenericHash.CreateIncrementalHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoGenericHash.CreateIncrementalHash
+  nameWithType: CryptoGenericHash.CreateIncrementalHash
 - uid: LibSodium.CryptoGenericHash.HashLen
   name: HashLen
   href: api/LibSodium.CryptoGenericHash.html#LibSodium_CryptoGenericHash_HashLen
@@ -979,6 +995,22 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoHmacSha256.ComputeMacAsync
   nameWithType: CryptoHmacSha256.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha256.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name: CreateIncrementalMac(ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha256.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name.vb: CreateIncrementalMac(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha256.CreateIncrementalMac(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha256.CreateIncrementalMac(System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha256.CreateIncrementalMac(ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha256.CreateIncrementalMac(ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha256.CreateIncrementalMac*
+  name: CreateIncrementalMac
+  href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_CreateIncrementalMac_
+  commentId: Overload:LibSodium.CryptoHmacSha256.CreateIncrementalMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha256.CreateIncrementalMac
+  nameWithType: CryptoHmacSha256.CreateIncrementalMac
 - uid: LibSodium.CryptoHmacSha256.GenerateKey(System.Span{System.Byte})
   name: GenerateKey(Span<byte>)
   href: api/LibSodium.CryptoHmacSha256.html#LibSodium_CryptoHmacSha256_GenerateKey_System_Span_System_Byte__
@@ -1095,6 +1127,22 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoHmacSha512.ComputeMacAsync
   nameWithType: CryptoHmacSha512.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha512.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name: CreateIncrementalMac(ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name.vb: CreateIncrementalMac(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512.CreateIncrementalMac(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512.CreateIncrementalMac(System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512.CreateIncrementalMac(ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512.CreateIncrementalMac(ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512.CreateIncrementalMac*
+  name: CreateIncrementalMac
+  href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_CreateIncrementalMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512.CreateIncrementalMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512.CreateIncrementalMac
+  nameWithType: CryptoHmacSha512.CreateIncrementalMac
 - uid: LibSodium.CryptoHmacSha512.GenerateKey(System.Span{System.Byte})
   name: GenerateKey(Span<byte>)
   href: api/LibSodium.CryptoHmacSha512.html#LibSodium_CryptoHmacSha512_GenerateKey_System_Span_System_Byte__
@@ -1211,6 +1259,22 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoHmacSha512_256.ComputeMacAsync
   nameWithType: CryptoHmacSha512_256.ComputeMacAsync
+- uid: LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name: CreateIncrementalMac(ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name.vb: CreateIncrementalMac(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHmacSha512_256.CreateIncrementalMac(ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHmacSha512_256.CreateIncrementalMac(ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHmacSha512_256.CreateIncrementalMac*
+  name: CreateIncrementalMac
+  href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_
+  commentId: Overload:LibSodium.CryptoHmacSha512_256.CreateIncrementalMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoHmacSha512_256.CreateIncrementalMac
+  nameWithType: CryptoHmacSha512_256.CreateIncrementalMac
 - uid: LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span{System.Byte})
   name: GenerateKey(Span<byte>)
   href: api/LibSodium.CryptoHmacSha512_256.html#LibSodium_CryptoHmacSha512_256_GenerateKey_System_Span_System_Byte__
@@ -1492,6 +1556,22 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoOneTimeAuth.ComputeMacAsync
   nameWithType: CryptoOneTimeAuth.ComputeMacAsync
+- uid: LibSodium.CryptoOneTimeAuth.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name: CreateIncrementalMac(ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoOneTimeAuth.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})
+  name.vb: CreateIncrementalMac(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoOneTimeAuth.CreateIncrementalMac(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoOneTimeAuth.CreateIncrementalMac(System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoOneTimeAuth.CreateIncrementalMac(ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoOneTimeAuth.CreateIncrementalMac(ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoOneTimeAuth.CreateIncrementalMac*
+  name: CreateIncrementalMac
+  href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_CreateIncrementalMac_
+  commentId: Overload:LibSodium.CryptoOneTimeAuth.CreateIncrementalMac
+  isSpec: "True"
+  fullName: LibSodium.CryptoOneTimeAuth.CreateIncrementalMac
+  nameWithType: CryptoOneTimeAuth.CreateIncrementalMac
 - uid: LibSodium.CryptoOneTimeAuth.GenerateKey(System.Span{System.Byte})
   name: GenerateKey(Span<byte>)
   href: api/LibSodium.CryptoOneTimeAuth.html#LibSodium_CryptoOneTimeAuth_GenerateKey_System_Span_System_Byte__
@@ -1879,6 +1959,56 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoPasswordHashScrypt.VerifyPassword
   nameWithType: CryptoPasswordHashScrypt.VerifyPassword
+- uid: LibSodium.CryptoScalarMult
+  name: CryptoScalarMult
+  href: api/LibSodium.CryptoScalarMult.html
+  commentId: T:LibSodium.CryptoScalarMult
+  fullName: LibSodium.CryptoScalarMult
+  nameWithType: CryptoScalarMult
+- uid: LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: CalculatePublicKey(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: CalculatePublicKey(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoScalarMult.CalculatePublicKey(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoScalarMult.CalculatePublicKey(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoScalarMult.CalculatePublicKey*
+  name: CalculatePublicKey
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_CalculatePublicKey_
+  commentId: Overload:LibSodium.CryptoScalarMult.CalculatePublicKey
+  isSpec: "True"
+  fullName: LibSodium.CryptoScalarMult.CalculatePublicKey
+  nameWithType: CryptoScalarMult.CalculatePublicKey
+- uid: LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Compute(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Compute(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoScalarMult.Compute(System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoScalarMult.Compute(System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoScalarMult.Compute(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoScalarMult.Compute(Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoScalarMult.Compute*
+  name: Compute
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_Compute_
+  commentId: Overload:LibSodium.CryptoScalarMult.Compute
+  isSpec: "True"
+  fullName: LibSodium.CryptoScalarMult.Compute
+  nameWithType: CryptoScalarMult.Compute
+- uid: LibSodium.CryptoScalarMult.PrivateKeyLen
+  name: PrivateKeyLen
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_PrivateKeyLen
+  commentId: F:LibSodium.CryptoScalarMult.PrivateKeyLen
+  fullName: LibSodium.CryptoScalarMult.PrivateKeyLen
+  nameWithType: CryptoScalarMult.PrivateKeyLen
+- uid: LibSodium.CryptoScalarMult.PublicKeyLen
+  name: PublicKeyLen
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_PublicKeyLen
+  commentId: F:LibSodium.CryptoScalarMult.PublicKeyLen
+  fullName: LibSodium.CryptoScalarMult.PublicKeyLen
+  nameWithType: CryptoScalarMult.PublicKeyLen
 - uid: LibSodium.CryptoSecretStream
   name: CryptoSecretStream
   href: api/LibSodium.CryptoSecretStream.html
@@ -2084,6 +2214,19 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoSha256.ComputeHashAsync
   nameWithType: CryptoSha256.ComputeHashAsync
+- uid: LibSodium.CryptoSha256.CreateIncrementalHash
+  name: CreateIncrementalHash()
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_CreateIncrementalHash
+  commentId: M:LibSodium.CryptoSha256.CreateIncrementalHash
+  fullName: LibSodium.CryptoSha256.CreateIncrementalHash()
+  nameWithType: CryptoSha256.CreateIncrementalHash()
+- uid: LibSodium.CryptoSha256.CreateIncrementalHash*
+  name: CreateIncrementalHash
+  href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_CreateIncrementalHash_
+  commentId: Overload:LibSodium.CryptoSha256.CreateIncrementalHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha256.CreateIncrementalHash
+  nameWithType: CryptoSha256.CreateIncrementalHash
 - uid: LibSodium.CryptoSha256.HashLen
   name: HashLen
   href: api/LibSodium.CryptoSha256.html#LibSodium_CryptoSha256_HashLen
@@ -2137,6 +2280,19 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoSha512.ComputeHashAsync
   nameWithType: CryptoSha512.ComputeHashAsync
+- uid: LibSodium.CryptoSha512.CreateIncrementalHash
+  name: CreateIncrementalHash()
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_CreateIncrementalHash
+  commentId: M:LibSodium.CryptoSha512.CreateIncrementalHash
+  fullName: LibSodium.CryptoSha512.CreateIncrementalHash()
+  nameWithType: CryptoSha512.CreateIncrementalHash()
+- uid: LibSodium.CryptoSha512.CreateIncrementalHash*
+  name: CreateIncrementalHash
+  href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_CreateIncrementalHash_
+  commentId: Overload:LibSodium.CryptoSha512.CreateIncrementalHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoSha512.CreateIncrementalHash
+  nameWithType: CryptoSha512.CreateIncrementalHash
 - uid: LibSodium.CryptoSha512.HashLen
   name: HashLen
   href: api/LibSodium.CryptoSha512.html#LibSodium_CryptoSha512_HashLen
@@ -2221,12 +2377,44 @@ references:
   commentId: F:LibSodium.CryptoSign.PrivateKeyLen
   fullName: LibSodium.CryptoSign.PrivateKeyLen
   nameWithType: CryptoSign.PrivateKeyLen
+- uid: LibSodium.CryptoSign.PrivateKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: PrivateKeyToCurve(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSign.PrivateKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: PrivateKeyToCurve(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSign.PrivateKeyToCurve(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSign.PrivateKeyToCurve(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSign.PrivateKeyToCurve(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSign.PrivateKeyToCurve(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSign.PrivateKeyToCurve*
+  name: PrivateKeyToCurve
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyToCurve_
+  commentId: Overload:LibSodium.CryptoSign.PrivateKeyToCurve
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PrivateKeyToCurve
+  nameWithType: CryptoSign.PrivateKeyToCurve
 - uid: LibSodium.CryptoSign.PublicKeyLen
   name: PublicKeyLen
   href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PublicKeyLen
   commentId: F:LibSodium.CryptoSign.PublicKeyLen
   fullName: LibSodium.CryptoSign.PublicKeyLen
   nameWithType: CryptoSign.PublicKeyLen
+- uid: LibSodium.CryptoSign.PublicKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: PublicKeyToCurve(Span<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PublicKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoSign.PublicKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: PublicKeyToCurve(Span(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoSign.PublicKeyToCurve(System.Span<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoSign.PublicKeyToCurve(System.Span(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoSign.PublicKeyToCurve(Span<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoSign.PublicKeyToCurve(Span(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoSign.PublicKeyToCurve*
+  name: PublicKeyToCurve
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PublicKeyToCurve_
+  commentId: Overload:LibSodium.CryptoSign.PublicKeyToCurve
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PublicKeyToCurve
+  nameWithType: CryptoSign.PublicKeyToCurve
 - uid: LibSodium.CryptoSign.SeedLen
   name: SeedLen
   href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_SeedLen
@@ -3087,6 +3275,44 @@ references:
   isSpec: "True"
   fullName: LibSodium.HexEncoding.HexToBin
   nameWithType: HexEncoding.HexToBin
+- uid: LibSodium.ICryptoIncrementalHash
+  name: ICryptoIncrementalHash
+  href: api/LibSodium.ICryptoIncrementalHash.html
+  commentId: T:LibSodium.ICryptoIncrementalHash
+  fullName: LibSodium.ICryptoIncrementalHash
+  nameWithType: ICryptoIncrementalHash
+- uid: LibSodium.ICryptoIncrementalHash.Final(System.Span{System.Byte})
+  name: Final(Span<byte>)
+  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Final_System_Span_System_Byte__
+  commentId: M:LibSodium.ICryptoIncrementalHash.Final(System.Span{System.Byte})
+  name.vb: Final(Span(Of Byte))
+  fullName: LibSodium.ICryptoIncrementalHash.Final(System.Span<byte>)
+  fullName.vb: LibSodium.ICryptoIncrementalHash.Final(System.Span(Of Byte))
+  nameWithType: ICryptoIncrementalHash.Final(Span<byte>)
+  nameWithType.vb: ICryptoIncrementalHash.Final(Span(Of Byte))
+- uid: LibSodium.ICryptoIncrementalHash.Final*
+  name: Final
+  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Final_
+  commentId: Overload:LibSodium.ICryptoIncrementalHash.Final
+  isSpec: "True"
+  fullName: LibSodium.ICryptoIncrementalHash.Final
+  nameWithType: ICryptoIncrementalHash.Final
+- uid: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan{System.Byte})
+  name: Update(ReadOnlySpan<byte>)
+  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Update_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan{System.Byte})
+  name.vb: Update(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan(Of Byte))
+  nameWithType: ICryptoIncrementalHash.Update(ReadOnlySpan<byte>)
+  nameWithType.vb: ICryptoIncrementalHash.Update(ReadOnlySpan(Of Byte))
+- uid: LibSodium.ICryptoIncrementalHash.Update*
+  name: Update
+  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Update_
+  commentId: Overload:LibSodium.ICryptoIncrementalHash.Update
+  isSpec: "True"
+  fullName: LibSodium.ICryptoIncrementalHash.Update
+  nameWithType: ICryptoIncrementalHash.Update
 - uid: LibSodium.LibSodiumException
   name: LibSodiumException
   href: api/LibSodium.LibSodiumException.html
@@ -3752,6 +3978,15 @@ references:
   fullName.vb: LibSodium.SecureMemory.MemZero(Of T)(System.Span(Of T))
   nameWithType: SecureMemory.MemZero<T>(Span<T>)
   nameWithType.vb: SecureMemory.MemZero(Of T)(Span(Of T))
+- uid: LibSodium.SecureMemory.MemZero``1(``0@)
+  name: MemZero<T>(ref T)
+  href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero__1___0__
+  commentId: M:LibSodium.SecureMemory.MemZero``1(``0@)
+  name.vb: MemZero(Of T)(T)
+  fullName: LibSodium.SecureMemory.MemZero<T>(ref T)
+  fullName.vb: LibSodium.SecureMemory.MemZero(Of T)(T)
+  nameWithType: SecureMemory.MemZero<T>(ref T)
+  nameWithType.vb: SecureMemory.MemZero(Of T)(T)
 - uid: LibSodium.SecureMemory.MemZero``1(``0[])
   name: MemZero<T>(T[])
   href: api/LibSodium.SecureMemory.html#LibSodium_SecureMemory_MemZero__1___0___

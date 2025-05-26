@@ -374,6 +374,102 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <a id="LibSodium_CryptoSign_PrivateKeyToCurve_" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve*"></a>
+
+  <h3 id="LibSodium_CryptoSign_PrivateKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  PrivateKeyToCurve(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an Ed25519 private key (64 bytes) to a Curve25519 private key (32 bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrivateKeyToCurve(Span&lt;byte&gt; curvePrivateKey, ReadOnlySpan&lt;byte&gt; edPrivateKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>curvePrivateKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer where the resulting Curve25519 private key will be written. Must be 32 bytes.</p>
+</dd>
+    <dt><code>edPrivateKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The source Ed25519 private key. Must be 64 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoSign_PrivateKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The resulting Curve25519 private key can be used with <a class="xref" href="LibSodium.CryptoBox.html">CryptoBox</a> and <a class="xref" href="LibSodium.CryptoKeyExchange.html">CryptoKeyExchange</a> APIs.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if buffer sizes are incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the conversion fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSign_PublicKeyToCurve_" data-uid="LibSodium.CryptoSign.PublicKeyToCurve*"></a>
+
+  <h3 id="LibSodium_CryptoSign_PublicKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.PublicKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  PublicKeyToCurve(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an Ed25519 public key (32 bytes) to a Curve25519 public key (32 bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PublicKeyToCurve(Span&lt;byte&gt; curvePublicKey, ReadOnlySpan&lt;byte&gt; edPublicKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>curvePublicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer where the resulting Curve25519 public key will be written. Must be 32 bytes.</p>
+</dd>
+    <dt><code>edPublicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The source Ed25519 public key. Must be 32 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoSign_PublicKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The resulting Curve25519 public key can be used with <a class="xref" href="LibSodium.CryptoBox.html">CryptoBox</a> and <a class="xref" href="LibSodium.CryptoKeyExchange.html">CryptoKeyExchange</a> APIs.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if buffer sizes are incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the conversion fails.</p>
+</dd>
+  </dl>
+
+
+
   <a id="LibSodium_CryptoSign_Sign_" data-uid="LibSodium.CryptoSign.Sign*"></a>
 
   <h3 id="LibSodium_CryptoSign_Sign_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">

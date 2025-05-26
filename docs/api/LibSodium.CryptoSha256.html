@@ -89,7 +89,7 @@
 
 
   <h1 id="LibSodium_CryptoSha256" data-uid="LibSodium.CryptoSha256" class="text-break">
-Class CryptoSha256  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class CryptoSha256  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class CryptoSha256  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LibSodium_CryptoSha256_HashLen" data-uid="LibSodium.CryptoSha256.HashLen">
   HashLen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Hash length in bytes (32).</p>
@@ -193,7 +193,7 @@ Class CryptoSha256  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LibSodium_CryptoSha256_ComputeHash_System_Span_System_Byte__System_IO_Stream_" data-uid="LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.IO.Stream)">
   ComputeHash(Span&lt;byte&gt;, Stream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes a SHA‑256 hash over the entire contents of the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>.</p>
@@ -244,7 +244,7 @@ Class CryptoSha256  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LibSodium_CryptoSha256_ComputeHash_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSha256.ComputeHash(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   ComputeHash(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes a SHA‑256 hash of <code class="paramref">message</code> and stores the result in
@@ -290,7 +290,7 @@ Class CryptoSha256  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LibSodium_CryptoSha256_ComputeHashAsync_System_Memory_System_Byte__System_IO_Stream_System_Threading_CancellationToken_" data-uid="LibSodium.CryptoSha256.ComputeHashAsync(System.Memory{System.Byte},System.IO.Stream,System.Threading.CancellationToken)">
   ComputeHashAsync(Memory&lt;byte&gt;, Stream, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously computes a SHA‑256 hash over the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>, writing the
@@ -341,6 +341,49 @@ hashing network streams or large files without blocking the calling thread.</p>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if <code class="paramref">hash</code> is not exactly 32 bytes.</p>
 </dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the underlying libsodium call fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSha256_CreateIncrementalHash_" data-uid="LibSodium.CryptoSha256.CreateIncrementalHash*"></a>
+
+  <h3 id="LibSodium_CryptoSha256_CreateIncrementalHash" data-uid="LibSodium.CryptoSha256.CreateIncrementalHash">
+  CreateIncrementalHash()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSha256.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of an incremental hash computation object using the SHA-512 algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalHash()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> instance that allows incremental computation of a SHA-512 hash.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoSha256_CreateIncrementalHash_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method provides an object for computing a hash incrementally, which is useful for processing
+large data streams or when the data to be hashed is not available all at once.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
     <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
     <dd><p>Thrown if the underlying libsodium call fails.</p>
 </dd>

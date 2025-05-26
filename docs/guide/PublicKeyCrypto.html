@@ -87,11 +87,13 @@
         <article data-uid="">
 <h1 id="-public-key-cryptography">🔑 Public Key Cryptography</h1>
 
-<p>LibSodium.Net provides high-level APIs for public-key cryptography based on Curve25519 and Ed25519. This includes secure encryption between peers (<code>CryptoBox</code>), anonymous encryption (<code>Sealed Boxes</code>), and digital signatures (<code>CryptoSign</code>).</p>
+<p>LibSodium.Net provides high-level APIs for public-key cryptography based on Curve25519 and Ed25519. This includes secure encryption between peers (<code>CryptoBox</code>), anonymous encryption (<code>Sealed Boxes</code>), and digital signatures (<code>CryptoSign</code>). LibSodium.Net also exposes the low-level scalar multiplication primitive via <code>CryptoScalarMult</code>, which implements X25519.</p>
 <blockquote>
 <p>🧂 Based on <a href="https://doc.libsodium.org/public-key_cryptography/">libsodium's Public-Key Cryptography</a><br>
+🧂 Based on <a href="https://doc.libsodium.org/advanced/scalar_multiplication">libsodium's Point*scalar multiplication</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoBox.html">API Reference: CryptoBox</a><br>
-ℹ️ <a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></p>
+ℹ️ <a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a>
+ℹ️ <a href="../api/LibSodium.CryptoScalarMult.html">API Reference: CryptoScalarMult</a></p>
 </blockquote>
 <hr>
 <h2 id="-features">🌟 Features</h2>
@@ -100,6 +102,7 @@
 <li>Anonymous encryption for messages (Sealed Boxes)</li>
 <li>Digital signatures with Ed25519 (<code>CryptoSign</code>)</li>
 <li>Span-based APIs for efficient, allocation-free usage</li>
+<li>Conversion from Ed25519 keys to Curve25519 (<code>CryptoSign.PublicKeyToCurve</code>, <code>CryptoSign.PrivateKeyToCurve</code>)</li>
 </ul>
 <hr>
 <h2 id="-cryptobox--authenticated-encryption">✨ CryptoBox — Authenticated Encryption</h2>
@@ -169,6 +172,19 @@ CryptoBox.GenerateKeypairDeterministically(publicKey, privateKey, seed);
 <pre><code class="lang-csharp">Span&lt;byte&gt; sharedKey = stackalloc byte[CryptoBox.SharedKeyLen];
 CryptoBox.CalculateSharedKey(sharedKey, otherPartyPublicKey, myPrivateKey);
 </code></pre>
+<h3 id="-convert-ed25519-to-curve25519">📋 Convert Ed25519 to Curve25519</h3>
+<p>LibSodium.Net allows converting Ed25519 key pairs (used for digital signatures) to Curve25519 format, suitable for encryption and key exchange.</p>
+<p>These converted keys can be used with the <code>CryptoBox</code> and <code>CryptoKeyExchange</code> APIs.</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(edPk, edSk);
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
+Span&lt;byte&gt; curveSk = stackalloc byte[CryptoBox.PrivateKeyLen];
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+</code></pre>
+<p>The resulting <code>curvePk</code> and <code>curveSk</code> can be used anywhere a Curve25519 key is expected.</p>
 <hr>
 <h2 id="-encryption-modes">✨ Encryption Modes</h2>
 <h3 id="-encrypt--decrypt-with-keypair-combined-auto-nonce">📋 Encrypt / Decrypt with Keypair (Combined, Auto Nonce)</h3>
@@ -261,6 +277,111 @@ bool ok = CryptoSign.TryVerify(message, signature, publicKey);
 CryptoSign.Verify(message, signature, publicKey); // throws LibSodiumException if the signature is invalid
 </code></pre>
 <hr>
+<h2 id="-cryptoscalarmult--raw-scalar-multiplication">✨ CryptoScalarMult — Raw Scalar Multiplication</h2>
+<p>The <code>CryptoScalarMult</code> API exposes the low-level scalar multiplication primitive <code>crypto_scalarmult</code>, based on Curve25519.
+This operation implements the <strong>X25519</strong> algorithm (ECDH over Curve25519), as defined in <a href="https://datatracker.ietf.org/doc/html/rfc7748">RFC 7748</a>.
+It forms the foundation of key exchange protocols such as <code>CryptoBox</code>, <code>CryptoKeyExchange</code>, and others.</p>
+<p>This API is rarely needed directly. Prefer CryptoBox or CryptoKeyExchange unless you need protocol-level control or are replicating RFC 7748 behavior manually.</p>
+<blockquote>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/advanced/scalar_multiplication">Scalar multiplication</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoScalarMult.html">API Reference for <code>CryptoScalarMult</code></a></p>
+</blockquote>
+<hr>
+<h3 id="-constants-2">📏 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Length of the public key (q = nB)</td>
+</tr>
+<tr>
+<td><code>PrivateKeyLen</code></td>
+<td>32</td>
+<td>Length of the private scalar</td>
+</tr>
+<tr>
+<td><code>SharedKeyLen</code></td>
+<td>32</td>
+<td>Length of the computed q = nP</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-calculate-public-key">📋 Calculate Public Key</h3>
+<p>Computes the public key <code>q = n·B</code> given a private scalar <code>n</code>:</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; privateKey = stackalloc byte[CryptoScalarMult.PrivateKeyLen];
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+RandomGenerator.Fill(privateKey);
+CryptoScalarMult.CalculatePublicKey(publicKey, privateKey);
+</code></pre>
+<hr>
+<h3 id="-compute-shared-point">📋 Compute Shared Point</h3>
+<p>Performs scalar multiplication <code>q = n·P</code> with a private scalar and a peer’s public key:</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; sharedPoint = stackalloc byte[CryptoScalarMult.SharedKeyLen];
+CryptoScalarMult.Compute(sharedPoint, myPrivateKey, peerPublicKey);
+</code></pre>
+<hr>
+<h3 id="-avoid-using-q-directly-as-a-shared-key">⚠️ Avoid Using <code>q</code> Directly as a Shared Key</h3>
+<p>Many <code>(privateKey, publicKey)</code> pairs can produce the <strong>same result <code>q</code></strong> when using <code>CryptoScalarMult</code>.
+This is because <code>q</code> is a point on the curve, and scalar multiplication is not injective.</p>
+<p>A safer and recommended approach is to derive a shared key using a cryptographic hash of the transcript:</p>
+<pre><code>sharedKey = H(q || pk1 || pk2)
+</code></pre>
+<p>This binds the result to the specific public keys involved, preventing ambiguity or replay.
+The order of the public keys must be agreed upon (e.g., lexicographically or based on fixed roles) to ensure both sides derive the same key.</p>
+<hr>
+<h3 id="-recommended-derivation-pattern">📋 Recommended Derivation Pattern</h3>
+<pre><code class="lang-csharp">using System.Diagnostics;
+
+Span&lt;byte&gt; clientPrivateKey = stackalloc byte[CryptoScalarMult.PrivateKeyLen];
+Span&lt;byte&gt; clientPublicKey  = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+Span&lt;byte&gt; serverPrivateKey = stackalloc byte[CryptoScalarMult.PrivateKeyLen];
+Span&lt;byte&gt; serverPublicKey  = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+
+Span&lt;byte&gt; sharedPointClient = stackalloc byte[CryptoScalarMult.SharedKeyLen];
+Span&lt;byte&gt; sharedPointServer = stackalloc byte[CryptoScalarMult.SharedKeyLen];
+
+Span&lt;byte&gt; derivedKeyClient = stackalloc byte[CryptoGenericHash.HashLen];
+Span&lt;byte&gt; derivedKeyServer = stackalloc byte[CryptoGenericHash.HashLen];
+
+// Generate key pairs
+RandomGenerator.Fill(clientPrivateKey);
+RandomGenerator.Fill(serverPrivateKey);
+CryptoScalarMult.CalculatePublicKey(clientPublicKey, clientPrivateKey);
+CryptoScalarMult.CalculatePublicKey(serverPublicKey, serverPrivateKey);
+
+// Derive shared key on the client side
+CryptoScalarMult.Compute(sharedPointClient, clientPrivateKey, serverPublicKey);
+using (var hash = CryptoGenericHash.CreateIncrementalHash())
+{
+    hash.Update(sharedPointClient);
+    hash.Update(clientPublicKey);
+    hash.Update(serverPublicKey);
+    hash.Final(derivedKeyClient);
+}
+
+// Derive shared key on the server side
+CryptoScalarMult.Compute(sharedPointServer, serverPrivateKey, clientPublicKey);
+using (var hash = CryptoGenericHash.CreateIncrementalHash())
+{
+    hash.Update(sharedPointServer);
+    hash.Update(clientPublicKey);
+    hash.Update(serverPublicKey);
+    hash.Final(derivedKeyServer);
+}
+
+// Validate both parties derived the same key
+Debug.Assert(derivedKeyClient.SequenceEqual(derivedKeyServer));
+</code></pre>
+<hr>
 <h2 id="-error-handling">⚠️ Error Handling</h2>
 <ul>
 <li><code>ArgumentException</code> — when input buffers have incorrect lengths or invalid parameters.</li>
@@ -273,13 +394,18 @@ CryptoSign.Verify(message, signature, publicKey); // throws LibSodiumException i
 <li>All APIs are Span-friendly and do not allocate memory internally.</li>
 <li><code>EncryptWithPublicKey</code> prepends a 32-byte ephemeral public key and 16-byte MAC.</li>
 <li>Use <code>CryptoSign</code> when authentication is required <strong>without</strong> encryption.</li>
+<li><code>CryptoScalarMult</code> is a low-level primitive and does not provide authentication.</li>
+<li>Avoid using scalar multiplication output directly as a key — always apply a hash.</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>
 <ul>
 <li><a href="../api/LibSodium.CryptoBox.html">API Reference: CryptoBox</a></li>
 <li><a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></li>
+<li><a href="../api/LibSodium.CryptoScalarMult.html">API Reference: CryptoScalarMult</a></li>
 <li><a href="https://doc.libsodium.org/public-key_cryptography/">libsodium.org Public-Key Crypto</a></li>
+<li><a href="https://doc.libsodium.org/advanced/scalar_multiplication">libsodium scalar multiplication</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7748">RFC 7748 – X25519</a></li>
 </ul>
 
 </article>

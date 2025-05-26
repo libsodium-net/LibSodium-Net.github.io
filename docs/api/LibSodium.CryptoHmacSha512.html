@@ -378,6 +378,49 @@ Class CryptoHmacSha512  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="LibSodium_CryptoHmacSha512_CreateIncrementalMac_" data-uid="LibSodium.CryptoHmacSha512.CreateIncrementalMac*"></a>
+
+  <h3 id="LibSodium_CryptoHmacSha512_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})">
+  CreateIncrementalMac(ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an incremental hash object using the HMAC-SHA512 algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The cryptographic key (64 bytes) to use for the HMAC-SHA512 computation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> instance that allows incremental computation of the HMAC-SHA512 hash.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoHmacSha512_CreateIncrementalMac_System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> can be used to compute the HMAC-SHA512 hash
+incrementally by processing data in chunks.</p>
+</div>
+
+
+
+
   <a id="LibSodium_CryptoHmacSha512_GenerateKey_" data-uid="LibSodium.CryptoHmacSha512.GenerateKey*"></a>
 
   <h3 id="LibSodium_CryptoHmacSha512_GenerateKey_System_Span_System_Byte__" data-uid="LibSodium.CryptoHmacSha512.GenerateKey(System.Span{System.Byte})">

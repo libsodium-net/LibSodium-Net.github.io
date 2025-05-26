@@ -129,8 +129,7 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
-<h5>Note</h5>
+<blockquote>
 <p>🧂 Based on <a href="https://doc.libsodium.org/hashing">libsodium’s Hashing</a><br>
 🧂 Based on <a href="https://doc.libsodium.org/password_hashing">Password Hashing</a><br>
 🧂 Based on <a href="https://doc.libsodium.org/advanced/sha-2_hash_function">SHA-2</a><br>
@@ -140,7 +139,7 @@
 ℹ️ <a href="../api/LibSodium.CryptoShortHash.html">API Reference: CryptoShortHash</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoPasswordHashArgon.html">API Reference: CryptoPasswordHashArgon</a><br>
 ℹ️ <a href="../api/LibSodium.CryptoPasswordHashScrypt.html">API Reference: CryptoPasswordHashScrypt</a><br></p>
-</div>
+</blockquote>
 <hr>
 <h2 id="-features">🌟 Features</h2>
 <ul>
@@ -150,6 +149,7 @@
 <li>Password hashing and key derivation using Argon2 (CryptoPasswordHash)</li>
 <li>All methods are allocation‑free, <code>Span</code>‑based, and deterministic (except password hash, which is randomized)</li>
 <li>Stream and async support for large input hashing (GenericHash, CryptoSha256, CryptoSha512)</li>
+<li>Incremental (multi-part) hashing  (GenericHash, CryptoSha256, CryptoSha512)</li>
 </ul>
 <hr>
 <h2 id="-generichashblake2b">✨ GenericHash — BLAKE2b</h2>
@@ -162,7 +162,7 @@
 <li>Unique deterministic identifiers</li>
 <li>Pseudorandom functions (PRF) when keyed</li>
 </ul>
-<p>By default, it produces 32‑byte output, but can be configured to return between 16 and 64 bytes. It supports <em>keyed hashing</em> for MAC‑like behavior, or <em>unkeyed hashing</em> for general‑purpose hashing.</p>
+<p>By default, it produces 32‑byte output, but can be configured to return between 16 and 64 bytes. It supports <em>keyed hashing</em> for MAC‑like or PRF behavior, using a key of 32 bytes by default (configurable between 16 and 64 bytes), or <em>unkeyed hashing</em> for general‑purpose use.</p>
 <h3 id="-constants">📏 Constants</h3>
 <table>
 <thead>
@@ -280,6 +280,43 @@ CryptoSha512.ComputeHash(hash, stream);
 <h3 id="-async-stream-hashing-1">📋 Async stream hashing</h3>
 <pre><code class="lang-csharp">await CryptoSha512.ComputeHashAsync(hash, stream);
 </code></pre>
+<hr>
+<h2 id="-incremental-hashing">✨ Incremental Hashing</h2>
+<p>In some scenarios, data to be hashed is not available as a single contiguous buffer — for example, when you want to compute <code>hash(a || b || c)</code> from multiple inputs. LibSodium.Net offers <strong>incremental hashing</strong> for this purpose.</p>
+<p>The following classes support incremental hashing:</p>
+<ul>
+<li><code>CryptoGenericHash</code> (BLAKE2b, optionally keyed)</li>
+<li><code>CryptoSha256</code> (SHA-256)</li>
+<li><code>CryptoSha512</code> (SHA-512)</li>
+</ul>
+<p>These types expose an incremental API via the <code>ICryptoIncrementalHash</code> interface.</p>
+<h3 id="-compute-hash-from-multiple-parts">📋 Compute hash from multiple parts</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoSha256.HashLen];
+using var hasher = CryptoSha256.CreateIncrementalHash();
+
+hasher.Update(Encoding.UTF8.GetBytes(&quot;header&quot;));
+hasher.Update(Encoding.UTF8.GetBytes(&quot;payload&quot;));
+hasher.Update(Encoding.UTF8.GetBytes(&quot;footer&quot;));
+hasher.Final(hash);
+</code></pre>
+<p>This pattern ensures correctness and efficiency when you want to hash logically grouped inputs without allocating or copying them into a single buffer.</p>
+<h3 id="-with-a-keyed-blake2b-hash">📋 With a keyed BLAKE2b hash</h3>
+<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[CryptoGenericHash.KeyLen];
+RandomGenerator.Fill(key);
+
+Span&lt;byte&gt; hash = stackalloc byte[32];
+var part1 = Encoding.UTF8.GetBytes(&quot;hello&quot;);
+var part2 = Encoding.UTF8.GetBytes(&quot;world&quot;);
+
+using var hasher = CryptoGenericHash.CreateIncrementalHash(key, hash.Length);
+
+hasher.Update(part1);
+hasher.Update(part2);
+hasher.Final(hash);
+</code></pre>
+<blockquote>
+<p>ℹ️ The <code>Final()</code> method may only be called once per hash instance. You must create a new instance for each new computation.</p>
+</blockquote>
 <hr>
 <h2 id="-shorthashsiphash24">✨ ShortHash — SipHash‑2‑4</h2>
 <blockquote>

@@ -182,6 +182,12 @@ Allows two parties to derive shared session keys securely.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="LibSodium.CryptoScalarMult.html">CryptoScalarMult</a></dt>
+      <dd><p>Provides low-level scalar multiplication on Curve25519.
+This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmult_base</code> functions from libsodium.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="LibSodium.CryptoSecretStream.html">CryptoSecretStream</a></dt>
       <dd><p>The CryptoSecretStream class provides methods for performing authenticated encryption and decryption of data streams, with optional additional authenticated data. It is based on the XChaCha20-Poly1305 algorithm.</p>
 </dd>
@@ -310,6 +316,14 @@ This class encapsulates secure memory allocation, read-only protection, and zero
     <dl class="jumplist">
       <dt><a class="xref" href="LibSodium.XChaCha20Poly1305.html">XChaCha20Poly1305</a></dt>
       <dd><p>Provides high-level access to the XChaCha20-Poly1305 AEAD construction from Libsodium.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+      <dd><p>Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.</p>
 </dd>
     </dl>
     <h3 id="enums">

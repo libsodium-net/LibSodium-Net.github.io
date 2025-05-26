@@ -371,7 +371,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemLock_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.SecureMemory.MemLock(System.ReadOnlySpan{System.Byte})">
   MemLock(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Locks an unmanaged memory buffer, preventing it from being swapped to disk.</p>
@@ -410,7 +410,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemLock__1_System_ReadOnlySpan___0__" data-uid="LibSodium.SecureMemory.MemLock``1(System.ReadOnlySpan{``0})">
   MemLock&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Locks an unmanaged memory buffer, preventing it from being swapped to disk.</p>
@@ -454,7 +454,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemUnlock_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.SecureMemory.MemUnlock(System.ReadOnlySpan{System.Byte})">
   MemUnlock(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unlocks an unmanaged memory buffer, allowing it to be swapped to disk if necessary.</p>
@@ -493,7 +493,7 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
   <h3 id="LibSodium_SecureMemory_MemUnlock__1_System_ReadOnlySpan___0__" data-uid="LibSodium.SecureMemory.MemUnlock``1(System.ReadOnlySpan{``0})">
   MemUnlock&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unlocks an unmanaged memory buffer, allowing it to be swapped to disk if necessary.</p>
@@ -633,6 +633,50 @@ These methods help protect sensitive data from being swapped to disk or accessed
 
 
 
+
+
+
+
+  <a id="LibSodium_SecureMemory_MemZero_" data-uid="LibSodium.SecureMemory.MemZero*"></a>
+
+  <h3 id="LibSodium_SecureMemory_MemZero__1___0__" data-uid="LibSodium.SecureMemory.MemZero``1(``0@)">
+  MemZero&lt;T&gt;(ref T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/SecureMemory.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overwrites the memory of the specified buffer with zeros.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MemZero&lt;T&gt;(ref T buffer) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <span class="xref">T</span></dt>
+    <dd><p>A reference to the buffer whose memory will be cleared.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the buffer. Must be an unmanaged type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_SecureMemory_MemZero__1___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method ensures that the memory of the provided buffer is securely overwritten with zeros. It
+is typically used to clear sensitive data, such as cryptographic keys, from memory. The method requires the
+library to be initialized before use.</p>
+</div>
 
 
 

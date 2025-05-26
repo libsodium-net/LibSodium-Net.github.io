@@ -269,6 +269,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoScalarMult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoScalarMult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoScalarMult",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoScalarMult.yml\" sourcestartlinenumber=\"1\">Provides low-level scalar multiplication on Curve25519.\nThis class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmult_base</code> functions from libsodium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoSecretStream.yml",
       "output": {
         ".html": {
@@ -448,6 +462,20 @@
       "IsMRef": true,
       "Title": "LibSodium.HexEncoding",
       "Summary": "<p sourcefile=\"api/LibSodium.HexEncoding.yml\" sourcestartlinenumber=\"1\">Provides methods for encoding and decoding hexadecimal strings and byte buffers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.ICryptoIncrementalHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.ICryptoIncrementalHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.ICryptoIncrementalHash",
+      "Summary": "<p sourcefile=\"api/LibSodium.ICryptoIncrementalHash.yml\" sourcestartlinenumber=\"1\">Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.</p>\n"
     },
     {
       "type": "ManagedReference",

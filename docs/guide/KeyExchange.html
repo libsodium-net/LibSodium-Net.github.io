@@ -229,6 +229,18 @@ Debug.Assert(clientReceiveKey.SequenceEqual(serverSendKey)); // Downstream traff
 var ciphertext = SecretBox.Encrypt(message, nonce, clientSendKey);
 var plaintext  = SecretBox.Decrypt(ciphertext, nonce, serverReceiveKey);
 </code></pre>
+<h2 id="-using-ed25519-keys-with-cryptokeyexchange">📋 Using Ed25519 Keys with CryptoKeyExchange</h2>
+<p>If you already have an Ed25519 key pair (typically used for digital signatures), you can convert it to Curve25519 format and use it directly with <code>CryptoKeyExchange</code>.</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(edPk, edSk);
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+Span&lt;byte&gt; curveSk = stackalloc byte[CryptoKeyExchange.SecretKeyLen];
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+</code></pre>
+<p>The resulting <code>curvePk</code> and <code>curveSk</code> are fully compatible with all key exchange methods in <code>CryptoKeyExchange</code>.</p>
 <h2 id="-error-handling">⚠️ Error Handling</h2>
 <ul>
 <li><strong>Size checks</strong> – All spans <strong>must</strong> match the declared constants. Otherwise <code>ArgumentException</code> or <code>ArgumentOutOfRangeException</code> is thrown.</li>
