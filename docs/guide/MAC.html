@@ -152,6 +152,9 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>ℹ️ All lengths are in bytes</p>
+</blockquote>
 <hr>
 <h2 id="-hmacsha256">✨ HMAC‑SHA‑256</h2>
 <p>The <code>CryptoHmacSha256</code> API implements HMAC-SHA-256 —built on the widely-deployed SHA-256 hash function— producing a 32-byte tag with a fixed 32-byte key. Choose this when you are interacting with external systems that require HMAC-SHA-256 (e.g., AWS S3 signatures, JWT HS256 tokens, many REST APIs).</p>
@@ -262,11 +265,36 @@
 </tbody>
 </table>
 <hr>
-<h2 id="-key-management-tips">🗝️ Key Management Tips</h2>
+<h2 id="-key-management">🗝️ Key Management</h2>
+<p>You can pass keys to MAC methods using:</p>
+<ul>
+<li><code>SecureMemory&lt;byte&gt;</code> – most secure, with memory protection and automatic zeroing.</li>
+<li><code>Span&lt;byte&gt;</code>/<code>ReadOnlySpan&lt;byte&gt;</code> – fast and stack-allocated, but not supported in asynchronous methods.</li>
+<li><code>byte[]</code> – works with both synchronous and asynchronous APIs.</li>
+<li><code>Memory&lt;byte&gt;</code>/<code>ReadOnlyMemory&lt;byte&gt;</code> — used in async APIs. Can be converted to span if needed.</li>
+</ul>
+<blockquote>
+<p>📝 Use <code>Span&lt;T&gt;</code> when performance is critical, and <code>SecureMemory&lt;byte&gt;</code> when security is paramount.</p>
+</blockquote>
+<p><strong>Examples</strong>:</p>
+<pre><code class="lang-csharp">// SecureMemory&lt;byte&gt;
+using var key = new SecureMemory&lt;byte&gt;(CryptoHmacSha256.KeyLen);
+CryptoHmacSha256.GenerateKey(key);
+key.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span&lt;byte&gt;
+Span&lt;byte&gt; key = stackalloc byte[CryptoHmacSha256.KeyLen];
+CryptoHmacSha256.GenerateKey(key);
+</code></pre>
+<pre><code class="lang-csharp">// byte[]
+var key = new byte[CryptoHmacSha256.KeyLen];
+CryptoHmacSha256.GenerateKey(key);
+</code></pre>
+<p><strong>Tips:</strong></p>
 <ul>
 <li>Generate a fresh random key with <code>GenerateKey</code> and store it securely (e.g., Azure Key Vault, environment variable, HSM).</li>
-<li><strong>Never</strong> reuse keys across different algorithms or protocols.</li>
-<li>Rotate keys periodically and re‑compute MACs for stored data when you do.</li>
+<li>Never reuse keys across different algorithms or protocols. Even if the key size is compatible, doing so weakens isolation and security boundaries.</li>
+<li>Rotate keys periodically.</li>
 <li>Don't reuse keys in <code>CryptoOneTimeAuth</code>.</li>
 </ul>
 <hr>
@@ -275,10 +303,7 @@
 
 // Async overloads accept Memory&lt;byte&gt;/ReadOnlyMemory&lt;byte&gt;, not Span&lt;byte&gt;.
 // We use byte[] because it implicitly converts to both Memory&lt;byte&gt; and Span&lt;byte&gt;.
-byte[] key = new byte[CryptoHmacSha256.KeyLen];
 byte[] mac = new byte[CryptoHmacSha256.MacLen];
-
-CryptoHmacSha256.GenerateKey(key);
 
 // UTF‑8 string literal (.NET 8+)
 ReadOnlySpan&lt;byte&gt; message = &quot;hello&quot;u8; 
@@ -319,32 +344,31 @@ Debug.Assert(okStreamAsync);
 <li><code>CryptoHmacSha512_256</code></li>
 <li><code>CryptoOneTimeAuth</code></li>
 </ul>
-<p>Each class provides a <code>CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code> method.</p>
-<h3 id="-compute-mac-over-multiple-parts">📋 Compute MAC over multiple parts</h3>
+<p>Each class provides <code>CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code> and <code>CreateIncrementalMac(SecureMemory&lt;byte&gt; key)</code> methods.</p>
+<p><strong>Compute MAC over multiple parts:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoHmacSha512.MacLen];
-Span&lt;byte&gt; key = stackalloc byte[CryptoHmacSha512.KeyLen];
-RandomGenerator.Fill(key);
 
-var part1 = Encoding.UTF8.GetBytes(&quot;hello &quot;);
-var part2 = Encoding.UTF8.GetBytes(&quot;world&quot;);
+ReadOnlySpan&lt;byte&gt; part1 = &quot;hello &quot;u8;
+ReadOnlySpan&lt;byte&gt; part2 = &quot;world&quot;u8;
 
-using var macCalc = CryptoHmacSha512.CreateIncrementalMac(key);
-macCalc.Update(part1);
-macCalc.Update(part2);
-macCalc.Final(mac);
+using var incMac = CryptoHmacSha512.CreateIncrementalMac(key);
+incMac.Update(part1);
+incMac.Update(part2);
+incMac.Final(mac);
 </code></pre>
-<h3 id="-poly1305-incremental-mac">📋 Poly1305 incremental MAC</h3>
+<p><strong>Poly1305 incremental MAC:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; mac = stackalloc byte[CryptoOneTimeAuth.MacLen];
-Span&lt;byte&gt; key = stackalloc byte[CryptoOneTimeAuth.KeyLen];
-RandomGenerator.Fill(key);
 
-using var macCalc = CryptoOneTimeAuth.CreateIncrementalMac(key);
-macCalc.Update(data1);
-macCalc.Update(data2);
-macCalc.Final(mac);
+ReadOnlySpan&lt;byte&gt; part1 = &quot;hello &quot;u8;
+ReadOnlySpan&lt;byte&gt; part2 = &quot;world&quot;u8;
+
+using var incMac = CryptoOneTimeAuth.CreateIncrementalMac(key);
+incMac.Update(part1);
+incMac.Update(part2);
+incMac.Final(mac);
 </code></pre>
 <blockquote>
-<p>⚠️ The <code>Final()</code> method may only be called once. Create a new incremental MAC instance for each new message.</p>
+<p>⚠️ The <code>Final()</code> method may only be called once. If you need to compute another MAC, create a new incremental instance with <code>CreateIncrementalMac()</code>.</p>
 </blockquote>
 <hr>
 <h2 id="-choosing-the-right-mac">🧭 Choosing the Right MAC</h2>
@@ -407,7 +431,7 @@ macCalc.Final(mac);
 <ul>
 <li>All APIs are <strong>deterministic</strong>: same key + message ⇒ same MAC.</li>
 <li>Verification is <strong>constant‑time</strong> to avoid timing attacks.</li>
-<li>The secret key length is fixed (32).</li>
+<li>The secret key length is fixed: 32 bytes.</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>

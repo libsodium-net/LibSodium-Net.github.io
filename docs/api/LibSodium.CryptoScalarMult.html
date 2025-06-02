@@ -222,9 +222,57 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
   <a id="LibSodium_CryptoScalarMult_CalculatePublicKey_" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey*"></a>
 
+  <h3 id="LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  CalculatePublicKey(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the public key corresponding to a private scalar on Curve25519.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CalculatePublicKey(Span&lt;byte&gt; publicKey, SecureMemory&lt;byte&gt; privateKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The output buffer where the public key (32 bytes) will be stored.</p>
+</dd>
+    <dt><code>privateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The private scalar (32 bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method wraps <code>crypto_scalarmult_base</code>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any buffer has incorrect length.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the operation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoScalarMult_CalculatePublicKey_" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey*"></a>
+
   <h3 id="LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   CalculatePublicKey(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the public key corresponding to a private scalar on Curve25519.</p>
@@ -260,6 +308,57 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if any buffer has incorrect length.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the operation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoScalarMult_Compute_" data-uid="LibSodium.CryptoScalarMult.Compute*"></a>
+
+  <h3 id="LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})">
+  Compute(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the scalar multiplication of a private scalar and a public point on Curve25519.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Compute(Span&lt;byte&gt; sharedPoint, SecureMemory&lt;byte&gt; privateKey, ReadOnlySpan&lt;byte&gt; publicKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sharedPoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The output buffer where the result (32 bytes) will be stored.</p>
+</dd>
+    <dt><code>privateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The private scalar (32 bytes).</p>
+</dd>
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The public point (32 bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method wraps <code>crypto_scalarmult</code>. Do not use the output directly as a symmetric key.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any input or output buffer has incorrect length.</p>
 </dd>
     <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
     <dd><p>Thrown if the operation fails.</p>

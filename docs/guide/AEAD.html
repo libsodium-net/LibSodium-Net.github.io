@@ -146,15 +146,16 @@
 <h2 id="-encrypting-and-decrypting">🗝️ Encrypting and Decrypting</h2>
 <p>Use the <code>Encrypt</code> and <code>Decrypt</code> methods from any <code>LibSodium.&lt;Algorithm&gt;</code> class. The API automatically chooses <strong>combined</strong> or <strong>detached</strong> mode based on the presence of the optional <code>mac</code> parameter.</p>
 <p>All AEAD algorithms share the same API:</p>
-<pre><code class="lang-csharp">public static Span&lt;byte&gt; Encrypt(
+<pre><code class="lang-csharp">// With ReadOnlySpan&lt;byte&gt; key
+public static Span&lt;byte&gt; Encrypt(
     Span&lt;byte&gt; ciphertext,
     ReadOnlySpan&lt;byte&gt; plaintext,
     ReadOnlySpan&lt;byte&gt; key,
     Span&lt;byte&gt; mac = default,
     ReadOnlySpan&lt;byte&gt; aad = default,
-    ReadOnlySpan&lt;byte&gt; nonce = default)
-</code></pre>
-<pre><code class="lang-csharp">public static Span&lt;byte&gt; Decrypt(
+    ReadOnlySpan&lt;byte&gt; nonce = default);
+
+public static Span&lt;byte&gt; Decrypt(
     Span&lt;byte&gt; plaintext,
     ReadOnlySpan&lt;byte&gt; ciphertext,
     ReadOnlySpan&lt;byte&gt; key,
@@ -162,8 +163,28 @@
     ReadOnlySpan&lt;byte&gt; aad = default,
     ReadOnlySpan&lt;byte&gt; nonce = default)
 </code></pre>
+<pre><code class="lang-csharp">// With SecureMemory&lt;byte&gt; key
+public static Span&lt;byte&gt; Encrypt(
+    Span&lt;byte&gt; ciphertext,
+    ReadOnlySpan&lt;byte&gt; plaintext,
+    SecureMemory&lt;byte&gt; key,
+    Span&lt;byte&gt; mac = default,
+    ReadOnlySpan&lt;byte&gt; aad = default,
+    ReadOnlySpan&lt;byte&gt; nonce = default);
+
+public static Span&lt;byte&gt; Decrypt(
+    Span&lt;byte&gt; plaintext,
+    ReadOnlySpan&lt;byte&gt; ciphertext,
+    SecureMemory&lt;byte&gt; key,
+    ReadOnlySpan&lt;byte&gt; mac = default,
+    ReadOnlySpan&lt;byte&gt; aad = default,
+    ReadOnlySpan&lt;byte&gt; nonce = default)
+</code></pre>
+<p><code>ReadOnlySpan&lt;byte&gt;</code>, <code>byte[]</code> and <code>SecureMemory&lt;byte&gt;</code> are accepted as key inputs.</p>
+<p>Optional parameters allow for ergonomic usage while retaining full control. Using named arguments for optional ones is highly recommended.</p>
 <hr>
-<h2 id="-example-1-aegis-256-combined-mode-with-auto-nonce-and-aad">📋 Example 1: AEGIS-256 (Combined mode with auto nonce and AAD)</h2>
+<h2 id="-aegis-256-example">📋 AEGIS-256 example</h2>
+<p>AEGIS-256 (Combined mode with auto nonce and AAD)</p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[Aegis256.KeyLen];
 RandomGenerator.Fill(key);
 
@@ -181,7 +202,8 @@ SecureMemory.MemZero(key);
 Console.WriteLine(Encoding.UTF8.GetString(decrypted));
 </code></pre>
 <hr>
-<h2 id="-example-2-chacha20-poly1305-combined-mode-with-aad-incrementing-manual-nonce-to-prevent-reuse">📋 Example 2: ChaCha20-Poly1305 (Combined mode with AAD, incrementing manual nonce to prevent reuse)</h2>
+<h2 id="-chacha20-poly1305-example">📋 ChaCha20-Poly1305 example</h2>
+<p>ChaCha20-Poly1305 (Combined mode with AAD, incrementing manual nonce to prevent reuse)</p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[ChaCha20Poly1305.KeyLen];
 Span&lt;byte&gt; nonce = stackalloc byte[ChaCha20Poly1305.NonceLen];
 RandomGenerator.Fill(key);
@@ -201,6 +223,22 @@ ChaCha20Poly1305.Encrypt(ciphertext2, message2, key, aad: aad, nonce: nonce);
 
 SecureMemory.MemZero(key);
 </code></pre>
+<h2 id="-aes256-gcm-example">📋 AES256-GCM example</h2>
+<p>AES256-GCM (SecureMemory, detached MAC, autononce, no AAD)</p>
+<pre><code class="lang-csharp">using var key = new SecureMemory&lt;byte&gt;(Aes256Gcm.KeyLen);
+Span&lt;byte&gt; nonce = stackalloc byte[Aes256Gcm.NonceLen];
+RandomGenerator.Fill(key);
+RandomGenerator.Fill(nonce);
+key.ProtectReadOnly();
+
+Span&lt;byte&gt; ciphertext = new byte[plaintext.Length];
+Span&lt;byte&gt; mac = stackalloc byte[Aes256Gcm.MacLen];
+
+Aes256Gcm.Encrypt(ciphertext, plaintext, key, mac: mac);
+
+Span&lt;byte&gt; decrypted = new byte[plaintext.Length];
+Aes256Gcm.Decrypt(decrypted, ciphertext, key, mac: mac);
+</code></pre>
 <hr>
 <h2 id="-error-handling">⚠️ Error Handling</h2>
 <ul>
@@ -214,8 +252,13 @@ SecureMemory.MemZero(key);
 <li>Nonces must match the algorithm's required length.</li>
 <li>If omitted, a random nonce is generated automatically and prepended to the ciphertext.</li>
 <li>Buffers must be large enough to hold output.</li>
-<li>AAD is optional, but highly recommended.</li>
-<li>Combined mode includes the MAC within the ciphertext.</li>
+<li>AAD is optional and not a secret. If provided it must the same for both encryption and decryption.</li>
+<li>Nonce is optional and not a secret. If not provided (automatic nonce) it is randomly generated and prepended to the ciphertext. If provided (manual nonce) it must be the same for both encryption and decryption.</li>
+<li>MAC is optional and not a secret. If not provided (combined mode) it is included within the ciphertext. If provided (detached mode) it must be the same for both encryption and decryption.</li>
+</ul>
+<ul>
+<li>Use <code>RandomGenerator.Fill()</code> to generate cryptographically secure random keys and nonces. Alternatively, keys may be securely stored or derived using a key derivation function.</li>
+<li>Use <code>SecureMemory&lt;byte&gt;</code> for keys.</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>

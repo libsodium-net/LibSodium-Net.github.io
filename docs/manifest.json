@@ -157,6 +157,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoHkdf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoHkdf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoHkdf",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoHkdf.yml\" sourcestartlinenumber=\"1\">Provides HKDF key derivation (RFC 5869) using SHA-256 or SHA-512.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoHmacSha256.yml",
       "output": {
         ".html": {
@@ -434,20 +448,6 @@
       "IsMRef": true,
       "Title": "LibSodium.CryptoStreamXSalsa20",
       "Summary": "<p sourcefile=\"api/LibSodium.CryptoStreamXSalsa20.yml\" sourcestartlinenumber=\"1\">Provides high-level access to the <code>XSalsa20</code> stream cipher.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/LibSodium.HKDF.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LibSodium.HKDF.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "LibSodium.HKDF",
-      "Summary": "<p sourcefile=\"api/LibSodium.HKDF.yml\" sourcestartlinenumber=\"1\">Provides HKDF key derivation (RFC 5869) using SHA-256 or SHA-512.</p>\n"
     },
     {
       "type": "ManagedReference",

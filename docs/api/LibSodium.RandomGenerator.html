@@ -192,7 +192,7 @@ Class RandomGenerator  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="LibSodium_RandomGenerator_Close" data-uid="LibSodium.RandomGenerator.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Closes the random number generator.</p>
@@ -218,6 +218,39 @@ Class RandomGenerator  <a class="header-action link-secondary" title="View sourc
     <dd><p>Thrown when randombytes_close() fails.</p>
 </dd>
   </dl>
+
+
+
+  <a id="LibSodium_RandomGenerator_Fill_" data-uid="LibSodium.RandomGenerator.Fill*"></a>
+
+  <h3 id="LibSodium_RandomGenerator_Fill_LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.RandomGenerator.Fill(LibSodium.SecureMemory{System.Byte})">
+  Fill(SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the specified secure memory buffer with random bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fill(SecureMemory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer to fill with random bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,9 +289,52 @@ Class RandomGenerator  <a class="header-action link-secondary" title="View sourc
 
   <a id="LibSodium_RandomGenerator_FillDeterministic_" data-uid="LibSodium.RandomGenerator.FillDeterministic*"></a>
 
+  <h3 id="LibSodium_RandomGenerator_FillDeterministic_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.RandomGenerator.FillDeterministic(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  FillDeterministic(SecureMemory&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the specified buffer with deterministic random bytes based on the provided seed.
+It produces the same sequence of random bytes for the same seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FillDeterministic(SecureMemory&lt;byte&gt; buffer, SecureMemory&lt;byte&gt; seed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer to fill with deterministic random bytes.</p>
+</dd>
+    <dt><code>seed</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The seed used for deterministic random byte generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the seed length is not equal to SeedLen.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_RandomGenerator_FillDeterministic_" data-uid="LibSodium.RandomGenerator.FillDeterministic*"></a>
+
   <h3 id="LibSodium_RandomGenerator_FillDeterministic_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.RandomGenerator.FillDeterministic(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   FillDeterministic(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills the specified buffer with deterministic random bytes based on the provided seed.
@@ -373,7 +449,7 @@ It produces the same sequence of random bytes for the same seed.</p>
 
   <h3 id="LibSodium_RandomGenerator_Stir" data-uid="LibSodium.RandomGenerator.Stir">
   Stir()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/RandomGenerator.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stirs the random number generator to ensure randomness.</p>

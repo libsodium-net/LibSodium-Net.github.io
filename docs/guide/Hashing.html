@@ -130,6 +130,9 @@
 </tbody>
 </table>
 <blockquote>
+<p>📝 SHA‑2 functions are <strong>not suitable</strong> for password hashing or key derivation. Use Argon2 or scrypt instead.</p>
+</blockquote>
+<blockquote>
 <p>🧂 Based on <a href="https://doc.libsodium.org/hashing">libsodium’s Hashing</a><br>
 🧂 Based on <a href="https://doc.libsodium.org/password_hashing">Password Hashing</a><br>
 🧂 Based on <a href="https://doc.libsodium.org/advanced/sha-2_hash_function">SHA-2</a><br>
@@ -152,6 +155,41 @@
 <li>Incremental (multi-part) hashing  (GenericHash, CryptoSha256, CryptoSha512)</li>
 </ul>
 <hr>
+<h2 id="-key-management">🗝️ Key Management</h2>
+<p>Some hash functions accept a key (e.g., GenericHash, ShortHash), while others produce one as output (e.g., Argon2, Scrypt). This section explains how to pass and store keys safely.</p>
+<p>Keys can be provided or stored using the following types:</p>
+<ul>
+<li><code>SecureMemory&lt;byte&gt;</code> — most secure option, with memory protection and automatic zeroing.</li>
+<li><code>Span&lt;byte&gt;</code> / <code>ReadOnlySpan&lt;byte&gt;</code> — fast and stack-allocated. Ideal for synchronous use.</li>
+<li><code>byte[]</code> — interoperable and usable in both sync and async contexts.</li>
+<li><code>Memory&lt;byte&gt;</code> / <code>ReadOnlyMemory&lt;byte&gt;</code> — for use with async methods.</li>
+</ul>
+<blockquote>
+<p>📝 Use <code>Span&lt;T&gt;</code> for high-performance local operations, and <code>SecureMemory&lt;byte&gt;</code> to protect secrets in memory.</p>
+</blockquote>
+<p>When using key derivation functions (e.g., Argon2, Scrypt):</p>
+<p><strong>Examples</strong>:</p>
+<pre><code class="lang-csharp">// SecureMemory&lt;byte&gt;
+using var key = new SecureMemory&lt;byte&gt;(GenericHash.KeyLen);
+RandomGenerator.Fill(key);
+key.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span&lt;byte&gt;
+Span&lt;byte&gt; key = stackalloc byte[GenericHash.KeyLen];
+RandomGenerator.Fill(key);
+</code></pre>
+<pre><code class="lang-csharp">// byte[]
+var key = new byte[GenericHash.KeyLen];
+RandomGenerator.Fill(key);
+</code></pre>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Store the derived key in <code>SecureMemory&lt;byte&gt;</code>, mark it as read-only using <code>.ProtectReadOnly()</code>, and dispose it properly.</li>
+<li>Never reuse keys across different algorithms or protocols. Even if the key size is compatible, doing so weakens isolation and security boundaries.</li>
+<li>Use a strong, random salt and a context-specific derivation strategy.</li>
+<li>Generate a fresh random key with <code>RandomGenerator.Fill()</code> and store it securely (e.g., Azure Key Vault, environment variable, HSM).</li>
+<li>Rotate keys periodically.</li>
+</ul>
 <h2 id="-generichashblake2b">✨ GenericHash — BLAKE2b</h2>
 <p>BLAKE2b is a cryptographic hash function designed as a faster and safer alternative to SHA‑2. It provides high‑performance hashing with optional key support, making it suitable for:</p>
 <ul>
@@ -205,18 +243,19 @@
 </tr>
 </tbody>
 </table>
-<h3 id="-hash-with-optional-key">📋 Hash with optional key</h3>
+<h3 id="-hashing-with-generichash">📋 Hashing with GenericHash</h3>
+<p><strong>With optional key:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoGenericHash.HashLen];
 CryptoGenericHash.ComputeHash(hash, message);              // unkeyed
-CryptoGenericHash.ComputeHash(hash, message, key);         // keyed (MAC or PRF)
+CryptoGenericHash.ComputeHash(hash, message, key);         // keyed
 </code></pre>
-<h3 id="-hash-from-a-stream">📋 Hash from a stream</h3>
+<p><strong>from a stream:</strong></p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-input.dat&quot;);
 CryptoGenericHash.ComputeHash(hash, stream);
 </code></pre>
-<h3 id="-async-stream-support">📋 Async stream support</h3>
+<p><strong>Async stream support:</strong></p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-input.dat&quot;);
-await CryptoGenericHash.ComputeHashAsync(hash, stream);
+await CryptoGenericHash.ComputeHashAsync(hash, stream, key);
 </code></pre>
 <hr>
 <h2 id="-cryptosha256sha256">✨ CryptoSha256 — SHA‑256</h2>
@@ -238,15 +277,16 @@ await CryptoGenericHash.ComputeHashAsync(hash, stream);
 </tr>
 </tbody>
 </table>
-<h3 id="-hash-a-byte-array">📋 Hash a byte array</h3>
+<h3 id="-hashing-with-cryptosha256">📋 Hashing with CryptoSha256</h3>
+<p><strong>Hash a byte array:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoSha256.HashLen];
 CryptoSha256.ComputeHash(hash, message);
 </code></pre>
-<h3 id="-hash-a-stream-buffered-sync">📋 Hash a stream (buffered, sync)</h3>
+<p><strong>Hash a stream (buffered, sync):</strong></p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;video.mp4&quot;);
 CryptoSha256.ComputeHash(hash, stream);
 </code></pre>
-<h3 id="-async-stream-hashing">📋 Async stream hashing</h3>
+<p><strong>Async stream hashing:</strong></p>
 <pre><code class="lang-csharp">await CryptoSha256.ComputeHashAsync(hash, stream);
 </code></pre>
 <hr>
@@ -269,15 +309,16 @@ CryptoSha256.ComputeHash(hash, stream);
 </tr>
 </tbody>
 </table>
-<h3 id="-hash-a-byte-array-1">📋 Hash a byte array</h3>
+<h3 id="-hashing-with-cryptosha512">📋 Hashing with CryptoSha512</h3>
+<p><strong>Hash a Span<byte>:</byte></strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoSha512.HashLen];
 CryptoSha512.ComputeHash(hash, message);
 </code></pre>
-<h3 id="-hash-a-stream-buffered-sync-1">📋 Hash a stream (buffered, sync)</h3>
+<p><strong>Hash a stream (buffered, sync):</strong></p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;backup.tar&quot;);
 CryptoSha512.ComputeHash(hash, stream);
 </code></pre>
-<h3 id="-async-stream-hashing-1">📋 Async stream hashing</h3>
+<p><strong>Async stream hashing:</strong></p>
 <pre><code class="lang-csharp">await CryptoSha512.ComputeHashAsync(hash, stream);
 </code></pre>
 <hr>
@@ -290,7 +331,7 @@ CryptoSha512.ComputeHash(hash, stream);
 <li><code>CryptoSha512</code> (SHA-512)</li>
 </ul>
 <p>These types expose an incremental API via the <code>ICryptoIncrementalHash</code> interface.</p>
-<h3 id="-compute-hash-from-multiple-parts">📋 Compute hash from multiple parts</h3>
+<p><strong>Compute hash from multiple parts:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoSha256.HashLen];
 using var hasher = CryptoSha256.CreateIncrementalHash();
 
@@ -300,7 +341,7 @@ hasher.Update(Encoding.UTF8.GetBytes(&quot;footer&quot;));
 hasher.Final(hash);
 </code></pre>
 <p>This pattern ensures correctness and efficiency when you want to hash logically grouped inputs without allocating or copying them into a single buffer.</p>
-<h3 id="-with-a-keyed-blake2b-hash">📋 With a keyed BLAKE2b hash</h3>
+<p><strong>With a keyed BLAKE2b hash</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[CryptoGenericHash.KeyLen];
 RandomGenerator.Fill(key);
 
@@ -352,7 +393,10 @@ hasher.Final(hash);
 </tr>
 </tbody>
 </table>
-<h3 id="-hash-with-key">📋 Hash with key</h3>
+<h3 id="-hashing-with-shorthash">📋 Hashing with ShortHash</h3>
+<blockquote>
+<p>ℹ️ key is required</p>
+</blockquote>
 <pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoShortHash.HashLen];
 CryptoShortHash.ComputeHash(hash, message, key);
 </code></pre>
@@ -398,11 +442,11 @@ CryptoShortHash.ComputeHash(hash, message, key);
 </tr>
 <tr>
 <td><code>MinMemoryLen</code></td>
-<td>8 KB</td>
+<td>8 KiB</td>
 <td>Minimum acceptable memory for hashing</td>
 </tr>
 <tr>
-<td><code>MinInterations</code></td>
+<td><code>MinIterations</code></td>
 <td>1</td>
 <td>Minimum acceptable iterations</td>
 </tr>
@@ -413,7 +457,7 @@ CryptoShortHash.ComputeHash(hash, message, key);
 </tr>
 <tr>
 <td><code>InteractiveMemoryLen</code></td>
-<td>64 MB</td>
+<td>64 MiB</td>
 <td>Memory usage for interactive targets</td>
 </tr>
 <tr>
@@ -423,7 +467,7 @@ CryptoShortHash.ComputeHash(hash, message, key);
 </tr>
 <tr>
 <td><code>ModerateMemoryLen</code></td>
-<td>256Mb</td>
+<td>256 MiB</td>
 <td>For app secrets or backup keys</td>
 </tr>
 <tr>
@@ -433,19 +477,20 @@ CryptoShortHash.ComputeHash(hash, message, key);
 </tr>
 <tr>
 <td><code>SensitiveMemoryLen</code></td>
-<td>1 GB</td>
+<td>1 GiB</td>
 <td>Memory usage for sensitive targets</td>
 </tr>
 </tbody>
 </table>
-<h3 id="-hash-a-password-encoded-random-salt">📋 Hash a password (encoded, random salt)</h3>
+<h3 id="-working-with-passwordhashargon">📋 Working with PasswordHashArgon</h3>
+<p><strong>Hash a password (encoded, random salt):</strong></p>
 <pre><code class="lang-csharp">string hash = CryptoPasswordHash.HashPassword(&quot;my password&quot;);
 </code></pre>
-<h3 id="-verify-a-password">📋 Verify a password</h3>
+<p><strong>Verify a password:</strong></p>
 <pre><code class="lang-csharp">bool valid = CryptoPasswordHash.VerifyPassword(hash, &quot;my password&quot;);
 </code></pre>
-<h3 id="-derive-a-secret-key-from-a-password-eg-for-encryption">📋 Derive a secret key from a password (e.g., for encryption)</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[32];
+<p><strong>Derive a secret key from a password (e.g., for encryption):</strong></p>
+<pre><code class="lang-csharp">using var key = new SecureMemory(32);
 Span&lt;byte&gt; salt = stackalloc byte[CryptoPasswordHash.SaltLen];
 RandomGenerator.Fill(salt);
 CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
@@ -532,11 +577,13 @@ CryptoPasswordHash.DeriveKey(key, &quot;password&quot;, salt);
 </tr>
 </tbody>
 </table>
-<h3 id="-examples">📋 Examples</h3>
+<h3 id="-working-with-passwordhashscrypt">📋 Working with PasswordHashScrypt</h3>
+<p><strong>Hash and verify:</strong></p>
 <pre><code class="lang-csharp">string hash = CryptoPasswordHashScrypt.HashPassword(&quot;my password&quot;);
 bool valid = CryptoPasswordHashScrypt.VerifyPassword(hash, &quot;my password&quot;);
 </code></pre>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[32];
+<p><strong>Deriving a key from a password:</strong></p>
+<pre><code class="lang-csharp">using var key = new SecureMemory&lt;byte&gt;(32);
 Span&lt;byte&gt; salt = stackalloc byte[CryptoPasswordHashScrypt.SaltLen];
 RandomGenerator.Fill(salt);
 CryptoPasswordHashScrypt.DeriveKey(key, &quot;password&quot;, salt,
@@ -584,8 +631,8 @@ CryptoPasswordHashScrypt.DeriveKey(key, &quot;password&quot;, salt,
 <td><code>CryptoSha512</code></td>
 </tr>
 <tr>
-<td>MAC or PRF</td>
-<td><code>GenericHash</code> (keyed)</td>
+<td>MAC (Message Authentication Code) or PRF (Pseudo Random Function)</td>
+<td><code>GenericHash</code> (with key)</td>
 </tr>
 <tr>
 <td>Hashing short keys in tables</td>

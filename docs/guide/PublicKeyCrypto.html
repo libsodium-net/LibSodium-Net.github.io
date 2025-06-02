@@ -103,6 +103,7 @@
 <li>Digital signatures with Ed25519 (<code>CryptoSign</code>)</li>
 <li>Span-based APIs for efficient, allocation-free usage</li>
 <li>Conversion from Ed25519 keys to Curve25519 (<code>CryptoSign.PublicKeyToCurve</code>, <code>CryptoSign.PrivateKeyToCurve</code>)</li>
+<li>Keys and seeds can be provided as <code>SecureMemory&lt;byte&gt;</code>, <code>Span&lt;byte&gt;</code>/<code>ReadOnlySpan&lt;byte&gt;</code>, and <code>byte[]</code>.</li>
 </ul>
 <hr>
 <h2 id="-cryptobox--authenticated-encryption">✨ CryptoBox — Authenticated Encryption</h2>
@@ -156,38 +157,49 @@
 </tbody>
 </table>
 <hr>
-<h2 id="-key-management">🗝️ Key Management</h2>
-<h3 id="-generate-keypair">📋 Generate Keypair</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
+<h3 id="-cryptobox-key-management">📋 CryptoBox Key Management</h3>
+<p><strong>Generate random key pair:</strong></p>
+<pre><code class="lang-csharp">// SecureMemory
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
+using var privateKey = new SecureMemory&lt;byte&gt;(CryptoBox.PrivateKeyLen);
+CryptoBox.GenerateKeypair(publicKey, privateKey);
+privateKey.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
 Span&lt;byte&gt; privateKey = stackalloc byte[CryptoBox.PrivateKeyLen];
 CryptoBox.GenerateKeypair(publicKey, privateKey);
 </code></pre>
-<h3 id="-deterministic-keypair-from-seed">📋 Deterministic Keypair from Seed</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; seed = stackalloc byte[CryptoBox.SeedLen];
+<p><strong>Deterministic key pair from seed:</strong></p>
+<pre><code class="lang-csharp">// SecureMemory
+using var seed = new SecureMemory&lt;byte&gt;(CryptoBox.SeedLen);
+//TODO: fill the seed using seed.AsSpan() 
+seed.ProtectReadOnly();
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
+using var privateKey = new SecureMemory&lt;byte&gt;(CryptoBox.PrivateKeyLen);
+CryptoBox.GenerateKeypairDeterministically(publicKey, privateKey, seed);
+privateKey.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; seed = stackalloc byte[CryptoBox.SeedLen];
+//TODO: fill the seed
 Span&lt;byte&gt; publicKey = stackalloc byte[CryptoBox.PublicKeyLen];
 Span&lt;byte&gt; privateKey = stackalloc byte[CryptoBox.PrivateKeyLen];
 CryptoBox.GenerateKeypairDeterministically(publicKey, privateKey, seed);
 </code></pre>
-<h3 id="-precompute-shared-key">📋 Precompute Shared Key</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; sharedKey = stackalloc byte[CryptoBox.SharedKeyLen];
+<p>**Precompute shared key:</p>
+<pre><code class="lang-csharp">// SecureMemory
+using var  sharedKey = SecureMemory&lt;byte&gt;(CryptoBox.SharedKeyLen);
+CryptoBox.CalculateSharedKey(sharedKey, otherPartyPublicKey, myPrivateKey);
+sharedKey.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; sharedKey = stackalloc byte[CryptoBox.SharedKeyLen];
 CryptoBox.CalculateSharedKey(sharedKey, otherPartyPublicKey, myPrivateKey);
 </code></pre>
-<h3 id="-convert-ed25519-to-curve25519">📋 Convert Ed25519 to Curve25519</h3>
-<p>LibSodium.Net allows converting Ed25519 key pairs (used for digital signatures) to Curve25519 format, suitable for encryption and key exchange.</p>
-<p>These converted keys can be used with the <code>CryptoBox</code> and <code>CryptoKeyExchange</code> APIs.</p>
-<pre><code class="lang-csharp">Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
-Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
-CryptoSign.GenerateKeyPair(edPk, edSk);
-
-Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
-Span&lt;byte&gt; curveSk = stackalloc byte[CryptoBox.PrivateKeyLen];
-CryptoSign.PublicKeyToCurve(curvePk, edPk);
-CryptoSign.PrivateKeyToCurve(curveSk, edSk);
-</code></pre>
-<p>The resulting <code>curvePk</code> and <code>curveSk</code> can be used anywhere a Curve25519 key is expected.</p>
 <hr>
-<h2 id="-encryption-modes">✨ Encryption Modes</h2>
-<h3 id="-encrypt--decrypt-with-keypair-combined-auto-nonce">📋 Encrypt / Decrypt with Keypair (Combined, Auto Nonce)</h3>
+<h3 id="-encrypting-and-decrypting-with-cryptobox">✨ Encrypting and Decrypting with CryptoBox</h3>
+<p><strong>Encrypt / Decrypt with Keypair (Combined, Auto Nonce):</strong></p>
 <pre><code class="lang-csharp">var message = Encoding.UTF8.GetBytes(&quot;Hello, world!&quot;);
 Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.MacLen + CryptoBox.NonceLen];
 CryptoBox.EncryptWithKeypair(ciphertext, message, recipientPublicKey, senderPrivateKey);
@@ -196,28 +208,28 @@ Span&lt;byte&gt; decrypted = stackalloc byte[message.Length];
 CryptoBox.DecryptWithKeypair(decrypted, ciphertext, senderPublicKey, recipientPrivateKey);
 AssertLite.True(decrypted.SequenceEqual(message));
 </code></pre>
-<h3 id="-encrypt--decrypt-with-keypair-detached-manual-nonce">📋 Encrypt / Decrypt with Keypair (Detached, Manual Nonce)</h3>
+<p><strong>Encrypt / Decrypt with Keypair (Detached, Manual Nonce)</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; nonce = stackalloc byte[CryptoBox.NonceLen];
 Span&lt;byte&gt; mac = stackalloc byte[CryptoBox.MacLen];
 Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length];
 CryptoBox.EncryptWithKeypair(ciphertext, message, recipientPublicKey, senderPrivateKey, mac, nonce);
 CryptoBox.DecryptWithKeypair(decrypted, ciphertext, senderPublicKey, recipientPublicKey, mac, nonce);
 </code></pre>
-<h3 id="-encrypt--decrypt-with-shared-key-combined-auto-nonce">📋 Encrypt / Decrypt with Shared Key (Combined, Auto Nonce)</h3>
+<p><strong>Encrypt / Decrypt with Shared Key (Combined, Auto Nonce):</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.MacLen + CryptoBox.NonceLen];
 CryptoBox.EncryptWithSharedKey(ciphertext, message, sharedKey);
 CryptoBox.DecryptWithSharedKey(decrypted, ciphertext, sharedKey);
-AssertLite.True(decrypted.SequenceEqual(message));
+Debug.Assert(decrypted.SequenceEqual(message));
 </code></pre>
-<h3 id="-encrypt--decrypt-with-shared-key-detached-manual-nonce">📋 Encrypt / Decrypt with Shared Key (Detached, Manual Nonce)</h3>
+<p><strong>Encrypt / Decrypt with Shared Key (Detached, Manual Nonce):</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; nonce = stackalloc byte[CryptoBox.NonceLen];
 Span&lt;byte&gt; mac = stackalloc byte[CryptoBox.MacLen];
 Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length];
 CryptoBox.EncryptWithSharedKey(ciphertext, message, sharedKey, mac, nonce);
 CryptoBox.DecryptWithSharedKey(decrypted, ciphertext, sharedKey, mac, nonce);
 </code></pre>
-<h3 id="-sealed-boxes--anonymous-encryption">📋 Sealed Boxes — Anonymous Encryption</h3>
-<p>Sealed boxes enable <strong>anonymous encryption</strong>: anyone can encrypt a message to a recipient’s public key without revealing their identity. Internally, a random ephemeral keypair is generated and embedded in the ciphertext.</p>
+<p><strong>Sealed Boxes — Anonymous Encryption:</strong></p>
+<p>Sealed boxes enable <strong>anonymous encryption</strong>: anyone can encrypt a message to a recipient’s public key without revealing their identity.</p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; ciphertext = stackalloc byte[message.Length + CryptoBox.SealOverheadLen];
 CryptoBox.EncryptWithPublicKey(ciphertext, message, recipientPublicKey);
 
@@ -264,18 +276,52 @@ AssertLite.True(decrypted.SequenceEqual(message));
 </tr>
 </tbody>
 </table>
-<h3 id="-generate-keypair-1">📋 Generate Keypair</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
+<h3 id="-working-with-cryptosign">📋 Working with CryptoSign</h3>
+<p><strong>Generate random key pair:</strong></p>
+<pre><code class="lang-csharp">// SecureMemory
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
+using var privateKey = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(publicKey, privateKey);
+privateKey.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
 Span&lt;byte&gt; privateKey = stackalloc byte[CryptoSign.PrivateKeyLen];
 CryptoSign.GenerateKeyPair(publicKey, privateKey);
 </code></pre>
-<h3 id="-sign-and-verify">📋 Sign and Verify</h3>
+<p><strong>Sign and Verify:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; signature = stackalloc byte[CryptoSign.SignatureLen];
 CryptoSign.Sign(message, signature, privateKey);
 
 bool ok = CryptoSign.TryVerify(message, signature, publicKey);
 CryptoSign.Verify(message, signature, publicKey); // throws LibSodiumException if the signature is invalid
 </code></pre>
+<h3 id="-convert-ed25519-to-curve25519">📋 Convert Ed25519 to Curve25519</h3>
+<p><code>CryptoSign</code> allows converting Ed25519 key pairs to Curve25519 format, suitable for encryption and key exchange.</p>
+<p>These converted keys can be used with the <code>CryptoBox</code> and <code>CryptoKeyExchange</code> APIs.</p>
+<pre><code class="lang-csharp">// SecureMemory
+Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+using var edSk = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(edPk, edSk);
+edSk.ProtectReadOnly();
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
+using var curveSk = SecureMemory&lt;byte&gt;(CryptoBox.PrivateKeyLen);
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+curveSk.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(edPk, edSk);
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
+Span&lt;byte&gt; curveSk = stackalloc byte[CryptoBox.PrivateKeyLen];
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+</code></pre>
+<p>The resulting <code>curvePk</code> and <code>curveSk</code> can be used anywhere a Curve25519 key is expected.</p>
 <hr>
 <h2 id="-cryptoscalarmult--raw-scalar-multiplication">✨ CryptoScalarMult — Raw Scalar Multiplication</h2>
 <p>The <code>CryptoScalarMult</code> API exposes the low-level scalar multiplication primitive <code>crypto_scalarmult</code>, based on Curve25519.
@@ -315,15 +361,15 @@ It forms the foundation of key exchange protocols such as <code>CryptoBox</code>
 </tbody>
 </table>
 <hr>
-<h3 id="-calculate-public-key">📋 Calculate Public Key</h3>
+<h3 id="-working-with-cryptoscalarmult">📋 Working with CryptoScalarMult</h3>
+<p><strong>Calculate Public Key:</strong></p>
 <p>Computes the public key <code>q = n·B</code> given a private scalar <code>n</code>:</p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; privateKey = stackalloc byte[CryptoScalarMult.PrivateKeyLen];
 Span&lt;byte&gt; publicKey = stackalloc byte[CryptoScalarMult.PublicKeyLen];
 RandomGenerator.Fill(privateKey);
 CryptoScalarMult.CalculatePublicKey(publicKey, privateKey);
 </code></pre>
-<hr>
-<h3 id="-compute-shared-point">📋 Compute Shared Point</h3>
+<p><strong>Compute Shared Point:</strong></p>
 <p>Performs scalar multiplication <code>q = n·P</code> with a private scalar and a peer’s public key:</p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; sharedPoint = stackalloc byte[CryptoScalarMult.SharedKeyLen];
 CryptoScalarMult.Compute(sharedPoint, myPrivateKey, peerPublicKey);

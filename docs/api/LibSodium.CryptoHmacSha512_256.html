@@ -221,9 +221,111 @@ Class CryptoHmacSha512_256  <a class="header-action link-secondary" title="View 
 
   <a id="LibSodium_CryptoHmacSha512_256_ComputeMac_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_ComputeMac_LibSodium_SecureMemory_System_Byte__System_IO_Stream_System_Span_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac(LibSodium.SecureMemory{System.Byte},System.IO.Stream,System.Span{System.Byte})">
+  ComputeMac(SecureMemory&lt;byte&gt;, Stream, Span&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes an HMAC-SHA-512/256 authentication code from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ComputeMac(SecureMemory&lt;byte&gt; key, Stream messageStream, Span&lt;byte&gt; mac)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>messageStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream containing the message.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A buffer to receive the 32-byte MAC.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the MAC computation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_ComputeMac_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac*"></a>
+
+  <h3 id="LibSodium_CryptoHmacSha512_256_ComputeMac_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})">
+  ComputeMac(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes an HMAC-SHA-512/256 authentication code for the given message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ComputeMac(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; message, Span&lt;byte&gt; mac)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The message to authenticate.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A buffer to receive the 32-byte MAC.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the MAC written (always 32).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the MAC computation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_ComputeMac_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_ComputeMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_Span_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.Span{System.Byte})">
   ComputeMac(ReadOnlySpan&lt;byte&gt;, Stream, Span&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes an HMAC-SHA-512/256 authentication code from a stream.</p>
@@ -323,9 +425,66 @@ Class CryptoHmacSha512_256  <a class="header-action link-secondary" title="View 
 
   <a id="LibSodium_CryptoHmacSha512_256_ComputeMacAsync_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMacAsync*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_ComputeMacAsync_LibSodium_SecureMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMacAsync(LibSodium.SecureMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)">
+  ComputeMacAsync(SecureMemory&lt;byte&gt;, Stream, Memory&lt;byte&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously computes an HMAC-SHA-512/256 authentication code from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ComputeMacAsync(SecureMemory&lt;byte&gt; key, Stream messageStream, Memory&lt;byte&gt; mac, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>messageStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream containing the message.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A buffer to receive the 32-byte MAC.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the MAC computation fails internally.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_ComputeMacAsync_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMacAsync*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_ComputeMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_" data-uid="LibSodium.CryptoHmacSha512_256.ComputeMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)">
   ComputeMacAsync(ReadOnlyMemory&lt;byte&gt;, Stream, Memory&lt;byte&gt;, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously computes an HMAC-SHA-512/256 authentication code from a stream.</p>
@@ -380,9 +539,52 @@ Class CryptoHmacSha512_256  <a class="header-action link-secondary" title="View 
 
   <a id="LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_" data-uid="LibSodium.CryptoHmacSha512_256.CreateIncrementalMac*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(LibSodium.SecureMemory{System.Byte})">
+  CreateIncrementalMac(SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an incremental hash object using the HMAC-SHA512/256 algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalMac(SecureMemory&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The cryptographic key (64 bytes) to use for the HMAC-SHA512/256 computation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> instance that allows incremental computation of the HMAC-SHA512/256 hash.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_LibSodium_SecureMemory_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> can be used to compute the HMAC-SHA512/256 hash
+incrementally by processing data in chunks.</p>
+</div>
+
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_" data-uid="LibSodium.CryptoHmacSha512_256.CreateIncrementalMac*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_CreateIncrementalMac_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.CreateIncrementalMac(System.ReadOnlySpan{System.Byte})">
   CreateIncrementalMac(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an incremental hash object using the HMAC-SHA512/256 algorithm.</p>
@@ -423,9 +625,42 @@ incrementally by processing data in chunks.</p>
 
   <a id="LibSodium_CryptoHmacSha512_256_GenerateKey_" data-uid="LibSodium.CryptoHmacSha512_256.GenerateKey*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_GenerateKey_LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.GenerateKey(LibSodium.SecureMemory{System.Byte})">
+  GenerateKey(SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a random 32-byte key suitable for HMAC-SHA-512/256.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKey(SecureMemory&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A buffer to receive the generated key (must be 32 bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_GenerateKey_" data-uid="LibSodium.CryptoHmacSha512_256.GenerateKey*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_GenerateKey_System_Span_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.GenerateKey(System.Span{System.Byte})">
   GenerateKey(Span&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates a random 32-byte key suitable for HMAC-SHA-512/256.</p>
@@ -456,9 +691,111 @@ incrementally by processing data in chunks.</p>
 
   <a id="LibSodium_CryptoHmacSha512_256_VerifyMac_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMac_LibSodium_SecureMemory_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac(LibSodium.SecureMemory{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})">
+  VerifyMac(SecureMemory&lt;byte&gt;, Stream, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies an HMAC-SHA-512/256 authentication code from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool VerifyMac(SecureMemory&lt;byte&gt; key, Stream messageStream, ReadOnlySpan&lt;byte&gt; mac)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>messageStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream containing the message.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The expected 32-byte MAC.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the MAC is valid; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_VerifyMac_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac*"></a>
+
+  <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMac_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  VerifyMac(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies an HMAC-SHA-512/256 authentication code against a given message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool VerifyMac(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; mac)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The message to verify.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The expected 32-byte MAC.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the MAC is valid; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_VerifyMac_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMac_System_ReadOnlySpan_System_Byte__System_IO_Stream_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})">
   VerifyMac(ReadOnlySpan&lt;byte&gt;, Stream, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Verifies an HMAC-SHA-512/256 authentication code from a stream.</p>
@@ -509,7 +846,7 @@ incrementally by processing data in chunks.</p>
 
   <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMac_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMac(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   VerifyMac(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Verifies an HMAC-SHA-512/256 authentication code against a given message.</p>
@@ -558,9 +895,63 @@ incrementally by processing data in chunks.</p>
 
   <a id="LibSodium_CryptoHmacSha512_256_VerifyMacAsync_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMacAsync*"></a>
 
+  <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMacAsync_LibSodium_SecureMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMacAsync(LibSodium.SecureMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
+  VerifyMacAsync(SecureMemory&lt;byte&gt;, Stream, ReadOnlyMemory&lt;byte&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously verifies an HMAC-SHA-512/256 authentication code from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; VerifyMacAsync(SecureMemory&lt;byte&gt; key, Stream messageStream, ReadOnlyMemory&lt;byte&gt; mac, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A 32-byte secret key.</p>
+</dd>
+    <dt><code>messageStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream containing the message.</p>
+</dd>
+    <dt><code>mac</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The expected 32-byte MAC.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><code>true</code> if the MAC is valid; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">key</code> or <code class="paramref">mac</code> has an invalid length.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoHmacSha512_256_VerifyMacAsync_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMacAsync*"></a>
+
   <h3 id="LibSodium_CryptoHmacSha512_256_VerifyMacAsync_System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_" data-uid="LibSodium.CryptoHmacSha512_256.VerifyMacAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
   VerifyMacAsync(ReadOnlyMemory&lt;byte&gt;, Stream, ReadOnlyMemory&lt;byte&gt;, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoHmacSha512_256.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously verifies an HMAC-SHA-512/256 authentication code from a stream.</p>

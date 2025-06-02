@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="-securememory">🛡️ SecureMemory</h1>
 
-<p>When working with cryptographic data, it's essential to ensure that sensitive information doesn't get leaked through memory dumps, swapping, or garbage collection. LibSodium.Net provides <code>SecureMemory</code> and <code>SecureMemory&lt;T&gt;</code> as robust tools to manage sensitive data safely in unmanaged memory.</p>
+<p>When working with cryptographic data, it's essential to ensure that sensitive information doesn't get leaked through memory dumps or swapping. LibSodium.Net provides <code>SecureMemory</code> and <code>SecureMemory&lt;T&gt;</code> as robust tools to manage sensitive data safely in unmanaged memory.</p>
 <blockquote>
 <p>🧂 Backed by libsodium's <a href="https://doc.libsodium.org/memory_management">Secure memory</a>.<br>
 ℹ️ <em>See also</em>: <a href="../api/LibSodium.SecureMemory-1.html">API Reference for <code>SecureMemory&lt;T&gt;</code></a></p>
@@ -103,40 +103,48 @@
 <li>Optional read-write toggle with <code>ProtectReadWrite()</code>.</li>
 <li>Safe access through <code>Span&lt;T&gt;</code>, <code>Memory&lt;T&gt;</code>, <code>ReadOnlySpan&lt;T&gt;</code>, and <code>ReadOnlyMemory&lt;T&gt;</code>.</li>
 </ul>
+<blockquote>
+<p>🗝️ <code>SecureMemory&lt;byte&gt;</code> is used extensively across LibSodium.Net for handling <strong>keys</strong>, <strong>seeds</strong>, and other sensitive data.
+It provides guarded unmanaged heap allocations with memory protection and automatic wiping,
+making it the recommended type for storing cryptographic secrets.</p>
+</blockquote>
 <hr>
 <h2 id="-basic-usage">📋 Basic Usage</h2>
-<pre><code class="lang-csharp">using var secure = SecureMemory.Create&lt;byte&gt;(32); // Allocate secure memory
-var span = secure.AsSpan(); // Write access
+<pre><code class="lang-csharp">// Allocate secure memory. 
+using var buffer = new SecureMemory&lt;byte&gt;(32); 
 
-RandomGenerator.Fill(span); // Fill with sensitive data
+// Contents are initialized to 0x80 (for debugging purposes).
+Debug.Assert(!buffer.IsZero());
 
-secure.ProtectReadOnly(); // Make it read-only
-var readOnly = secure.AsReadOnlySpan(); // Safe read-only view
+// Optional: explicitly zero memory.
+buffer.MemZero(); 
+
+// Fill with random data.
+RandomGenerator.Fill(buffer); 
+
+// Write access 
+var span = buffer.AsSpan(); 
+var memory = buffer.AsMemory(); 
+
+// Making it read-only prevents modifications.
+buffer.ProtectReadOnly(); 
+
+// access as read-only
+var readOnlySpan = buffer.AsReadOnlySpan(); 
+var readOnlyMemory = buffer.AsReadOnlyMemory(); 
+
+// Make it writable again.
+buffer.ProtectReadWrite(); 
+
 </code></pre>
 <hr>
 <h2 id="-safety-features">✨ Safety Features</h2>
 <ul>
+<li>Memory is initialized to 0x80 bytes.</li>
 <li>Accessing the <code>SecureMemory&lt;T&gt;</code> object after disposal throws <code>ObjectDisposedException</code>.</li>
 <li>Writing to memory after calling <code>ProtectReadOnly()</code> throws an <code>AccessViolationException</code>.</li>
-<li>Writing through a <code>Span&lt;T&gt;</code> previously obtained before calling <code>ProtectReadOnly()</code> also throws <code>AccessViolationException</code>.</li>
+<li><code>AsSpan()</code> and <code>AsMemory()</code> throw <code>InvalidOperationException</code> if the memory is protected with <code>ProtectReadOnly()</code>. Attempting to write using a previously obtained <code>Span&lt;T&gt;</code> or <code>Memory&lt;T&gt;</code> will trigger an <code>AccessViolationException</code></li>
 <li>Memory is automatically zeroed out upon disposal using <code>sodium_memzero</code>.</li>
-</ul>
-<hr>
-<h2 id="-securememoryt-utilities">✨ SecureMemory&lt;T&gt; Utilities</h2>
-<h3 id="-allocate-secure-buffers">📋 Allocate Secure Buffers</h3>
-<pre><code class="lang-csharp">using var buffer = SecureMemory.Create&lt;byte&gt;(64);
-</code></pre>
-<h3 id="-zeroing-buffers">📋 Zeroing Buffers</h3>
-<pre><code class="lang-csharp">buffer.MemZero(); // Overwrites memory with zeroes
-</code></pre>
-<h3 id="-protect-memory">📋 Protect Memory</h3>
-<pre><code class="lang-csharp">buffer.ProtectReadOnly();
-buffer.ProtectReadWrite();
-</code></pre>
-<h3 id="-read-only--read-write-access">📋 Read-Only &amp; Read-Write Access</h3>
-<ul>
-<li>Use <code>.AsSpan()</code> to get mutable access.</li>
-<li>Use <code>.AsReadOnlySpan()</code> to get immutable view.</li>
 </ul>
 <hr>
 <h2 id="-security-considerations">⚠️ Security Considerations</h2>

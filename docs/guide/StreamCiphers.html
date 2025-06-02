@@ -116,6 +116,7 @@ when integrity or authenticity matters.</p>
 <li>Key &amp; nonce length checks throw early (<code>ArgumentException</code>).</li>
 <li>Deterministic: same key + nonce ⇒ same keystream.</li>
 <li>Huge keystream period: 2^64 blocks ≈ 2^70 bytes —except for the IETF variant— <em>practically</em> limitless but <strong>not infinite</strong>.</li>
+<li>Accepts <code>SecureMemory&lt;byte&gt;</code> as key input.</li>
 </ul>
 <hr>
 <h2 id="-common-api">✨ Common API</h2>
@@ -258,11 +259,23 @@ when integrity or authenticity matters.</p>
 <hr>
 <h2 id="-usage-example">📋 Usage Example</h2>
 <p>All examples are in C# and work for all stream cipher algorithms, just change the class name.</p>
+<p>LibSodium.Net accepts <code>Span&lt;byte&gt;</code>/<code>ReadOnlySpan&lt;byte&gt;</code>, <code>byte[]</code>, or <code>SecureMemory&lt;byte&gt;</code> as key inputs for synchronous methods.
+For asynchronous methods, it accepts <code>Memory&lt;byte&gt;</code>/<code>ReadOnlyMemory&lt;byte&gt;</code>, <code>byte[]</code>, or <code>SecureMemory&lt;byte&gt;</code>.</p>
+<p>Using <code>SecureMemory&lt;byte&gt;</code> is strongly recommended, as it protects key material in unmanaged memory with automatic zeroing and access control.</p>
 <pre><code class="lang-csharp">// Async overloads accept Memory&lt;byte&gt;/ReadOnlyMemory&lt;byte&gt;, not Span&lt;byte&gt;.
 // We use byte[] because it implicitly converts to both Memory&lt;byte&gt; and Span&lt;byte&gt;.
 byte[] key = new byte[CryptoStreamXChaCha20.KeyLen];
-byte[] nonce = new byte[CryptoStreamXChaCha20.NonceLen];
 RandomGenerator.Fill(key);
+</code></pre>
+<pre><code class="lang-csharp">// SecureMemory works for both synchronous and asynchronous methods.
+using var key = new SecureMemory&lt;byte&gt;(CryptoStreamXChaCha20.KeyLen);
+RandomGenerator.Fill(key);
+key.ProtectReadOnly();
+</code></pre>
+<p>Use <code>RandomGenerator.Fill()</code> to generate a cryptographically secure random key.
+Alternatively, keys may be securely stored or derived using a key derivation function.</p>
+<pre><code class="lang-csharp">
+byte[] nonce = new byte[CryptoStreamXChaCha20.NonceLen];
 RandomGenerator.Fill(nonce);
 
 // 1. Basic usage encrypt and decrypt buffer
@@ -336,10 +349,9 @@ CryptoStreamXChaCha20.Decrypt(key, nonce, ciphertext, decrypted, initialCounter:
 <hr>
 <h2 id="-key--nonce-management-tips">🗝️ Key &amp; Nonce Management Tips</h2>
 <ul>
-<li>Generate keys with <code>RandomGenerator.Fill</code> or <code>GenerateKey</code>.</li>
 <li><strong>Never</strong> reuse a nonce with the same key—this reveals keystream and breaks confidentiality.</li>
 <li>Prefer 24‑byte variants for random nonces; use counters for 8/12‑byte variants.</li>
-<li>Rotate keys well before exceeding <strong>2^64 blocks</strong> (≈ 1 PiB) of keystream.</li>
+<li>Use <code>SecureMemory&lt;byte&gt;</code> for keys. It provides guarded heap allocations with memory protection and automatic wiping.</li>
 </ul>
 <hr>
 <h2 id="-notes">📝 Notes</h2>

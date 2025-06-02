@@ -283,9 +283,54 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LibSodium_CryptoSign_GenerateKeyPair_" data-uid="LibSodium.CryptoSign.GenerateKeyPair*"></a>
 
+  <h3 id="LibSodium_CryptoSign_GenerateKeyPair_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoSign.GenerateKeyPair(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  GenerateKeyPair(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a new Ed25519 public/private key pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKeyPair(Span&lt;byte&gt; publicKey, SecureMemory&lt;byte&gt; privateKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span where the generated public key will be stored (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_PublicKeyLen">PublicKeyLen</a> bytes).</p>
+</dd>
+    <dt><code>privateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span where the generated private key will be stored (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyLen">PrivateKeyLen</a> bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the buffer sizes are incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if key pair generation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSign_GenerateKeyPair_" data-uid="LibSodium.CryptoSign.GenerateKeyPair*"></a>
+
   <h3 id="LibSodium_CryptoSign_GenerateKeyPair_System_Span_System_Byte__System_Span_System_Byte__" data-uid="LibSodium.CryptoSign.GenerateKeyPair(System.Span{System.Byte},System.Span{System.Byte})">
   GenerateKeyPair(Span&lt;byte&gt;, Span&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates a new Ed25519 public/private key pair.</p>
@@ -328,9 +373,57 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LibSodium_CryptoSign_GenerateKeyPairDeterministically_" data-uid="LibSodium.CryptoSign.GenerateKeyPairDeterministically*"></a>
 
+  <h3 id="LibSodium_CryptoSign_GenerateKeyPairDeterministically_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoSign.GenerateKeyPairDeterministically(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  GenerateKeyPairDeterministically(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a Ed25519 public/private key pair from a seed deterministically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKeyPairDeterministically(Span&lt;byte&gt; publicKey, SecureMemory&lt;byte&gt; secretKey, SecureMemory&lt;byte&gt; seed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publicKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span where the generated public key will be stored (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_PublicKeyLen">PublicKeyLen</a> bytes).</p>
+</dd>
+    <dt><code>secretKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span where the generated private key will be stored (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyLen">PrivateKeyLen</a> bytes).</p>
+</dd>
+    <dt><code>seed</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A seed used for key generation (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_SeedLen">SeedLen</a> bytes).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the buffer sizes are incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if key pair generation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSign_GenerateKeyPairDeterministically_" data-uid="LibSodium.CryptoSign.GenerateKeyPairDeterministically*"></a>
+
   <h3 id="LibSodium_CryptoSign_GenerateKeyPairDeterministically_System_Span_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.GenerateKeyPairDeterministically(System.Span{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   GenerateKeyPairDeterministically(Span&lt;byte&gt;, Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates a Ed25519 public/private key pair from a seed deterministically.</p>
@@ -376,9 +469,57 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LibSodium_CryptoSign_PrivateKeyToCurve_" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve*"></a>
 
+  <h3 id="LibSodium_CryptoSign_PrivateKeyToCurve_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  PrivateKeyToCurve(SecureMemory&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an Ed25519 private key (64 bytes) to a Curve25519 private key (32 bytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PrivateKeyToCurve(SecureMemory&lt;byte&gt; curvePrivateKey, SecureMemory&lt;byte&gt; edPrivateKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>curvePrivateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer where the resulting Curve25519 private key will be written. Must be 32 bytes.</p>
+</dd>
+    <dt><code>edPrivateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The source Ed25519 private key. Must be 64 bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoSign_PrivateKeyToCurve_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The resulting Curve25519 private key can be used with <a class="xref" href="LibSodium.CryptoBox.html">CryptoBox</a> and <a class="xref" href="LibSodium.CryptoKeyExchange.html">CryptoKeyExchange</a> APIs.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if buffer sizes are incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the conversion fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSign_PrivateKeyToCurve_" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve*"></a>
+
   <h3 id="LibSodium_CryptoSign_PrivateKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.PrivateKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   PrivateKeyToCurve(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an Ed25519 private key (64 bytes) to a Curve25519 private key (32 bytes).</p>
@@ -426,7 +567,7 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LibSodium_CryptoSign_PublicKeyToCurve_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.PublicKeyToCurve(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   PublicKeyToCurve(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an Ed25519 public key (32 bytes) to a Curve25519 public key (32 bytes).</p>
@@ -472,9 +613,63 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LibSodium_CryptoSign_Sign_" data-uid="LibSodium.CryptoSign.Sign*"></a>
 
+  <h3 id="LibSodium_CryptoSign_Sign_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoSign.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  Sign(ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a signature for the given message using the provided private key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Span&lt;byte&gt; Sign(ReadOnlySpan&lt;byte&gt; message, Span&lt;byte&gt; signature, SecureMemory&lt;byte&gt; privateKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The message to be signed.</p>
+</dd>
+    <dt><code>signature</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A span to store the signature (must be at least <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_SignatureLen">SignatureLen</a> bytes).</p>
+</dd>
+    <dt><code>privateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The private key to sign with (must be <a class="xref" href="LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyLen">PrivateKeyLen</a> bytes).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>A slice of the signature span containing the actual signature.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the signature or private key length is incorrect.</p>
+</dd>
+    <dt><a class="xref" href="LibSodium.LibSodiumException.html">LibSodiumException</a></dt>
+    <dd><p>Thrown if the signing operation fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoSign_Sign_" data-uid="LibSodium.CryptoSign.Sign*"></a>
+
   <h3 id="LibSodium_CryptoSign_Sign_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.Sign(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   Sign(ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a signature for the given message using the provided private key.</p>
@@ -528,7 +723,7 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LibSodium_CryptoSign_TryVerify_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.TryVerify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   TryVerify(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Verifies a signature against a given message and public key.</p>
@@ -579,7 +774,7 @@ Class CryptoSign  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LibSodium_CryptoSign_Verify_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoSign.Verify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   Verify(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoSign.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Verifies a signature against a given message and public key.

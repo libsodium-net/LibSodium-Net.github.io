@@ -107,6 +107,7 @@
 <li><strong>Separate TX/RX keys</strong> – enforces directionality and prevents nonce reuse.</li>
 <li><strong>AOT &amp; Unity friendly</strong> – works seamlessly in Ahead‑of‑Time compiled environments.</li>
 <li><strong>Defensive size checks</strong> – throws early on invalid input lengths.</li>
+<li><strong>Accepts <code>SecureMemory&lt;byte&gt;</code> as private key input</strong>. It provides guarded heap allocations with memory protection and automatic wiping.</li>
 </ul>
 <h2 id="-typical-scenarios">✨ Typical Scenarios</h2>
 <table>
@@ -140,38 +141,38 @@
 </blockquote>
 <h2 id="-api-overview">✨ API Overview</h2>
 <h3 id="-constants">📏 Constants</h3>
+<p>All lengths are in bytes. These constants are exposed by <code>CryptoKeyExchange</code> for zero-cost validation.</p>
 <table>
 <thead>
 <tr>
-<th>Constant</th>
-<th>Size (bytes)</th>
-<th>Purpose</th>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>PublicKeyLen</code></td>
 <td>32</td>
-<td>Curve25519 public key.</td>
+<td>Curve25519 public key</td>
 </tr>
 <tr>
 <td><code>SecretKeyLen</code></td>
 <td>32</td>
-<td>Private key.</td>
+<td>Curve25519 secret (private) key</td>
 </tr>
 <tr>
 <td><code>SeedLen</code></td>
 <td>32</td>
-<td>Deterministic key‑pair seed.</td>
+<td>Length of deterministic seed</td>
 </tr>
 <tr>
 <td><code>SessionKeyLen</code></td>
 <td>32</td>
-<td>TX or RX session key.</td>
+<td>Length of derived session keys</td>
 </tr>
 </tbody>
 </table>
-<p>All constants are surfaced on <strong><code>CryptoKeyExchange</code></strong> for zero‑cost access.</p>
 <h3 id="-core-methods">📋 Core Methods</h3>
 <table>
 <thead>
@@ -199,10 +200,44 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>ℹ️ <strong>Naming convention:</strong> <em>Client TX = data you SEND</em>, <em>Client RX = data you RECEIVE</em>.</p>
-</blockquote>
 <h2 id="-usage-example">📋 Usage Example</h2>
+<blockquote>
+<p>📝 Naming convention in arguments: <code>tx</code> = key to transmit (send), <code>rx</code> = key to receive.</p>
+</blockquote>
+<p><strong>Using SecureMemory for private and session keys:</strong></p>
+<pre><code class="lang-csharp">// Key generation (once)
+Span&lt;byte&gt; clientPublicKey = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+using var clientSecretKey  = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SecretKeyLen);
+CryptoKeyExchange.GenerateKeyPair(clientPublicKey, clientSecretKey);
+clientSecretKey.ProtectReadOnly();
+
+Span&lt;byte&gt; serverPublicKey = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+using var serverSecretKey  = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SecretKeyLen);
+CryptoKeyExchange.GenerateKeyPair(serverPublicKey, serverSecretKey);
+serverSecretKey.ProtectReadOnly();
+
+// Derive session keys (per connection)
+using var clientReceiveKey = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SessionKeyLen);
+using var clientSendKey    = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SessionKeyLen);
+CryptoKeyExchange.DeriveClientSessionKeys(clientReceiveKey, clientSendKey, clientPublicKey, clientSecretKey, serverPublicKey);
+clientReceiveKey.ProtectReadOnly();
+clientSendKey.ProtectReadOnly();
+
+using var serverReceiveKey = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SessionKeyLen);
+using var serverSendKey    = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SessionKeyLen);
+CryptoKeyExchange.DeriveServerSessionKeys(serverReceiveKey, serverSendKey, serverPublicKey, serverSecretKey, clientPublicKey);
+serverReceiveKey.ProtectReadOnly();
+serverSendKey.ProtectReadOnly();
+
+// Verify keys match
+Debug.Assert(clientSendKey.SequenceEqual(serverReceiveKey)); // Upstream traffic
+Debug.Assert(clientReceiveKey.SequenceEqual(serverSendKey)); // Downstream traffic
+
+// Use with SecretBox
+var ciphertext = SecretBox.Encrypt(message, nonce, clientSendKey);
+var plaintext  = SecretBox.Decrypt(ciphertext, nonce, serverReceiveKey);
+</code></pre>
+<p><strong>Using Span for private and session keys:</strong></p>
 <pre><code class="lang-csharp">// Key generation (once)
 Span&lt;byte&gt; clientPublicKey = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
 Span&lt;byte&gt; clientSecretKey = stackalloc byte[CryptoKeyExchange.SecretKeyLen];
@@ -231,6 +266,22 @@ var plaintext  = SecretBox.Decrypt(ciphertext, nonce, serverReceiveKey);
 </code></pre>
 <h2 id="-using-ed25519-keys-with-cryptokeyexchange">📋 Using Ed25519 Keys with CryptoKeyExchange</h2>
 <p>If you already have an Ed25519 key pair (typically used for digital signatures), you can convert it to Curve25519 format and use it directly with <code>CryptoKeyExchange</code>.</p>
+<blockquote>
+<p>📝 Ed25519 to Curve25519 conversion is one-way: you can derive a Curve25519 key pair from an Ed25519 pair, but not vice versa.</p>
+</blockquote>
+<p><strong>Using SecureMemory for private keys:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+using var edSk = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(edPk, edSk);
+edSk.ProtectReadOnly();
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoKeyExchange.PublicKeyLen];
+using var curveSk = new SecureMemory&lt;byte&gt;(CryptoKeyExchange.SecretKeyLen);
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+curveSk.ProtectReadOnly();
+</code></pre>
+<p><strong>Using Span for private keys:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
 Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
 CryptoSign.GenerateKeyPair(edPk, edSk);
@@ -245,7 +296,7 @@ CryptoSign.PrivateKeyToCurve(curveSk, edSk);
 <ul>
 <li><strong>Size checks</strong> – All spans <strong>must</strong> match the declared constants. Otherwise <code>ArgumentException</code> or <code>ArgumentOutOfRangeException</code> is thrown.</li>
 <li><strong>Return codes</strong> – Non‑zero return from native libsodium maps to <code>LibSodiumException</code>.</li>
-<li><strong>Dispose secrets carefully</strong> – Zero out secret keys (<code>SecretKeyLen</code>) after use; consider <code>fixed</code> + <code>CryptographicOperations.ZeroMemory</code>.</li>
+<li><strong>Dispose secrets carefully</strong> – Zero out secret keys (<code>SecretKeyLen</code>) after use. <code>SecureMemory&lt;T&gt;</code> is automatically zeroed when disposed.</li>
 </ul>
 <h2 id="-security-notes">📝 Security Notes</h2>
 <ul>
@@ -253,11 +304,14 @@ CryptoSign.PrivateKeyToCurve(curveSk, edSk);
 <li>Re‑key often if you require PFS. The operation is cheap.</li>
 <li>Combine with <strong>SecretStream.Encrypt</strong> / <strong>Decrypt</strong> (or their <code>Async</code> variants) for long‑lived encrypted pipes.</li>
 <li>Do <strong>not</strong> share the same session key across protocols; derive one per purpose using an HKDF if needed.</li>
+<li>Using <code>SecureMemory&lt;byte&gt;</code> for private and session keys is strongly recommended, as it protects key material in unmanaged memory with automatic zeroing and access control.</li>
 </ul>
 <h2 id="-see-also">👀 See Also</h2>
 <ul>
 <li>🧂 <a href="https://doc.libsodium.org/key_exchange">libsodium Key Exchange</a></li>
-<li>ℹ️ <a href="../api/LibSodium.CryptoKeyExchange.html">API Reference for <code>CryptoKeyExchange</code></a></li>
+<li>🧂 <a href="https://doc.libsodium.org/advanced/ed25519-curve25519">libsodium Ed25519 ↔ Curve25519</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoKeyExchange.html">API Reference: CryptoKeyExchange</a></li>
+<li>ℹ️ <a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></li>
 </ul>
 
 </article>

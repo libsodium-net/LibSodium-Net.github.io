@@ -96,7 +96,7 @@
 <p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/key_derivation">Key derivation</a><br>
 🧂 Based on libsodium's <a href="https://doc.libsodium.org/key_derivation/hkdf">HKDF</a><br>
 ℹ️ <em>See also</em>: <a href="../api/LibSodium.CryptoKeyDerivation.html">API Reference for <code>CryptoKeyDerivation</code></a><br>
-ℹ️ <em>See also</em>: <a href="../api/LibSodium.HKDF.html">API Reference for <code>HKDF</code></a></p>
+ℹ️ <em>See also</em>: <a href="../api/LibSodium.HKDF.yml">API Reference for <code>HKDF</code></a></p>
 </blockquote>
 <p>This guide compares both options, shows how to choose between them, and offers practical usage advice.</p>
 <hr>
@@ -262,11 +262,33 @@
 </tbody>
 </table>
 <h3 id="-generate-a-master-key">📋 Generate a master key</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; masterKey = stackalloc byte[CryptoKeyDerivation.MasterKeyLen];
+<p>You can use  <code>CryptoKeyDerivation.GenerateMasterKey</code> to generate a cryptographically secure random master key. Alternatively, the key may be securely stored or derived.</p>
+<p>Master key can be <code>SecureMemory&lt;byte&gt;</code>, <code>Span&lt;byte&gt;</code>, or <code>byte[]</code> (implicitly convertible to <code>Span&lt;byte&gt;</code>)</p>
+<pre><code class="lang-csharp">// SecureMemory masterKey
+using var masterKey = new SecureMemory&lt;byte&gt;(CryptoKeyDerivation.MasterKeyLen);
+CryptoKeyDerivation.GenerateMasterKey(masterKey);
+</code></pre>
+<pre><code class="lang-csharp">// Span masterKey
+Span&lt;byte&gt; masterKey = stackalloc byte[CryptoKeyDerivation.MasterKeyLen];
+CryptoKeyDerivation.GenerateMasterKey(masterKey);
+</code></pre>
+<pre><code class="lang-csharp">// byte[] masterKey
+var masterKey = new byte[CryptoKeyDerivation.MasterKeyLen];
 CryptoKeyDerivation.GenerateMasterKey(masterKey);
 </code></pre>
 <h3 id="-derive-a-subkey">📋 Derive a subkey</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; subkey = stackalloc byte[32];
+<p>You derive a subkey from a master key, a subkey id and a context using <code>DeriveSubKey()</code> method.
+Subkeys can be <code>SecureMemory&lt;byte&gt;</code>, <code>Span&lt;byte&gt;</code>, or <code>byte[]</code> (implicitly convertible to <code>Span&lt;byte&gt;</code>)</p>
+<pre><code class="lang-csharp">// SecureMemory subkey
+using var subkey = new SecureMemory&lt;byte&gt;(32);
+CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
+</code></pre>
+<pre><code class="lang-csharp">// Span subkey
+Span&lt;byte&gt; subkey = stackalloc byte[32];
+CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
+</code></pre>
+<pre><code class="lang-csharp">// byte[] subkey
+using var subkey = new byte[32];
 CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
 </code></pre>
 <p>📝 Context must be exactly 8 bytes. Strings shorter than 8 are zero-padded.</p>
@@ -274,6 +296,8 @@ CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
 <h2 id="-hkdf">✨ <code>HKDF</code></h2>
 <p><code>HKDF</code> implements RFC 5869 using HMAC-SHA-256 or HMAC-SHA-512. It is compatible with <code>System.Security.Cryptography.HKDF.DeriveKey</code> and produces identical outputs when the inputs match.</p>
 <p>📝 LibSodium.Net's <code>HKDF</code> is fully interoperable with <code>System.Security.Cryptography.HKDF</code> from .NET — both produce identical outputs when using the same inputs and hash algorithm.</p>
+<p>Key, IKM (Initial Key Material), PRK (Pseudo-Random Key), and OKM (Output Key Material) can be provided as <code>SecureMemory&lt;byte&gt;</code>, <code>Span&lt;byte&gt;</code> / <code>ReadOnlySpan&lt;byte&gt;</code>, or <code>byte[]</code> (implicitly convertible to <code>Span&lt;byte&gt;</code>) for synchronous methods.
+For asynchronous streaming methods, use <code>SecureMemory&lt;byte&gt;</code>, <code>Memory&lt;byte&gt;</code> / <code>ReadOnlyMemory&lt;byte&gt;</code>, or <code>byte[]</code> (implicitly convertible to <code>Memory&lt;byte&gt;</code> / <code>ReadOnlyMemory&lt;byte&gt;</code>).</p>
 <h3 id="-constants-1">📏 Constants</h3>
 <table>
 <thead>
@@ -307,9 +331,9 @@ CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
 </table>
 <h3 id="-hkdf-phases">🪄 HKDF Phases</h3>
 <ul>
-<li><code>Extract</code>: converts input keying material (IKM) and salt into a pseudorandom key (PRK).</li>
-<li><code>Expand</code>: derives the final output key material (OKM) from the PRK and optional <code>info</code>.</li>
-<li><code>DeriveKey</code>: performs both steps in one call.</li>
+<li><code>Extract</code>: Converts input keying material (IKM) and salt into a pseudorandom key (PRK).</li>
+<li><code>Expand</code>: Derives the final output key material (OKM) from the PRK and optional <code>info</code>.</li>
+<li><code>DeriveKey</code>: Performs both steps in one call.</li>
 </ul>
 <h4 id="when-to-use-which">When to use which:</h4>
 <ul>
@@ -318,7 +342,12 @@ CryptoKeyDerivation.DeriveSubkey(subkey, 42, &quot;MYCTX&quot;, masterKey);
 <li>Use <code>Expand</code> when you already have a good master key.</li>
 </ul>
 <h3 id="-derive-a-key-in-one-step">📋 Derive a key in one step</h3>
-<pre><code class="lang-csharp">Span&lt;byte&gt; key = stackalloc byte[64];
+<pre><code class="lang-csharp">// Span key
+Span&lt;byte&gt; key = stackalloc byte[64];
+HKDF.DeriveKey(HashAlgorithmName.SHA512, ikm, key, salt, info);
+</code></pre>
+<pre><code class="lang-csharp">// SecureMemory key
+using var key = new SecureMemory&lt;byte&gt;(64);
 HKDF.DeriveKey(HashAlgorithmName.SHA512, ikm, key, salt, info);
 </code></pre>
 <h3 id="-separate-extract-and-expand">📋 Separate extract and expand</h3>
@@ -329,7 +358,7 @@ Span&lt;byte&gt; okm = stackalloc byte[64];
 HKDF.Expand(HashAlgorithmName.SHA512, prk, okm, info);
 </code></pre>
 <h3 id="-extract-from-stream-incremental-entropy">📋 Extract from stream (incremental entropy)</h3>
-<p>This allows deriving a PRK from streamed IKM's.</p>
+<p>This allows deriving a PRK from streamed IKM.</p>
 <pre><code class="lang-csharp">using var stream = File.OpenRead(&quot;large-secret.bin&quot;);
 var prk = new byte[HKDF.Sha512PrkLen];
 await HKDF.ExtractAsync(HashAlgorithmName.SHA512, stream, salt, prk);
@@ -349,6 +378,7 @@ await HKDF.ExtractAsync(HashAlgorithmName.SHA512, stream, salt, prk);
 <li>Use <code>Extract</code>/<code>Expand</code> for advanced scenarios: PRK reuse, incremental entropy, or interoperability layers.</li>
 <li>Only <code>HKDF</code> supports streaming input for IKM.</li>
 <li><code>CryptoKeyDerivation</code> is deterministic and optimized for fast sequential subkey derivation.</li>
+<li>Using <code>SecureMemory&lt;byte&gt;</code> for keys and ikm's is strongly recommended, as it protects key material in unmanaged memory with automatic zeroing and access control.</li>
 </ul>
 <hr>
 <h2 id="-see-also">👀 See Also</h2>
@@ -356,7 +386,7 @@ await HKDF.ExtractAsync(HashAlgorithmName.SHA512, stream, salt, prk);
 <li><a href="https://doc.libsodium.org/key_derivation">libsodium key derivation</a></li>
 <li><a href="https://datatracker.ietf.org/doc/html/rfc5869">RFC 5869</a></li>
 <li><a href="../api/LibSodium.CryptoKeyDerivation.html">API Reference: CryptoKeyDerivation</a></li>
-<li><a href="../api/LibSodium.HKDF.html">API Reference: HKDF</a></li>
+<li><a href="../api/LibSodium.HKDF.yml">API Reference: HKDF</a></li>
 </ul>
 
 </article>

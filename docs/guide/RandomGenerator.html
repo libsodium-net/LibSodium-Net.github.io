@@ -102,28 +102,46 @@
 <li>Stir or close the RNG engine as needed.</li>
 </ul>
 <hr>
-<h2 id="-getting-random-values">✨ Getting Random Values</h2>
-<h3 id="-get-a-random-32-bit-unsigned-integer">📋 Get a random 32-bit unsigned integer</h3>
+<h2 id="-getting-random-values">📋 Getting Random Values</h2>
+<p> <strong>Get a random 32-bit unsigned integer:</strong> returns a cryptographically secure, uniformly distributed value.</p>
 <pre><code class="lang-csharp">uint value = RandomGenerator.GetUInt32();
 </code></pre>
-<p>Returns a cryptographically secure, uniformly distributed value.</p>
-<h3 id="-get-a-random-value-less-than-an-upper-bound">📋 Get a random value less than an upper bound</h3>
+<p>  <strong>Get a random value less than an upper bound</strong>: Returns a value in the range <code>[0, upperBound)</code>.</p>
 <pre><code class="lang-csharp">uint lessThan100 = RandomGenerator.GetUInt32(100);
 </code></pre>
-<p>Returns a value in the range <code>[0, upperBound)</code>.
-Uses a rejection sampling method to ensure uniform distribution.</p>
 <hr>
-<h2 id="-filling-buffers">✨ Filling Buffers</h2>
-<h3 id="-fill-a-buffer-with-random-bytes">📋 Fill a buffer with random bytes</h3>
+<h2 id="-filling-buffers">📋 Filling Buffers</h2>
+<blockquote>
+<p>🔐 <em>When dealing with sensitive data (e.g., seeds, key material), prefer using <code>SecureMemory&lt;byte&gt;</code> for guarded heap allocations and automatic zeroing.</em></p>
+</blockquote>
+<p>  <strong>Fill a buffer with unpredictable cryptographic random bytes:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; buffer = stackalloc byte[32];
 RandomGenerator.Fill(buffer);
 </code></pre>
-<p>This fills the buffer with unpredictable cryptographic random bytes.</p>
-<h3 id="-fill-a-buffer-with-deterministic-random-bytes">📋 Fill a buffer with deterministic random bytes</h3>
+<pre><code class="lang-csharp">var buffer = new byte[32];
+RandomGenerator.Fill(buffer);
+</code></pre>
+<p>  **</p>
+<pre><code class="lang-csharp">using var buffer = SecureMemory.Create&lt;byte&gt;(32);
+RandomGenerator.Fill(buffer);
+</code></pre>
+<p>  <strong>Fill a buffer with deterministic random bytes:</strong></p>
 <pre><code class="lang-csharp">Span&lt;byte&gt; seed = stackalloc byte[RandomGenerator.SeedLen];
 RandomGenerator.Fill(seed); // Generate a secure seed
 
 Span&lt;byte&gt; buffer = stackalloc byte[32];
+RandomGenerator.FillDeterministic(buffer, seed);
+</code></pre>
+<pre><code class="lang-csharp">var seed = new byte[RandomGenerator.SeedLen];
+RandomGenerator.Fill(seed); // Generate a secure seed
+
+var buffer = new byte[32];
+RandomGenerator.FillDeterministic(buffer, seed);
+</code></pre>
+<pre><code class="lang-csharp">using var seed = SecureMemory.Create&lt;byte&gt;(RandomGenerator.SeedLen);
+RandomGenerator.Fill(seed); // Generate a secure seed
+
+using var buffer = SecureMemory.Create&lt;byte&gt;(32);
 RandomGenerator.FillDeterministic(buffer, seed);
 </code></pre>
 <p>The same seed and length will always produce the same output.</p>
@@ -131,12 +149,12 @@ RandomGenerator.FillDeterministic(buffer, seed);
 <p>⚠️ Seed must be exactly <code>RandomGenerator.SeedLen</code> bytes long. Otherwise, <code>ArgumentException</code> is thrown.</p>
 </blockquote>
 <hr>
-<h2 id="-stirring-and-closing-the-rng">✨ Stirring and Closing the RNG</h2>
-<h3 id="-stir-the-rng">📋 Stir the RNG</h3>
+<h2 id="-stirring-and-closing">📋 Stirring and Closing</h2>
+<p>  <strong>Stir the RNG:</strong></p>
 <pre><code class="lang-csharp">RandomGenerator.Stir();
 </code></pre>
 <p>This reseeds the RNG, recommended after forking a process or when explicitly needed.</p>
-<h3 id="-close-the-rng">📋 Close the RNG</h3>
+<p>  <strong>Close the RNG:</strong></p>
 <pre><code class="lang-csharp">RandomGenerator.Close();
 </code></pre>
 <p>Closes the randombytes subsystem. This may be needed in long-running processes or to release resources. Calling it more than once will throw <code>LibSodiumException</code>.</p>

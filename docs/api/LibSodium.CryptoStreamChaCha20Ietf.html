@@ -89,7 +89,7 @@
 
 
   <h1 id="LibSodium_CryptoStreamChaCha20Ietf" data-uid="LibSodium.CryptoStreamChaCha20Ietf" class="text-break">
-Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L442"><i class="bi bi-code-slash"></i></a>
+Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L838"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,7 +156,7 @@ Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="V
 
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_BlockLen" data-uid="LibSodium.CryptoStreamChaCha20Ietf.BlockLen">
   BlockLen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L847"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Block size of the keystream in bytes (64).</p>
@@ -187,7 +187,7 @@ Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="V
 
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_KeyLen" data-uid="LibSodium.CryptoStreamChaCha20Ietf.KeyLen">
   KeyLen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Length of the secret key in bytes (32).</p>
@@ -218,7 +218,7 @@ Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="V
 
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_NonceLen" data-uid="LibSodium.CryptoStreamChaCha20Ietf.NonceLen">
   NonceLen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L844"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Length of the nonce in bytes (12).</p>
@@ -252,9 +252,113 @@ Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="V
 
   <a id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt*"></a>
 
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)">
+  Decrypt(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Stream, Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L968"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Decrypt(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; nonce, Stream input, Stream output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes long.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce used during encryption. Must be exactly <code>12</code> bytes long.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream containing ciphertext to decrypt.</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream to receive the decrypted data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if key or nonce are invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt*"></a>
+
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)">
+  Decrypt(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L922"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypts the given ciphertext using the <code>ChaCha20Ietf</code> stream cipher, with the provided key and nonce.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Decrypt(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; nonce, ReadOnlySpan&lt;byte&gt; ciphertext, Span&lt;byte&gt; plaintext, ulong initialCounter = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes long.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce used during encryption. Must be exactly <code>12</code> bytes long.</p>
+</dd>
+    <dt><code>ciphertext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The ciphertext to decrypt (produced by XOR with keystream).</p>
+</dd>
+    <dt><code>plaintext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The output buffer to receive the decrypted plaintext. Must be at least as long as <code class="paramref">ciphertext</code>.</p>
+</dd>
+    <dt><code>initialCounter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The starting block index for the keystream (each block is 64 bytes).
+Use this to skip blocks, resume encryption, or decrypt from a specific offset.
+Defaults to 0.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Decryption is symmetric: it re-generates the same keystream and XORs it with the ciphertext.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any input length is invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt*"></a>
+
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)">
   Decrypt(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Stream, Stream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Decrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
@@ -302,7 +406,7 @@ Class CryptoStreamChaCha20Ietf  <a class="header-action link-secondary" title="V
 
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Decrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Decrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)">
   Decrypt(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Decrypts the given ciphertext using the <code>ChaCha20Ietf</code> stream cipher, with the provided key and nonce.</p>
@@ -356,9 +460,60 @@ Defaults to 0.</p>
 
   <a id="LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync*"></a>
 
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_LibSodium_SecureMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(LibSodium.SecureMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)">
+  DecryptAsync(SecureMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, Stream, Stream, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L1017"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously decrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task DecryptAsync(SecureMemory&lt;byte&gt; key, ReadOnlyMemory&lt;byte&gt; nonce, Stream input, Stream output, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce used during encryption. Must be <code>12</code> bytes.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The readable stream with ciphertext.</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The writable stream to receive decrypted data.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Optional token to cancel the async operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync*"></a>
+
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_DecryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.DecryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)">
   DecryptAsync(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, Stream, Stream, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L1005"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously decrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
@@ -407,9 +562,113 @@ Defaults to 0.</p>
 
   <a id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt*"></a>
 
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)">
+  Encrypt(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Stream, Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L946"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Encrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Encrypt(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; nonce, Stream input, Stream output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes long.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce. Must be exactly <code>12</code> bytes long.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream containing plaintext data to encrypt.</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream to receive the encrypted data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if key or nonce are invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt*"></a>
+
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)">
+  Encrypt(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L884"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Encrypts the given plaintext using the <code>ChaCha20Ietf</code> stream cipher, with the provided key and nonce.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Encrypt(SecureMemory&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; nonce, ReadOnlySpan&lt;byte&gt; plaintext, Span&lt;byte&gt; ciphertext, ulong initialCounter = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes long.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce. Must be exactly <code>12</code> bytes long. Must never be reused with the same key.</p>
+</dd>
+    <dt><code>plaintext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The plaintext data to encrypt.</p>
+</dd>
+    <dt><code>ciphertext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The output buffer to receive the encrypted data. Must be at least as long as <code class="paramref">plaintext</code>.</p>
+</dd>
+    <dt><code>initialCounter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The starting block index for the keystream (each block is 64 bytes).
+Use this to skip blocks, resume encryption, or decrypt from a specific offset.
+Defaults to 0.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method XORs the plaintext with a keystream derived from the key and nonce.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if any input length is invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt*"></a>
+
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_IO_Stream_System_IO_Stream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.IO.Stream,System.IO.Stream)">
   Encrypt(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Stream, Stream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L934"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Encrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
@@ -457,7 +716,7 @@ Defaults to 0.</p>
 
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_Encrypt_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.Encrypt(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64)">
   Encrypt(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L865"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Encrypts the given plaintext using the <code>ChaCha20Ietf</code> stream cipher, with the provided key and nonce.</p>
@@ -511,9 +770,60 @@ Defaults to 0.</p>
 
   <a id="LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync*"></a>
 
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_LibSodium_SecureMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(LibSodium.SecureMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)">
+  EncryptAsync(SecureMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, Stream, Stream, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L992"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously encrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task EncryptAsync(SecureMemory&lt;byte&gt; key, ReadOnlyMemory&lt;byte&gt; nonce, Stream input, Stream output, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The secret key. Must be exactly <code>32</code> bytes.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce. Must be exactly <code>12</code> bytes.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The readable stream with plaintext data.</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The writable stream to receive ciphertext.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Optional token to cancel the async operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync*"></a>
+
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_EncryptAsync_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_IO_Stream_System_IO_Stream_System_Threading_CancellationToken_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.EncryptAsync(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)">
   EncryptAsync(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, Stream, Stream, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L980"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously encrypts a stream using the <code>ChaCha20Ietf</code> stream cipher.</p>
@@ -562,9 +872,54 @@ Defaults to 0.</p>
 
   <a id="LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream*"></a>
 
+  <h3 id="LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.SecureMemory{System.Byte})">
+  GenerateKeystream(SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SecureMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L1038"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a keystream of the specified length using the <code>ChaCha20Ietf</code> stream cipher.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GenerateKeystream(SecureMemory&lt;byte&gt; output, ReadOnlySpan&lt;byte&gt; nonce, SecureMemory&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>output</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The buffer to receive the generated keystream.</p>
+</dd>
+    <dt><code>nonce</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The nonce. Must be exactly <code>12</code> bytes.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The key. Must be exactly <code>32</code> bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">output</code> is empty or lengths are invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_" data-uid="LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream*"></a>
+
   <h3 id="LibSodium_CryptoStreamChaCha20Ietf_GenerateKeystream_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoStreamChaCha20Ietf.GenerateKeystream(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   GenerateKeystream(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/StreamCiphers.cs/#L1028"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates a keystream of the specified length using the <code>ChaCha20Ietf</code> stream cipher.</p>
