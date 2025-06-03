@@ -1182,6 +1182,79 @@ references:
   commentId: F:LibSodium.CryptoGenericHash.MinKeyLen
   fullName: LibSodium.CryptoGenericHash.MinKeyLen
   nameWithType: CryptoGenericHash.MinKeyLen
+- uid: LibSodium.CryptoHChaCha20
+  name: CryptoHChaCha20
+  href: api/LibSodium.CryptoHChaCha20.html
+  commentId: T:LibSodium.CryptoHChaCha20
+  fullName: LibSodium.CryptoHChaCha20
+  nameWithType: CryptoHChaCha20
+- uid: LibSodium.CryptoHChaCha20.ContextLen
+  name: ContextLen
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_ContextLen
+  commentId: F:LibSodium.CryptoHChaCha20.ContextLen
+  fullName: LibSodium.CryptoHChaCha20.ContextLen
+  nameWithType: CryptoHChaCha20.ContextLen
+- uid: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_DeriveSubkey_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHChaCha20.DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHChaCha20.DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.String)
+  name: DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>, string)
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_DeriveSubkey_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_String_
+  commentId: M:LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},System.String)
+  name.vb: DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte), String)
+  fullName: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, System.ReadOnlySpan<byte>, string)
+  fullName.vb: LibSodium.CryptoHChaCha20.DeriveSubkey(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), System.ReadOnlySpan(Of Byte), String)
+  nameWithType: CryptoHChaCha20.DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>, string)
+  nameWithType.vb: CryptoHChaCha20.DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte), String)
+- uid: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_DeriveSubkey_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoHChaCha20.DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoHChaCha20.DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.String)
+  name: DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, string)
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_DeriveSubkey_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_String_
+  commentId: M:LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.String)
+  name.vb: DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), String)
+  fullName: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan<byte>, System.Span<byte>, System.ReadOnlySpan<byte>, string)
+  fullName.vb: LibSodium.CryptoHChaCha20.DeriveSubkey(System.ReadOnlySpan(Of Byte), System.Span(Of Byte), System.ReadOnlySpan(Of Byte), String)
+  nameWithType: CryptoHChaCha20.DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ReadOnlySpan<byte>, string)
+  nameWithType.vb: CryptoHChaCha20.DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ReadOnlySpan(Of Byte), String)
+- uid: LibSodium.CryptoHChaCha20.DeriveSubkey*
+  name: DeriveSubkey
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_DeriveSubkey_
+  commentId: Overload:LibSodium.CryptoHChaCha20.DeriveSubkey
+  isSpec: "True"
+  fullName: LibSodium.CryptoHChaCha20.DeriveSubkey
+  nameWithType: CryptoHChaCha20.DeriveSubkey
+- uid: LibSodium.CryptoHChaCha20.InputLen
+  name: InputLen
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_InputLen
+  commentId: F:LibSodium.CryptoHChaCha20.InputLen
+  fullName: LibSodium.CryptoHChaCha20.InputLen
+  nameWithType: CryptoHChaCha20.InputLen
+- uid: LibSodium.CryptoHChaCha20.KeyLen
+  name: KeyLen
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_KeyLen
+  commentId: F:LibSodium.CryptoHChaCha20.KeyLen
+  fullName: LibSodium.CryptoHChaCha20.KeyLen
+  nameWithType: CryptoHChaCha20.KeyLen
+- uid: LibSodium.CryptoHChaCha20.SubKeyLen
+  name: SubKeyLen
+  href: api/LibSodium.CryptoHChaCha20.html#LibSodium_CryptoHChaCha20_SubKeyLen
+  commentId: F:LibSodium.CryptoHChaCha20.SubKeyLen
+  fullName: LibSodium.CryptoHChaCha20.SubKeyLen
+  nameWithType: CryptoHChaCha20.SubKeyLen
 - uid: LibSodium.CryptoHkdf
   name: CryptoHkdf
   href: api/LibSodium.CryptoHkdf.html
@@ -2003,6 +2076,24 @@ references:
   commentId: F:LibSodium.CryptoKeyDerivation.ContextLen
   fullName: LibSodium.CryptoKeyDerivation.ContextLen
   nameWithType: CryptoKeyDerivation.ContextLen
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ulong, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_UInt64_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ULong, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, ulong, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), ULong, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ulong, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ULong, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.UInt64,System.String)
+  name: DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ulong, string)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_UInt64_System_String_
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.UInt64,System.String)
+  name.vb: DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ULong, String)
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, ulong, string)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), ULong, String)
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(SecureMemory<byte>, SecureMemory<byte>, ulong, string)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(SecureMemory(Of Byte), SecureMemory(Of Byte), ULong, String)
 - uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte},LibSodium.SecureMemory{System.Byte})
   name: DeriveSubkey(SecureMemory<byte>, ulong, ReadOnlySpan<byte>, SecureMemory<byte>)
   href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_LibSodium_SecureMemory_System_Byte__System_UInt64_System_ReadOnlySpan_System_Byte__LibSodium_SecureMemory_System_Byte__
@@ -2021,6 +2112,24 @@ references:
   fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(LibSodium.SecureMemory(Of Byte), ULong, String, LibSodium.SecureMemory(Of Byte))
   nameWithType: CryptoKeyDerivation.DeriveSubkey(SecureMemory<byte>, ulong, string, SecureMemory<byte>)
   nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(SecureMemory(Of Byte), ULong, String, SecureMemory(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte})
+  name: DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ulong, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte})
+  name.vb: DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ULong, ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan<byte>, System.Span<byte>, ulong, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong, System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ulong, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ULong, ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64,System.String)
+  name: DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ulong, string)
+  href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_UInt64_System_String_
+  commentId: M:LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.UInt64,System.String)
+  name.vb: DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ULong, String)
+  fullName: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan<byte>, System.Span<byte>, ulong, string)
+  fullName.vb: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.ReadOnlySpan(Of Byte), System.Span(Of Byte), ULong, String)
+  nameWithType: CryptoKeyDerivation.DeriveSubkey(ReadOnlySpan<byte>, Span<byte>, ulong, string)
+  nameWithType.vb: CryptoKeyDerivation.DeriveSubkey(ReadOnlySpan(Of Byte), Span(Of Byte), ULong, String)
 - uid: LibSodium.CryptoKeyDerivation.DeriveSubkey(System.Span{System.Byte},System.UInt64,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: DeriveSubkey(Span<byte>, ulong, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   href: api/LibSodium.CryptoKeyDerivation.html#LibSodium_CryptoKeyDerivation_DeriveSubkey_System_Span_System_Byte__System_UInt64_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
@@ -5356,6 +5465,23 @@ references:
   fullName.vb: LibSodium.SecureMemory(Of T).IsReadOnly
   nameWithType: SecureMemory<T>.IsReadOnly
   nameWithType.vb: SecureMemory(Of T).IsReadOnly
+- uid: LibSodium.SecureMemory`1.IsZero
+  name: IsZero()
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsZero
+  commentId: M:LibSodium.SecureMemory`1.IsZero
+  fullName: LibSodium.SecureMemory<T>.IsZero()
+  fullName.vb: LibSodium.SecureMemory(Of T).IsZero()
+  nameWithType: SecureMemory<T>.IsZero()
+  nameWithType.vb: SecureMemory(Of T).IsZero()
+- uid: LibSodium.SecureMemory`1.IsZero*
+  name: IsZero
+  href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_IsZero_
+  commentId: Overload:LibSodium.SecureMemory`1.IsZero
+  isSpec: "True"
+  fullName: LibSodium.SecureMemory<T>.IsZero
+  fullName.vb: LibSodium.SecureMemory(Of T).IsZero
+  nameWithType: SecureMemory<T>.IsZero
+  nameWithType.vb: SecureMemory(Of T).IsZero
 - uid: LibSodium.SecureMemory`1.Length
   name: Length
   href: api/LibSodium.SecureMemory-1.html#LibSodium_SecureMemory_1_Length
