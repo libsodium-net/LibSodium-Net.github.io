@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128290; Scalar Multiplication with CryptoScalarMult | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128290; Scalar Multiplication with CryptoScalarMult | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/CryptoScalarMult.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-scalar-multiplication-with-cryptoscalarmult">🔢 Scalar Multiplication with CryptoScalarMult</h1>
+
+<p>The <code>CryptoScalarMult</code> API exposes the low-level scalar multiplication primitive <code>crypto_scalarmult</code>, based on Curve25519.
+This operation implements the <strong>X25519</strong> algorithm (ECDH over Curve25519), as defined in <a href="https://datatracker.ietf.org/doc/html/rfc7748">RFC 7748</a>.
+It forms the foundation of key exchange protocols such as <code>CryptoBox</code>, <code>CryptoKeyExchange</code>, and others.</p>
+<p>This API is rarely needed directly. It is recommended only when implementing custom protocols or interoperating with other systems that use raw X25519 as defined in RFC 7748.</p>
+<blockquote>
+<p>🧂 Based on libsodium's <a href="https://doc.libsodium.org/advanced/scalar_multiplication">Scalar multiplication</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoScalarMult.html">API Reference for <code>CryptoScalarMult</code></a></p>
+</blockquote>
+<hr>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li>Curve25519 scalar multiplication (X25519, RFC 7748)</li>
+<li>Directional operation: <code>Q = n·P</code></li>
+<li>Safe public key calculation: <code>P = n·B</code></li>
+<li>Deterministic, constant-time implementation</li>
+<li>Fully allocation-free and Span-friendly</li>
+<li>Used internally by <code>CryptoBox</code>, <code>CryptoKeyExchange</code></li>
+</ul>
+<hr>
+<h2 id="-constants">📏 Constants</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Length of the public key (q = n·B)</td>
+</tr>
+<tr>
+<td><code>PrivateKeyLen</code></td>
+<td>32</td>
+<td>Length of the private scalar</td>
+</tr>
+<tr>
+<td><code>SharedPointLen</code></td>
+<td>32</td>
+<td>Length of the computed q = n·P</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-working-with-cryptoscalarmult">📋 Working with CryptoScalarMult</h2>
+<p><strong>Calculate Public Key:</strong></p>
+<p>Computes the public key <code>P = n·B</code> given a private scalar <code>n</code> and the curve25519 base point <code>B</code>:</p>
+<pre><code class="lang-csharp">using var privateKey = new SecureMemory&lt;byte&gt;(CryptoScalarMult.PrivateKeyLen);
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+RandomGenerator.Fill(privateKey);
+CryptoScalarMult.CalculatePublicKey(publicKey, privateKey);
+</code></pre>
+<hr>
+<p><strong>Compute Shared Point:</strong></p>
+<p>Performs scalar multiplication <code>S₁ = n₁·P₂</code> with a private scalar and a peer’s public key to compute a shared secret point:</p>
+<pre><code class="lang-csharp">using var sharedPoint = new SecureMemory(CryptoScalarMult.SharedPointLen);
+CryptoScalarMult.Compute(sharedPoint, myPrivateKey, peerPublicKey);
+</code></pre>
+<hr>
+<h3 id="-why-both-parties-compute-the-same-shared-secret-point">❓ Why Both Parties Compute the Same Shared Secret Point</h3>
+<p>Let:</p>
+<ul>
+<li><code>n₁</code>: Alice's private scalar key</li>
+<li><code>n₂</code>: Bob's private scalar key</li>
+</ul>
+<p>Public keys are calculated by multiplying the private scalar with the base point <code>B</code> of the Curve25519:</p>
+<ul>
+<li>Alice's public key: <code>P₁ = n₁ · B</code></li>
+<li>Bob's public key: <code>P₂ = n₂ · B</code></li>
+</ul>
+<p>Now both Alice and Bob compute the shared secret by multiplying their private key with the public key of the other party:</p>
+<pre><code class="lang-text">S₁ = n₁ · P₂ = n₁ · (n₂ · B) = (n₁ × n₂) · B
+S₂ = n₂ · P₁ = n₂ · (n₁ · B) = (n₂ × n₁) · B = (n₁ × n₂) · B = S₁
+</code></pre>
+<p>They arrive at the same point because of the algebraic properties of scalar and integer multiplication.<br>
+Particularly, scalar multiplication is <strong>associative</strong> and integer multiplication is <strong>commutative</strong>.<br>
+Therefore, <code>S₁ = S₂</code>, and both parties share the same secret point.</p>
+<blockquote>
+<p>ℹ️ Note: dot <code>·</code> means scalar multiplication and <code>×</code> integer multiplication.</p>
+</blockquote>
+<hr>
+<h3 id="-why-you-cannot-derive-the-private-scalar-from-the-public-point">❓ Why You Cannot Derive the Private Scalar from the Public Point</h3>
+<p>Given:</p>
+<ul>
+<li><code>n</code>: the private scalar key</li>
+<li><code>B</code>: the base point (public)</li>
+<li><code>P = n · B</code>: the public key</li>
+</ul>
+<p>Recovering <code>n</code> from <code>P</code> and <code>B</code> is equivalent to solving the <strong>Elliptic Curve Discrete Logarithm Problem (ECDLP)</strong>.</p>
+<p>This problem is considered <strong>computationally infeasible</strong> with current technology. No classical algorithm can efficiently recover <code>n</code> from <code>P</code> and <code>B</code>, even with massive computing power.</p>
+<p>Only a large-scale <strong>quantum computer</strong> running Shor’s algorithm could break this — but such machines do not exist today.</p>
+<hr>
+<h3 id="-avoid-using-the-shared-secret-directly-as-a-shared-key">⚠️ Avoid Using the Shared Secret Directly as a Shared Key</h3>
+<p>Many <code>(privateKey, publicKey)</code> pairs can produce the <strong>same result <code>S</code></strong> when using <code>CryptoScalarMult</code>.
+This is because <code>S</code> is a point on the curve, and scalar multiplication is not injective.</p>
+<p>A safer and recommended approach is to derive a shared key using a cryptographic hash of the transcript:</p>
+<pre><code class="lang-text">sharedKey = H(S || pk1 || pk2)
+</code></pre>
+<p>Or better use a key derivation function:</p>
+<pre><code class="lang-text">sharedKey = KDF(S, pk1, pk2)
+</code></pre>
+<p>This binds the result to the specific public keys involved, preventing ambiguity or replay.
+The order of the public keys must be agreed upon (e.g., lexicographically or based on fixed roles) to ensure both sides derive the same key.</p>
+<hr>
+<h3 id="-recommended-derivation-pattern">📋 Recommended Derivation Pattern</h3>
+<p>This pattern illustrates how to compute a shared secret <code>S = n₁·P₂ = n₂·P₁</code>  and derive a symmetric key from it using <code>HKDF</code>.</p>
+<p>The derivation uses:</p>
+<ul>
+<li><code>ikm = S</code> (the shared secret point from scalar multiplication)</li>
+<li><code>salt = senderPublicKey</code></li>
+<li><code>info = recipientPublicKey</code></li>
+</ul>
+<p>This ensures the derived key is uniquely bound to both the shared secret and the roles of the participants.</p>
+<blockquote>
+<p>🤔 Tip: Swapping <code>salt</code> and <code>info</code> will produce a different key.<br>
+Be consistent across sender and recipient (e.g., always use sender's public key as salt).</p>
+</blockquote>
+<p>This pattern prevents accidental key reuse and mitigates reflection or unknown key share attacks by incorporating both parties' public keys into the derivation process.</p>
+<pre><code class="lang-csharp">using var alicePrivateKey = new SecureMemory&lt;byte&gt;(CryptoScalarMult.PrivateKeyLen);
+Span&lt;byte&gt; alicePublicKey = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+RandomGenerator.Fill(alicePrivateKey);
+CryptoScalarMult.CalculatePublicKey(alicePublicKey, alicePrivateKey);
+
+using var bobPrivateKey = new SecureMemory&lt;byte&gt;(CryptoScalarMult.PrivateKeyLen);
+Span&lt;byte&gt; bobPublicKey = stackalloc byte[CryptoScalarMult.PublicKeyLen];
+RandomGenerator.Fill(bobPrivateKey);
+CryptoScalarMult.CalculatePublicKey(bobPublicKey, bobPrivateKey);
+
+using var aliceSharedSecret = new SecureMemory&lt;byte&gt;(CryptoScalarMult.PublicKeyLen);
+CryptoScalarMult.Compute(aliceSharedSecret, alicePrivateKey, bobPublicKey);
+
+using var bobSharedSecret = new SecureMemory&lt;byte&gt;(CryptoScalarMult.PublicKeyLen);
+CryptoScalarMult.Compute(bobSharedSecret, bobPrivateKey, alicePublicKey);
+
+bool isTheSameSharedSecret = aliceSharedSecret.AsReadOnlySpan()
+    .SequenceEqual(bobSharedSecret.AsReadOnlySpan());
+
+Debug.Assert(isTheSameSharedSecret, &quot;Shared secrets should match between Alice and Bob.&quot;);
+
+using var aliceTxKey = new SecureMemory&lt;byte&gt;(XChaCha20Poly1305.KeyLen);
+CryptoHkdf.DeriveKey(HashAlgorithmName.SHA512, ikm: aliceSharedSecret, okm: aliceTxKey, 
+	salt: alicePublicKey, info: bobPublicKey);
+
+using var bobRxKey = new SecureMemory&lt;byte&gt;(XChaCha20Poly1305.KeyLen);
+CryptoHkdf.DeriveKey(HashAlgorithmName.SHA512, ikm: bobSharedSecret, okm: bobRxKey, 
+	salt: alicePublicKey, info: bobPublicKey);
+
+bool isTheSameTxRxKey = aliceTxKey.AsReadOnlySpan().SequenceEqual(bobRxKey.AsReadOnlySpan());
+
+Debug.Assert(isTheSameTxRxKey, &quot;Transmission key derived by Alice should match receive key derived by Bob.&quot;);
+</code></pre>
+<hr>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — when input buffers have incorrect lengths or invalid parameters.</li>
+<li><code>LibSodiumException</code> — when a crypto operation fails.</li>
+</ul>
+<hr>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li>All APIs, except <code>SecureMemory</code> are Span-friendly and do not allocate memory internally.</li>
+<li><code>CryptoScalarMult</code> is a low-level primitive and does not provide authentication.</li>
+<li>Avoid using scalar multiplication output directly as a key — always apply a key derivation function or a hash.</li>
+</ul>
+<hr>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li><a href="KeyExchange.html">CryptoKeyExchange</a></li>
+<li><a href="CryptoBox.html">CryptoBox</a></li>
+<li><a href="Hashing.html">CryptoHkdf</a></li>
+<li><a href="../api/LibSodium.CryptoScalarMult.html">API Reference: CryptoScalarMult</a></li>
+<li><a href="https://doc.libsodium.org/advanced/scalar_multiplication">libsodium scalar multiplication</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7748">RFC 7748 – X25519</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

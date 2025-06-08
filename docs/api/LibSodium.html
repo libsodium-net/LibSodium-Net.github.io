@@ -192,6 +192,11 @@ Allows two parties to derive shared session keys securely.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="LibSodium.CryptoRistretto.html">CryptoRistretto</a></dt>
+      <dd><p>Constants and cryptographic operations for the Ristretto255 group.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="LibSodium.CryptoScalarMult.html">CryptoScalarMult</a></dt>
       <dd><p>Provides low-level scalar multiplication on Curve25519.
 This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmult_base</code> functions from libsodium.</p>
@@ -327,8 +332,8 @@ This class encapsulates secure memory allocation, read-only protection, and zero
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
-      <dd><p>Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.</p>
+      <dt><a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a></dt>
+      <dd><p>Represents an incremental operation such as incremental hash, MAC, or sign calculation that processes data in chunks and produces a fixed-size output.</p>
 </dd>
     </dl>
     <h3 id="enums">
@@ -367,7 +372,7 @@ Enums
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ for <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
         </div>
       </div>
     </footer>

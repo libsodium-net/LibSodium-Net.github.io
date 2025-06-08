@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface ICryptoIncrementalHash | LibSodium.Net </title>
+      <title>Interface ICryptoIncrementalOperation | LibSodium.Net </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface ICryptoIncrementalHash | LibSodium.Net ">
+      <meta name="title" content="Interface ICryptoIncrementalOperation | LibSodium.Net ">
       
-      <meta name="description" content="Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.">
+      <meta name="description" content="Represents an incremental operation such as incremental hash, MAC, or sign calculation that processes data in chunks and produces a fixed-size output.">
       <link rel="icon" href="../images/Na.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_ICryptoIncrementalHash.md&amp;value=---%0Auid%3A%20LibSodium.ICryptoIncrementalHash%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/new/main/apiSpec/new?filename=LibSodium_ICryptoIncrementalOperation.md&amp;value=---%0Auid%3A%20LibSodium.ICryptoIncrementalOperation%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LibSodium.ICryptoIncrementalHash">
+        <article data-uid="LibSodium.ICryptoIncrementalOperation">
 
 
 
-  <h1 id="LibSodium_ICryptoIncrementalHash" data-uid="LibSodium.ICryptoIncrementalHash" class="text-break">
-Interface ICryptoIncrementalHash  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalHash.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="LibSodium_ICryptoIncrementalOperation" data-uid="LibSodium.ICryptoIncrementalOperation" class="text-break">
+Interface ICryptoIncrementalOperation  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalOperation.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Interface ICryptoIncrementalHash  <a class="header-action link-secondary" title=
   <dl><dt>Assembly</dt><dd>LibSodium.Net.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.</p>
+  <div class="markdown summary"><p>Represents an incremental operation such as incremental hash, MAC, or sign calculation that processes data in chunks and produces a fixed-size output.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICryptoIncrementalHash : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ICryptoIncrementalOperation : IDisposable</code></pre>
   </div>
 
 
@@ -128,24 +128,24 @@ Interface ICryptoIncrementalHash  <a class="header-action link-secondary" title=
 </h2>
 
 
-  <a id="LibSodium_ICryptoIncrementalHash_Final_" data-uid="LibSodium.ICryptoIncrementalHash.Final*"></a>
+  <a id="LibSodium_ICryptoIncrementalOperation_Final_" data-uid="LibSodium.ICryptoIncrementalOperation.Final*"></a>
 
-  <h3 id="LibSodium_ICryptoIncrementalHash_Final_System_Span_System_Byte__" data-uid="LibSodium.ICryptoIncrementalHash.Final(System.Span{System.Byte})">
+  <h3 id="LibSodium_ICryptoIncrementalOperation_Final_System_Span_System_Byte__" data-uid="LibSodium.ICryptoIncrementalOperation.Final(System.Span{System.Byte})">
   Final(Span&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalHash.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalOperation.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Finalizes the hash or MAC computation and writes the result to the specified buffer.</p>
+  <div class="markdown level1 summary"><p>Finalizes the incremental computation and writes the result to the specified buffer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Final(Span&lt;byte&gt; hash)</code></pre>
+    <pre><code class="lang-csharp hljs">void Final(Span&lt;byte&gt; result)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>hash</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
     <dd><p>The buffer where the final result will be written. Must match the expected output length.</p>
 </dd>
   </dl>
@@ -167,11 +167,11 @@ Interface ICryptoIncrementalHash  <a class="header-action link-secondary" title=
 
 
 
-  <a id="LibSodium_ICryptoIncrementalHash_Update_" data-uid="LibSodium.ICryptoIncrementalHash.Update*"></a>
+  <a id="LibSodium_ICryptoIncrementalOperation_Update_" data-uid="LibSodium.ICryptoIncrementalOperation.Update*"></a>
 
-  <h3 id="LibSodium_ICryptoIncrementalHash_Update_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan{System.Byte})">
+  <h3 id="LibSodium_ICryptoIncrementalOperation_Update_System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.ICryptoIncrementalOperation.Update(System.ReadOnlySpan{System.Byte})">
   Update(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalHash.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/ICryptoIncrementalOperation.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Appends data to the ongoing hash or MAC computation.</p>
@@ -217,7 +217,7 @@ Interface ICryptoIncrementalHash  <a class="header-action link-secondary" title=
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ for <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
         </div>
       </div>
     </footer>

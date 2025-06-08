@@ -549,7 +549,7 @@ Class CryptoHmacSha256  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalMac(SecureMemory&lt;byte&gt; key)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalOperation CreateIncrementalMac(SecureMemory&lt;byte&gt; key)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -561,8 +561,8 @@ Class CryptoHmacSha256  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
-    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> instance that allows incremental computation of the HMAC-SHA256 hash.</p>
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a></dt>
+    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a> instance that allows incremental computation of the HMAC-SHA256 hash.</p>
 </dd>
   </dl>
 
@@ -573,7 +573,7 @@ Class CryptoHmacSha256  <a class="header-action link-secondary" title="View sour
 
 
   <h4 class="section" id="LibSodium_CryptoHmacSha256_CreateIncrementalMac_LibSodium_SecureMemory_System_Byte___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> can be used to compute the HMAC-SHA256 hash
+  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a> can be used to compute the HMAC-SHA256 hash
 incrementally by processing data in chunks. This is useful for scenarios where the data to be hashed is too large
 to fit in memory or is received in a streaming fashion.</p>
 </div>
@@ -593,7 +593,7 @@ to fit in memory or is received in a streaming fashion.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalOperation CreateIncrementalMac(ReadOnlySpan&lt;byte&gt; key)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -605,8 +605,8 @@ to fit in memory or is received in a streaming fashion.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
-    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> instance that allows incremental computation of the HMAC-SHA256 hash.</p>
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a></dt>
+    <dd><p>An <a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a> instance that allows incremental computation of the HMAC-SHA256 hash.</p>
 </dd>
   </dl>
 
@@ -617,7 +617,7 @@ to fit in memory or is received in a streaming fashion.</p>
 
 
   <h4 class="section" id="LibSodium_CryptoHmacSha256_CreateIncrementalMac_System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a> can be used to compute the HMAC-SHA256 hash
+  <div class="markdown level1 remarks"><p>The returned <a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a> can be used to compute the HMAC-SHA256 hash
 incrementally by processing data in chunks. This is useful for scenarios where the data to be hashed is too large
 to fit in memory or is received in a streaming fashion.</p>
 </div>
@@ -1014,7 +1014,7 @@ to fit in memory or is received in a streaming fashion.</p>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ for <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
         </div>
       </div>
     </footer>

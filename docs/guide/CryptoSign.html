@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/CryptoSign.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="-cryptosign--digital-signatures">📜 CryptoSign — Digital Signatures</h2>
+<p><code>CryptoSign</code> provides functions to digitally sign and verify messages using the <strong>Ed25519</strong> signature scheme.
+It produces compact, fixed-size signatures (64 bytes) that allow verifying the authenticity and integrity of a message without encryption.</p>
+<p>This is ideal for use cases such as:</p>
+<ul>
+<li>Validating messages or files from trusted sources</li>
+<li>Verifying software updates or configuration payloads</li>
+<li>Authenticating data across systems without requiring secrecy</li>
+</ul>
+<blockquote>
+<p>🧂 Based on libsodium <a href="https://doc.libsodium.org/public-key_cryptography/public-key_signatures">Public-key signatures</a><br>
+ℹ️ <a href="../api/LibSodium.CryptoSign.html">API Reference for <code>CryptoSign</code></a></p>
+</blockquote>
+<p>The signing process uses a <strong>private key</strong> (64 bytes), and the verification process only requires the corresponding <strong>public key</strong> (32 bytes).
+Messages can be signed in a single call or progressively using a streaming interface for large inputs.</p>
+<blockquote>
+<p>⚠️ <strong>Note:</strong> Libsodium provides two related but incompatible algorithms:</p>
+<ul>
+<li><code>Sign</code> and <code>Verify</code> use <strong>Ed25519</strong>, signing the full message directly.</li>
+<li><code>PreHashSign</code> and <code>PreHashVerify</code> use <strong>Ed25519ph</strong>, signing a SHA-512 hash of the message.<br></li>
+</ul>
+<p>🤔  <strong>You must use matching methods for signing and verification — mixing them will fail.</strong></p>
+</blockquote>
+<h2 id="-features">🌟 Features</h2>
+<ul>
+<li>Digital signatures with Ed25519</li>
+<li>Span-based APIs for efficient, allocation-free usage</li>
+<li>Conversion from Ed25519 keys to Curve25519.</li>
+<li>Streaming interface.</li>
+<li>Keys can be provided as <code>SecureMemory&lt;byte&gt;</code>, <code>Span&lt;byte&gt;</code>/<code>ReadOnlySpan&lt;byte&gt;</code>, and <code>byte[]</code>.</li>
+</ul>
+<h2 id="-constants">📏 Constants</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PublicKeyLen</code></td>
+<td>32</td>
+<td>Ed25519 public key length</td>
+</tr>
+<tr>
+<td><code>PrivateKeyLen</code></td>
+<td>64</td>
+<td>Ed25519 private key length</td>
+</tr>
+<tr>
+<td><code>SignatureLen</code></td>
+<td>64</td>
+<td>Signature length</td>
+</tr>
+<tr>
+<td><code>SeedLen</code></td>
+<td>32</td>
+<td>Seed length for deterministic key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-working-with-cryptosign">📋 Working with CryptoSign</h2>
+<p><strong>Generate random key pair:</strong></p>
+<pre><code class="lang-csharp">// SecureMemory
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
+using var privateKey = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(publicKey, privateKey);
+privateKey.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; publicKey = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; privateKey = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(publicKey, privateKey);
+</code></pre>
+<p><strong>Sign and Verify:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; signature = stackalloc byte[CryptoSign.SignatureLen];
+CryptoSign.Sign(message, signature, privateKey);
+
+bool ok = CryptoSign.TryVerify(message, signature, publicKey);
+CryptoSign.Verify(message, signature, publicKey); // throws LibSodiumException if the signature is invalid
+</code></pre>
+<h2 id="-signing-and-verifying-streams">📋 Signing and Verifying Streams</h2>
+<p>The <code>CryptoSign</code> API also supports signing and verifying large messages using a streaming interface.
+This uses the <code>Ed25519ph</code> algorithm, which <strong>is not compatible</strong> with standard Ed25519 signatures.</p>
+<blockquote>
+<p>⚠️ <code>PreHashSign</code> and <code>PreHashVerify</code> use the Ed25519ph algorithm.
+These signatures <strong>cannot</strong> be verified using <code>Verify</code>, and vice versa.
+Always match signing and verification methods accordingly.</p>
+</blockquote>
+<p>📏 Signature format and key sizes are the same (<code>64-byte</code> signature, <code>32-byte</code> public key, <code>64-byte</code> private key).
+But <strong>internally they operate differently</strong>: Ed25519 signs the raw message; Ed25519ph signs a hash of the message.</p>
+<hr>
+<p><strong>Sign and verify a stream (sync):</strong></p>
+<pre><code class="lang-csharp">var pk = new byte[CryptoSign.PublicKeyLen];
+using var sk = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(pk, sk);
+
+byte[] signature = new byte[CryptoSign.SignatureLen];
+
+using var stream = new MemoryStream();
+var message = new byte[256];
+Random.Shared.NextBytes(message);
+stream.Write(message);
+stream.Position = 0;
+
+CryptoSign.PreHashSign(stream, signature, sk);
+stream.Position = 0;
+
+bool isValid = CryptoSign.PreHashVerify(stream, signature, pk);
+</code></pre>
+<hr>
+<p><strong>Sign and verify a stream (async)</strong>:</p>
+<pre><code class="lang-csharp">var pk = new byte[CryptoSign.PublicKeyLen];
+using var sk = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(pk, sk);
+
+byte[] signature = new byte[CryptoSign.SignatureLen];
+
+using var stream = new MemoryStream();
+var message = new byte[256];
+Random.Shared.NextBytes(message);
+stream.Write(message);
+stream.Position = 0;
+
+await CryptoSign.PreHashSignAsync(stream, signature, sk);
+stream.Position = 0;
+
+bool isValid = await CryptoSign.PreHashVerifyAsync(stream, signature, pk);
+</code></pre>
+<h2 id="-convert-ed25519-to-curve25519">📋 Convert Ed25519 to Curve25519</h2>
+<p><code>CryptoSign</code> allows converting Ed25519 key pairs to Curve25519 format, suitable for encryption and key exchange.</p>
+<p>These converted keys can be used with the <code>CryptoBox</code> and <code>CryptoKeyExchange</code> APIs.</p>
+<pre><code class="lang-csharp">// SecureMemory
+Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+using var edSk = new SecureMemory&lt;byte&gt;(CryptoSign.PrivateKeyLen);
+CryptoSign.GenerateKeyPair(edPk, edSk);
+edSk.ProtectReadOnly();
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
+using var curveSk = SecureMemory&lt;byte&gt;(CryptoBox.PrivateKeyLen);
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+curveSk.ProtectReadOnly();
+</code></pre>
+<pre><code class="lang-csharp">// Span
+Span&lt;byte&gt; edPk = stackalloc byte[CryptoSign.PublicKeyLen];
+Span&lt;byte&gt; edSk = stackalloc byte[CryptoSign.PrivateKeyLen];
+CryptoSign.GenerateKeyPair(edPk, edSk);
+
+Span&lt;byte&gt; curvePk = stackalloc byte[CryptoBox.PublicKeyLen];
+Span&lt;byte&gt; curveSk = stackalloc byte[CryptoBox.PrivateKeyLen];
+CryptoSign.PublicKeyToCurve(curvePk, edPk);
+CryptoSign.PrivateKeyToCurve(curveSk, edSk);
+</code></pre>
+<p>The resulting <code>curvePk</code> and <code>curveSk</code> can be used anywhere a Curve25519 key is expected.</p>
+<h2 id="-error-handling">⚠️ Error Handling</h2>
+<ul>
+<li><code>ArgumentException</code> — when input buffers have incorrect lengths or invalid parameters.</li>
+<li><code>LibSodiumException</code> — when a crypto operation cannot complete.</li>
+</ul>
+<h2 id="-notes">📝 Notes</h2>
+<ul>
+<li><p>Ed25519 keys are <em>not</em> compatible with Curve25519 APIs like <code>CryptoBox</code> or <code>CryptoKeyExchange</code> — use <code>PublicKeyToCurve</code> and <code>PrivateKeyToCurve</code> to convert them.</p>
+</li>
+<li><p>Ed25519 private keys must be 64 bytes long in libsodium’s format.</p>
+</li>
+<li><p>Signatures are deterministic and always 64 bytes long.</p>
+</li>
+<li><p><code>Verify()</code> throws on failure, while <code>TryVerify()</code> returns <code>false</code>.</p>
+</li>
+<li><p>The same message signed with the same key always produces the same signature.</p>
+</li>
+<li><p>This API is suitable for authentication and non-repudiation, <strong>not for encryption</strong>.</p>
+</li>
+<li><p><code>Sign</code> and <code>PreHashSign</code> use different algorithms:</p>
+<ul>
+<li><code>Sign</code> → <strong>Ed25519</strong>: deterministic signature over the full message.</li>
+<li><code>PreHashSign</code> → <strong>Ed25519ph</strong>: signs a SHA-512 hash of the message.</li>
+</ul>
+</li>
+<li><p>These formats are <strong>not interchangeable</strong> — you must verify with the corresponding method.</p>
+</li>
+<li><p>The streaming interface is recommended for large messages or when reading from <code>Stream</code>.</p>
+</li>
+</ul>
+<h2 id="-see-also">👀 See Also</h2>
+<ul>
+<li><a href="../api/LibSodium.CryptoSign.html">API Reference: CryptoSign</a></li>
+<li><a href="https://doc.libsodium.org/public-key_cryptography/public-key_signatures">libsodium Public-key signatures</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

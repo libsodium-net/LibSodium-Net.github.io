@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#127744; CryptoRistretto — Operations on the Ristretto255 group | LibSodium.Net </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#127744; CryptoRistretto — Operations on the Ristretto255 group | LibSodium.Net ">
+      
+      
+      <link rel="icon" href="../images/Na.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/docfx/guide/CryptoRistretto.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Home">
+            Home
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-cryptoristretto--operations-on-the-ristretto255-group">🌀 CryptoRistretto — Operations on the Ristretto255 group</h1>
+
+<p>Ristretto255 provides a safer and simpler way to work with elliptic curves — specifically Curve25519 — by eliminating subtle issues and vulnerabilities that arise when using the curve directly.</p>
+<p>It removes concerns like cofactors, low-order points, and invalid encodings, giving you a clean, prime-order group that's easier to reason about and safer to use in real-world protocols.</p>
+<p>If you're building key exchanges, anonymous credentials, signatures, or zero-knowledge systems, Ristretto255 offers a robust foundation.</p>
+<p>LibSodium.Net exposes the full Ristretto255 API from libsodium in a clear and idiomatic way.</p>
+<hr>
+<h2 id="-constants">📏 Constants</h2>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PointLen</code></td>
+<td>32</td>
+<td>Length of a Ristretto255 encoded point</td>
+</tr>
+<tr>
+<td><code>ScalarLen</code></td>
+<td>32</td>
+<td>Length of a scalar</td>
+</tr>
+<tr>
+<td><code>HashLen</code></td>
+<td>64</td>
+<td>Input length for deriving points from a hash</td>
+</tr>
+<tr>
+<td><code>NonReducedScalarLen</code></td>
+<td>64</td>
+<td>Input length for reduction to scalar mod L</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-api-surface">✨ API Surface</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GenerateRandomScalar</code></td>
+<td>Fills a buffer with a random 32-byte scalar (modulo group order).</td>
+</tr>
+<tr>
+<td><code>GenerateRandomPoint</code></td>
+<td>Fills a buffer with a uniformly random valid Ristretto point.</td>
+</tr>
+<tr>
+<td><code>ReduceScalar</code></td>
+<td>Reduces a 64-byte value to a 32-byte scalar mod group order.</td>
+</tr>
+<tr>
+<td><code>DerivePointFromHash</code></td>
+<td>Maps a 64-byte hash to a valid Ristretto point.</td>
+</tr>
+<tr>
+<td><code>IsValidPoint</code></td>
+<td>Returns true if the point is a valid Ristretto255 encoding.</td>
+</tr>
+<tr>
+<td><code>NegateScalar</code></td>
+<td>Computes the additive inverse of a scalar.</td>
+</tr>
+<tr>
+<td><code>ComplementScalar</code></td>
+<td>Computes (L - 1 - s) mod L, where L is the group order.</td>
+</tr>
+<tr>
+<td><code>InvertScalar</code></td>
+<td>Computes the multiplicative inverse of a scalar mod group order.</td>
+</tr>
+<tr>
+<td><code>AddScalars</code></td>
+<td>Adds two scalars modulo group order.</td>
+</tr>
+<tr>
+<td><code>SubtractScalars</code></td>
+<td>Subtracts one scalar from another modulo group order.</td>
+</tr>
+<tr>
+<td><code>MultiplyScalars</code></td>
+<td>Multiplies two scalars (mod group order).</td>
+</tr>
+<tr>
+<td><code>AddPoints</code></td>
+<td>Adds two Ristretto points.</td>
+</tr>
+<tr>
+<td><code>SubtractPoints</code></td>
+<td>Subtracts one Ristretto point from another.</td>
+</tr>
+<tr>
+<td><code>ScalarMultiply</code></td>
+<td>Multiplies a point by a scalar.</td>
+</tr>
+<tr>
+<td><code>ScalarMultiplyBase</code></td>
+<td>Multiplies the base point by a scalar (used to compute public keys).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-examples">📋 Examples</h2>
+<p><strong>Generate a random Ristretto255 point:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; point = stackalloc byte[CryptoRistretto.PointLen];
+CryptoRistretto.GenerateRandomPoint(point);
+</code></pre>
+<p><strong>Generate a random scalar and compute a public key:</strong></p>
+<pre><code class="lang-csharp">using var sk = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+SecureMemory&lt;byte&gt; pk = SecureMemory.Create&lt;byte&gt;(CryptoRistretto.PointLen);
+CryptoRistretto.GenerateRandomScalar(sk);
+CryptoRistretto.ScalarMultiplyBase(sk, pk);
+</code></pre>
+<p><strong>Derive a point from a hash:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; hash = stackalloc byte[CryptoRistretto.HashLen];
+RandomNumberGenerator.Fill(hash);
+Span&lt;byte&gt; point = stackalloc byte[CryptoRistretto.PointLen];
+CryptoRistretto.DerivePointFromHash(hash, point);
+</code></pre>
+<p><strong>Multiply two scalars:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; k1 = stackalloc byte[32];
+Span&lt;byte&gt; k2 = stackalloc byte[32];
+Span&lt;byte&gt; product = stackalloc byte[32];
+RandomNumberGenerator.Fill(k1);
+RandomNumberGenerator.Fill(k2);
+CryptoRistretto.MultiplyScalars(k1, k2, product);
+</code></pre>
+<p><strong>Add two points:</strong></p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; p1 = stackalloc byte[32];
+Span&lt;byte&gt; p2 = stackalloc byte[32];
+Span&lt;byte&gt; sum = stackalloc byte[32];
+CryptoRistretto.GenerateRandomPoint(p1);
+CryptoRistretto.GenerateRandomPoint(p2);
+CryptoRistretto.AddPoints(p1, p2, sum);
+</code></pre>
+<p><strong>Reduce a 64-byte value to a scalar:</strong></p>
+<p>Useful for converting hashes, nonces, or user inputs into a valid scalar mod L.</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; longValue = stackalloc byte[64];
+Span&lt;byte&gt; reduced = stackalloc byte[32];
+RandomNumberGenerator.Fill(longValue);
+CryptoRistretto.ReduceScalar(longValue, reduced);
+</code></pre>
+<hr>
+<h3 id="-authenticated-key-exchange-and-encryption">🔑 Authenticated Key Exchange and Encryption</h3>
+<p>This example shows how Alice and Bob can use Ristretto255 and HKDF to derive a shared secret <code>S = n₁·P₂ = n₂·P₁</code> from a Diffie-Hellman exchange.</p>
+<p>The computed shared secret is then used to derive a symmetric key using <code>HKDF</code>. The derivation uses:</p>
+<ul>
+<li><code>ikm = S</code> (the shared secret point from scalar multiplication)</li>
+<li><code>salt = senderPublicKey</code></li>
+<li><code>info = recipientPublicKey</code></li>
+</ul>
+<p>This ensures the derived key is uniquely bound to both the shared secret and the roles of the participants.</p>
+<p>The symmetric key is used to encrypt a message from Alice to Bob with <code>XChaCha20-Poly1305</code>.</p>
+<blockquote>
+<p>🤔 Tip: Swapping <code>salt</code> and <code>info</code> will produce a different key.<br>
+Be consistent across sender and recipient (e.g., always use sender's public key as salt).</p>
+</blockquote>
+<p>This pattern prevents accidental key reuse and mitigates reflection or unknown key share attacks by incorporating both parties' public keys into the derivation process. It also allows secure, authenticated, and forward-secret communication using ephemeral keys.</p>
+<pre><code class="lang-csharp">using var aliceScalarSecret = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+using var bobScalarSecret = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+CryptoRistretto.GenerateRandomScalar(aliceScalarSecret);
+CryptoRistretto.GenerateRandomScalar(bobScalarSecret);
+
+Span&lt;byte&gt; alicePublicPoint = stackalloc byte[CryptoRistretto.PointLen];
+Span&lt;byte&gt; bobPublicPoint = stackalloc byte[CryptoRistretto.PointLen];
+
+CryptoRistretto.ScalarMultiplyBase(aliceScalarSecret, alicePublicPoint);
+CryptoRistretto.ScalarMultiplyBase(bobScalarSecret, bobPublicPoint);
+
+using var aliceSharedSecret = new SecureMemory&lt;byte&gt;(CryptoRistretto.PointLen);
+using var bobSharedSecret = new SecureMemory&lt;byte&gt;(CryptoRistretto.PointLen);
+
+CryptoRistretto.ScalarMultiply(bobScalarSecret, alicePublicPoint, bobSharedSecret);
+CryptoRistretto.ScalarMultiply(aliceScalarSecret, bobPublicPoint, aliceSharedSecret);
+
+bool isSameSharedSecret = aliceSharedSecret.AsReadOnlySpan()
+	.SequenceEqual(bobSharedSecret.AsReadOnlySpan());
+
+Debug.Assert(isSameSharedSecret, &quot;The shared secrets should be equal.&quot;);
+
+using var aliceTxKey = new SecureMemory&lt;byte&gt;(XChaCha20Poly1305.KeyLen);
+CryptoHkdf.DeriveKey(HashAlgorithmName.SHA512, ikm: aliceSharedSecret, okm: aliceTxKey, salt: alicePublicPoint, info: bobPublicPoint);
+
+var aliceMessageToBobPlaintext = &quot;Hello Bob, this is Alice!&quot;u8;
+
+Span&lt;byte&gt; aliceMessageToBobCiphertext = stackalloc byte[aliceMessageToBobPlaintext.Length + XChaCha20Poly1305.MacLen + XChaCha20Poly1305.NonceLen];
+
+XChaCha20Poly1305.Encrypt(aliceMessageToBobCiphertext, aliceMessageToBobPlaintext, aliceTxKey);
+
+using var bobRxKey = new SecureMemory&lt;byte&gt;(XChaCha20Poly1305.KeyLen);
+CryptoHkdf.DeriveKey(HashAlgorithmName.SHA512, ikm: bobSharedSecret, okm: bobRxKey, salt: alicePublicPoint, info: bobPublicPoint);
+
+Span&lt;byte&gt; aliceMessageToBobDecrypted = stackalloc byte[aliceMessageToBobCiphertext.Length - XChaCha20Poly1305.MacLen - XChaCha20Poly1305.NonceLen];
+
+XChaCha20Poly1305.Decrypt(aliceMessageToBobDecrypted, aliceMessageToBobCiphertext, bobRxKey);
+
+bool isDecryptionValid = aliceMessageToBobDecrypted.SequenceEqual(aliceMessageToBobPlaintext);
+
+Debug.Assert(isDecryptionValid, &quot;Decrypted message should match original plaintext.&quot;);
+</code></pre>
+<hr>
+<h3 id="-two-party-computation-oblivious-evaluation">🔢 Two-Party Computation (Oblivious Evaluation)</h3>
+<p>This example shows how two parties can evaluate a function of the form <code>f(x, k) = p(x)·k</code> — without revealing <code>x</code> to the evaluator, or <code>k</code> to the input holder.</p>
+<p>Let:</p>
+<ul>
+<li>Party A holds a secret input <code>x</code></li>
+<li>Party B holds a secret scalar <code>k</code></li>
+<li>The goal is for A to obtain <code>p(x)·k</code>,
+where <code>p(x)</code> is a well-known hash-to-point function</li>
+</ul>
+<h4 id="protocol-steps">Protocol steps:</h4>
+<ol>
+<li><p>A derives <code>p(x)</code> from <code>x</code>, generates a random scalar <code>r</code>, and blinds <code>p(x)</code>:</p>
+<pre><code>a = p(x) + B·r
+</code></pre>
+<p>where <code>B</code> is the base point of the group.</p>
+</li>
+<li><p>A sends <code>a</code> to B. B applies its secret scalar:</p>
+<pre><code>b = a·k = (p(x) + B·r)·k = p(x)·k + B·(r·k)
+</code></pre>
+</li>
+<li><p>B sends <code>b</code> to A. A removes the blinding term:</p>
+<ul>
+<li><p>Computes <code>v = B·k</code> (received or derived from B)</p>
+</li>
+<li><p>Computes <code>v·(-r) = B·(-r·k)</code></p>
+</li>
+<li><p>Adds it to <code>b</code>:</p>
+<pre><code>fx = b + B·(-r·k) = p(x)·k
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<p>Thus, A obtains <code>p(x)·k</code> without learning <code>k</code>, and B never sees <code>x</code>.</p>
+<hr>
+<blockquote>
+<p>🛡️ This technique is useful in privacy-preserving protocols like anonymous credentials, voting systems, or verifiable secret sharing.</p>
+</blockquote>
+<pre><code class="lang-csharp">
+// Party A: has input x and computes p(x)
+using var x = new SecureMemory&lt;byte&gt;(CryptoRistretto.HashLen);
+RandomGenerator.Fill(x);
+
+using var px = new SecureMemory&lt;byte&gt;(CryptoRistretto.PointLen);
+// p(x) = hash-to-point(x)
+CryptoRistretto.DerivePointFromHash(x, px); 
+
+// A blinds p(x) using random scalar r
+using var r = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+Span&lt;byte&gt; gr = stackalloc byte[CryptoRistretto.PointLen];
+Span&lt;byte&gt; a = stackalloc byte[CryptoRistretto.PointLen];
+
+CryptoRistretto.GenerateRandomScalar(r);
+// g·r = base point scaled by r
+CryptoRistretto.ScalarMultiplyBase(r, gr); 
+// a = p(x) + g·r (blinded point sent to B)
+CryptoRistretto.AddPoints(px.AsReadOnlySpan(), gr, a);      
+
+// -------- Party B: evaluator --------
+using var k = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+Span&lt;byte&gt; v = stackalloc byte[CryptoRistretto.PointLen];
+Span&lt;byte&gt; b = stackalloc byte[CryptoRistretto.PointLen];
+
+CryptoRistretto.GenerateRandomScalar(k);
+// v = g·k (public key of B)
+CryptoRistretto.ScalarMultiplyBase(k, v);    
+// b = a·k = p(x)·k + g·(r·k)
+CryptoRistretto.ScalarMultiply(k.AsReadOnlySpan(), a, b);        
+
+// -------- Party A: unblinding --------
+using var ir = new SecureMemory&lt;byte&gt;(CryptoRistretto.ScalarLen);
+Span&lt;byte&gt; vir = stackalloc byte[CryptoRistretto.PointLen];
+using var fx = new SecureMemory&lt;byte&gt;(CryptoRistretto.PointLen);
+
+// Compute -r
+CryptoRistretto.NegateScalar(r, ir);
+// Compute v·(-r) = g·(-r·k)
+CryptoRistretto.ScalarMultiply(ir.AsReadOnlySpan(), v, vir); 
+// Recover fx = b + g·(-r·k) = p(x)·k
+CryptoRistretto.AddPoints(b, vir, fx.AsSpan());          
+
+// Validate that fx == p(x)·k
+using var expected = new SecureMemory&lt;byte&gt;(CryptoRistretto.PointLen);
+CryptoRistretto.ScalarMultiply(k, px, expected);
+
+bool isValid = fx.AsReadOnlySpan().SequenceEqual(expected.AsReadOnlySpan());
+Debug.Assert(isValid, &quot;The final result fx should match the expected value.&quot;);
+
+
+
+</code></pre>
+<blockquote>
+<p>💡 This protocol can serve as a building block for secure multiparty computation or threshold cryptography.</p>
+</blockquote>
+<hr>
+<h3 id="-see-also">👀 See Also</h3>
+<ul>
+<li><a href="https://doc.libsodium.org/advanced/point-arithmetic/ristretto">libsodium Ristretto docs</a></li>
+<li><a href="CryptoScalarMult.html">CryptoScalarMult — X25519</a></li>
+<li><a href="CryptoSign.html">CryptoSign — Ed25519</a></li>
+<li><a href="Hashing.html">CryptoHkdf — Key derivation</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

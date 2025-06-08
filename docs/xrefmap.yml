@@ -2913,6 +2913,339 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoPasswordHashScrypt.VerifyPassword
   nameWithType: CryptoPasswordHashScrypt.VerifyPassword
+- uid: LibSodium.CryptoRistretto
+  name: CryptoRistretto
+  href: api/LibSodium.CryptoRistretto.html
+  commentId: T:LibSodium.CryptoRistretto
+  fullName: LibSodium.CryptoRistretto
+  nameWithType: CryptoRistretto
+- uid: LibSodium.CryptoRistretto.AddPoints(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: AddPoints(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_AddPoints_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.AddPoints(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: AddPoints(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.AddPoints(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.AddPoints(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.AddPoints(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.AddPoints(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.AddPoints*
+  name: AddPoints
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_AddPoints_
+  commentId: Overload:LibSodium.CryptoRistretto.AddPoints
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.AddPoints
+  nameWithType: CryptoRistretto.AddPoints
+- uid: LibSodium.CryptoRistretto.AddScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: AddScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_AddScalars_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.AddScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: AddScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.AddScalars(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.AddScalars(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.AddScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.AddScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.AddScalars*
+  name: AddScalars
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_AddScalars_
+  commentId: Overload:LibSodium.CryptoRistretto.AddScalars
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.AddScalars
+  nameWithType: CryptoRistretto.AddScalars
+- uid: LibSodium.CryptoRistretto.ComplementScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ComplementScalar(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ComplementScalar_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ComplementScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ComplementScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ComplementScalar(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ComplementScalar(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.ComplementScalar(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.ComplementScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.ComplementScalar*
+  name: ComplementScalar
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ComplementScalar_
+  commentId: Overload:LibSodium.CryptoRistretto.ComplementScalar
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.ComplementScalar
+  nameWithType: CryptoRistretto.ComplementScalar
+- uid: LibSodium.CryptoRistretto.DerivePointFromHash(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: DerivePointFromHash(SecureMemory<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_DerivePointFromHash_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.DerivePointFromHash(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: DerivePointFromHash(SecureMemory(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.DerivePointFromHash(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.DerivePointFromHash(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.DerivePointFromHash(SecureMemory<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.DerivePointFromHash(SecureMemory(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.DerivePointFromHash(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: DerivePointFromHash(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_DerivePointFromHash_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.DerivePointFromHash(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: DerivePointFromHash(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.DerivePointFromHash(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.DerivePointFromHash(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.DerivePointFromHash(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.DerivePointFromHash(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.DerivePointFromHash*
+  name: DerivePointFromHash
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_DerivePointFromHash_
+  commentId: Overload:LibSodium.CryptoRistretto.DerivePointFromHash
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.DerivePointFromHash
+  nameWithType: CryptoRistretto.DerivePointFromHash
+- uid: LibSodium.CryptoRistretto.GenerateRandomPoint(System.Span{System.Byte})
+  name: GenerateRandomPoint(Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_GenerateRandomPoint_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.GenerateRandomPoint(System.Span{System.Byte})
+  name.vb: GenerateRandomPoint(Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.GenerateRandomPoint(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.GenerateRandomPoint(System.Span(Of Byte))
+  nameWithType: CryptoRistretto.GenerateRandomPoint(Span<byte>)
+  nameWithType.vb: CryptoRistretto.GenerateRandomPoint(Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.GenerateRandomPoint*
+  name: GenerateRandomPoint
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_GenerateRandomPoint_
+  commentId: Overload:LibSodium.CryptoRistretto.GenerateRandomPoint
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.GenerateRandomPoint
+  nameWithType: CryptoRistretto.GenerateRandomPoint
+- uid: LibSodium.CryptoRistretto.GenerateRandomScalar(LibSodium.SecureMemory{System.Byte})
+  name: GenerateRandomScalar(SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_GenerateRandomScalar_LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.GenerateRandomScalar(LibSodium.SecureMemory{System.Byte})
+  name.vb: GenerateRandomScalar(SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.GenerateRandomScalar(LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.GenerateRandomScalar(LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.GenerateRandomScalar(SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.GenerateRandomScalar(SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.GenerateRandomScalar(System.Span{System.Byte})
+  name: GenerateRandomScalar(Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_GenerateRandomScalar_System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.GenerateRandomScalar(System.Span{System.Byte})
+  name.vb: GenerateRandomScalar(Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.GenerateRandomScalar(System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.GenerateRandomScalar(System.Span(Of Byte))
+  nameWithType: CryptoRistretto.GenerateRandomScalar(Span<byte>)
+  nameWithType.vb: CryptoRistretto.GenerateRandomScalar(Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.GenerateRandomScalar*
+  name: GenerateRandomScalar
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_GenerateRandomScalar_
+  commentId: Overload:LibSodium.CryptoRistretto.GenerateRandomScalar
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.GenerateRandomScalar
+  nameWithType: CryptoRistretto.GenerateRandomScalar
+- uid: LibSodium.CryptoRistretto.HashLen
+  name: HashLen
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_HashLen
+  commentId: F:LibSodium.CryptoRistretto.HashLen
+  fullName: LibSodium.CryptoRistretto.HashLen
+  nameWithType: CryptoRistretto.HashLen
+- uid: LibSodium.CryptoRistretto.InvertScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: InvertScalar(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_InvertScalar_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.InvertScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: InvertScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.InvertScalar(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.InvertScalar(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.InvertScalar(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.InvertScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.InvertScalar*
+  name: InvertScalar
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_InvertScalar_
+  commentId: Overload:LibSodium.CryptoRistretto.InvertScalar
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.InvertScalar
+  nameWithType: CryptoRistretto.InvertScalar
+- uid: LibSodium.CryptoRistretto.IsValidPoint(System.ReadOnlySpan{System.Byte})
+  name: IsValidPoint(ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_IsValidPoint_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.IsValidPoint(System.ReadOnlySpan{System.Byte})
+  name.vb: IsValidPoint(ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoRistretto.IsValidPoint(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.IsValidPoint(System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoRistretto.IsValidPoint(ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoRistretto.IsValidPoint(ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoRistretto.IsValidPoint*
+  name: IsValidPoint
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_IsValidPoint_
+  commentId: Overload:LibSodium.CryptoRistretto.IsValidPoint
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.IsValidPoint
+  nameWithType: CryptoRistretto.IsValidPoint
+- uid: LibSodium.CryptoRistretto.MultiplyScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: MultiplyScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_MultiplyScalars_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.MultiplyScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: MultiplyScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.MultiplyScalars(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.MultiplyScalars(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.MultiplyScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.MultiplyScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.MultiplyScalars*
+  name: MultiplyScalars
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_MultiplyScalars_
+  commentId: Overload:LibSodium.CryptoRistretto.MultiplyScalars
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.MultiplyScalars
+  nameWithType: CryptoRistretto.MultiplyScalars
+- uid: LibSodium.CryptoRistretto.NegateScalar(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: NegateScalar(SecureMemory<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_NegateScalar_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.NegateScalar(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: NegateScalar(SecureMemory(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.NegateScalar(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.NegateScalar(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.NegateScalar(SecureMemory<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.NegateScalar(SecureMemory(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.NegateScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: NegateScalar(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_NegateScalar_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.NegateScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: NegateScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.NegateScalar(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.NegateScalar(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.NegateScalar(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.NegateScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.NegateScalar*
+  name: NegateScalar
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_NegateScalar_
+  commentId: Overload:LibSodium.CryptoRistretto.NegateScalar
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.NegateScalar
+  nameWithType: CryptoRistretto.NegateScalar
+- uid: LibSodium.CryptoRistretto.NonReducedScalarLen
+  name: NonReducedScalarLen
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_NonReducedScalarLen
+  commentId: F:LibSodium.CryptoRistretto.NonReducedScalarLen
+  fullName: LibSodium.CryptoRistretto.NonReducedScalarLen
+  nameWithType: CryptoRistretto.NonReducedScalarLen
+- uid: LibSodium.CryptoRistretto.PointLen
+  name: PointLen
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_PointLen
+  commentId: F:LibSodium.CryptoRistretto.PointLen
+  fullName: LibSodium.CryptoRistretto.PointLen
+  nameWithType: CryptoRistretto.PointLen
+- uid: LibSodium.CryptoRistretto.ReduceScalar(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: ReduceScalar(SecureMemory<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ReduceScalar_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ReduceScalar(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: ReduceScalar(SecureMemory(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ReduceScalar(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ReduceScalar(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.ReduceScalar(SecureMemory<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.ReduceScalar(SecureMemory(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.ReduceScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ReduceScalar(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ReduceScalar_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ReduceScalar(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ReduceScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ReduceScalar(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ReduceScalar(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.ReduceScalar(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.ReduceScalar(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.ReduceScalar*
+  name: ReduceScalar
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ReduceScalar_
+  commentId: Overload:LibSodium.CryptoRistretto.ReduceScalar
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.ReduceScalar
+  nameWithType: CryptoRistretto.ReduceScalar
+- uid: LibSodium.CryptoRistretto.ScalarLen
+  name: ScalarLen
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarLen
+  commentId: F:LibSodium.CryptoRistretto.ScalarLen
+  fullName: LibSodium.CryptoRistretto.ScalarLen
+  nameWithType: CryptoRistretto.ScalarLen
+- uid: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: ScalarMultiply(SecureMemory<byte>, SecureMemory<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiply_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: ScalarMultiply(SecureMemory(Of Byte), SecureMemory(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.ScalarMultiply(SecureMemory<byte>, SecureMemory<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.ScalarMultiply(SecureMemory(Of Byte), SecureMemory(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: ScalarMultiply(SecureMemory<byte>, ReadOnlySpan<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiply_LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: ScalarMultiply(SecureMemory(Of Byte), ReadOnlySpan(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory<byte>, System.ReadOnlySpan<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ScalarMultiply(LibSodium.SecureMemory(Of Byte), System.ReadOnlySpan(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoRistretto.ScalarMultiply(SecureMemory<byte>, ReadOnlySpan<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoRistretto.ScalarMultiply(SecureMemory(Of Byte), ReadOnlySpan(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoRistretto.ScalarMultiply(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ScalarMultiply(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiply_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ScalarMultiply(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ScalarMultiply(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ScalarMultiply(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ScalarMultiply(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.ScalarMultiply(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.ScalarMultiply(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.ScalarMultiply*
+  name: ScalarMultiply
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiply_
+  commentId: Overload:LibSodium.CryptoRistretto.ScalarMultiply
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.ScalarMultiply
+  nameWithType: CryptoRistretto.ScalarMultiply
+- uid: LibSodium.CryptoRistretto.ScalarMultiplyBase(LibSodium.SecureMemory{System.Byte},System.Span{System.Byte})
+  name: ScalarMultiplyBase(SecureMemory<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiplyBase_LibSodium_SecureMemory_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ScalarMultiplyBase(LibSodium.SecureMemory{System.Byte},System.Span{System.Byte})
+  name.vb: ScalarMultiplyBase(SecureMemory(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ScalarMultiplyBase(LibSodium.SecureMemory<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ScalarMultiplyBase(LibSodium.SecureMemory(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.ScalarMultiplyBase(SecureMemory<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.ScalarMultiplyBase(SecureMemory(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.ScalarMultiplyBase(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: ScalarMultiplyBase(ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiplyBase_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.ScalarMultiplyBase(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: ScalarMultiplyBase(ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.ScalarMultiplyBase(System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.ScalarMultiplyBase(System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.ScalarMultiplyBase(ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.ScalarMultiplyBase(ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.ScalarMultiplyBase*
+  name: ScalarMultiplyBase
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_ScalarMultiplyBase_
+  commentId: Overload:LibSodium.CryptoRistretto.ScalarMultiplyBase
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.ScalarMultiplyBase
+  nameWithType: CryptoRistretto.ScalarMultiplyBase
+- uid: LibSodium.CryptoRistretto.SubtractPoints(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: SubtractPoints(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_SubtractPoints_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.SubtractPoints(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: SubtractPoints(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.SubtractPoints(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.SubtractPoints(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.SubtractPoints(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.SubtractPoints(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.SubtractPoints*
+  name: SubtractPoints
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_SubtractPoints_
+  commentId: Overload:LibSodium.CryptoRistretto.SubtractPoints
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.SubtractPoints
+  nameWithType: CryptoRistretto.SubtractPoints
+- uid: LibSodium.CryptoRistretto.SubtractScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name: SubtractScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_SubtractScalars_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Span_System_Byte__
+  commentId: M:LibSodium.CryptoRistretto.SubtractScalars(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})
+  name.vb: SubtractScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+  fullName: LibSodium.CryptoRistretto.SubtractScalars(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.Span<byte>)
+  fullName.vb: LibSodium.CryptoRistretto.SubtractScalars(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.Span(Of Byte))
+  nameWithType: CryptoRistretto.SubtractScalars(ReadOnlySpan<byte>, ReadOnlySpan<byte>, Span<byte>)
+  nameWithType.vb: CryptoRistretto.SubtractScalars(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), Span(Of Byte))
+- uid: LibSodium.CryptoRistretto.SubtractScalars*
+  name: SubtractScalars
+  href: api/LibSodium.CryptoRistretto.html#LibSodium_CryptoRistretto_SubtractScalars_
+  commentId: Overload:LibSodium.CryptoRistretto.SubtractScalars
+  isSpec: "True"
+  fullName: LibSodium.CryptoRistretto.SubtractScalars
+  nameWithType: CryptoRistretto.SubtractScalars
 - uid: LibSodium.CryptoScalarMult
   name: CryptoScalarMult
   href: api/LibSodium.CryptoScalarMult.html
@@ -2944,15 +3277,15 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoScalarMult.CalculatePublicKey
   nameWithType: CryptoScalarMult.CalculatePublicKey
-- uid: LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: Compute(Span<byte>, SecureMemory<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: Compute(Span(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.CryptoScalarMult.Compute(System.Span<byte>, LibSodium.SecureMemory<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.CryptoScalarMult.Compute(System.Span(Of Byte), LibSodium.SecureMemory(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: CryptoScalarMult.Compute(Span<byte>, SecureMemory<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: CryptoScalarMult.Compute(Span(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte))
+- uid: LibSodium.CryptoScalarMult.Compute(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})
+  name: Compute(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>)
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_Compute_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.CryptoScalarMult.Compute(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})
+  name.vb: Compute(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte))
+  fullName: LibSodium.CryptoScalarMult.Compute(LibSodium.SecureMemory<byte>, LibSodium.SecureMemory<byte>, System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.CryptoScalarMult.Compute(LibSodium.SecureMemory(Of Byte), LibSodium.SecureMemory(Of Byte), System.ReadOnlySpan(Of Byte))
+  nameWithType: CryptoScalarMult.Compute(SecureMemory<byte>, SecureMemory<byte>, ReadOnlySpan<byte>)
+  nameWithType.vb: CryptoScalarMult.Compute(SecureMemory(Of Byte), SecureMemory(Of Byte), ReadOnlySpan(Of Byte))
 - uid: LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Compute(Span<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
@@ -2981,6 +3314,12 @@ references:
   commentId: F:LibSodium.CryptoScalarMult.PublicKeyLen
   fullName: LibSodium.CryptoScalarMult.PublicKeyLen
   nameWithType: CryptoScalarMult.PublicKeyLen
+- uid: LibSodium.CryptoScalarMult.SharedPointLen
+  name: SharedPointLen
+  href: api/LibSodium.CryptoScalarMult.html#LibSodium_CryptoScalarMult_SharedPointLen
+  commentId: F:LibSodium.CryptoScalarMult.SharedPointLen
+  fullName: LibSodium.CryptoScalarMult.SharedPointLen
+  nameWithType: CryptoScalarMult.SharedPointLen
 - uid: LibSodium.CryptoSecretStream
   name: CryptoSecretStream
   href: api/LibSodium.CryptoSecretStream.html
@@ -3347,6 +3686,47 @@ references:
   commentId: T:LibSodium.CryptoSign
   fullName: LibSodium.CryptoSign
   nameWithType: CryptoSign
+- uid: LibSodium.CryptoSign.CreateIncrementalPreHashSign(LibSodium.SecureMemory{System.Byte})
+  name: CreateIncrementalPreHashSign(SecureMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_CreateIncrementalPreHashSign_LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.CreateIncrementalPreHashSign(LibSodium.SecureMemory{System.Byte})
+  name.vb: CreateIncrementalPreHashSign(SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.CreateIncrementalPreHashSign(LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.CreateIncrementalPreHashSign(LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoSign.CreateIncrementalPreHashSign(SecureMemory<byte>)
+  nameWithType.vb: CryptoSign.CreateIncrementalPreHashSign(SecureMemory(Of Byte))
+- uid: LibSodium.CryptoSign.CreateIncrementalPreHashSign(System.ReadOnlyMemory{System.Byte})
+  name: CreateIncrementalPreHashSign(ReadOnlyMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_CreateIncrementalPreHashSign_System_ReadOnlyMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.CreateIncrementalPreHashSign(System.ReadOnlyMemory{System.Byte})
+  name.vb: CreateIncrementalPreHashSign(ReadOnlyMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.CreateIncrementalPreHashSign(System.ReadOnlyMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.CreateIncrementalPreHashSign(System.ReadOnlyMemory(Of Byte))
+  nameWithType: CryptoSign.CreateIncrementalPreHashSign(ReadOnlyMemory<byte>)
+  nameWithType.vb: CryptoSign.CreateIncrementalPreHashSign(ReadOnlyMemory(Of Byte))
+- uid: LibSodium.CryptoSign.CreateIncrementalPreHashSign*
+  name: CreateIncrementalPreHashSign
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_CreateIncrementalPreHashSign_
+  commentId: Overload:LibSodium.CryptoSign.CreateIncrementalPreHashSign
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.CreateIncrementalPreHashSign
+  nameWithType: CryptoSign.CreateIncrementalPreHashSign
+- uid: LibSodium.CryptoSign.CreateIncrementalPreHashVerify(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name: CreateIncrementalPreHashVerify(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_CreateIncrementalPreHashVerify_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.CreateIncrementalPreHashVerify(System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name.vb: CreateIncrementalPreHashVerify(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.CreateIncrementalPreHashVerify(System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.CreateIncrementalPreHashVerify(System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte))
+  nameWithType: CryptoSign.CreateIncrementalPreHashVerify(ReadOnlyMemory<byte>, ReadOnlyMemory<byte>)
+  nameWithType.vb: CryptoSign.CreateIncrementalPreHashVerify(ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte))
+- uid: LibSodium.CryptoSign.CreateIncrementalPreHashVerify*
+  name: CreateIncrementalPreHashVerify
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_CreateIncrementalPreHashVerify_
+  commentId: Overload:LibSodium.CryptoSign.CreateIncrementalPreHashVerify
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.CreateIncrementalPreHashVerify
+  nameWithType: CryptoSign.CreateIncrementalPreHashVerify
 - uid: LibSodium.CryptoSign.GenerateKeyPair(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})
   name: GenerateKeyPair(Span<byte>, SecureMemory<byte>)
   href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_GenerateKeyPair_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__
@@ -3397,6 +3777,88 @@ references:
   isSpec: "True"
   fullName: LibSodium.CryptoSign.GenerateKeyPairDeterministically
   nameWithType: CryptoSign.GenerateKeyPairDeterministically
+- uid: LibSodium.CryptoSign.PreHashSign(System.IO.Stream,System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name: PreHashSign(Stream, Span<byte>, SecureMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSign_System_IO_Stream_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.PreHashSign(System.IO.Stream,System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})
+  name.vb: PreHashSign(Stream, Span(Of Byte), SecureMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.PreHashSign(System.IO.Stream, System.Span<byte>, LibSodium.SecureMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.PreHashSign(System.IO.Stream, System.Span(Of Byte), LibSodium.SecureMemory(Of Byte))
+  nameWithType: CryptoSign.PreHashSign(Stream, Span<byte>, SecureMemory<byte>)
+  nameWithType.vb: CryptoSign.PreHashSign(Stream, Span(Of Byte), SecureMemory(Of Byte))
+- uid: LibSodium.CryptoSign.PreHashSign(System.IO.Stream,System.Span{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name: PreHashSign(Stream, Span<byte>, ReadOnlyMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSign_System_IO_Stream_System_Span_System_Byte__System_ReadOnlyMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.PreHashSign(System.IO.Stream,System.Span{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name.vb: PreHashSign(Stream, Span(Of Byte), ReadOnlyMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.PreHashSign(System.IO.Stream, System.Span<byte>, System.ReadOnlyMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.PreHashSign(System.IO.Stream, System.Span(Of Byte), System.ReadOnlyMemory(Of Byte))
+  nameWithType: CryptoSign.PreHashSign(Stream, Span<byte>, ReadOnlyMemory<byte>)
+  nameWithType.vb: CryptoSign.PreHashSign(Stream, Span(Of Byte), ReadOnlyMemory(Of Byte))
+- uid: LibSodium.CryptoSign.PreHashSign*
+  name: PreHashSign
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSign_
+  commentId: Overload:LibSodium.CryptoSign.PreHashSign
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PreHashSign
+  nameWithType: CryptoSign.PreHashSign
+- uid: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream,System.Memory{System.Byte},LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name: PreHashSignAsync(Stream, Memory<byte>, SecureMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSignAsync_System_IO_Stream_System_Memory_System_Byte__LibSodium_SecureMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream,System.Memory{System.Byte},LibSodium.SecureMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: PreHashSignAsync(Stream, Memory(Of Byte), SecureMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream, System.Memory<byte>, LibSodium.SecureMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream, System.Memory(Of Byte), LibSodium.SecureMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoSign.PreHashSignAsync(Stream, Memory<byte>, SecureMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoSign.PreHashSignAsync(Stream, Memory(Of Byte), SecureMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream,System.Memory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: PreHashSignAsync(Stream, Memory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSignAsync_System_IO_Stream_System_Memory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream,System.Memory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: PreHashSignAsync(Stream, Memory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream, System.Memory<byte>, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoSign.PreHashSignAsync(System.IO.Stream, System.Memory(Of Byte), System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoSign.PreHashSignAsync(Stream, Memory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoSign.PreHashSignAsync(Stream, Memory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoSign.PreHashSignAsync*
+  name: PreHashSignAsync
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashSignAsync_
+  commentId: Overload:LibSodium.CryptoSign.PreHashSignAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PreHashSignAsync
+  nameWithType: CryptoSign.PreHashSignAsync
+- uid: LibSodium.CryptoSign.PreHashVerify(System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name: PreHashVerify(Stream, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashVerify_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__
+  commentId: M:LibSodium.CryptoSign.PreHashVerify(System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte})
+  name.vb: PreHashVerify(Stream, ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte))
+  fullName: LibSodium.CryptoSign.PreHashVerify(System.IO.Stream, System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>)
+  fullName.vb: LibSodium.CryptoSign.PreHashVerify(System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte))
+  nameWithType: CryptoSign.PreHashVerify(Stream, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>)
+  nameWithType.vb: CryptoSign.PreHashVerify(Stream, ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte))
+- uid: LibSodium.CryptoSign.PreHashVerify*
+  name: PreHashVerify
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashVerify_
+  commentId: Overload:LibSodium.CryptoSign.PreHashVerify
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PreHashVerify
+  nameWithType: CryptoSign.PreHashVerify
+- uid: LibSodium.CryptoSign.PreHashVerifyAsync(System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name: PreHashVerifyAsync(Stream, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashVerifyAsync_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Threading_CancellationToken_
+  commentId: M:LibSodium.CryptoSign.PreHashVerifyAsync(System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)
+  name.vb: PreHashVerifyAsync(Stream, ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+  fullName: LibSodium.CryptoSign.PreHashVerifyAsync(System.IO.Stream, System.ReadOnlyMemory<byte>, System.ReadOnlyMemory<byte>, System.Threading.CancellationToken)
+  fullName.vb: LibSodium.CryptoSign.PreHashVerifyAsync(System.IO.Stream, System.ReadOnlyMemory(Of Byte), System.ReadOnlyMemory(Of Byte), System.Threading.CancellationToken)
+  nameWithType: CryptoSign.PreHashVerifyAsync(Stream, ReadOnlyMemory<byte>, ReadOnlyMemory<byte>, CancellationToken)
+  nameWithType.vb: CryptoSign.PreHashVerifyAsync(Stream, ReadOnlyMemory(Of Byte), ReadOnlyMemory(Of Byte), CancellationToken)
+- uid: LibSodium.CryptoSign.PreHashVerifyAsync*
+  name: PreHashVerifyAsync
+  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PreHashVerifyAsync_
+  commentId: Overload:LibSodium.CryptoSign.PreHashVerifyAsync
+  isSpec: "True"
+  fullName: LibSodium.CryptoSign.PreHashVerifyAsync
+  nameWithType: CryptoSign.PreHashVerifyAsync
 - uid: LibSodium.CryptoSign.PrivateKeyLen
   name: PrivateKeyLen
   href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_PrivateKeyLen
@@ -3487,22 +3949,6 @@ references:
   commentId: F:LibSodium.CryptoSign.SignatureLen
   fullName: LibSodium.CryptoSign.SignatureLen
   nameWithType: CryptoSign.SignatureLen
-- uid: LibSodium.CryptoSign.TryVerify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name: TryVerify(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_TryVerify_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.CryptoSign.TryVerify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
-  name.vb: TryVerify(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-  fullName: LibSodium.CryptoSign.TryVerify(System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>, System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.CryptoSign.TryVerify(System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte), System.ReadOnlySpan(Of Byte))
-  nameWithType: CryptoSign.TryVerify(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
-  nameWithType.vb: CryptoSign.TryVerify(ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte), ReadOnlySpan(Of Byte))
-- uid: LibSodium.CryptoSign.TryVerify*
-  name: TryVerify
-  href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_TryVerify_
-  commentId: Overload:LibSodium.CryptoSign.TryVerify
-  isSpec: "True"
-  fullName: LibSodium.CryptoSign.TryVerify
-  nameWithType: CryptoSign.TryVerify
 - uid: LibSodium.CryptoSign.Verify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})
   name: Verify(ReadOnlySpan<byte>, ReadOnlySpan<byte>, ReadOnlySpan<byte>)
   href: api/LibSodium.CryptoSign.html#LibSodium_CryptoSign_Verify_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__
@@ -4500,44 +4946,44 @@ references:
   isSpec: "True"
   fullName: LibSodium.HexEncoding.HexToBin
   nameWithType: HexEncoding.HexToBin
-- uid: LibSodium.ICryptoIncrementalHash
-  name: ICryptoIncrementalHash
-  href: api/LibSodium.ICryptoIncrementalHash.html
-  commentId: T:LibSodium.ICryptoIncrementalHash
-  fullName: LibSodium.ICryptoIncrementalHash
-  nameWithType: ICryptoIncrementalHash
-- uid: LibSodium.ICryptoIncrementalHash.Final(System.Span{System.Byte})
+- uid: LibSodium.ICryptoIncrementalOperation
+  name: ICryptoIncrementalOperation
+  href: api/LibSodium.ICryptoIncrementalOperation.html
+  commentId: T:LibSodium.ICryptoIncrementalOperation
+  fullName: LibSodium.ICryptoIncrementalOperation
+  nameWithType: ICryptoIncrementalOperation
+- uid: LibSodium.ICryptoIncrementalOperation.Final(System.Span{System.Byte})
   name: Final(Span<byte>)
-  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Final_System_Span_System_Byte__
-  commentId: M:LibSodium.ICryptoIncrementalHash.Final(System.Span{System.Byte})
+  href: api/LibSodium.ICryptoIncrementalOperation.html#LibSodium_ICryptoIncrementalOperation_Final_System_Span_System_Byte__
+  commentId: M:LibSodium.ICryptoIncrementalOperation.Final(System.Span{System.Byte})
   name.vb: Final(Span(Of Byte))
-  fullName: LibSodium.ICryptoIncrementalHash.Final(System.Span<byte>)
-  fullName.vb: LibSodium.ICryptoIncrementalHash.Final(System.Span(Of Byte))
-  nameWithType: ICryptoIncrementalHash.Final(Span<byte>)
-  nameWithType.vb: ICryptoIncrementalHash.Final(Span(Of Byte))
-- uid: LibSodium.ICryptoIncrementalHash.Final*
+  fullName: LibSodium.ICryptoIncrementalOperation.Final(System.Span<byte>)
+  fullName.vb: LibSodium.ICryptoIncrementalOperation.Final(System.Span(Of Byte))
+  nameWithType: ICryptoIncrementalOperation.Final(Span<byte>)
+  nameWithType.vb: ICryptoIncrementalOperation.Final(Span(Of Byte))
+- uid: LibSodium.ICryptoIncrementalOperation.Final*
   name: Final
-  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Final_
-  commentId: Overload:LibSodium.ICryptoIncrementalHash.Final
+  href: api/LibSodium.ICryptoIncrementalOperation.html#LibSodium_ICryptoIncrementalOperation_Final_
+  commentId: Overload:LibSodium.ICryptoIncrementalOperation.Final
   isSpec: "True"
-  fullName: LibSodium.ICryptoIncrementalHash.Final
-  nameWithType: ICryptoIncrementalHash.Final
-- uid: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan{System.Byte})
+  fullName: LibSodium.ICryptoIncrementalOperation.Final
+  nameWithType: ICryptoIncrementalOperation.Final
+- uid: LibSodium.ICryptoIncrementalOperation.Update(System.ReadOnlySpan{System.Byte})
   name: Update(ReadOnlySpan<byte>)
-  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Update_System_ReadOnlySpan_System_Byte__
-  commentId: M:LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan{System.Byte})
+  href: api/LibSodium.ICryptoIncrementalOperation.html#LibSodium_ICryptoIncrementalOperation_Update_System_ReadOnlySpan_System_Byte__
+  commentId: M:LibSodium.ICryptoIncrementalOperation.Update(System.ReadOnlySpan{System.Byte})
   name.vb: Update(ReadOnlySpan(Of Byte))
-  fullName: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan<byte>)
-  fullName.vb: LibSodium.ICryptoIncrementalHash.Update(System.ReadOnlySpan(Of Byte))
-  nameWithType: ICryptoIncrementalHash.Update(ReadOnlySpan<byte>)
-  nameWithType.vb: ICryptoIncrementalHash.Update(ReadOnlySpan(Of Byte))
-- uid: LibSodium.ICryptoIncrementalHash.Update*
+  fullName: LibSodium.ICryptoIncrementalOperation.Update(System.ReadOnlySpan<byte>)
+  fullName.vb: LibSodium.ICryptoIncrementalOperation.Update(System.ReadOnlySpan(Of Byte))
+  nameWithType: ICryptoIncrementalOperation.Update(ReadOnlySpan<byte>)
+  nameWithType.vb: ICryptoIncrementalOperation.Update(ReadOnlySpan(Of Byte))
+- uid: LibSodium.ICryptoIncrementalOperation.Update*
   name: Update
-  href: api/LibSodium.ICryptoIncrementalHash.html#LibSodium_ICryptoIncrementalHash_Update_
-  commentId: Overload:LibSodium.ICryptoIncrementalHash.Update
+  href: api/LibSodium.ICryptoIncrementalOperation.html#LibSodium_ICryptoIncrementalOperation_Update_
+  commentId: Overload:LibSodium.ICryptoIncrementalOperation.Update
   isSpec: "True"
-  fullName: LibSodium.ICryptoIncrementalHash.Update
-  nameWithType: ICryptoIncrementalHash.Update
+  fullName: LibSodium.ICryptoIncrementalOperation.Update
+  nameWithType: ICryptoIncrementalOperation.Update
 - uid: LibSodium.LibSodiumException
   name: LibSodiumException
   href: api/LibSodium.LibSodiumException.html

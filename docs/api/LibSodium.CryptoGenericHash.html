@@ -669,7 +669,7 @@ https://libsodium.gitbook.io/doc/hashing/generic_hashing
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalHash(SecureMemory&lt;byte&gt;? key = null, int hashLen = 32)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalOperation CreateIncrementalHash(SecureMemory&lt;byte&gt;? key, int hashLen = 32)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -682,7 +682,7 @@ https://libsodium.gitbook.io/doc/hashing/generic_hashing
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a></dt>
     <dd></dd>
   </dl>
 
@@ -707,7 +707,7 @@ https://libsodium.gitbook.io/doc/hashing/generic_hashing
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalHash CreateIncrementalHash(ReadOnlySpan&lt;byte&gt; key = default, int hashLen = 32)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ICryptoIncrementalOperation CreateIncrementalHash(ReadOnlySpan&lt;byte&gt; key = default, int hashLen = 32)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -720,7 +720,7 @@ https://libsodium.gitbook.io/doc/hashing/generic_hashing
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="LibSodium.ICryptoIncrementalHash.html">ICryptoIncrementalHash</a></dt>
+    <dt><a class="xref" href="LibSodium.ICryptoIncrementalOperation.html">ICryptoIncrementalOperation</a></dt>
     <dd></dd>
   </dl>
 
@@ -751,7 +751,7 @@ https://libsodium.gitbook.io/doc/hashing/generic_hashing
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ for <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
         </div>
       </div>
     </footer>

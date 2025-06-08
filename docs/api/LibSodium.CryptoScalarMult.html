@@ -216,6 +216,41 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
 
 
+
+  <h3 id="LibSodium_CryptoScalarMult_SharedPointLen" data-uid="LibSodium.CryptoScalarMult.SharedPointLen">
+  SharedPointLen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the length, in bytes, of a shared point in cryptographic operations (32).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SharedPointLen = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="LibSodium_CryptoScalarMult_SharedPointLen_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The shared point length is equivalent to the length of a public key, which is 32 bytes. This
+constant can be used to validate or configure cryptographic processes that involve shared points.</p>
+</div>
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -224,7 +259,7 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
   <h3 id="LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte})">
   CalculatePublicKey(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the public key corresponding to a private scalar on Curve25519.</p>
@@ -272,7 +307,7 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
   <h3 id="LibSodium_CryptoScalarMult_CalculatePublicKey_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.CalculatePublicKey(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
   CalculatePublicKey(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the public key corresponding to a private scalar on Curve25519.</p>
@@ -318,9 +353,9 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
   <a id="LibSodium_CryptoScalarMult_Compute_" data-uid="LibSodium.CryptoScalarMult.Compute*"></a>
 
-  <h3 id="LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})">
-  Compute(Span&lt;byte&gt;, SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LibSodium_CryptoScalarMult_Compute_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.Compute(LibSodium.SecureMemory{System.Byte},LibSodium.SecureMemory{System.Byte},System.ReadOnlySpan{System.Byte})">
+  Compute(SecureMemory&lt;byte&gt;, SecureMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the scalar multiplication of a private scalar and a public point on Curve25519.</p>
@@ -328,12 +363,12 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Compute(Span&lt;byte&gt; sharedPoint, SecureMemory&lt;byte&gt; privateKey, ReadOnlySpan&lt;byte&gt; publicKey)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Compute(SecureMemory&lt;byte&gt; sharedPoint, SecureMemory&lt;byte&gt; privateKey, ReadOnlySpan&lt;byte&gt; publicKey)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sharedPoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dt><code>sharedPoint</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
     <dd><p>The output buffer where the result (32 bytes) will be stored.</p>
 </dd>
     <dt><code>privateKey</code> <a class="xref" href="LibSodium.SecureMemory-1.html">SecureMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
@@ -351,7 +386,7 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
 
 
-  <h4 class="section" id="LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <h4 class="section" id="LibSodium_CryptoScalarMult_Compute_LibSodium_SecureMemory_System_Byte__LibSodium_SecureMemory_System_Byte__System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method wraps <code>crypto_scalarmult</code>. Do not use the output directly as a symmetric key.</p>
 </div>
 
@@ -371,7 +406,7 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
 
   <h3 id="LibSodium_CryptoScalarMult_Compute_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="LibSodium.CryptoScalarMult.Compute(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
   Compute(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/LibSodium-Net/LibSodium.Net/blob/main/src/LibSodium.Net/CryptoScalarMult.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the scalar multiplication of a private scalar and a public point on Curve25519.</p>
@@ -435,7 +470,7 @@ This class exposes the <code>crypto_scalarmult</code> and <code>crypto_scalarmul
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ for <strong>LibSodium.Net</strong> — Secure cryptography for .NET, built on libsodium.</p>
+          <p align="center" style="font-size: 0.9rem; color: #666;">Made with ❤️ by Jesús López for the community — LibSodium.Net: secure cryptography for .NET</p>
         </div>
       </div>
     </footer>

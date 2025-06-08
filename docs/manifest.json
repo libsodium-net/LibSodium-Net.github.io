@@ -297,6 +297,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LibSodium.CryptoRistretto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LibSodium.CryptoRistretto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LibSodium.CryptoRistretto",
+      "Summary": "<p sourcefile=\"api/LibSodium.CryptoRistretto.yml\" sourcestartlinenumber=\"1\">Constants and cryptographic operations for the Ristretto255 group.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LibSodium.CryptoScalarMult.yml",
       "output": {
         ".html": {
@@ -479,17 +493,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LibSodium.ICryptoIncrementalHash.yml",
+      "source_relative_path": "api/LibSodium.ICryptoIncrementalOperation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LibSodium.ICryptoIncrementalHash.html"
+          "relative_path": "api/LibSodium.ICryptoIncrementalOperation.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "LibSodium.ICryptoIncrementalHash",
-      "Summary": "<p sourcefile=\"api/LibSodium.ICryptoIncrementalHash.yml\" sourcestartlinenumber=\"1\">Represents an incremental hash or MAC calculator that processes data in chunks and produces a fixed-size output.</p>\n"
+      "Title": "LibSodium.ICryptoIncrementalOperation",
+      "Summary": "<p sourcefile=\"api/LibSodium.ICryptoIncrementalOperation.yml\" sourcestartlinenumber=\"1\">Represents an incremental operation such as incremental hash, MAC, or sign calculation that processes data in chunks and produces a fixed-size output.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -746,6 +760,36 @@
       "output": {
         ".html": {
           "relative_path": "guide/CryptoBox.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/CryptoRistretto.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CryptoRistretto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/CryptoScalarMult.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CryptoScalarMult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/CryptoSign.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CryptoSign.html"
         }
       },
       "version": ""
